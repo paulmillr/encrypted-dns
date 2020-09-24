@@ -38,7 +38,7 @@
 	<key>PayloadDisplayName</key>
 	<string>DNSPod over HTTPS</string>
 	<key>PayloadIdentifier</key>
-	<string>com.dnspod.apple-dns</string>
+	<string>com.paulmillr.apple-dns</string>
 	<key>PayloadRemovalDisallowed</key>
 	<false/>
 	<key>PayloadType</key>
