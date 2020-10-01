@@ -20,7 +20,7 @@
 				<string>https://cloudflare-dns.com/dns-query</string>
 			</dict>
 			<key>PayloadDescription</key>
-			<string>Configures device to use Cloudflare Encrypted DNS over TLS</string>
+			<string>Configures device to use Cloudflare Encrypted DNS over HTTPS</string>
 			<key>PayloadDisplayName</key>
 			<string>Cloudflare DNS over HTTPS</string>
 			<key>PayloadIdentifier</key>
