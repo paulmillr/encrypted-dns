@@ -11,13 +11,13 @@
 				<string>HTTPS</string>
 				<key>ServerAddresses</key>
 				<array>
-					<string>2606:4700:4700::1111</string>
-					<string>2606:4700:4700::1001</string>
-					<string>1.1.1.1</string>
-					<string>1.0.0.1</string>
+					<string>2606:4700:4700::1112</string>
+					<string>2606:4700:4700::1002</string>
+					<string>1.1.1.2</string>
+					<string>1.0.0.2</string>
 				</array>
 				<key>ServerURL</key>
-				<string>https://cloudflare-dns.com/dns-query</string>
+				<string>https://familiy.cloudflare-dns.com/dns-query</string>
 			</dict>
 			<key>PayloadDescription</key>
 			<string>Configures device to use Cloudflare Encrypted DNS over HTTPS</string>
