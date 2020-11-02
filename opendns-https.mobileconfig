@@ -9,13 +9,6 @@
 			<dict>
 				<key>DNSProtocol</key>
 				<string>HTTPS</string>
-				<key>ServerAddresses</key>
-				<array>
-					<string>2620:119:35::35</string>
-					<string>2620:119:53::53</string>
-					<string>208.67.220.220</string>
-					<string>208.67.222.222</string>
-				</array>
 				<key>ServerURL</key>
 				<string>https://doh.opendns.com/dns-query</string>
 			</dict>
