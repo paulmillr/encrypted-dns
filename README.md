@@ -18,3 +18,5 @@ To verify resolver IPs and hostnames, compare mobileconfig files to the followin
 - Cloudflare https://developers.cloudflare.com/1.1.1.1/dns-over-https
 - Google https://developers.google.com/speed/public-dns/docs/secure-transports
 - OpenDNS https://support.opendns.com/hc/en-us/articles/360038086532
+
+Internal workings of the profiles are described on [developer.apple.com](https://developer.apple.com/documentation/devicemanagement/dnssettings).
