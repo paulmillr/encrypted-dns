@@ -5,7 +5,7 @@ Check out the article for more info: [paulmillr.com/posts/encrypted-dns/](https:
 
 ## Installation
 
-To make settings work across all apps in iOS 14 & MacOS Big Sur, you’ll need to install configuration profile. This profile would tell operating system to use DOH / DOT. Note: it’s not enough to simply set server IPs in System Preferences — you need to install a profile.
+To make settings work across all apps in **iOS 14** & **MacOS Big Sur**, you’ll need to install configuration profile. This profile would tell operating system to use DOH / DOT. Note: it’s not enough to simply set server IPs in System Preferences — you need to install a profile.
 
 On iOS, after installation, go to system **Settings => General => Profile**, select downloaded profile and click “Install” button.
 
