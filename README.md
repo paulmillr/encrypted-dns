@@ -9,14 +9,15 @@ To make settings work across all apps in **iOS 14** & **MacOS Big Sur**, you’l
 
 On iOS, after installation, go to system **Settings => General => Profile**, select downloaded profile and click “Install” button.
 
-## Docs
+## Providers
 
-To verify resolver IPs and hostnames, compare mobileconfig files to the following documentation.
+- [🇷🇺 AdGuard](https://adguard.com/en/adguard-dns/overview.html#instruction)
+- [🇨🇳 Alibaba](https://www.alidns.com/faqs/#dns-safe)
+- [🇺🇸 Cloudflare](https://developers.cloudflare.com/1.1.1.1/dns-over-https)
+- 🇨🇳 DNSPod
+- [🇺🇸 Google](https://developers.google.com/speed/public-dns/docs/secure-transports)
+- [🇺🇸 OpenDNS](https://support.opendns.com/hc/en-us/articles/360038086532)
+- [🇺🇸 Quad9](https://www.quad9.net/doh-quad9-dns-servers/) — no filtering. Operated by CleanerDNS, Inc. 
+- [🇸🇬🇺🇸 Tiar.app](https://doh.tiar.app) — "Privacy-first DNS provider". Filters some domains. Server is located in SG, hosted on Digital Ocean
 
-- Alibaba https://www.alidns.com/faqs/#dns-safe
-- AdGuard https://adguard.com/en/adguard-dns/overview.html#instruction
-- Cloudflare https://developers.cloudflare.com/1.1.1.1/dns-over-https
-- Google https://developers.google.com/speed/public-dns/docs/secure-transports
-- OpenDNS https://support.opendns.com/hc/en-us/articles/360038086532
-
-Internal workings of the profiles are described on [developer.apple.com](https://developer.apple.com/documentation/devicemanagement/dnssettings).
+To verify resolver IPs and hostnames, compare mobileconfig files to their documentation URLs. Internal workings of the profiles are described on [developer.apple.com](https://developer.apple.com/documentation/devicemanagement/dnssettings).
