@@ -13,7 +13,7 @@ On iOS, after installation, go to system **Settings => General => Profile**, sel
 
 - [🇷🇺 AdGuard](https://adguard.com/en/adguard-dns/overview.html#instruction)
 - [🇳🇱 Alekberg](https://alekberg.net)
-- [🇨🇳 Alibaba](https://www.alidns.com/faqs/#dns-safe)
+- [🇨🇳 Alibaba](https://www.alidns.com/)
 - [🇨🇦 Canadian Shield](https://www.cira.ca/cybersecurity-services/canadian-shield) - Operated by the Canadian Internet Registration Authority (CIRA)
 - [🇺🇸 Cloudflare](https://developers.cloudflare.com/1.1.1.1/dns-over-https)
 - 🇨🇳 DNSPod
