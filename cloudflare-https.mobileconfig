@@ -17,7 +17,19 @@
 					<string>1.0.0.1</string>
 				</array>
 				<key>ServerURL</key>
-				<string>https://cloudflare-dns.com/dns-query</string>
+				<string>https://cloudflare-dns.com/dns-query</string> 
+
+                                <key>DNSProtocol</key>
+				<string>TLS</string>
+				<key>ServerAddresses</key>
+				<array>
+					<string>2606:4700:4700::1111</string>
+					<string>2606:4700:4700::1001</string>
+					<string>1.1.1.1</string>
+					<string>1.0.0.1</string>
+				</array>
+				<key>ServerName</key>
+				<string>cloudflare-dns.com</string>
 			</dict>
 			<key>PayloadDescription</key>
 			<string>Configures device to use Cloudflare Encrypted DNS over HTTPS</string>
