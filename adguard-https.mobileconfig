@@ -17,7 +17,7 @@
 					<string>94.140.15.15</string>
 				</array>
 				<key>ServerURL</key>
-				<string>https://dns.adguard.com/dns-query</string>
+				<string>https://1.0.0.1/dns-query</string>
 			</dict>
 			<key>PayloadDescription</key>
 			<string>Configures device to use Adguard Default Encrypted DNS over HTTPS</string>
