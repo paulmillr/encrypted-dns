@@ -20,7 +20,7 @@
 				<string>https://dns.google/dns-query</string>
 			</dict>
 			<key>PayloadDescription</key>
-			<string>Configures device to use Google Encrypted DNS over TLS</string>
+			<string>Configures device to use Google Encrypted DNS over HTTPS</string>
 			<key>PayloadDisplayName</key>
 			<string>Google DNS over HTTPS</string>
 			<key>PayloadIdentifier</key>
