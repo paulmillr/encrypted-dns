@@ -11,10 +11,10 @@
 				<string>HTTPS</string>
 				<key>ServerAddresses</key>
 				<array>
-					<string>2620:10A:80BB::10</string>
-					<string>2620:10A:80BC::10</string>
-					<string>149.112.121.10</string>
-					<string>149.112.122.10</string>
+					<string>2620:10A:80BB::20</string>
+					<string>2620:10A:80BC::20</string>
+					<string>149.112.121.20</string>
+					<string>149.112.122.20</string>
 				</array>
 				<key>ServerURL</key>
 				<string>https://protected.canadianshield.cira.ca/dns-query</string>
