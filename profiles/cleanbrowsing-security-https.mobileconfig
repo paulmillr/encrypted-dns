@@ -17,7 +17,7 @@
 					<string>185.228.169.9</string>
 				</array>
 				<key>ServerURL</key>
-				<string>https://doh.cleanbrowsing.org/doh/Security-filter/</string>
+				<string>https://doh.cleanbrowsing.org/doh/security-filter/</string>
 			</dict>
 			<key>PayloadDescription</key>
 			<string>Configures device to use Cleanbrowsing Security Filter Encrypted DNS over HTTPS</string>

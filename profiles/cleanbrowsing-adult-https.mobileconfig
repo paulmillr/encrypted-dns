@@ -17,7 +17,7 @@
 					<string>185.228.168.10</string>
 				</array>
 				<key>ServerURL</key>
-				<string>https://doh.cleanbrowsing.org/doh/Adult-filter/</string>
+				<string>https://doh.cleanbrowsing.org/doh/adult-filter/</string>
 			</dict>
 			<key>PayloadDescription</key>
 			<string>Configures device to use Cleanbrowsing Adult Filter Encrypted DNS over HTTPS</string>
