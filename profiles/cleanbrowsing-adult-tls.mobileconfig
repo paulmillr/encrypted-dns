@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>DNSSettings</key>
+			<dict>
+				<key>DNSProtocol</key>
+				<string>TLS</string>
+				<key>ServerAddresses</key>
+				<array>
+					<string>2a0d:2a00:1::1</string>
+					<string>2a0d:2a00:2::1</string>
+					<string>185.228.169.10</string>
+					<string>185.228.168.10</string>
+				</array>
+				<key>ServerName</key>
+				<string>adult-filter-dns.cleanbrowsing.org</string>
+			</dict>
+			<key>PayloadDescription</key>
+			<string>Configures device to use Cleanbrowsing Adult Filter Encrypted DNS over TLS</string>
+			<key>PayloadDisplayName</key>
+			<string>Cleanbrowsing Adult Filter DNS over TLS</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.dnsSettings.managed.9d6e5fdf-e404-4f34-ae94-27ed2f636ac4</string>
+			<key>PayloadType</key>
+			<string>com.apple.dnsSettings.managed</string>
+			<key>PayloadUUID</key>
+			<string>35d5c8a0-afa6-4b36-a9fe-099a997b44ad</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProhibitDisablement</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Adds the Cleanbrowsing Adult Filter DNS to Big Sur and iOS 14 based systems</string>
+	<key>PayloadDisplayName</key>
+	<string>Cleanbrowsing Adult Filter DNS over TLS</string>
+	<key>PayloadIdentifier</key>
+	<string>com.paulmillr.apple-dns</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>7AE40871-B9FA-4215-9AB5-E7A17505C154</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>
