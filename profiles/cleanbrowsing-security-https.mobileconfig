@@ -36,9 +36,9 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Adds the Cleanbrowsing Security Filter DNS to Big Sur and iOS 14 based systems</string>
+	<string>Adds the Cleanbrowsing Security Filter DNS  over HTTPS to Big Sur and iOS 14 based systems</string>
 	<key>PayloadDisplayName</key>
-	<string>Cleanbrowsing Security Filter DNS over HTTPS</string>
+	<string>Cleanbrowsing Security DNS over HTTPS</string>
 	<key>PayloadIdentifier</key>
 	<string>com.paulmillr.apple-dns</string>
 	<key>PayloadRemovalDisallowed</key>
