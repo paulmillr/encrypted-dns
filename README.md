@@ -38,3 +38,12 @@ In the signed folder, we have signed versions of the profiles in this repository
 [comment]: <> (We recommend that you install a signed profile instead of an unsigned profile because it ensures that it was not modified while it was downloading.)
 
 To verify resolver IPs and hostnames, compare mobileconfig files to their documentation URLs. Internal workings of the profiles are described on [developer.apple.com](https://developer.apple.com/documentation/devicemanagement/dnssettings). In order to verify signed mobileconfigs, you will need to download them to your computer and open them in a text editor, because signing profiles makes GitHub think that they are binary files.
+
+## Known issues
+
+We can't fix the issues, only Apple can:
+
+- [Little Snitch / Lulu disable Encrypted DNS](https://github.com/paulmillr/encrypted-dns/issues/13)
+- [Some traffic e.g. Terminal / App Store is except from EDNS](https://github.com/paulmillr/encrypted-dns/issues/22)
+- [Chrome is except from EDNS](https://github.com/paulmillr/encrypted-dns/issues/19)
+- [VPN disable EDNS](https://github.com/paulmillr/encrypted-dns/issues/18)
