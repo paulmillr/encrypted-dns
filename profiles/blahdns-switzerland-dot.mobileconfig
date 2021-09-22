@@ -5,11 +5,9 @@
 		<key>PayloadDisplayName</key>
 		<string>BlahDNS (Switzerland) DNS over TLS</string>
 		<key>PayloadOrganization</key>
-		<string>encrypted-dns.party</string>
+		<string>BlahDNS</string>
 		<key>PayloadDescription</key>
-		<string>This profile enables BlahDNS (Switzerland) DNS over TLS on all networks using the iOS 14 / iPadOS 14 / tvOS 14 / macOS Big Sur Encrypted DNS feature.
-
-Downloaded from encrypted-dns.party.</string>
+		<string>This profile enables BlahDNS (Switzerland) DNS over TLS on all networks using the iOS 14 / iPadOS 14 / tvOS 14 / macOS Big Sur Encrypted DNS feature.</string>
 		<key>ConsentText</key>
 		<dict>
 			<key>default</key>
