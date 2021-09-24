@@ -11,8 +11,8 @@
 				<string>HTTPS</string>
 				<key>ServerAddresses</key>
 				<array>
-					<string>119.29.29.29</string>
-					<string>119.28.28.28</string>
+					<string>162.14.21.178</string>
+					<string>162.14.21.56</string>
 				</array>
 				<key>ServerURL</key>
 				<string>https://doh.pub/dns-query</string>
