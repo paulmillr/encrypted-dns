@@ -17,7 +17,7 @@
 					<string>149.112.112.11</string>
 				</array>
 				<key>ServerURL</key>
-				<string>https://dns11.quad9.net/dns-query</string>
+				<string>https://dns11.quad9.net:5053/dns-query</string>
 			</dict>
 			<key>PayloadDescription</key>
 			<string>Configures device to use Quad9 Encrypted DNS over HTTPS with ECS</string>
