@@ -39,6 +39,21 @@ https://blahdns.com</string>
 					<key>ServerURL</key>
 					<string>https://doh-de.blahdns.com/dns-query</string>
 				</dict>
+				<key>OnDemandRules</key>
+				<array>
+					<dict>
+						<key>Action</key>
+						<string>Connect</string>
+						<key>InterfaceTypeMatch</key>
+						<string>Cellular</string>
+					</dict>
+					<dict>
+						<key>Action</key>
+						<string>Connect</string>
+						<key>URLStringProbe</key>
+						<string>http://captive.apple.com/hotspot-detect.html</string>
+					</dict>
+				</array>
 				<key>PayloadType</key>
 				<string>com.apple.dnsSettings.managed</string>
 				<key>PayloadIdentifier</key>
