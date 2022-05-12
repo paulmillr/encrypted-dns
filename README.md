@@ -5,7 +5,7 @@ Check out the article for more info: [paulmillr.com/posts/encrypted-dns/](https:
 
 ## Providers
 
-"Censorship=yes" means the profile will not send true information about hostname=IP relation for some hosts.
+`Censorship=yes` means the profile will not send true information about `hostname=IP` relation for some hosts.
 
 All profiles include a *Wi-Fi-only* exception for `http://captive.apple.com/hotspot-detect.html` in order for hotel/cafe networks to work properly.
 
