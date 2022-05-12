@@ -44,7 +44,7 @@ To install, simply open the file in GitHib, and then click/tap on install button
 
 ## Signed Profiles
 
-In the signed folder, we have signed versions of the profiles in this repository. These profiles have been signed by [@Candygoblen123](https://github.com/Candygoblen123) so that when you install the profiles, they will have a verified check box on the installation screen. It also ensures that these profiles have not been tampered with. However, since they were signed by a third party, they may lag behind their unsigned counterparts a little.
+In the signed folder, we have *slightly outdated* signed versions of the profiles in this repository. These profiles have been signed by [@Candygoblen123](https://github.com/Candygoblen123) so that when you install the profiles, they will have a verified check box on the installation screen. It also ensures that these profiles have not been tampered with. However, since they were signed by a third party, they may lag behind their unsigned counterparts a little.
 
 [comment]: <> (We recommend that you install a signed profile instead of an unsigned profile because it ensures that it was not modified while it was downloading.)
 
