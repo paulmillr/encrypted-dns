@@ -7,6 +7,8 @@ Check out the article for more info: [paulmillr.com/posts/encrypted-dns/](https:
 
 "Censorship=yes" means the profile will not send true information about hostname=IP relation for some hosts.
 
+All profiles include a *Wi-Fi-only* exception for `http://captive.apple.com/hotspot-detect.html` in order for hotel/cafe networks to work properly.
+
 | Name                      | Country | Censorship | Notes                                                                                                                                   | Install button                                                                                                                                                                                                      |
 |---------------------------|---------|------------|-----------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | AdGuard                   | 🇷🇺      | Yes 🔴          | [Operated](https://adguard.com/en/adguard-dns/overview.html) by AdGuard in Russia                                                       | [HTTPS](https://github.com/paulmillr/encrypted-dns/raw/master/profiles/adguard-https.mobileconfig)                                                                                                                           |
