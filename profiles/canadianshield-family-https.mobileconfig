@@ -19,21 +19,6 @@
 				<key>ServerURL</key>
 				<string>https://family.canadianshield.cira.ca/dns-query</string>
 			</dict>
-			<key>OnDemandRules</key>
-			<array>
-				<dict>
-					<key>Action</key>
-					<string>Connect</string>
-					<key>InterfaceTypeMatch</key>
-					<string>Cellular</string>
-				</dict>
-				<dict>
-					<key>Action</key>
-					<string>Connect</string>
-					<key>URLStringProbe</key>
-					<string>http://captive.apple.com/hotspot-detect.html</string>
-				</dict>
-			</array>
 			<key>PayloadDescription</key>
 			<string>Configures device to use Canadian Shield Encrypted DNS over HTTPS</string>
 			<key>PayloadDisplayName</key>
