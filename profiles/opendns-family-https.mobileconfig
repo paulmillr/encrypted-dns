@@ -12,21 +12,6 @@
 				<key>ServerURL</key>
 				<string>https://doh.familyshield.opendns.com/dns-query</string>
 			</dict>
-			<key>OnDemandRules</key>
-			<array>
-				<dict>
-					<key>Action</key>
-					<string>Connect</string>
-					<key>InterfaceTypeMatch</key>
-					<string>Cellular</string>
-				</dict>
-				<dict>
-					<key>Action</key>
-					<string>Connect</string>
-					<key>URLStringProbe</key>
-					<string>http://captive.apple.com/hotspot-detect.html</string>
-				</dict>
-			</array>
 			<key>PayloadDescription</key>
 			<string>Configures device to use OpenDNS Encrypted DNS over HTTPS</string>
 			<key>PayloadDisplayName</key>
