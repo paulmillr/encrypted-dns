@@ -1,7 +1,7 @@
 # encrypted-dns-configs
 Configuration profiles for [DNS over HTTPS](https://en.wikipedia.org/wiki/DNS_over_HTTPS) and [DNS over TLS](https://en.wikipedia.org/wiki/DNS_over_TLS).
 
-Check out the article for more info: [paulmillr.com/posts/encrypted-dns/](https://paulmillr.com/posts/encrypted-dns/)
+Check out the article for more info: [paulmillr.com/posts/encrypted-dns/](https://paulmillr.com/posts/encrypted-dns/) and info about [contributing a new profile](#contributing-a-new-profile)
 
 ## Providers
 
@@ -49,6 +49,10 @@ In the signed folder, we have *slightly outdated* signed versions of the profile
 [comment]: <> (We recommend that you install a signed profile instead of an unsigned profile because it ensures that it was not modified while it was downloading.)
 
 To verify resolver IPs and hostnames, compare mobileconfig files to their documentation URLs. Internal workings of the profiles are described on [developer.apple.com](https://developer.apple.com/documentation/devicemanagement/dnssettings). In order to verify signed mobileconfigs, you will need to download them to your computer and open them in a text editor, because signing profiles makes GitHub think that they are binary files.
+
+## Contributing a new profile
+
+Profiles are basically text files. Copy an existing one and change its UUID, for example, by generating a new one online. Make sure you update README with new profile's info.
 
 ## Known issues
 
