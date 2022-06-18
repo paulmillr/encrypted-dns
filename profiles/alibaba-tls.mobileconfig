@@ -8,25 +8,27 @@
 			<key>DNSSettings</key>
 			<dict>
 				<key>DNSProtocol</key>
-				<string>TLS</string>
+				<string>HTTPS</string>
 				<key>ServerAddresses</key>
 				<array>
-					<string>1.12.12.12</string>
-					<string>120.53.53.53</string>
+					<string>2400:3200::1</string>
+					<string>2400:3200:baba::1</string>
+					<string>223.5.5.5</string>
+					<string>223.6.6.6</string>
 				</array>
 				<key>ServerName</key>
-				<string>dot.pub</string>
+				<string>dns.alidns.com</string>
 			</dict>
 			<key>PayloadDescription</key>
-			<string>Configures device to use DNSPod Encrypted DNS over TLS</string>
+			<string>Configures device to use AliDNS Encrypted DNS over TLS</string>
 			<key>PayloadDisplayName</key>
-			<string>DNSPod over TLS</string>
+			<string>AliDNS DNS over TLS</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.dnsSettings.managed.C498EC0C-EF6C-44F0-BFB7-0000658B99AC</string>
+			<string>com.apple.dnsSettings.managed.9d6e5fdf-e404-4f34-ae94-27ed2f636ac4</string>
 			<key>PayloadType</key>
 			<string>com.apple.dnsSettings.managed</string>
 			<key>PayloadUUID</key>
-			<string>065AB183-5E34-4794-9BEB-B5327CF61F27</string>
+			<string>35d5c8a0-afa6-4b36-a9fe-099a997b44ad</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProhibitDisablement</key>
@@ -34,9 +36,9 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Adds the DNSPod to Big Sur and iOS 14 based systems</string>
+	<string>Adds the AliDNS to Big Sur and iOS 14 based systems</string>
 	<key>PayloadDisplayName</key>
-	<string>DNSPod over TLS</string>
+	<string>AliDNS over TLS</string>
 	<key>PayloadIdentifier</key>
 	<string>com.paulmillr.apple-dns</string>
 	<key>PayloadRemovalDisallowed</key>
@@ -44,7 +46,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>3FFF1FEC-04EB-4D2B-94AB-602EE3261D1D</string>
+	<string>6C7F342C-930C-49D7-8FFF-750F38CE39DD</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>
