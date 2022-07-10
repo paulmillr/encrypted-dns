@@ -41,7 +41,7 @@ All profiles include a *Wi-Fi-only* exception for `http://captive.apple.com/hots
 
 To make settings work across all apps in **iOS** & **MacOS**, you’ll need to install configuration profile. This profile would tell operating system to use DOH / DOT. Note: it’s not enough to simply set server IPs in System Preferences — you need to install a profile.
 
-To install, simply open the file in GitHub, and then click/tap on install button. The profile should download. On macOS, double click on the downloaded file to open it in settings, and approve instalation. On iOS, go to **System Settings => General => Profile**, select downloaded profile and tap the “Install” button.
+To install, simply open the file in GitHub by using Safari (other browsers will just download the file and won't ask for installation), and then click/tap on install button. The profile should download. On macOS, double click on the downloaded file to open it in settings, and approve instalation. On iOS, go to **System Settings => General => Profile**, select downloaded profile and tap the “Install” button.
 
 ## Signed Profiles
 
