@@ -1,13 +1,18 @@
 # encrypted-dns-configs
-Configuration profiles for [DNS over HTTPS](https://en.wikipedia.org/wiki/DNS_over_HTTPS) and [DNS over TLS](https://en.wikipedia.org/wiki/DNS_over_TLS).
+Configuration profiles for [DNS over HTTPS](https://en.wikipedia.org/wiki/DNS_over_HTTPS) and [DNS over TLS](https://en.wikipedia.org/wiki/DNS_over_TLS). Check out the article for more info: [paulmillr.com/posts/encrypted-dns/](https://paulmillr.com/posts/encrypted-dns/) and info about [contributing a new profile](#contributing-a-new-profile).
 
-Check out the article for more info: [paulmillr.com/posts/encrypted-dns/](https://paulmillr.com/posts/encrypted-dns/) and info about [contributing a new profile](#contributing-a-new-profile).
+## Caveats
+
+Good news: starting from iOS 15.5, [Wi-Fi captive portals](https://en.wikipedia.org/wiki/Captive_portal) in cafes, hotels, airports are exempted by Apple from eDNS rules; to simplify authentication. There are still some other issues; we can't fix them, only Apple can:
+
+- [Little Snitch / Lulu disable Encrypted DNS](https://github.com/paulmillr/encrypted-dns/issues/13)
+- [Some traffic e.g. Terminal / App Store is except from EDNS](https://github.com/paulmillr/encrypted-dns/issues/22)
+- [Chrome is exempt from eDNS](https://github.com/paulmillr/encrypted-dns/issues/19)
+- [VPN disable eDNS](https://github.com/paulmillr/encrypted-dns/issues/18)
 
 ## Providers
 
 `Censorship=yes` means the profile will not send true information about `hostname=IP` relation for some hosts.
-
-All profiles include a *Wi-Fi-only* exception for `http://captive.apple.com/hotspot-detect.html` in order for hotel/cafe networks to work properly.
 
 | Name                      | Country | Censorship | Notes                                                                                                                                   | Install button                                                                                                                                                                                                      |
 |---------------------------|---------|------------|-----------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -54,12 +59,3 @@ To verify resolver IPs and hostnames, compare mobileconfig files to their docume
 ## Contributing a new profile
 
 Profiles are basically text files. Copy an existing one and change its UUID, for example, by generating a new one online. Make sure you update README with new profile's info.
-
-## Known issues
-
-We can't fix the issues, only Apple can:
-
-- [Little Snitch / Lulu disable Encrypted DNS](https://github.com/paulmillr/encrypted-dns/issues/13)
-- [Some traffic e.g. Terminal / App Store is except from EDNS](https://github.com/paulmillr/encrypted-dns/issues/22)
-- [Chrome is except from EDNS](https://github.com/paulmillr/encrypted-dns/issues/19)
-- [VPN disable EDNS](https://github.com/paulmillr/encrypted-dns/issues/18)
