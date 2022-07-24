@@ -5,10 +5,8 @@ Configuration profiles for [DNS over HTTPS](https://en.wikipedia.org/wiki/DNS_ov
 
 Good news: starting from iOS 15.5, [Wi-Fi captive portals](https://en.wikipedia.org/wiki/Captive_portal) in cafes, hotels, airports are exempted by Apple from eDNS rules; to simplify authentication. There are still some other issues; we can't fix them, only Apple can:
 
-- [Little Snitch / Lulu disable Encrypted DNS](https://github.com/paulmillr/encrypted-dns/issues/13)
-- [Some traffic e.g. Terminal / App Store is except from EDNS](https://github.com/paulmillr/encrypted-dns/issues/22)
-- [Chrome is exempt from eDNS](https://github.com/paulmillr/encrypted-dns/issues/19)
-- [VPN disable eDNS](https://github.com/paulmillr/encrypted-dns/issues/18)
+- eDNS gets disabled: [Little Snitch & Lulu](https://github.com/paulmillr/encrypted-dns/issues/13), [VPN](https://github.com/paulmillr/encrypted-dns/issues/18)
+- Some traffic is exempt from eDNS: [Terminal / App Store](https://github.com/paulmillr/encrypted-dns/issues/22), [Chrome](https://github.com/paulmillr/encrypted-dns/issues/19)
 
 ## Providers
 
