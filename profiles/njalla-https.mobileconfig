@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>DNSSettings</key>
+			<dict>
+				<key>DNSProtocol</key>
+				<string>HTTPS</string>
+				<key>ServerAddresses</key>
+				<array>
+                    <string>95.215.19.53</string>
+					<string>2001:67c:2354:2::53</string>
+				</array>
+				<key>ServerURL</key>
+				<string>https://dns.njal.la/dns-query</string>
+			</dict>
+			<key>PayloadDescription</key>
+			<string>Configures device to use Njalla Encrypted DNS over HTTPS</string>
+			<key>PayloadDisplayName</key>
+			<string>Njalla DNS over HTTPS</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.dnsSettings.managed.652b69f4-678c-42aa-9868-561d81f345f1</string>
+			<key>PayloadType</key>
+			<string>com.apple.dnsSettings.managed</string>
+			<key>PayloadUUID</key>
+			<string>3dcc84af-2cc0-4ac5-a028-a205c6799034</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProhibitDisablement</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Adds Njalla DNS to Big Sur and iOS 14 based systems</string>
+	<key>PayloadDisplayName</key>
+	<string>Njalla DNS over HTTPS</string>
+	<key>PayloadIdentifier</key>
+	<string>com.buggysolid.apple-dns</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>97ac77f1-8fae-48c6-bd06-7c3082122595</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>
