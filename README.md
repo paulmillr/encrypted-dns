@@ -10,6 +10,8 @@ Starting from iOS 15.5, [Wi-Fi captive portals](https://en.wikipedia.org/wiki/Ca
 - eDNS gets disabled: [Little Snitch & Lulu](https://github.com/paulmillr/encrypted-dns/issues/13), [VPN](https://github.com/paulmillr/encrypted-dns/issues/18)
 - Some traffic is exempt from eDNS: [Terminal / App Store](https://github.com/paulmillr/encrypted-dns/issues/22), [Chrome](https://github.com/paulmillr/encrypted-dns/issues/19)
 
+If you need even more privacy, check out [encrypted-dns over TOR](https://github.com/alecmuffett/dohot).
+
 ## Providers
 
 `Censorship=yes` means the profile will not send true information about `hostname=IP` relation for some hosts.
