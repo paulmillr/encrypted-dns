@@ -8,19 +8,21 @@
 			<key>DNSSettings</key>
 			<dict>
 				<key>DNSProtocol</key>
-				<string>HTTPS</string>
+				<string>TLS</string>
 				<key>ServerAddresses</key>
 				<array>
-					<string>1.12.12.12</string>
-					<string>120.53.53.53</string>
+					<string>2a10:50c0::1:ff</string>
+					<string>2a10:50c0::2:ff</string>
+					<string>94.140.14.140</string>
+					<string>94.140.14.141</string>
 				</array>
-				<key>ServerURL</key>
-				<string>https://doh.pub/dns-query</string>
+				<key>ServerName</key>
+				<string>dns-unfiltered.adguard.com</string>
 			</dict>
 			<key>PayloadDescription</key>
-			<string>Configures device to use DNSPod Encrypted DNS over HTTPS</string>
+			<string>Configures device to use Adguard No Filter Encrypted DNS over TLS</string>
 			<key>PayloadDisplayName</key>
-			<string>DNSPod over HTTPS</string>
+			<string>Adguard No Filter over TLS</string>
 			<key>PayloadIdentifier</key>
 			<string>com.apple.dnsSettings.managed.C498EC0C-EF6C-44F0-BFB7-0000658B99AC</string>
 			<key>PayloadType</key>
@@ -34,9 +36,9 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Adds the DNSPod to Big Sur and iOS 14 based systems</string>
+	<string>Adds the Adguard No Filter to Big Sur and iOS 14 based systems</string>
 	<key>PayloadDisplayName</key>
-	<string>DNSPod over HTTPS</string>
+	<string>Adguard No Filter over TLS</string>
 	<key>PayloadIdentifier</key>
 	<string>com.paulmillr.apple-dns</string>
 	<key>PayloadRemovalDisallowed</key>

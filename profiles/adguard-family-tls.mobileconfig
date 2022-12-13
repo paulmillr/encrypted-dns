@@ -11,22 +11,24 @@
 				<string>HTTPS</string>
 				<key>ServerAddresses</key>
 				<array>
-					<string>1.12.12.12</string>
-					<string>120.53.53.53</string>
+					<string>2a10:50c0::bad1:ff</string>
+					<string>2a10:50c0::bad2:ff</string>
+					<string>94.140.14.15</string>
+					<string>94.140.15.16</string>
 				</array>
-				<key>ServerURL</key>
-				<string>https://doh.pub/dns-query</string>
+				<key>ServerName</key>
+				<string>dns-family.adguard.com</string>
 			</dict>
 			<key>PayloadDescription</key>
-			<string>Configures device to use DNSPod Encrypted DNS over HTTPS</string>
+			<string>Configures device to use AdGuard Family Protection Encrypted DNS over TLS</string>
 			<key>PayloadDisplayName</key>
-			<string>DNSPod over HTTPS</string>
+			<string>AdGuard Family Protection DNS over TLS</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.dnsSettings.managed.C498EC0C-EF6C-44F0-BFB7-0000658B99AC</string>
+			<string>com.apple.dnsSettings.managed.56f69d61-c1d2-422b-989a-adeeb1b6ddc0</string>
 			<key>PayloadType</key>
 			<string>com.apple.dnsSettings.managed</string>
 			<key>PayloadUUID</key>
-			<string>065AB183-5E34-4794-9BEB-B5327CF61F27</string>
+			<string>1cda01f8-b05b-4b0d-8675-44eeb5290564</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProhibitDisablement</key>
@@ -34,9 +36,9 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Adds the DNSPod to Big Sur and iOS 14 based systems</string>
+	<string>Adds the AdGuard Family Protection DNS to Big Sur and iOS 14 based systems</string>
 	<key>PayloadDisplayName</key>
-	<string>DNSPod over HTTPS</string>
+	<string>AdGuard Family Protection DNS over TLS</string>
 	<key>PayloadIdentifier</key>
 	<string>com.paulmillr.apple-dns</string>
 	<key>PayloadRemovalDisallowed</key>
@@ -44,7 +46,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>030E6D6F-69A2-4515-9D77-99342CB9AE76</string>
+	<string>FF00A616-63CE-4078-8786-800A1F357A9C</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>

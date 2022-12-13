@@ -11,22 +11,24 @@
 				<string>HTTPS</string>
 				<key>ServerAddresses</key>
 				<array>
-					<string>1.12.12.12</string>
-					<string>120.53.53.53</string>
+					<string>2620:fe::fe:11</string>
+					<string>2620:fe::11</string>
+					<string>9.9.9.11</string>
+					<string>149.112.112.11</string>
 				</array>
 				<key>ServerURL</key>
-				<string>https://doh.pub/dns-query</string>
+				<string>https://dns11.quad9.net/dns-query</string>
 			</dict>
 			<key>PayloadDescription</key>
-			<string>Configures device to use DNSPod Encrypted DNS over HTTPS</string>
+			<string>Configures device to use Quad9 Encrypted DNS over HTTPS with ECS</string>
 			<key>PayloadDisplayName</key>
-			<string>DNSPod over HTTPS</string>
+			<string>Quad9 DNS over HTTPS with ECS</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.dnsSettings.managed.C498EC0C-EF6C-44F0-BFB7-0000658B99AC</string>
+			<string>com.apple.dnsSettings.managed.1a93b54b-8541-4536-8302-c08159ca9184</string>
 			<key>PayloadType</key>
 			<string>com.apple.dnsSettings.managed</string>
 			<key>PayloadUUID</key>
-			<string>065AB183-5E34-4794-9BEB-B5327CF61F27</string>
+			<string>ffee2c6b-9cff-4c2a-892c-e03788bcbd64</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProhibitDisablement</key>
@@ -34,9 +36,9 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Adds the DNSPod to Big Sur and iOS 14 based systems</string>
+	<string>Adds the Quad9 with ECS DNS to Big Sur and iOS 14 based systems</string>
 	<key>PayloadDisplayName</key>
-	<string>DNSPod over HTTPS</string>
+	<string>Quad9 with ECS Encrypted DNS over HTTPS</string>
 	<key>PayloadIdentifier</key>
 	<string>com.paulmillr.apple-dns</string>
 	<key>PayloadRemovalDisallowed</key>
@@ -44,7 +46,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>030E6D6F-69A2-4515-9D77-99342CB9AE76</string>
+	<string>088A5DC0-0E1F-4699-A56D-A709078D7603</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>

@@ -11,22 +11,24 @@
 				<string>HTTPS</string>
 				<key>ServerAddresses</key>
 				<array>
-					<string>1.12.12.12</string>
-					<string>120.53.53.53</string>
+					<string>2a10:50c0::1:ff</string>
+					<string>2a10:50c0::2:ff</string>
+					<string>94.140.14.140</string>
+					<string>94.140.14.141</string>
 				</array>
 				<key>ServerURL</key>
-				<string>https://doh.pub/dns-query</string>
+				<string>https://dns-unfiltered.adguard.com/dns-query</string>
 			</dict>
 			<key>PayloadDescription</key>
-			<string>Configures device to use DNSPod Encrypted DNS over HTTPS</string>
+			<string>Configures device to use Adguard No Filter Encrypted DNS over TLS</string>
 			<key>PayloadDisplayName</key>
-			<string>DNSPod over HTTPS</string>
+			<string>Adguard No Filter over HTTPS</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.dnsSettings.managed.C498EC0C-EF6C-44F0-BFB7-0000658B99AC</string>
+			<string>com.apple.dnsSettings.managed.9d6e5fdf-e404-4f34-ae94-27ed2f636ac4</string>
 			<key>PayloadType</key>
 			<string>com.apple.dnsSettings.managed</string>
 			<key>PayloadUUID</key>
-			<string>065AB183-5E34-4794-9BEB-B5327CF61F27</string>
+			<string>35d5c8a0-afa6-4b36-a9fe-099a997b44ad</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProhibitDisablement</key>
@@ -34,9 +36,9 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Adds the DNSPod to Big Sur and iOS 14 based systems</string>
+	<string>Adds the Adguard No Filter to Big Sur and iOS 14 based systems</string>
 	<key>PayloadDisplayName</key>
-	<string>DNSPod over HTTPS</string>
+	<string>Adguard No Filter over HTTPS</string>
 	<key>PayloadIdentifier</key>
 	<string>com.paulmillr.apple-dns</string>
 	<key>PayloadRemovalDisallowed</key>
@@ -44,7 +46,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>030E6D6F-69A2-4515-9D77-99342CB9AE76</string>
+	<string>A4475135-633A-4F15-A79B-BE15093DC97A</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>
