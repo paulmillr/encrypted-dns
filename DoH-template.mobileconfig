@@ -20,9 +20,9 @@
 				<string>!!!DNS over HTTPS Address!!!</string>
 			</dict>
 			<key>PayloadDescription</key>
-			<string>Configures device to use Adguard Default Encrypted DNS over HTTPS</string>
+			<string>Configures device to use !!!Adguard!!! Encrypted DNS over HTTPS</string>
 			<key>PayloadDisplayName</key>
-			<string>Adguard Default DNS over HTTPS</string>
+			<string>!!!Adguard!!! DNS over HTTPS</string>
 			<key>PayloadIdentifier</key>
 			<string>com.apple.dnsSettings.managed.!!!RANDOM-UUID-CODE-HERE!!!</string>
 			<key>PayloadType</key>
@@ -36,9 +36,9 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Adds the !!!Adguard!!! Default DNS to MacOS Big Sur and iOS 14 based or newer systems</string>
+	<string>Adds the !!!Adguard!!! DNS to MacOS Big Sur and iOS 14 based or newer systems</string>
 	<key>PayloadDisplayName</key>
-	<string>!!!Adguard!!! Default DNS over HTTPS</string>
+	<string>!!!Adguard!!! DNS over HTTPS</string>
 	<key>PayloadIdentifier</key>
 	<string>!!!RANDOM-UUID-CODE-HERE!!!</string>
 	<key>PayloadRemovalDisallowed</key>
