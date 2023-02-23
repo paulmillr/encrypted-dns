@@ -49,7 +49,24 @@ If you need even more privacy, check out [encrypted-dns over TOR](https://github
 
 To make settings work across all apps in **iOS** & **MacOS**, you’ll need to install configuration profile. This profile would tell operating system to use DOH / DOT. Note: it’s not enough to simply set server IPs in System Preferences — you need to install a profile.
 
-To install, simply open the file in GitHub by using Safari (other browsers will just download the file and won't ask for installation), and then click/tap on install button. The profile should download. On macOS, double click on the downloaded file and approve instalation in **System settings => Privacy & Security => Profiles**. On iOS, go to **System Settings => General => VPN, DNS & Device Management**, select downloaded profile and tap the “Install” button.
+iOS: Open the mobileconfig file in GitHub by using Safari (other browsers will just download the file and won't ask for installation), and then click/tap on install button. The profile should download. Go to **System Settings => General => VPN, DNS & Device Management**, select downloaded profile and tap the “Install” button.
+
+macOS [(official docs)](https://support.apple.com/guide/mac-help/configuration-profiles-standardize-settings-mh35561/13.0/mac/13.0):
+    
+1. Download and save the profile. After save, rename it to be in format: `NAME.mobileconfig`, not NAME.txt, or so
+2. Choose Apple menu > System Settings, click Privacy and Security in the sidebar, then click Profiles on the right. You may need to scroll down.
+  You may be asked to supply your password or other information during installation.
+3. In the Downloaded section, double-click the profile.
+4. Review the profile contents then click Continue, Install or Enroll to install the profile. If an earlier version of a profile is already installed on your Mac, the settings in the updated version replace the previous ones.
+
+## Scope
+
+There seems to be an [additional option](https://github.com/paulmillr/encrypted-dns/issues/22) that allows to use system-wide profiles. To try it, add this to mobileconfig file:
+
+```
+<key>PayloadScope</key>
+<string>System</string>
+```
 
 ## Signed Profiles
 
