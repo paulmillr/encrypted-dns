@@ -11,8 +11,8 @@
 				<string>HTTPS</string>
 				<key>ServerAddresses</key>
 				<array>
-					<string>101.198.198.198</string>
-					<string>101.198.199.200</string>
+					<string>101.226.4.6</string>
+					<string>218.30.118.6</string>
 				</array>
 				<key>ServerURL</key>
 				<string>https://doh.360.cn/dns-query</string>
