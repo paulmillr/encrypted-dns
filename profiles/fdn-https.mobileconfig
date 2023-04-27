@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>DNSSettings</key>
+			<dict>
+				<key>DNSProtocol</key>
+				<string>HTTPS</string>
+				<key>ServerAddresses</key>
+				<array>
+					<string>2001:910:800::12</string>
+					<string>2001:910:800::40</string>
+					<string>80.67.169.12</string>
+					<string>80.67.169.40</string>
+				</array>
+				<key>ServerURL</key>
+				<string>https://ns0.fdn.fr/dns-query</string>
+			</dict>
+			<key>PayloadDescription</key>
+			<string>Configures device to use Google Encrypted DNS over HTTPS</string>
+			<key>PayloadDisplayName</key>
+			<string>FDN DNS over HTTPS</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.dnsSettings.managed.f0ffd552-7183-4f2e-86e5-ee1ecad2a53a</string>
+			<key>PayloadType</key>
+			<string>com.apple.dnsSettings.managed</string>
+			<key>PayloadUUID</key>
+			<string>0ffcd083-5afa-4ba2-88e1-f01abd75bcc2</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProhibitDisablement</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Adds the FDN DNS to Big Sur and iOS 14 based systems</string>
+	<key>PayloadDisplayName</key>
+	<string>FDN Encrypted DNS over HTTPS</string>
+	<key>PayloadIdentifier</key>
+	<string>com.paulmillr.apple-dns</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>93C5EB95-3A25-4097-B64B-02B5F1493D32</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>
