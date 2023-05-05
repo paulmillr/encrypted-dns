@@ -42,6 +42,7 @@
 | [Cloudflare 1.1.1.1 家庭][cloudflare-dns-family] | 🇺🇸    | 是   | 由 Cloudflare 运营，拦截恶意软件、钓鱼网站和成人内容               | [HTTPS][cloudflare-dns-family-profile-https]                                                   |
 | [DNSPod 公共 DNS][dnspod-dns]                    | 🇨🇳    | 否   | 由腾讯云计算旗下 DNSPod 运营                                       | [HTTPS][dnspod-dns-profile-https], [TLS][dnspod-dns-profile-tls]                               |
 | [谷歌公共 DNS][google-dns]                       | 🇺🇸    | 否   | 由谷歌运营                                                         | [HTTPS][google-dns-profile-https], [TLS][google-dns-profile-tls]                               |
+| [keweonDNS][keweondns]                           | 🇩🇪    | 否   | 由 Aviontex. 拦截广告和跟踪器                                        | [HTTPS][keweondns-profile-https], [TLS][keweondns-profile-tls]                               |
 | [Mullvad DNS][mullvad-dns]                       | 🇸🇪    | 是   | 由 Mullvad VPN 运营                                                | [HTTPS][mullvad-dns-profile-https]                                                             |
 | [Mullvad DNS 广告过滤][mullvad-dns]              | 🇸🇪    | 是   | 由 Mullvad VPN 运营，拦截广告和跟踪器                              | [HTTPS][mullvad-dns-adblock-profile-https]                                                     |
 | [OpenDNS 标准][opendns]                          | 🇺🇸    | 否   | 由思科 OpenDNS 运营                                                | [HTTPS][opendns-standard-profile-https]                                                        |
@@ -154,6 +155,9 @@ New-Guid
 [google-dns]: https://developers.google.com/speed/public-dns/docs/secure-transports?hl=zh-cn
 [google-dns-profile-https]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/google-https.mobileconfig
 [google-dns-profile-tls]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/google-tls.mobileconfig
+[keweondns]: https://forum.xda-developers.com/t/keweondns-info-facts-and-what-is-keweon-actually.4576651/
+[keweondns-profile-https]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/keweondns-doh.mobileconfig
+[keweondns-profile-tls]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/keweondns-dot.mobileconfig
 [mullvad-dns]: https://mullvad.net/zh-hans/help/dns-over-https-and-dns-over-tls/
 [mullvad-dns-profile-https]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/mullvad-doh.mobileconfig
 [mullvad-dns-adblock-profile-https]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/mullvad-adblock-doh.mobileconfig
