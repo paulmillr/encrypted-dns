@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>DNSSettings</key>
+			<dict>
+				<key>DNSProtocol</key>
+				<string>TLS</string>
+				<key>ServerAddresses</key>
+				<array>
+					<string>2600:3c02::f03c:94ff:fe86:115d</string>
+					<string>66.228.61.140</string>
+				</array>
+				<key>ServerName</key>
+				<string>doh.archuser.org</string>
+			</dict>
+			<key>PayloadDescription</key>
+			<string>Configures device to use ArchUser's DNS over TLS</string>
+			<key>PayloadDisplayName</key>
+			<string>Archuser.org DNS over TLS</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.dnsSettings.managed.f1109887-ce9e-47bb-b751-fa2e2356691c</string>
+			<key>PayloadType</key>
+			<string>com.apple.dnsSettings.managed</string>
+			<key>PayloadUUID</key>
+			<string>0c93de73-7828-4d5e-83dd-1249a42ba225</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProhibitDisablement</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Adds Archuser.org's PubHole DNS to the latest macOS and iOS systems</string>
+	<key>PayloadDisplayName</key>
+	<string>ArchUser.org DNS over TLS</string>
+	<key>PayloadIdentifier</key>
+	<string>com.paulmillr.apple-dns</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>864d8cf9-01bb-4424-a7da-93c77fbd9613</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+        <key>PayloadScope</key>
+        <string>System</string>
+</dict>
+</plist>
