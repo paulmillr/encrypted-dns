@@ -27,6 +27,7 @@ If you need even more privacy, check out [encrypted-dns over TOR](https://github
 | [AdGuard DNS Non-filtering][adguard-dns-unfiltered]  | 🇷🇺     | No         | Operated by AdGuard Software Ltd. Non-filtering                                                           | [HTTPS][adguard-dns-unfiltered-profile-https-signed], [TLS][adguard-dns-unfiltered-profile-tls-signed]       | [HTTPS][adguard-dns-unfiltered-profile-https], [TLS][adguard-dns-unfiltered-profile-tls]       |
 | [Alekberg Encrypted DNS][alekberg-dns]               | 🇳🇱     | No         | Independent                                                                                               | [HTTPS][alekberg-dns-profile-https-signed]                                                                   | [HTTPS][alekberg-dns-profile-https]                                                            |
 | [Aliyun Public DNS][aliyun-dns]                      | 🇨🇳     | No         | Operated by Alibaba Cloud Ltd.                                                                            | [HTTPS][aliyun-dns-profile-https-signed], [TLS][aliyun-dns-profile-tls-signed]                               | [HTTPS][aliyun-dns-profile-https], [TLS][aliyun-dns-profile-tls]                               |
+| [Archuser.org PubHole][archuser]                     | 🇺🇸     | Yes        | Independent. Blocks ads, tracking, and supports OpenNIC Domains. |  | [HTTPS][archuser-https], [TLS][archuser-tls]
 | [BlahDNS CDN Filtered][blahdns]                      | 🇺🇸     | Yes        | Independent. Blocks ads, tracking & malware                                                               | [HTTPS][blahdns-cdn-filtered-profile-https-signed]                                                           | [HTTPS][blahdns-cdn-filtered-profile-https]                                                    |
 | [BlahDNS CDN Unfiltered][blahdns]                    | 🇺🇸     | No         | Independent. Non-filtering                                                                                | [HTTPS][blahdns-cdn-unfiltered-profile-https-signed]                                                         | [HTTPS][blahdns-cdn-unfiltered-profile-https]                                                  |
 | [BlahDNS Finland][blahdns]                           | 🇫🇮     | Yes        | Independent. Blocks ads, tracking & malware                                                               | [HTTPS][blahdns-finland-profile-https-signed]                                                                | [HTTPS][blahdns-finland-profile-https]                                                         |
@@ -133,6 +134,9 @@ New-Guid
 [aliyun-dns]: https://www.alidns.com/
 [aliyun-dns-profile-https]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/alibaba-https.mobileconfig
 [aliyun-dns-profile-tls]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/alibaba-tls.mobileconfig
+[archuser]: https://pubhole.archuser.org
+[archuser-https]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/archuser-https.mobileconfig
+[archuser-tls]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/archuser-tls.mobileconfig
 [blahdns]: https://blahdns.com/
 [blahdns-cdn-filtered-profile-https]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/blahdns-cdn-adblock-doh1.mobileconfig
 [blahdns-cdn-unfiltered-profile-https]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/blahdns-cdn-unfiltered-doh1.mobileconfig
