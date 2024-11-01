@@ -27,7 +27,7 @@ If you need even more privacy, check out [encrypted-dns over TOR](https://github
 | [AdGuard DNS Non-filtering][adguard-dns-unfiltered]  | 🇷🇺     | No         | Operated by AdGuard Software Ltd. Non-filtering                                                           | [HTTPS][adguard-dns-unfiltered-profile-https-signed], [TLS][adguard-dns-unfiltered-profile-tls-signed]       | [HTTPS][adguard-dns-unfiltered-profile-https], [TLS][adguard-dns-unfiltered-profile-tls]       |
 | [Alekberg Encrypted DNS][alekberg-dns]               | 🇳🇱     | No         | Independent                                                                                               | [HTTPS][alekberg-dns-profile-https-signed]                                                                   | [HTTPS][alekberg-dns-profile-https]                                                            |
 | [Aliyun Public DNS][aliyun-dns]                      | 🇨🇳     | No         | Operated by Alibaba Cloud Ltd.                                                                            | [HTTPS][aliyun-dns-profile-https-signed], [TLS][aliyun-dns-profile-tls-signed]                               | [HTTPS][aliyun-dns-profile-https], [TLS][aliyun-dns-profile-tls]                               |
-| [Archuser.org PubHole][archuser]                     | 🇺🇸     | Yes        | Independent. Blocks ads, tracking, and supports OpenNIC Domains. |  | [HTTPS][archuser-https], [TLS][archuser-tls]
+| [Archuser.org PubHole][archuser]                     | 🇺🇸     | Yes        | Independent. Blocks ads, tracking, and supports OpenNIC Domains.                                          | [HTTPS][archuser-https-signed], [TLS][archuser-tls-signed]                                                   | [HTTPS][archuser-https], [TLS][archuser-tls]
 | [BlahDNS CDN Filtered][blahdns]                      | 🇺🇸     | Yes        | Independent. Blocks ads, tracking & malware                                                               | [HTTPS][blahdns-cdn-filtered-profile-https-signed]                                                           | [HTTPS][blahdns-cdn-filtered-profile-https]                                                    |
 | [BlahDNS CDN Unfiltered][blahdns]                    | 🇺🇸     | No         | Independent. Non-filtering                                                                                | [HTTPS][blahdns-cdn-unfiltered-profile-https-signed]                                                         | [HTTPS][blahdns-cdn-unfiltered-profile-https]                                                  |
 | [BlahDNS Finland][blahdns]                           | 🇫🇮     | Yes        | Independent. Blocks ads, tracking & malware                                                               | [HTTPS][blahdns-finland-profile-https-signed]                                                                | [HTTPS][blahdns-finland-profile-https]                                                         |
@@ -81,9 +81,11 @@ There seems to be an [additional option](https://github.com/paulmillr/encrypted-
 
 In the `signed` folder we have signed versions of the profiles in this repository. These profiles have been signed by [@Xernium](https://github.com/Xernium) so that when you install the profiles, 
 they will have a verified check box on the installation screen. It also ensures that these profiles have not been tampered with. However, since they were signed by a third party, they may lag behind their unsigned counterparts a little.
-The signature is valid until `2024-11-30`
+The signature is valid until `2025-11-02`
 
-Previous signature by:
+Previous signatures by:
+[@Xernium](https://github.com/Xernium), replaced at `2024-11-01`   
+   
 [@Candygoblen123](https://github.com/Candygoblen123), replaced at `2023-11-29`
 
 [comment]: <> (We recommend that you install a signed profile instead of an unsigned profile because it ensures that it was not modified while it was downloading.)
@@ -191,6 +193,8 @@ New-Guid
 [alekberg-dns-profile-https-signed]: https://github.com/paulmillr/encrypted-dns/raw/master/signed/alekberg-https.mobileconfig
 [aliyun-dns-profile-https-signed]: https://github.com/paulmillr/encrypted-dns/raw/master/signed/alibaba-https.mobileconfig
 [aliyun-dns-profile-tls-signed]: https://github.com/paulmillr/encrypted-dns/raw/master/signed/alibaba-tls.mobileconfig
+[archuser-https-signed]: https://github.com/paulmillr/encrypted-dns/raw/master/signed/archuser-https.mobileconfig
+[archuser-tls-signed]: https://github.com/paulmillr/encrypted-dns/raw/master/signed/archuser-tls.mobileconfig
 [blahdns-cdn-filtered-profile-https-signed]: https://github.com/paulmillr/encrypted-dns/raw/master/signed/blahdns-cdn-adblock-doh1.mobileconfig
 [blahdns-cdn-unfiltered-profile-https-signed]: https://github.com/paulmillr/encrypted-dns/raw/master/signed/blahdns-cdn-unfiltered-doh1.mobileconfig
 [blahdns-finland-profile-https-signed]: https://github.com/paulmillr/encrypted-dns/raw/master/signed/blahdns-finland-doh.mobileconfig
