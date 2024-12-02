@@ -1,54 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-	<dict>
-		<key>PayloadDisplayName</key>
-		<string>Alekberg DNS over HTTPS (nl)</string>
-		<key>PayloadOrganization</key>
-		<string>encrypted-dns.party</string>
-		<key>PayloadDescription</key>
-		<string>This profile enables Alekberg DNS over HTTPS located in Amsterdam (DNSSEC enabled) on all networks using the iOS 14 / macOS Big Sur Encrypted DNS feature.</string>
-		<key>ConsentText</key>
+<dict>
+	<key>PayloadContent</key>
+	<array>
 		<dict>
-			<key>default</key>
-			<string>Privacy policy: https://alekberg.net/privacy</string>
-		</dict>
-		<key>PayloadIdentifier</key>
-		<string>com.apple.dnsSettings.managed.13778881-645b-4187-847a-76e2784e9b14</string>
-		<key>PayloadScope</key>
-		<string>User</string>
-		<key>PayloadType</key>
-		<string>Configuration</string>
-		<key>PayloadUUID</key>
-		<string>62451e0c-5e17-4a8f-a91e-f94ffaec6fb0</string>
-		<key>PayloadVersion</key>
-		<integer>1</integer>
-		<key>PayloadContent</key>
-		<array>
+			<key>DNSSettings</key>
 			<dict>
-				<key>DNSSettings</key>
-				<dict>
-					<key>DNSProtocol</key>
-					<string>HTTPS</string>
-					<key>ServerAddresses</key>
-					<array>
+				<key>DNSProtocol</key>
+				<string>HTTPS</string>
+				<key>ServerAddresses</key>
+				<array>
 						<string>89.38.131.38</string>
 						<string>2a0c:b9c0:f:451d::1</string>
-					</array>
-					<key>ServerURL</key>
-					<string>https://dnsnl.alekberg.net/dns-query</string>
-				</dict>
-				<key>PayloadType</key>
-				<string>com.apple.dnsSettings.managed</string>
-				<key>PayloadIdentifier</key>
-				<string>com.apple.dnsSettings.managed.a780dc38-c58e-4e73-9f81-d057abb7f9a9</string>
-				<key>PayloadUUID</key>
-				<string>97b18363-dcf3-4231-b205-4e99ff91bc73</string>
-				<key>PayloadDisplayName</key>
-				<string>Alekberg DNS over HTTPS (nl)</string>
-				<key>PayloadVersion</key>
-				<integer>1</integer>
+				</array>
+				<key>ServerURL</key>
+				<string>https://dnsnl.alekberg.net/dns-query</string>
 			</dict>
-		</array>
-	</dict>
+			<key>PayloadDescription</key>
+			<string>Configures device to use alekberg Encrypted DNS over HTTPS</string>
+			<key>PayloadDisplayName</key>
+			<string>Alekberg over HTTPS</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.dnsSettings.managed.9d6e5fdf-e404-4f34-ae94-27ed2f636ac4</string>
+			<key>PayloadType</key>
+			<string>com.apple.dnsSettings.managed</string>
+			<key>PayloadUUID</key>
+			<string>8c34ea70-71bc-44df-8920-581536ea4f6b</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProhibitDisablement</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Adds  Alekberg to Big Sur and iOS 14 based systems</string>
+	<key>PayloadDisplayName</key>
+	<string>Alekberg over HTTPS</string>
+	<key>PayloadIdentifier</key>
+	<string>com.paulmillr.apple-dns</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>A8875135-633A-4F15-A79B-BE15093DC97A</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
 </plist>
