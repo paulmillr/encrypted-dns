@@ -11,8 +11,8 @@
 				<string>TLS</string>
 				<key>ServerAddresses</key>
 				<array>
-					<string>2600:3c02::f03c:94ff:fe86:115d</string>
-					<string>66.228.61.140</string>
+					<string>10.202.10.10</string>
+					<string>10.202.10.11</string>
 				</array>
 				<key>ServerName</key>
 				<string>doh.archuser.org</string>
