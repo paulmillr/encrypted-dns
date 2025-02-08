@@ -6,20 +6,22 @@ Configuration profiles for [DNS over HTTPS](https://en.wikipedia.org/wiki/DNS_ov
 
 ### Caveats
 
-DoH seems to work faster & better than DoT judging from the [Google's article](https://security.googleblog.com/2022/07/dns-over-http3-in-android.html).
+If you need even more privacy, check out [encrypted-dns over TOR](https://github.com/alecmuffett/dohot).
 
-Starting from iOS & iPadOS 15.5, [Wi-Fi captive portals](https://en.wikipedia.org/wiki/Captive_portal) in cafes, hotels, airports are exempted by Apple from eDNS rules; to simplify authentication. This is good news. There are still some other issues; we can't fix them, only Apple can:
+DoH seems to work faster & better than DoT judging from the [Google's article](https://security.googleblog.com/2022/07/dns-over-http3-in-android.html). Also DoH has less chance of being blocked, since it uses standard 443 port and not 853.
+
+Starting from iOS & iPadOS 15.5, [Wi-Fi captive portals](https://en.wikipedia.org/wiki/Captive_portal) in cafes, hotels, airports are exempted by Apple from eDNS rules; to simplify authentication. This is good news.
+
+Known issues (we can't fix them, Apple can):
 
 - eDNS gets disabled: [Little Snitch & Lulu](https://github.com/paulmillr/encrypted-dns/issues/13), [VPN](https://github.com/paulmillr/encrypted-dns/issues/18)
 - Some traffic is exempt from eDNS: [Terminal / App Store](https://github.com/paulmillr/encrypted-dns/issues/22), [Chrome](https://github.com/paulmillr/encrypted-dns/issues/19)
 
-If you need even more privacy, check out [encrypted-dns over TOR](https://github.com/alecmuffett/dohot).
-
 ## Providers
 
-`Censorship=yes` means the profile will not send true information about `hostname=IP` relation for some hosts.
+`Censorship=yes` (also known as "filtering") means the profile will not send true information about `hostname=IP` relation for some hosts.
 
-| Name                                                 | Region | Censorship | Notes                                                                                                     | Install (Signed - Recommended)                                                                               | Install (unsigned) button                                                                      |
+| Name                                                 | Region | Censorship | Notes                                                                                                     | Install (Signed - Recommended)                                                                               | Install (unsigned)                                                                             |
 | ---------------------------------------------------- | ------ | ---------- | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------- |
 | [360 Security DNS][360-dns]                          | 🇨🇳     | Yes        | Operated by 360 Digital Security Group                                                                    | [HTTPS][360-dns-profile-https-signed]                                                                        | [HTTPS][360-dns-profile-https]                                                                 |
 | [AdGuard DNS Default][adguard-dns-default]           | 🇷🇺     | Yes        | Operated by AdGuard Software Ltd. Blocks ads, tracking & phishing                                         | [HTTPS][adguard-dns-default-profile-https-signed], [TLS][adguard-dns-default-profile-tls-signed]             | [HTTPS][adguard-dns-default-profile-https], [TLS][adguard-dns-default-profile-tls]             |
@@ -27,7 +29,7 @@ If you need even more privacy, check out [encrypted-dns over TOR](https://github
 | [AdGuard DNS Non-filtering][adguard-dns-unfiltered]  | 🇷🇺     | No         | Operated by AdGuard Software Ltd. Non-filtering                                                           | [HTTPS][adguard-dns-unfiltered-profile-https-signed], [TLS][adguard-dns-unfiltered-profile-tls-signed]       | [HTTPS][adguard-dns-unfiltered-profile-https], [TLS][adguard-dns-unfiltered-profile-tls]       |
 | [Alekberg Encrypted DNS][alekberg-dns]               | 🇳🇱     | No         | Independent                                                                                               | [HTTPS][alekberg-dns-profile-https-signed]                                                                   | [HTTPS][alekberg-dns-profile-https]                                                            |
 | [Aliyun Public DNS][aliyun-dns]                      | 🇨🇳     | No         | Operated by Alibaba Cloud Ltd.                                                                            | [HTTPS][aliyun-dns-profile-https-signed], [TLS][aliyun-dns-profile-tls-signed]                               | [HTTPS][aliyun-dns-profile-https], [TLS][aliyun-dns-profile-tls]                               |
-| [Archuser.org PubHole][archuser]                     | 🇺🇸     | Yes        | Independent. Blocks ads, tracking, and supports OpenNIC Domains.                                          | [HTTPS][archuser-https-signed], [TLS][archuser-tls-signed]                                                   | [HTTPS][archuser-https], [TLS][archuser-tls]
+| [Archuser.org PubHole][archuser]                     | 🇺🇸     | Yes        | Independent. Blocks ads, tracking, and supports OpenNIC Domains.                                          | [HTTPS][archuser-https-signed], [TLS][archuser-tls-signed]                                                   | [HTTPS][archuser-https], [TLS][archuser-tls]                                                   |
 | [BlahDNS CDN Filtered][blahdns]                      | 🇺🇸     | Yes        | Independent. Blocks ads, tracking & malware                                                               | [HTTPS][blahdns-cdn-filtered-profile-https-signed]                                                           | [HTTPS][blahdns-cdn-filtered-profile-https]                                                    |
 | [BlahDNS CDN Unfiltered][blahdns]                    | 🇺🇸     | No         | Independent. Non-filtering                                                                                | [HTTPS][blahdns-cdn-unfiltered-profile-https-signed]                                                         | [HTTPS][blahdns-cdn-unfiltered-profile-https]                                                  |
 | [BlahDNS Germany][blahdns]                           | 🇩🇪     | Yes        | Independent. Blocks ads, tracking & malware                                                               | [HTTPS][blahdns-germany-profile-https-signed]                                                                | [HTTPS][blahdns-germany-profile-https]                                                         |
@@ -35,14 +37,14 @@ If you need even more privacy, check out [encrypted-dns over TOR](https://github
 | [Canadian Shield Private][canadian-shield]           | 🇨🇦     | No         | Operated by the Canadian Internet Registration Authority (CIRA)                                           | [HTTPS][canadian-shield-private-profile-https-signed], [TLS][canadian-shield-private-profile-tls-signed]     | [HTTPS][canadian-shield-private-profile-https], [TLS][canadian-shield-private-profile-tls]     |
 | [Canadian Shield Protected][canadian-shield]         | 🇨🇦     | Yes        | Operated by the Canadian Internet Registration Authority (CIRA). Blocks malware & phishing                | [HTTPS][canadian-shield-protected-profile-https-signed], [TLS][canadian-shield-protected-profile-tls-signed] | [HTTPS][canadian-shield-protected-profile-https], [TLS][canadian-shield-protected-profile-tls] |
 | [Canadian Shield Family][canadian-shield]            | 🇨🇦     | Yes        | Operated by the Canadian Internet Registration Authority (CIRA). Blocks malware, phishing & adult content | [HTTPS][canadian-shield-family-profile-https-signed], [TLS][canadian-shield-family-profile-tls-signed]       | [HTTPS][canadian-shield-family-profile-https], [TLS][canadian-shield-family-profile-tls]       |
-| Cleanbrowsing Family Filter   | 🇺🇸      | Yes          | Filters malware & adult, mixed content	   |   [HTTPS](https://github.com/paulmillr/encrypted-dns/raw/master/profiles/cleanbrowsing-family-https.mobileconfig), [TLS](https://github.com/paulmillr/encrypted-dns/raw/master/profiles/cleanbrowsing-family-tls.mobileconfig)                            |
-| Cleanbrowsing Adult Filter   | 🇺🇸      | Yes          | Filters malware & adult content	    |   [HTTPS](https://github.com/paulmillr/encrypted-dns/raw/master/profiles/cleanbrowsing-adult-https.mobileconfig), [TLS](https://github.com/paulmillr/encrypted-dns/raw/master/profiles/cleanbrowsing-adult-tls.mobileconfig)                             |
-| Cleanbrowsing Security Filter   | 🇺🇸      | Yes          | Filters malware	 |   [HTTPS](https://github.com/paulmillr/encrypted-dns/raw/master/profiles/cleanbrowsing-security-https.mobileconfig), [TLS](https://github.com/paulmillr/encrypted-dns/raw/master/profiles/cleanbrowsing-security-tls.mobileconfig)                             |
+| [Cleanbrowsing Family Filter][cleanbrowsing]         | 🇺🇸     | Yes        | Filters malware & adult, mixed content                                                                    | [HTTPS][cleanbrowsing-family-https], [TLS][cleanbrowsing-family-tls]                                         |
+| [Cleanbrowsing Adult Filter][cleanbrowsing]          | 🇺🇸     | Yes        | Filters malware & adult content                                                                           | [HTTPS][cleanbrowsing-adult-https], [TLS][cleanbrowsing-adult-tls]                                           |
+| [Cleanbrowsing Security Filter][cleanbrowsing]       | 🇺🇸     | Yes        | Filters malware                                                                                           | [HTTPS][cleanbrowsing-security-https], [TLS][cleanbrowsing-security-tls]                                     |
 | [Cloudflare 1.1.1.1][cloudflare-dns]                 | 🇺🇸     | No         | Operated by Cloudflare Inc.                                                                               | [HTTPS][cloudflare-dns-profile-https-signed], [TLS][cloudflare-dns-profile-tls-signed]                       | [HTTPS][cloudflare-dns-profile-https], [TLS][cloudflare-dns-profile-tls]                       |
 | [Cloudflare 1.1.1.1 Security][cloudflare-dns-family] | 🇺🇸     | Yes        | Operated by Cloudflare Inc. Blocks malware & phishing                                                     | [HTTPS][cloudflare-dns-security-profile-https-signed]                                                        | [HTTPS][cloudflare-dns-security-profile-https]                                                 |
 | [Cloudflare 1.1.1.1 Family][cloudflare-dns-family]   | 🇺🇸     | Yes        | Operated by Cloudflare Inc. Blocks malware, phishing & adult content                                      | [HTTPS][cloudflare-dns-family-profile-https-signed]                                                          | [HTTPS][cloudflare-dns-family-profile-https]                                                   |
 | [DNSPod Public DNS][dnspod-dns]                      | 🇨🇳     | No         | Operated by DNSPod Inc., a Tencent Cloud Company                                                          | [HTTPS][dnspod-dns-profile-https-signed], [TLS][dnspod-dns-profile-tls-signed]                               | [HTTPS][dnspod-dns-profile-https], [TLS][dnspod-dns-profile-tls]                               |
-| FDN                    | 🇫🇷      | No          | [Operated](https://www.fdn.fr/actions/dns/) by French Data Network                                             | [HTTPS](https://github.com/paulmillr/encrypted-dns/raw/master/profiles/fdn-https.mobileconfig),  [TLS](https://github.com/paulmillr/encrypted-dns/raw/master/profiles/fdn-tls.mobileconfig)                                    |
+| [FDN][fdn-dns]                                       | 🇫🇷     | No         | Operated by French Data Network                                                                           | [HTTPS][fdn-https], [TLS][fdn-tls]                                                                           |
 | [Google Public DNS][google-dns]                      | 🇺🇸     | No         | Operated by Google LLC                                                                                    | [HTTPS][google-dns-profile-https-signed], [TLS][google-dns-profile-tls-signed]                               | [HTTPS][google-dns-profile-https], [TLS][google-dns-profile-tls]                               |
 | [keweonDNS][keweondns]                               | 🇩🇪     | No         | Operated by Aviontex. Blocks ads & tracking                                                               | [HTTPS][keweondns-profile-https-signed], [TLS][keweondns-profile-tls-signed]                                 | [HTTPS][keweondns-profile-https], [TLS][keweondns-profile-tls]                                 |
 | [Mullvad DNS][mullvad-dns]                           | 🇸🇪     | Yes        | Operated by Mullvad VPN AB                                                                                | [HTTPS][mullvad-dns-profile-https-signed]                                                                    | [HTTPS][mullvad-dns-profile-https]                                                             |
@@ -80,13 +82,13 @@ There seems to be an [additional option](https://github.com/paulmillr/encrypted-
 
 ## Signed Profiles
 
-In the `signed` folder we have signed versions of the profiles in this repository. These profiles have been signed by [@Xernium](https://github.com/Xernium) so that when you install the profiles, 
+In the `signed` folder we have signed versions of the profiles in this repository. These profiles have been signed by [@Xernium](https://github.com/Xernium) so that when you install the profiles,
 they will have a verified check box on the installation screen. It also ensures that these profiles have not been tampered with. However, since they were signed by a third party, they may lag behind their unsigned counterparts a little.
 The signature is valid until `2025-11-02`
 
 Previous signatures by:
-[@Xernium](https://github.com/Xernium), replaced at `2024-11-01`   
-   
+[@Xernium](https://github.com/Xernium), replaced at `2024-11-01`
+
 [@Candygoblen123](https://github.com/Candygoblen123), replaced at `2023-11-29`
 
 [comment]: <> (We recommend that you install a signed profile instead of an unsigned profile because it ensures that it was not modified while it was downloading.)
@@ -141,9 +143,6 @@ New-Guid
 [aliyun-dns]: https://www.alidns.com/
 [aliyun-dns-profile-https]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/alibaba-https.mobileconfig
 [aliyun-dns-profile-tls]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/alibaba-tls.mobileconfig
-[archuser]: https://pubhole.archuser.org
-[archuser-https]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/archuser-https.mobileconfig
-[archuser-tls]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/archuser-tls.mobileconfig
 [blahdns]: https://blahdns.com/
 [blahdns-cdn-filtered-profile-https]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/blahdns-cdn-adblock-doh1.mobileconfig
 [blahdns-cdn-unfiltered-profile-https]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/blahdns-cdn-unfiltered-doh1.mobileconfig
@@ -159,6 +158,13 @@ New-Guid
 [canadian-shield-protected-profile-tls]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/canadianshield-protected-tls.mobileconfig
 [canadian-shield-family-profile-https]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/canadianshield-family-https.mobileconfig
 [canadian-shield-family-profile-tls]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/canadianshield-family-tls.mobileconfig
+[cleanbrowsing]: https://cleanbrowsing.org/filters/
+[cleanbrowsing-adult-https]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/cleanbrowsing-adult-https.mobileconfig
+[cleanbrowsing-adult-tls]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/cleanbrowsing-adult-tls.mobileconfig
+[cleanbrowsing-family-https]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/cleanbrowsing-family-https.mobileconfig
+[cleanbrowsing-family-tls]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/cleanbrowsing-family-tls.mobileconfig
+[cleanbrowsing-security-https]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/cleanbrowsing-security-https.mobileconfig
+[cleanbrowsing-security-tls]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/cleanbrowsing-security-tls.mobileconfig
 [cloudflare-dns]: https://developers.cloudflare.com/1.1.1.1/encryption/
 [cloudflare-dns-profile-https]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/cloudflare-https.mobileconfig
 [cloudflare-dns-profile-tls]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/cloudflare-tls.mobileconfig
@@ -168,6 +174,9 @@ New-Guid
 [dnspod-dns]: https://www.dnspod.com/products/public.dns
 [dnspod-dns-profile-https]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/dnspod-https.mobileconfig
 [dnspod-dns-profile-tls]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/dnspod-tls.mobileconfig
+[fdn-dns]: https://www.fdn.fr/actions/dns/
+[fdn-https]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/fdn-https.mobileconfig
+[fdn-tls]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/fdn-tls.mobileconfig)
 [google-dns]: https://developers.google.com/speed/public-dns/docs/secure-transports
 [google-dns-profile-https]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/google-https.mobileconfig
 [google-dns-profile-tls]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/google-tls.mobileconfig
