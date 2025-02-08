@@ -6,16 +6,13 @@ Configuration profiles for [DNS over HTTPS](https://en.wikipedia.org/wiki/DNS_ov
 
 ### Caveats
 
-If you need even more privacy, check out [encrypted-dns over TOR](https://github.com/alecmuffett/dohot).
-
-DoH seems to work faster & better than DoT judging from the [Google's article](https://security.googleblog.com/2022/07/dns-over-http3-in-android.html). Also DoH has less chance of being blocked, since it uses standard 443 port and not 853.
-
-Starting from iOS & iPadOS 15.5, [Wi-Fi captive portals](https://en.wikipedia.org/wiki/Captive_portal) in cafes, hotels, airports are exempted by Apple from eDNS rules; to simplify authentication. This is good news.
-
-Known issues (we can't fix them, Apple can):
+Check out [encrypted-dns over TOR](https://github.com/alecmuffett/dohot) if you need more privacy. Known issues (we can't fix them, maybe Apple can):
 
 - eDNS gets disabled: [Little Snitch & Lulu](https://github.com/paulmillr/encrypted-dns/issues/13), [VPN](https://github.com/paulmillr/encrypted-dns/issues/18)
 - Some traffic is exempt from eDNS: [Terminal / App Store](https://github.com/paulmillr/encrypted-dns/issues/22), [Chrome](https://github.com/paulmillr/encrypted-dns/issues/19)
+- Starting from iOS & iPadOS 15.5, [Wi-Fi captive portals](https://en.wikipedia.org/wiki/Captive_portal) in cafes, hotels, airports are exempted by Apple from eDNS rules; to simplify authentication. This is good news.
+- TLS DNS is blocked more often by ISPs than HTTPS, because TLS uses non-standard port 853, which is easy to filter out.
+  See [Google's article](https://security.googleblog.com/2022/07/dns-over-http3-in-android.html)
 
 ## Providers
 
