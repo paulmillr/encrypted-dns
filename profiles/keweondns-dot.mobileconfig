@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>DNSSettings</key>
+			<dict>
+				<key>DNSProtocol</key>
+				<string>TLS</string>
+				<key>ServerName</key>
+				<string>dns.keweon.center</string>
+			</dict>
+			<key>OnDemandRules</key>
+			<array>
+				<dict>
+					<key>Action</key>
+					<string>Connect</string>
+					<key>InterfaceTypeMatch</key>
+					<string>WiFi</string>
+				</dict>
+				<dict>
+					<key>Action</key>
+					<string>Connect</string>
+					<key>InterfaceTypeMatch</key>
+					<string>Cellular</string>
+				</dict>
+				<dict>
+					<key>Action</key>
+					<string>Disconnect</string>
+				</dict>
+			</array>
+			<key>PayloadDescription</key>
+			<string>Configures device to use keweonDNS physical DNS Server to encrypt DNS over TLS</string>
+			<key>PayloadDisplayName</key>
+			<string>keweonDNS (DoT)</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.dnsSettings.managed.50cac8a0-da47-4e0c-bb45-a0250a799dd1</string>
+			<key>PayloadType</key>
+			<string>com.apple.dnsSettings.managed</string>
+			<key>PayloadUUID</key>
+			<string>50cac8a0-da47-4e0c-bb45-a0250a799dd1</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProhibitDisablement</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Adds keweonDNS encrypted DNS configurations to Apple based systems</string>
+	<key>PayloadDisplayName</key>
+	<string>keweonDNS (DoT)</string>
+	<key>PayloadIdentifier</key>
+	<string>center.keweo.apple-dns.616cf439-7a72-4e15-883c-c08569a96560</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>B0E8A932-459A-4C05-B433-B45CE0195E5A</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>
