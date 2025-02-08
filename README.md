@@ -173,7 +173,7 @@ New-Guid
 [dnspod-dns-profile-tls]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/dnspod-tls.mobileconfig
 [fdn-dns]: https://www.fdn.fr/actions/dns/
 [fdn-https]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/fdn-https.mobileconfig
-[fdn-tls]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/fdn-tls.mobileconfig)
+[fdn-tls]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/fdn-tls.mobileconfig
 [google-dns]: https://developers.google.com/speed/public-dns/docs/secure-transports
 [google-dns-profile-https]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/google-https.mobileconfig
 [google-dns-profile-tls]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/google-tls.mobileconfig
