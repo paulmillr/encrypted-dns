@@ -90,6 +90,10 @@ Previous signatures by:
 
 To verify resolver IPs and hostnames, compare mobileconfig files to their documentation URLs. Internal workings of the profiles are described on [developer.apple.com](https://developer.apple.com/documentation/devicemanagement/dnssettings). In order to verify signed mobileconfigs, you will need to download them to your computer and open them in a text editor, because signing profiles makes GitHub think that they are binary files.
 
+## On demand activation
+
+You can optionally exclude some trusted Wi-Fi networks where you don't want to use encrypted DNS. To do so, add your SSIDs in the [OnDemandRules](https://github.com/paulmillr/encrypted-dns/blob/master/profiles/template-on-demand.mobileconfig#L22-L38) section inside the `PayloadContent` dictionary of a profile. Note: you can't edit signed profiles.
+
 ## Contributing a new profile
 
 Profiles are basically text files. Copy an existing one and change its UUID, make sure you update README with new profile's info.
