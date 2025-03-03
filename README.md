@@ -49,6 +49,7 @@ Check out [encrypted-dns over TOR](https://github.com/alecmuffett/dohot) if you 
 | [OpenDNS FamilyShield][opendns]                      | 🇺🇸     | Yes        | Operated by Cisco OpenDNS LLC. Blocks malware & adult content                                             | [HTTPS][opendns-familyshield-profile-https-signed]                                                           | [HTTPS][opendns-familyshield-profile-https]                                                    |
 | [Quad9][quad9]                                       | 🇨🇭     | Yes        | Operated by Quad9 Foundation. Blocks malware                                                              | [HTTPS][quad9-profile-https-signed], [TLS][quad9-profile-tls-signed]                                         | [HTTPS][quad9-profile-https], [TLS][quad9-profile-tls]                                         |
 | [Quad9 w/ ECS][quad9]                                | 🇨🇭     | Yes        | Operated by Quad9 Foundation. Supports ECS. Blocks malware                                                | [HTTPS][quad9-ecs-profile-https-signed], [TLS][quad9-ecs-profile-tls-signed]                                 | [HTTPS][quad9-ecs-profile-https], [TLS][quad9-ecs-profile-tls]                                 |
+| [Quad9 Unfiltered][quad9]                            | 🇨🇭     | No         | Operated by Quad9 Foundation.                                                                             |                                                                                                              | [HTTPS][quad9-profile-unfiltered-https], [TLS][quad9-profile-unfiltered-tls]                   |
 | [Tiarap][tiarap]                                     | 🇸🇬 🇺🇸  | Yes        | Operated by Tiarap Inc. Blocks ads, tracking, phising & malware                                           | [HTTPS][tiarap-profile-https-signed], [TLS][tiarap-profile-tls-signed]                                       | [HTTPS][tiarap-profile-https], [TLS][tiarap-profile-tls]                                       |
 
 ## Installation
@@ -188,6 +189,8 @@ New-Guid
 [quad9]: https://www.quad9.net/news/blog/doh-with-quad9-dns-servers/
 [quad9-profile-https]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/quad9-https.mobileconfig
 [quad9-profile-tls]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/quad9-tls.mobileconfig
+[quad9-profile-unfiltered-https]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/quad9-nofilter-https.mobileconfig
+[quad9-profile-unfiltered-tls]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/quad9-nofilter-tls.mobileconfig
 [quad9-ecs-profile-https]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/quad9-ECS-https.mobileconfig
 [quad9-ecs-profile-tls]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/quad9-ECS-tls.mobileconfig
 [tiarap]: https://doh.tiar.app
