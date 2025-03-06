@@ -1,0 +1,52 @@
+{
+    "id": "aliyun-dns",
+    "profile": "aliyun-dns-profile",
+    "name": "alibaba",
+    "website": "https://www.alidns.com/",
+    "region": "CN",
+    "censorship": false,
+    "names": {
+        "en": "Aliyun Public DNS",
+        "cmn-CN": "阿里云公共 DNS",
+        "cmn-TW": "阿里雲公共 DNS"
+    },
+    "notes": {
+        "en": "Operated by Alibaba Cloud Ltd.",
+        "cmn-CN": "由阿里云计算运营",
+        "cmn-TW": "由阿里雲計算營運"
+    },
+    "https": {
+        "name": "AliDNS Encrypted DNS over TLS",
+        "fullName": "AliDNS",
+        "topName": "AliDNS over HTTPS",
+        "PayloadDisplayName": "AliDNS DNS over HTTPS",
+        "DNSProtocol": "HTTPS",
+        "ServerURLOrName": "https://dns.alidns.com/dns-query",
+        "ServerAddresses": [
+            "2400:3200::1",
+            "2400:3200:baba::1",
+            "223.5.5.5",
+            "223.6.6.6"
+        ],
+        "PayloadIdentifier": "com.apple.dnsSettings.managed.9d6e5fdf-e404-4f34-ae94-27ed2f636ac4",
+        "PayloadUUID": "35d5c8a0-afa6-4b36-a9fe-099a997b44ad",
+        "TopPayloadUUID": "A4475135-633A-4F15-A79B-BE15093DC97A"
+    },
+    "tls": {
+        "name": "AliDNS Encrypted DNS over TLS",
+        "fullName": "AliDNS",
+        "topName": "AliDNS over TLS",
+        "PayloadDisplayName": "AliDNS DNS over TLS",
+        "DNSProtocol": "TLS",
+        "ServerURLOrName": "dns.alidns.com",
+        "ServerAddresses": [
+            "2400:3200::1",
+            "2400:3200:baba::1",
+            "223.5.5.5",
+            "223.6.6.6"
+        ],
+        "PayloadIdentifier": "com.apple.dnsSettings.managed.9d6e5fdf-e404-4f34-ae94-27ed2f636ac4",
+        "PayloadUUID": "35d5c8a0-afa6-4b36-a9fe-099a997b44ad",
+        "TopPayloadUUID": "6C7F342C-930C-49D7-8FFF-750F38CE39DD"
+    }
+}

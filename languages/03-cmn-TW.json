@@ -1,0 +1,15 @@
+{
+  "code": "cmn-TW",
+  "name": "繁體中文",
+  "emojiLength": 1,
+  "table_columns": {
+    "name": "名稱",
+    "region": "區域",
+    "censorship": "審查",
+    "notes": "備註",
+    "install_signed": "安裝連結",
+    "install_unsigned": ""
+  },
+  "yes": "是",
+  "no": "否"
+}

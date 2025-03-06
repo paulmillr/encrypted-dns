@@ -1,0 +1,52 @@
+{
+    "id": "cloudflare-dns",
+    "profile": "cloudflare-dns-profile",
+    "website": "https://developers.cloudflare.com/1.1.1.1/encryption/",
+    "name": "cloudflare",
+    "region": "US",
+    "censorship": false,
+    "names": {
+        "en": "Cloudflare 1.1.1.1",
+        "cmn-CN": "Cloudflare 1.1.1.1",
+        "cmn-TW": "Cloudflare 1.1.1.1"
+    },
+    "notes": {
+        "en": "Operated by Cloudflare Inc.",
+        "cmn-CN": "由 Cloudflare 公司运营",
+        "cmn-TW": "由 Cloudflare 公司營運"
+    },
+    "https": {
+        "name": "Cloudflare Encrypted DNS over HTTPS",
+        "fullName": "Cloudflare DNS",
+        "topName": "Cloudflare DNS over HTTPS",
+        "PayloadDisplayName": "Cloudflare DNS over HTTPS",
+        "DNSProtocol": "HTTPS",
+        "ServerURLOrName": "https://cloudflare-dns.com/dns-query",
+        "ServerAddresses": [
+            "2606:4700:4700::1111",
+            "2606:4700:4700::1001",
+            "1.1.1.1",
+            "1.0.0.1"
+        ],
+        "PayloadIdentifier": "com.apple.dnsSettings.managed.9d6e5fdf-e404-4f34-ae94-27ed2f636ac4",
+        "PayloadUUID": "35d5c8a0-afa6-4b36-a9fe-099a997b44ad",
+        "TopPayloadUUID": "A4475135-633A-4F15-A79B-BE15093DC97A"
+    },
+    "tls": {
+        "name": "Cloudflare Encrypted DNS over TLS",
+        "fullName": "Cloudflare DNS",
+        "topName": "Cloudflare DNS over TLS",
+        "PayloadDisplayName": "Cloudflare DNS over TLS",
+        "DNSProtocol": "TLS",
+        "ServerURLOrName": "one.one.one.one",
+        "ServerAddresses": [
+            "2606:4700:4700::1111",
+            "2606:4700:4700::1001",
+            "1.1.1.1",
+            "1.0.0.1"
+        ],
+        "PayloadIdentifier": "com.apple.dnsSettings.managed.9d6e5fdf-e404-4f34-ae94-27ed2f636ac4",
+        "PayloadUUID": "35d5c8a0-afa6-4b36-a9fe-099a997b44ad",
+        "TopPayloadUUID": "32E01895-86AB-40AE-ACD2-4460D584EA35"
+    }
+}

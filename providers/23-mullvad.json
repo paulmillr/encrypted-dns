@@ -1,0 +1,34 @@
+{
+    "id": "mullvad-dns",
+    "profile": "mullvad-dns-profile",
+    "name": "mullvad",
+    "website": "https://mullvad.net/help/dns-over-https-and-dns-over-tls/",
+    "doh": true,
+    "region": "SE",
+    "censorship": true,
+    "names": {
+        "en": "Mullvad DNS",
+        "cmn-CN": "Mullvad DNS",
+        "cmn-TW": "Mullvad DNS"
+    },
+    "notes": {
+        "en": "Operated by Mullvad VPN AB",
+        "cmn-CN": "由 Mullvad VPN AB 运营",
+        "cmn-TW": "由 Mullvad VPN AB 營運"
+    },
+    "https": {
+        "name": "Mullvad DNS over HTTPS",
+        "fullName": "Mullvad DNS",
+        "topName": "Mullvad DNS over HTTPS",
+        "PayloadDisplayName": "Mullvad DNS over HTTPS",
+        "DNSProtocol": "HTTPS",
+        "ServerURLOrName": "https://doh.mullvad.net/dns-query",
+        "ServerAddresses": [
+            "2a07:e340::2",
+            "194.242.2.2"
+        ],
+        "PayloadIdentifier": "com.apple.dnsSettings.managed.C846E5BF-D246-45FB-A9E2-A9B30A153A8B",
+        "PayloadUUID": "C846E5BF-D246-45FB-A9E2-A9B30A153A8B",
+        "TopPayloadUUID": "13001589-3D36-4CC9-B16B-622C8E744FF4"
+    }
+}

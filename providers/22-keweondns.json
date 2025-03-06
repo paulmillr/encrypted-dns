@@ -1,0 +1,18 @@
+{
+    "id": "keweondns",
+    "profile": "keweondns-profile",
+    "website": "https://forum.xda-developers.com/t/keweondns-info-facts-and-what-is-keweon-actually.4576651/",
+    "doh": true,
+    "region": "DE",
+    "censorship": false,
+    "names": {
+        "en": "keweonDNS",
+        "cmn-CN": "keweonDNS",
+        "cmn-TW": "keweonDNS"
+    },
+    "notes": {
+        "en": "Operated by Aviontex. Blocks ads & tracking",
+        "cmn-CN": "由 Aviontex 运营，拦截广告和跟踪器",
+        "cmn-TW": "由 Aviontex 營運，阻擋廣告和追蹤器"
+    }
+}

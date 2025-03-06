@@ -1,0 +1,51 @@
+{
+    "id": "cleanbrowsing",
+    "profile": "cleanbrowsing-adult",
+    "name": "cleanbrowsing-adult",
+    "region": "US",
+    "censorship": true,
+    "names": {
+        "en": "Cleanbrowsing Adult Filter",
+        "cmn-CN": "Cleanbrowsing 成人过滤器",
+        "cmn-TW": "Cleanbrowsing 成人過濾器"
+    },
+    "notes": {
+        "en": "Filters malware & adult content",
+        "cmn-CN": "过滤恶意软件和成人内容",
+        "cmn-TW": "過濾惡意軟體和成人內容"
+    },
+    "https": {
+        "name": "Cleanbrowsing Adult Filter Encrypted DNS over HTTPS",
+        "fullName": "Cleanbrowsing Adult Filter DNS over HTTPS",
+        "topName": "Cleanbrowsing Adult DNS over HTTPS",
+        "PayloadDisplayName": "Cleanbrowsing Adult Filter DNS over HTTPS",
+        "DNSProtocol": "HTTPS",
+        "ServerURLOrName": "https://doh.cleanbrowsing.org/doh/adult-filter/",
+        "ServerAddresses": [
+            "2a0d:2a00:1::1",
+            "2a0d:2a00:2::1",
+            "185.228.169.10",
+            "185.228.168.10"
+        ],
+        "PayloadIdentifier": "com.apple.dnsSettings.managed.9d6e5fdf-e404-4f34-ae94-27ed2f636ac4",
+        "PayloadUUID": "35d5c8a0-afa6-4b36-a9fe-099a997b44ad",
+        "TopPayloadUUID": "5B083B6A-F07D-4B98-AF3B-EAF9F89CAE49"
+    },
+    "tls": {
+        "name": "Cleanbrowsing Adult Filter Encrypted DNS over TLS",
+        "fullName": "Cleanbrowsing Adult Filter DNS over TLS",
+        "topName": "Cleanbrowsing Adult DNS over TLS",
+        "PayloadDisplayName": "Cleanbrowsing Adult Filter DNS over TLS",
+        "DNSProtocol": "TLS",
+        "ServerURLOrName": "adult-filter-dns.cleanbrowsing.org",
+        "ServerAddresses": [
+            "2a0d:2a00:1::1",
+            "2a0d:2a00:2::1",
+            "185.228.169.10",
+            "185.228.168.10"
+        ],
+        "PayloadIdentifier": "com.apple.dnsSettings.managed.9d6e5fdf-e404-4f34-ae94-27ed2f636ac4",
+        "PayloadUUID": "35d5c8a0-afa6-4b36-a9fe-099a997b44ad",
+        "TopPayloadUUID": "7AE40871-B9FA-4215-9AB5-E7A17505C154"
+    }
+}

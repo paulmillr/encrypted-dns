@@ -1,0 +1,18 @@
+{
+    "id": "blahdns",
+    "profile": "blahdns-germany-profile",
+    "name": "blahdns-germany",
+    "region": "DE",
+    "censorship": true,
+    "doh": true,
+    "names": {
+        "en": "BlahDNS Germany",
+        "cmn-CN": "BlahDNS 德国",
+        "cmn-TW": "BlahDNS 德國"
+    },
+    "notes": {
+        "en": "Independent. Blocks ads, tracking & malware",
+        "cmn-CN": "由个人提供，拦截广告、跟踪器和恶意软件",
+        "cmn-TW": "由個人提供，阻擋廣告、追蹤器和惡意軟體"
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "id": "quad9",
+    "profile": "quad9-profile",
+    "website": "https://www.quad9.net/news/blog/doh-with-quad9-dns-servers/",
+    "region": "CH",
+    "censorship": true,
+    "names": {
+        "en": "Quad9",
+        "cmn-CN": "Quad9",
+        "cmn-TW": "Quad9"
+    },
+    "notes": {
+        "en": "Operated by Quad9 Foundation. Blocks malware",
+        "cmn-CN": "由 Quad9 基金会运营，拦截恶意软件",
+        "cmn-TW": "由 Quad9 基金會營運，阻擋惡意軟體"
+    },
+    "https": {
+        "name": "Quad9 Encrypted DNS over HTTPS",
+        "fullName": "Quad9 DNS",
+        "topName": "Quad9 Encrypted DNS over HTTPS",
+        "PayloadDisplayName": "Quad9 DNS over HTTPS",
+        "DNSProtocol": "HTTPS",
+        "ServerURLOrName": "https://dns.quad9.net/dns-query",
+        "ServerAddresses": [
+            "2620:fe::fe",
+            "2620:fe::9",
+            "9.9.9.9",
+            "149.112.112.112"
+        ],
+        "PayloadIdentifier": "com.apple.dnsSettings.managed.1a93b54b-8541-4536-8302-c08159ca9184",
+        "PayloadUUID": "ffee2c6b-9cff-4c2a-892c-e03788bcbd64",
+        "TopPayloadUUID": "088A5DC0-0E1F-4699-A56D-A709078D7603"
+    },
+    "tls": {
+        "name": "Quad9 Encrypted DNS over HTTPS",
+        "fullName": "Quad9 DNS",
+        "topName": "Quad9 Encrypted DNS over TLS",
+        "PayloadDisplayName": "Quad9 DNS over TLS",
+        "DNSProtocol": "TLS",
+        "ServerURLOrName": "dns.quad9.net",
+        "ServerAddresses": [
+            "2620:fe::fe",
+            "2620:fe::9",
+            "9.9.9.9",
+            "149.112.112.112"
+        ],
+        "PayloadIdentifier": "com.apple.dnsSettings.managed.1a93b54b-8541-4536-8302-c08159ca9184",
+        "PayloadUUID": "ffee2c6b-9cff-4c2a-892c-e03788bcbd64",
+        "TopPayloadUUID": "36F1938F-2141-4EF1-BA24-05D12CEF440B"
+    }
+}

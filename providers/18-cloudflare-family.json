@@ -1,0 +1,35 @@
+{
+    "id": "cloudflare-dns-family",
+    "profile": "cloudflare-dns-family-profile",
+    "name": "cloudflare-family",
+    "website": "https://developers.cloudflare.com/1.1.1.1/setup/#1111-for-families",
+    "region": "US",
+    "censorship": true,
+    "names": {
+        "en": "Cloudflare 1.1.1.1 Family",
+        "cmn-CN": "Cloudflare 1.1.1.1 家庭",
+        "cmn-TW": "Cloudflare 1.1.1.1 家庭"
+    },
+    "notes": {
+        "en": "Operated by Cloudflare Inc. Blocks malware, phishing & adult content",
+        "cmn-CN": "由 Cloudflare 公司运营，拦截恶意软件、钓鱼和成人内容",
+        "cmn-TW": "由 Cloudflare 公司營運，阻擋惡意軟體、釣魚和成人內容"
+    },
+    "https": {
+        "name": "Cloudflare Family Encrypted DNS over HTTPS",
+        "fullName": "Cloudflare DNS",
+        "topName": "Cloudflare Family DNS over HTTPS",
+        "PayloadDisplayName": "Cloudflare Family DNS over HTTPS",
+        "DNSProtocol": "HTTPS",
+        "ServerURLOrName": "https://family.cloudflare-dns.com/dns-query",
+        "ServerAddresses": [
+            "2606:4700:4700::1113",
+            "2606:4700:4700::1003",
+            "1.1.1.3",
+            "1.0.0.3"
+        ],
+        "PayloadIdentifier": "com.apple.dnsSettings.managed.9d6e5fdf-e404-4f34-ae94-27ed2f636ac4",
+        "PayloadUUID": "35d5c8a0-afa6-4b36-a9fe-099a997b44ad",
+        "TopPayloadUUID": "A4475135-633A-4F15-A79B-BE15093DC97A"
+    }
+}

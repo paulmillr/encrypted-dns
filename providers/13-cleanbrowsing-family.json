@@ -1,0 +1,52 @@
+{
+    "id": "cleanbrowsing",
+    "profile": "cleanbrowsing-family",
+    "name": "cleanbrowsing-family",
+    "website": "https://cleanbrowsing.org/filters/",
+    "region": "US",
+    "censorship": true,
+    "names": {
+        "en": "Cleanbrowsing Family Filter",
+        "cmn-CN": "Cleanbrowsing 家庭过滤器",
+        "cmn-TW": "Cleanbrowsing 家庭過濾器"
+    },
+    "notes": {
+        "en": "Filters malware & adult, mixed content",
+        "cmn-CN": "过滤恶意软件、成人内容和混合内容",
+        "cmn-TW": "過濾惡意軟體、成人內容和混合內容"
+    },
+    "https": {
+        "name": "Cleanbrowsing Family Filter Encrypted DNS over HTTPS",
+        "fullName": "Cleanbrowsing Family Filter DNS over HTTPS",
+        "topName": "Cleanbrowsing Family DNS over HTTPS",
+        "PayloadDisplayName": "Cleanbrowsing Family Filter DNS over HTTPS",
+        "DNSProtocol": "HTTPS",
+        "ServerURLOrName": "https://doh.cleanbrowsing.org/doh/family-filter/",
+        "ServerAddresses": [
+            "2a0d:2a00:1::",
+            "2a0d:2a00:1::",
+            "185.228.169.168",
+            "185.228.168.168"
+        ],
+        "PayloadIdentifier": "com.apple.dnsSettings.managed.9d6e5fdf-e404-4f34-ae94-27ed2f636ac4",
+        "PayloadUUID": "35d5c8a0-afa6-4b36-a9fe-099a997b44ad",
+        "TopPayloadUUID": "3E5C292F-D880-4F69-BB49-2A4AA20BDADA"
+    },
+    "tls": {
+        "name": "Cleanbrowsing Family Filter Encrypted DNS over TLS",
+        "fullName": "Cleanbrowsing Family Filter DNS  over TLS",
+        "topName": "Cleanbrowsing Family DNS over TLS",
+        "PayloadDisplayName": "Cleanbrowsing Family Filter DNS over TLS",
+        "DNSProtocol": "TLS",
+        "ServerURLOrName": "family-filter-dns.cleanbrowsing.org",
+        "ServerAddresses": [
+            "2a0d:2a00:1::",
+            "2a0d:2a00:1::",
+            "185.228.169.168",
+            "185.228.168.168"
+        ],
+        "PayloadIdentifier": "com.apple.dnsSettings.managed.9d6e5fdf-e404-4f34-ae94-27ed2f636ac4",
+        "PayloadUUID": "35d5c8a0-afa6-4b36-a9fe-099a997b44ad",
+        "TopPayloadUUID": "92BC38A9-5D7F-4F5B-BEE1-08F3BE17CED0"
+    }
+}

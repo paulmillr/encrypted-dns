@@ -1,0 +1,51 @@
+{
+    "id": "cleanbrowsing",
+    "profile": "cleanbrowsing-security",
+    "name": "cleanbrowsing-security",
+    "region": "US",
+    "censorship": true,
+    "names": {
+        "en": "Cleanbrowsing Security Filter",
+        "cmn-CN": "Cleanbrowsing 安全过滤器",
+        "cmn-TW": "Cleanbrowsing 安全過濾器"
+    },
+    "notes": {
+        "en": "Filters malware",
+        "cmn-CN": "过滤恶意软件",
+        "cmn-TW": "過濾惡意軟體"
+    },
+    "https": {
+        "name": "Cleanbrowsing Security Filter Encrypted DNS over HTTPS",
+        "fullName": "Cleanbrowsing Security Filter DNS  over HTTPS",
+        "topName": "Cleanbrowsing Security DNS over HTTPS",
+        "PayloadDisplayName": "Cleanbrowsing Security Filter DNS over HTTPS",
+        "DNSProtocol": "HTTPS",
+        "ServerURLOrName": "https://doh.cleanbrowsing.org/doh/security-filter/",
+        "ServerAddresses": [
+            "2a0d:2a00:1::2",
+            "2a0d:2a00:2::2",
+            "185.228.168.9",
+            "185.228.169.9"
+        ],
+        "PayloadIdentifier": "com.apple.dnsSettings.managed.9d6e5fdf-e404-4f34-ae94-27ed2f636ac4",
+        "PayloadUUID": "35d5c8a0-afa6-4b36-a9fe-099a997b44ad",
+        "TopPayloadUUID": "30A6F82B-5A75-40BB-B45E-04170CFEF7D3"
+    },
+    "tls": {
+        "name": "Cleanbrowsing Security Filter Encrypted DNS over TLS",
+        "fullName": "Cleanbrowsing Security Filter DNS over TLS",
+        "topName": "Cleanbrowsing Security DNS over TLS",
+        "PayloadDisplayName": "Cleanbrowsing Security Filter DNS over TLS",
+        "DNSProtocol": "TLS",
+        "ServerURLOrName": "security-filter-dns.cleanbrowsing.org",
+        "ServerAddresses": [
+            "2a0d:2a00:1::2",
+            "2a0d:2a00:2::2",
+            "185.228.168.9",
+            "185.228.169.9"
+        ],
+        "PayloadIdentifier": "com.apple.dnsSettings.managed.9d6e5fdf-e404-4f34-ae94-27ed2f636ac4",
+        "PayloadUUID": "35d5c8a0-afa6-4b36-a9fe-099a997b44ad",
+        "TopPayloadUUID": "E0B418C8-CBD7-4E7C-A176-3AC4BB62907F"
+    }
+}

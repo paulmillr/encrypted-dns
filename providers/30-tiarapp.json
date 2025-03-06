@@ -1,0 +1,21 @@
+{
+    "id": "tiarap",
+    "profile": "tiarap-profile",
+    "website": "https://doh.tiar.app",
+    "name": "tiarapp",
+    "region": [
+        "SG",
+        "US"
+    ],
+    "censorship": true,
+    "names": {
+        "en": "Tiarap",
+        "cmn-CN": "Tiarap",
+        "cmn-TW": "Tiarap"
+    },
+    "notes": {
+        "en": "Operated by Tiarap Inc. Blocks ads, tracking, phising & malware",
+        "cmn-CN": "由 Tiarap 公司运营，拦截广告、跟踪器、钓鱼和恶意软件",
+        "cmn-TW": "由 Tiarap 公司營運，阻擋廣告、追蹤器、釣魚和惡意軟體"
+    }
+}

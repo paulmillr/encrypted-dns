@@ -1,0 +1,52 @@
+{
+    "id": "google-dns",
+    "profile": "google-dns-profile",
+    "name": "google",
+    "website": "https://developers.google.com/speed/public-dns/docs/secure-transports",
+    "region": "US",
+    "censorship": false,
+    "names": {
+        "en": "Google Public DNS",
+        "cmn-CN": "Google 公共 DNS",
+        "cmn-TW": "Google 公共 DNS"
+    },
+    "notes": {
+        "en": "Operated by Google LLC",
+        "cmn-CN": "由谷歌公司运营",
+        "cmn-TW": "由谷歌公司營運"
+    },
+    "https": {
+        "name": "Google Encrypted DNS over HTTPS",
+        "fullName": "Google DNS",
+        "topName": "Google Encrypted DNS over HTTPS",
+        "PayloadDisplayName": "Google DNS over HTTPS",
+        "DNSProtocol": "HTTPS",
+        "ServerURLOrName": "https://dns.google/dns-query",
+        "ServerAddresses": [
+            "2001:4860:4860::8888",
+            "2001:4860:4860::8844",
+            "8.8.8.8",
+            "8.8.4.4"
+        ],
+        "PayloadIdentifier": "com.apple.dnsSettings.managed.f0ffd552-7183-4f2e-86e5-ee1ecad2a53a",
+        "PayloadUUID": "556aa9a6-04bb-4144-9a1b-e1b20cda3b46",
+        "TopPayloadUUID": "B27E8E10-697D-4938-8745-7FFEEEED57A0"
+    },
+    "tls": {
+        "name": "Google Encrypted DNS over TLS",
+        "fullName": "Google DNS",
+        "topName": "Google Encrypted DNS over TLS",
+        "PayloadDisplayName": "Google DNS over TLS",
+        "DNSProtocol": "TLS",
+        "ServerURLOrName": "dns.google",
+        "ServerAddresses": [
+            "2001:4860:4860::8888",
+            "2001:4860:4860::8844",
+            "8.8.8.8",
+            "8.8.4.4"
+        ],
+        "PayloadIdentifier": "com.apple.dnsSettings.managed.f0ffd552-7183-4f2e-86e5-ee1ecad2a53a",
+        "PayloadUUID": "556aa9a6-04bb-4144-9a1b-e1b20cda3b46",
+        "TopPayloadUUID": "34D8FE96-E803-4E50-A1E7-94367ABBEAB8"
+    }
+}

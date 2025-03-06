@@ -1,0 +1,18 @@
+{
+    "id": "alekberg-dns",
+    "profile": "alekberg-dns-profile",
+    "name": "alekberg",
+    "website": "https://alekberg.net",
+    "region": "NL",
+    "censorship": false,
+    "names": {
+        "en": "Alekberg Encrypted DNS",
+        "cmn-CN": "Alekberg 加密 DNS",
+        "cmn-TW": "Alekberg 加密 DNS"
+    },
+    "notes": {
+        "en": "Independent",
+        "cmn-CN": "由个人提供",
+        "cmn-TW": "由個人提供"
+    }
+}

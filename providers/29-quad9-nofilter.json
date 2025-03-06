@@ -1,0 +1,51 @@
+{
+    "id": "quad9",
+    "profile": "quad9-profile-unfiltered",
+    "name": "quad9-nofilter",
+    "region": "CH",
+    "censorship": false,
+    "names": {
+        "en": "Quad9 Unfiltered",
+        "cmn-CN": "Quad9 无过滤",
+        "cmn-TW": "Quad9 無過濾"
+    },
+    "notes": {
+        "en": "Operated by Quad9 Foundation.",
+        "cmn-CN": "由 Quad9 基金会运营",
+        "cmn-TW": "由 Quad9 基金會營運"
+    },
+    "https": {
+        "name": "Quad9 No Filter Encrypted DNS over HTTPS",
+        "fullName": "Quad9 No Filter DNS",
+        "topName": "Quad9 No Filter Encrypted DNS over HTTPS",
+        "PayloadDisplayName": "Quad9 No Filter DNS over HTTPS",
+        "DNSProtocol": "HTTPS",
+        "ServerURLOrName": "https://dns10.quad9.net/dns-query",
+        "ServerAddresses": [
+            "2620:fe::10",
+            "2620:fe::fe:10",
+            "9.9.9.10",
+            "149.112.112.10"
+        ],
+        "PayloadIdentifier": "com.apple.dnsSettings.managed.1a93b54b-8541-4536-8302-c08159ca9184",
+        "PayloadUUID": "5b67762c-3a11-47fd-ad22-1b7810cacfc1",
+        "TopPayloadUUID": "79AE8914-AC0B-4EF9-9AA4-392584F35278"
+    },
+    "tls": {
+        "name": "Quad9 No Filter Encrypted DNS over HTTPS",
+        "fullName": "Quad9 No Filter DNS",
+        "topName": "Quad9 No Filter Encrypted DNS over TLS",
+        "PayloadDisplayName": "Quad9 No Filter DNS over TLS",
+        "DNSProtocol": "TLS",
+        "ServerURLOrName": "dns10.quad9.net",
+        "ServerAddresses": [
+            "2620:fe::10",
+            "2620:fe::fe:10",
+            "9.9.9.10",
+            "149.112.112.10"
+        ],
+        "PayloadIdentifier": "com.apple.dnsSettings.managed.1a93b54b-8541-4536-8302-c08159ca9184",
+        "PayloadUUID": "4d269f08-712f-4fd3-8c5e-273443747d0e\"",
+        "TopPayloadUUID": "64289639-1FFE-484F-8133-E3350992F2CA"
+    }
+}
