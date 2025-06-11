@@ -19,6 +19,7 @@ const REGIONS = {
   FR: '🇫🇷',
   CH: '🇨🇭',
   SE: '🇸🇪',
+  EU: '🇪🇺',
 };
 
 const providerFile = (p, https, signed) => {

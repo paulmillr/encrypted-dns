@@ -1,0 +1,51 @@
+{
+    "id": "dns4eu-protective-ads",
+    "profile": "dns4eu-profile-protective-ads",
+    "website": "https://www.joindns4.eu/for-public",
+    "region": "EU",
+    "censorship": true,
+    "names": {
+        "en": "DNS4EU Protective ad-blocking",
+        "cmn-CN": "",
+        "cmn-TW": ""
+    },
+    "notes": {
+        "en": "Operated by a consortium lead by Whalebone. Blocks Malware and Ads",
+        "cmn-CN": "",
+        "cmn-TW": ""
+    },
+    "https": {
+        "name": "DNS4EU Protective ad-blocking Encrypted DNS over HTTPS",
+        "fullName": "DNS4EU Protective ad-blocking DNS",
+        "topName": "DNS4EU Protective ad-blocking Encrypted DNS over HTTPS",
+        "PayloadDisplayName": "DNS4EU Protective ad-blocking DNS over HTTPS",
+        "DNSProtocol": "HTTPS",
+        "ServerURLOrName": "noads.joindns4.eu/dns-query",
+        "ServerAddresses": [
+            "2a13:1001::86:54:11:13",
+            "2a13:1001::86:54:11:213",
+            "86.54.11.13",
+            "86.54.11.213"
+        ],
+        "PayloadIdentifier": "com.apple.dnsSettings.managed.F210BB26-827F-4D3E-AF7F-CEDC5C8D28A9",
+        "PayloadUUID": "79622A21-166A-49DF-9955-17990235BD4A",
+        "TopPayloadUUID": "57043A08-08C5-4FF3-9DFC-E6764AC46971"
+    },
+    "tls": {
+        "name": "DNS4EU Protective ad-blocking Encrypted DNS over HTTPS",
+        "fullName": "DNS4EU Protective ad-blocking DNS",
+        "topName": "DNS4EU Protective ad-blocking Encrypted DNS over TLS",
+        "PayloadDisplayName": "DNS4EU Protective ad-blocking DNS over TLS",
+        "DNSProtocol": "TLS",
+        "ServerURLOrName": "noads.joindns4.eu",
+        "ServerAddresses": [
+            "2a13:1001::86:54:11:13",
+            "2a13:1001::86:54:11:213",
+            "86.54.11.13",
+            "86.54.11.213"
+        ],
+        "PayloadIdentifier": "com.apple.dnsSettings.managed.9A8489AA-F2C3-4E9D-BFEA-90055D57F562",
+        "PayloadUUID": "7788AF52-BDA6-4B7E-9E57-6D8647F64C1D",
+        "TopPayloadUUID": "DFA5E6B2-55AB-47CE-80D4-E38205A03D69"
+    }
+}
