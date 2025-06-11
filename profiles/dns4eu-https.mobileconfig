@@ -16,8 +16,8 @@
 					<string>86.54.11.100</string>
 					<string>86.54.11.200</string>
 				</array>
-				<key>ServerName</key>
-				<string>unfiltered.joindns4.eu/dns-query</string>
+				<key>ServerURL</key>
+				<string>https://unfiltered.joindns4.eu/dns-query</string>
 			</dict>
 			<key>PayloadDescription</key>
 			<string>Configures device to use DNS4EU Encrypted DNS over HTTPS</string>

@@ -16,8 +16,8 @@
 					<string>86.54.11.13</string>
 					<string>86.54.11.213</string>
 				</array>
-				<key>ServerName</key>
-				<string>noads.joindns4.eu/dns-query</string>
+				<key>ServerURL</key>
+				<string>https://noads.joindns4.eu/dns-query</string>
 			</dict>
 			<key>PayloadDescription</key>
 			<string>Configures device to use DNS4EU Protective ad-blocking Encrypted DNS over HTTPS</string>

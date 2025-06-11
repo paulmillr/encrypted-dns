@@ -20,7 +20,7 @@
         "topName": "DNS4EU Protective ad-blocking Encrypted DNS over HTTPS",
         "PayloadDisplayName": "DNS4EU Protective ad-blocking DNS over HTTPS",
         "DNSProtocol": "HTTPS",
-        "ServerURLOrName": "noads.joindns4.eu/dns-query",
+        "ServerURLOrName": "https://noads.joindns4.eu/dns-query",
         "ServerAddresses": [
             "2a13:1001::86:54:11:13",
             "2a13:1001::86:54:11:213",

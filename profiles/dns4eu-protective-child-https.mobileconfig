@@ -16,8 +16,8 @@
 					<string>86.54.11.12</string>
 					<string>86.54.11.212</string>
 				</array>
-				<key>ServerName</key>
-				<string>child.joindns4.eu/dns-query</string>
+				<key>ServerURL</key>
+				<string>https://child.joindns4.eu/dns-query</string>
 			</dict>
 			<key>PayloadDescription</key>
 			<string>Configures device to use DNS4EU Protective with child protection Encrypted DNS over HTTPS</string>
