@@ -2,7 +2,7 @@
     "id": "dns4eu",
     "profile": "dns4eu-profile",
     "website": "https://www.joindns4.eu/for-public",
-    "region": "EU",
+    "region": "CZ",
     "censorship": false,
     "names": {
         "en": "DNS4EU",

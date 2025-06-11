@@ -2,7 +2,7 @@
     "id": "dns4eu-protective-ads",
     "profile": "dns4eu-profile-protective-ads",
     "website": "https://www.joindns4.eu/for-public",
-    "region": "EU",
+    "region": "CZ",
     "censorship": true,
     "names": {
         "en": "DNS4EU Protective ad-blocking",
