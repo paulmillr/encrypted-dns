@@ -105,7 +105,9 @@ You can optionally exclude some trusted Wi-Fi networks where you don't want to u
 
 ## Contributing a new profile
 
-Profiles are basically text files. Copy an existing one and change its UUID, make sure you update README with new profile's info.
+Profiles are generated from easily editable `.json` files. Check out `providers` directory to add or edit a new profile.
+
+Copy an existing one and change its UUID, make sure you update README with new profile's info.
 
 In addition to generating online, there are many other ways to generate a random UUID:
 
