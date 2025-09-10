@@ -1,0 +1,51 @@
+{
+    "id": "ffmucdns",
+    "profile": "ffmuc-profile",
+    "website": "https://ffmuc.net/wiki/knb:dohdot_en",
+    "region": "DE",
+    "censorship": false,
+    "names": {
+        "en": "FFMUC-DNS",
+        "cmn-CN": "FFMUC-DNS",
+        "cmn-TW": "FFMUC-DNS"
+    },
+    "notes": {
+        "en": "FFMUC free DNS servers provided by Freifunk München.",
+        "cmn-CN": "",
+        "cmn-TW": ""
+    },
+    "https": {
+        "name": "FFMUC-DNS Encrypted DNS over HTTPS",
+        "fullName": "FFMUC DNS",
+        "topName": "FFMUC Encrypted DNS over HTTPS",
+        "PayloadDisplayName": "FFMUC DNS over HTTPS",
+        "DNSProtocol": "HTTPS",
+        "ServerURLOrName": "https://doh.ffmuc.net/dns-query",
+        "ServerAddresses": [
+            "2001:678:e68:f000::",
+            "2001:678:ed0:f000::",
+            "5.1.66.255",
+            "185.150.99.255"
+        ],
+        "PayloadIdentifier": "com.apple.dnsSettings.managed.3b0c0dcc-d377-48fb-a222-019f42867461",
+        "PayloadUUID": "a9167fd8-e278-4c62-8c89-12f171617446",
+        "TopPayloadUUID": "f9186f3a-edbc-422e-9d3c-31956c67fd14"
+    },
+    "tls": {
+        "name": "FFMUC-DNS Encrypted DNS over TLS",
+        "fullName": "FFMUC DNS",
+        "topName": "FFMUC Encrypted DNS over TLS",
+        "PayloadDisplayName": "FFMUC DNS over TLS",
+        "DNSProtocol": "TLS",
+        "ServerURLOrName": "dot.ffmuc.net",
+        "ServerAddresses": [
+            "2001:678:e68:f000::",
+            "2001:678:ed0:f000::",
+            "5.1.66.255",
+            "185.150.99.255"
+        ],
+        "PayloadIdentifier": "com.apple.dnsSettings.managed.69866750-1580-4f0f-90db-bd10da1ce3df",
+        "PayloadUUID": "35022acf-0422-4523-a0aa-41f0747037ad",
+        "TopPayloadUUID": "386ffdff-bb84-499f-bfb4-10b4ea229ee8"
+    }
+}
