@@ -33,8 +33,8 @@ https://blahdns.com</string>
 					<string>HTTPS</string>
 					<key>ServerAddresses</key>
 					<array>
-						<string>192.53.175.149</string>
-						<string>2400:8901::f03c:92ff:fe27:870a</string>
+						<string>46.250.226.242</string>
+						<string>2407:3640:2205:1668::1</string>
 					</array>
 					<key>ServerURL</key>
 					<string>https://doh-sg.blahdns.com/dns-query</string>
