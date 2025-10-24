@@ -4,17 +4,22 @@ English | [简体中文](https://github.com/paulmillr/encrypted-dns/blob/master/
 
 Configuration profiles for [DNS over HTTPS](https://en.wikipedia.org/wiki/DNS_over_HTTPS) and [DNS over TLS](https://en.wikipedia.org/wiki/DNS_over_TLS). Check out the article for more info: [paulmillr.com/posts/encrypted-dns/](https://paulmillr.com/posts/encrypted-dns/).
 
-Profiles are generated from easily editable `.json` files. Check out `providers` directory to add or edit a new profile.
+Profiles are generated from simple `.json` files. Check out `providers` directory to add or edit a new profile.
 
 ### Caveats
 
-Check out [encrypted-dns over TOR](https://github.com/alecmuffett/dohot) if you need more privacy. Known issues (we can't fix them, maybe Apple can):
+Known issues (we can't fix them, maybe Apple can):
 
-- eDNS gets disabled: [Little Snitch & Lulu](https://github.com/paulmillr/encrypted-dns/issues/13), [VPN](https://github.com/paulmillr/encrypted-dns/issues/18)
-- Some traffic is exempt from eDNS: [Terminal / App Store](https://github.com/paulmillr/encrypted-dns/issues/22), [Chrome](https://github.com/paulmillr/encrypted-dns/issues/19) - this is bad
-- [Wi-Fi captive portals](https://en.wikipedia.org/wiki/Captive_portal) in cafes, hotels, airports are exempted by Apple from eDNS rules; to simplify authentication - this is good
-- TLS DNS is blocked more often by ISPs than HTTPS, because TLS uses non-standard port 853, which is easy to filter out.
-  See [Google's article](https://security.googleblog.com/2022/07/dns-over-http3-in-android.html)
+1. Applications (e.g. Firefox in specific regions; App Store in all regions) can choose to ignore the system-level resolver and use their own.
+   [Check out the discussion](https://github.com/paulmillr/encrypted-dns/issues/22).
+2. iCloud Private Relay, VPN clients & Little Snitch / LuLu will ignore the DNS profile.
+3. Command line tools that interact with DNS (e.g. `host`, `dig`, `nslookup`) won't use DoH -
+   will use the DNS severs set in Network, or picked up from DHCP.
+4. [Wi-Fi captive portals](https://en.wikipedia.org/wiki/Captive_portal) in cafes, hotels, airports are exempted by Apple from eDNS rules; to simplify authentication - this is good
+5. TLS DNS is blocked more often by ISPs than HTTPS, because TLS uses non-standard port 853, which is easy to block.
+   See [Google's article](https://security.googleblog.com/2022/07/dns-over-http3-in-android.html)
+
+Check out [encrypted-dns over TOR](https://github.com/alecmuffett/dohot) if you need more privacy.
 
 ## Providers
 
