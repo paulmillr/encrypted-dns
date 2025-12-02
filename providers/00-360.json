@@ -23,8 +23,8 @@
         "DNSProtocol": "HTTPS",
         "ServerURLOrName": "https://doh.360.cn/dns-query",
         "ServerAddresses": [
-            "101.226.4.6",
-            "218.30.118.6"
+            "101.198.198.198",
+            "101.198.199.200"
         ],
         "PayloadIdentifier": "com.apple.dnsSettings.managed.9d6e5fdf-e404-4f34-ae94-27ed2f636ac4",
         "PayloadUUID": "AADC443A-E6B1-4F18-9093-CEA9B406A8FF",
