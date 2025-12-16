@@ -234,6 +234,8 @@ ${x.ServerAddresses.map((i) => `\t\t\t\t\t<string>${i}</string>`).join('\n')}
 	<string>com.paulmillr.apple-dns</string>
 	<key>PayloadRemovalDisallowed</key>
 	<false/>
+	<key>PayloadScope</key>
+	<string>System</string>
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
