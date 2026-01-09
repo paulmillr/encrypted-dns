@@ -97,6 +97,7 @@ they will have a verified check box on the installation screen. It also ensures 
 The signature is valid until `2025-11-02`
 
 Previous signatures by:
+
 [@Xernium](https://github.com/Xernium), replaced at `2024-11-01`
 
 [@Candygoblen123](https://github.com/Candygoblen123), replaced at `2023-11-29`
@@ -104,6 +105,12 @@ Previous signatures by:
 [comment]: <> (We recommend that you install a signed profile instead of an unsigned profile because it ensures that it was not modified while it was downloading.)
 
 To verify resolver IPs and hostnames, compare mobileconfig files to their documentation URLs. Internal workings of the profiles are described on [developer.apple.com](https://developer.apple.com/documentation/devicemanagement/dnssettings). In order to verify signed mobileconfigs, you will need to download them to your computer and open them in a text editor, because signing profiles makes GitHub think that they are binary files.
+
+> **🚀 Automated Alternative:**
+>
+> If you encounter "Not Verified" warnings or need the absolute latest updates, check out the **auto-signed fork** by [@jiya-mira](https://github.com/jiya-mira/encrypted-dns).
+>
+> This fork implements a **zero-touch automation workflow** that regenerates and signs all profiles daily, ensuring certificates remain valid and synchronized with upstream changes.
 
 ## On demand activation
 
