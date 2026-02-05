@@ -29,7 +29,7 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Adds the OpenDNS DNS (family shield) to Big Sur and iOS 14 based systems</string>
+	<string>Adds the OpenDNS DNS (family shield) to Big Sur (and later) and iOS 14 (and later) based systems</string>
 	<key>PayloadDisplayName</key>
 	<string>OpenDNS Encrypted DNS Family Shield</string>
 	<key>PayloadIdentifier</key>
@@ -42,5 +42,7 @@
 	<string>9877ACF3-420D-4E25-B3B8-96C8EB82A907</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
+	<key>PayloadScope</key>
+	<string>System</string>
 </dict>
 </plist>
