@@ -4,8 +4,10 @@
   "type": "module",
   "scripts": {
     "build:clean": "rm -f signed/*.mobileconfig profiles/*.mobileconfig README*.md",
-    "build": "npm run build:clean && node scripts/generate.ts",
-    "test": "node --experimental-strip-types --test scripts/new.test.ts scripts/sign.test.ts",
+    "build": "npm run build:clean && node scripts/build.ts",
+    "sign": "node scripts/sign.ts",
+    "new": "node scripts/new.ts",
+    "test": "node --experimental-strip-types --test scripts/new.test.ts scripts/sign-single.test.ts",
     "format": "prettier --write \"src/*.json\" scripts/*.ts *.ts"
   },
   "dependencies": {

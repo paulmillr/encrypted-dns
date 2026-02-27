@@ -2,19 +2,7 @@ English | [简体中文](https://github.com/paulmillr/encrypted-dns/blob/master/
 
 # encrypted-dns-configs
 
-Configuration profiles for [DNS over HTTPS](https://en.wikipedia.org/wiki/DNS_over_HTTPS) and [DNS over TLS](https://en.wikipedia.org/wiki/DNS_over_TLS). Check out the article for more info: [paulmillr.com/posts/encrypted-dns/](https://paulmillr.com/posts/encrypted-dns/). To add a new provider, or edit an existing one, edit json files in `src` directory.
-
-## Known issues
-
-1. Some apps and protocols will ignore encrypted-dns:
-      - Firefox in specific regions, App Store in all regions. [More info](https://github.com/paulmillr/encrypted-dns/issues/22)
-      - iCloud Private Relay, VPN clients
-      - Little Snitch, LuLu
-      - DNS-related CLI tools: `host`, `dig`, `nslookup` etc.
-2. [Wi-Fi captive portals](https://en.wikipedia.org/wiki/Captive_portal) in cafes, hotels, airports are exempted by Apple from eDNS rules; to simplify authentication - this is ok
-3. TLS DNS is easier for providers to block, because it uses non-standard port 853.
-  [More info](https://security.googleblog.com/2022/07/dns-over-http3-in-android.html)
-4. e-dns over TOR could be better privacy-wise, but we don't have this for now.
+Configuration profiles for [DNS over HTTPS](https://en.wikipedia.org/wiki/DNS_over_HTTPS) and [DNS over TLS](https://en.wikipedia.org/wiki/DNS_over_TLS). Check out the article for more info: [paulmillr.com/posts/encrypted-dns/](https://paulmillr.com/posts/encrypted-dns/). To add a new provider, or edit an existing one: see [#contributing](#contributing).
 
 ## Usage
 
@@ -22,20 +10,20 @@ Install / download profile (`.mobileconfig` file) from a table below. After that
 
 iPhones, iPads:
 
-1. Open the mobileconfig file in GitHub by using Safari (other browsers will just download the file and won't ask for installation)
+1. Open the file by using Safari (other browsers will just download the file and won't ask for installation)
 2. Tap on "Allow" button. The profile should download.
 3. Go to **System Settings => General => VPN, DNS & Device Management**, select downloaded profile and tap the "Install" button.
 
 Mac:
 
 1. Ensure the downloaded file has proper extension: NAME.mobileconfig, not NAME.mobileconfig.txt.
-2. Choose Apple menu > System Settings, click Privacy and Security in the sidebar, then click Profiles on the right. (You may need to scroll down.)
-3. You may be asked to supply your password or other information during installation.
-4. In the Downloaded section, double-click the profile. Review the profile contents then click Continue, Install or Enroll to install the profile. If an earlier version of a profile is already installed on your Mac, the settings in the updated version replace the previous ones.
+2. Choose Apple menu > System Settings, click Privacy and Security in the sidebar, then click Profiles on the right.
+  You may need to scroll down. You may be asked to supply your password or other information during installation.
+3. In the Downloaded section, double-click the profile. Review the profile contents then click Continue, Install or Enroll to install the profile. If an earlier version of a profile is already installed on your Mac, the settings in the updated version replace the previous ones.
 
 ## Providers
 
-`Censorship=yes` (also known as "filtering") means the profile will not send true information about `hostname=IP` relation for some hosts.
+Censorship (also known as "filtering") means the profile will not send true information about `hostname=IP` relation for some hosts.
 
 | Name                                                                                 | Region | Censorship | Notes                                                                                                     | Install                                                                                                          | Install (unsigned)                                                                                 |
 | ------------------------------------------------------------------------------------ | ------ | ---------- | --------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
@@ -77,17 +65,52 @@ Mac:
 | [Quad9 Unfiltered][quad9]                                                            | 🇨🇭     | No         | Operated by Quad9 Foundation.                                                                             | [HTTPS][quad9-profile-unfiltered-https-signed], [TLS][quad9-profile-unfiltered-tls-signed]                       | [HTTPS][quad9-profile-unfiltered-https], [TLS][quad9-profile-unfiltered-tls]                       |
 | [Tiarap][tiarap]                                                                     | 🇸🇬 🇺🇸  | Yes        | Operated by Tiarap Inc. Blocks ads, tracking, phising & malware                                           | [HTTPS][tiarap-profile-https-signed], [TLS][tiarap-profile-tls-signed]                                           | [HTTPS][tiarap-profile-https], [TLS][tiarap-profile-tls]                                           |
 
-## Signed Profiles
+## Known issues
 
-To verify resolver IPs and hostnames, compare mobileconfig files to their documentation URLs. Internal workings of the profiles are described on [developer.apple.com](https://developer.apple.com/documentation/devicemanagement/dnssettings). In order to verify signed mobileconfigs, you will need to download them to your computer and open them in a text editor, because signing profiles makes GitHub think that they are binary files.
+1. Some apps and protocols will ignore encrypted-dns:
+      - Firefox in specific regions, App Store in all regions. [More info](https://github.com/paulmillr/encrypted-dns/issues/22)
+      - iCloud Private Relay, VPN clients
+      - Little Snitch, LuLu
+      - DNS-related CLI tools: `host`, `dig`, `nslookup` etc.
+2. [Wi-Fi captive portals](https://en.wikipedia.org/wiki/Captive_portal) in cafes, hotels, airports are exempted by Apple from eDNS rules; to simplify authentication - this is ok
+3. TLS DNS is easier for providers to block, because it uses non-standard port 853.
+  [More info](https://security.googleblog.com/2022/07/dns-over-http3-in-android.html)
+4. e-dns over TOR could be better privacy-wise, but we don't have this for now.
 
-## On demand activation
+## Contributing
 
-You can optionally exclude some trusted Wi-Fi networks where you don't want to use encrypted DNS. To do so, add your SSIDs in the [OnDemandRules](https://github.com/paulmillr/encrypted-dns/blob/master/profiles/template-on-demand.mobileconfig#L22-L38) section inside the `PayloadContent` dictionary of a profile. Note: you can't edit signed profiles.
+- **To add / edit a profile:** edit json files in `src` directory.
+- **To verify resolver IPs / hostnames:** compare mobileconfig files to their original websites (open files in a text editor).
+- Check out [developer.apple.com](https://developer.apple.com/documentation/devicemanagement/dnssettings) for more docs.
+- **On demand activation:** You can optionally exclude some trusted Wi-Fi networks where you don't want to use encrypted DNS. To do so, add your SSIDs in the [OnDemandRules](https://github.com/paulmillr/encrypted-dns/blob/master/profiles/template-on-demand.mobileconfig#L22-L38) section inside the `PayloadContent` dictionary of a profile.
 
-## Contributing a new profile
+### Scripts
 
-To add a new provider, or edit an existing one, edit json files in `src` directory.
+- `npm run build` - re-build profiles, signed profiles, READMEs
+- `npm run sign` - re-sign all profiles (updates `signature` field) using an ECC SSL certificate.
+    - Signing is done using [key-producer](https://github.com/paulmillr/micro-key-producer)
+    - Let's Encrypt free certificates are OK, but [expire in 45 days](https://letsencrypt.org/2026/02/24/rate-limits-45-day-certs).
+    - Expects following files to be present in `certs` subdirectory:
+
+    ```
+    `privkey.pem`  : the private key for your certificate.
+    `fullchain.pem`: the certificate file used in most server software.
+    `chain.pem`    : used for OCSP stapling in Nginx >=1.3.7.
+    `cert.pem`
+    ```
+
+- `npm run new` - interactively creates new profile from CLI options. Can also be ran with flags.
+    - `scripts/new.test.ts` includes CLI snapshot tests and a PTY interactive flow test.
+    - PTY test runs by default; set `NEW_TEST_PTY=0` to opt out.
+- `node scripts/sign-single.ts --ca cert.pem --priv_key key.pem [--chain chain.pem] path.mobileconfig` - sings single mobileconfig
+- `node scripts/sign-single-openssl.ts --ca cert.pem --priv_key key.pem [--chain chain.pem] path.mobileconfig` Sign one `.mobileconfig` using OpenSSL.
+    - Uses `-nosmimecap` to match local CMS signing policy.
+- `node scripts/detach.ts signed.mobileconfig` - detach CMS signature from signed profile and print PEM to stdout.
+- `node test/sign-single.test.ts` - Parity check for `sign-single.ts` vs `sign-single-openssl.sh`.
+    - Runs under `npm run test`.
+    - Generates temporary test root/signer certificates and keys via OpenSSL.
+    - Signs the same profile with `scripts/sign.ts` and `scripts/sign_openssl.sh`.
+    - Verifies detached content and embedded certificate set parity.
 
 [360-dns]: https://sdns.360.net/dnsPublic.html
 [360-dns-profile-https]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/360-https.mobileconfig
