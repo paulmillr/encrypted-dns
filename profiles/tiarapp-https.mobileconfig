@@ -17,11 +17,11 @@
 			<key>PayloadDisplayName</key>
 			<string>Tiarap DNS over HTTPS</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.dnsSettings.managed.c5a076fb-5f1e-445d-bf74-c67312d07986</string>
+			<string>com.apple.dnsSettings.managed.b8bfdb6a-295d-5b21-b057-eb3c8b0a786e</string>
 			<key>PayloadType</key>
 			<string>com.apple.dnsSettings.managed</string>
 			<key>PayloadUUID</key>
-			<string>b313269a-e180-45ff-8192-faf735835021</string>
+			<string>B8BFDB6A-295D-5B21-B057-EB3C8B0A786E</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProhibitDisablement</key>
@@ -29,17 +29,19 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Adds the Tiarap DNS to Big Sur and iOS 14 based systems</string>
+	<string>Adds the Tiarap DNS over HTTPS to Big Sur and iOS 14 based systems</string>
 	<key>PayloadDisplayName</key>
 	<string>Tiarap DNS over HTTPS</string>
 	<key>PayloadIdentifier</key>
-	<string>efc4955f-ecea-4fd0-9ee8-8f079010c01b</string>
+	<string>com.paulmillr.apple-dns</string>
 	<key>PayloadRemovalDisallowed</key>
 	<false/>
+	<key>PayloadScope</key>
+	<string>System</string>
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>c631d10c-1a4e-45b8-9448-91c0874b2492</string>
+	<string>5D9FBC79-C3B0-5A98-A17D-8EC8A05C0F22</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>

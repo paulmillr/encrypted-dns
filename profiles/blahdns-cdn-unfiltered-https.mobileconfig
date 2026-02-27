@@ -9,24 +9,19 @@
 			<dict>
 				<key>DNSProtocol</key>
 				<string>HTTPS</string>
-				<key>ServerAddresses</key>
-				<array>
-					<string>2a07:e340::2</string>
-					<string>194.242.2.2</string>
-				</array>
 				<key>ServerURL</key>
-				<string>https://doh.mullvad.net/dns-query</string>
+				<string>https://doh1.blahdns.com/uncensor</string>
 			</dict>
 			<key>PayloadDescription</key>
-			<string>Configures device to use Mullvad DNS over HTTPS</string>
+			<string>Configures device to use BlahDNS (CDN / Unfiltered / Primary) DNS over HTTPS</string>
 			<key>PayloadDisplayName</key>
-			<string>Mullvad DNS over HTTPS</string>
+			<string>BlahDNS (CDN / Unfiltered / Primary) DNS over HTTPS</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.dnsSettings.managed.C846E5BF-D246-45FB-A9E2-A9B30A153A8B</string>
+			<string>com.apple.dnsSettings.managed.68a187fb-09ed-583d-90e8-86768d65ec77</string>
 			<key>PayloadType</key>
 			<string>com.apple.dnsSettings.managed</string>
 			<key>PayloadUUID</key>
-			<string>C846E5BF-D246-45FB-A9E2-A9B30A153A8B</string>
+			<string>68A187FB-09ED-583D-90E8-86768D65EC77</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProhibitDisablement</key>
@@ -34,9 +29,15 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Adds the Mullvad DNS to Big Sur and iOS 14 based systems</string>
+	<string>This profile enables BlahDNS (CDN / Unfiltered / Primary) DNS over HTTPS on all networks using the iOS 14 / iPadOS 14 / tvOS 14 / macOS Big Sur Encrypted DNS feature.</string>
+	<key>ConsentText</key>
+	<dict>
+		<key>default</key>
+		<string>Privacy policy:
+https://blahdns.com</string>
+	</dict>
 	<key>PayloadDisplayName</key>
-	<string>Mullvad DNS over HTTPS</string>
+	<string>BlahDNS (CDN / Unfiltered / Primary) DNS over HTTPS</string>
 	<key>PayloadIdentifier</key>
 	<string>com.paulmillr.apple-dns</string>
 	<key>PayloadRemovalDisallowed</key>
@@ -46,7 +47,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>13001589-3D36-4CC9-B16B-622C8E744FF4</string>
+	<string>9B014330-556D-5F81-8279-71E5CB9F418B</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>

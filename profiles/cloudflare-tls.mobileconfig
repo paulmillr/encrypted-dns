@@ -24,11 +24,11 @@
 			<key>PayloadDisplayName</key>
 			<string>Cloudflare DNS over TLS</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.dnsSettings.managed.9d6e5fdf-e404-4f34-ae94-27ed2f636ac4</string>
+			<string>com.apple.dnsSettings.managed.c175937c-0992-5986-9710-d62101aa14e2</string>
 			<key>PayloadType</key>
 			<string>com.apple.dnsSettings.managed</string>
 			<key>PayloadUUID</key>
-			<string>35d5c8a0-afa6-4b36-a9fe-099a997b44ad</string>
+			<string>C175937C-0992-5986-9710-D62101AA14E2</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProhibitDisablement</key>
@@ -48,7 +48,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>32E01895-86AB-40AE-ACD2-4460D584EA35</string>
+	<string>39F27C9C-76F9-58A4-BF49-7E74B397C3AD</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>

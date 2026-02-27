@@ -24,11 +24,11 @@
 			<key>PayloadDisplayName</key>
 			<string>Adguard No Filter over HTTPS</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.dnsSettings.managed.9d6e5fdf-e404-4f34-ae94-27ed2f636ac4</string>
+			<string>com.apple.dnsSettings.managed.b32f80e6-b0d2-52b0-9b6b-8daa173ed9ce</string>
 			<key>PayloadType</key>
 			<string>com.apple.dnsSettings.managed</string>
 			<key>PayloadUUID</key>
-			<string>35d5c8a0-afa6-4b36-a9fe-099a997b44ad</string>
+			<string>B32F80E6-B0D2-52B0-9B6B-8DAA173ED9CE</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProhibitDisablement</key>
@@ -48,7 +48,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>A4475135-633A-4F15-A79B-BE15093DC97A</string>
+	<string>6E1CFE09-08BC-5EB6-9E22-9F651AD2FAF1</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>

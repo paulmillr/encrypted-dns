@@ -24,11 +24,11 @@
 			<key>PayloadDisplayName</key>
 			<string>Google DNS over HTTPS</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.dnsSettings.managed.f0ffd552-7183-4f2e-86e5-ee1ecad2a53a</string>
+			<string>com.apple.dnsSettings.managed.317a5cde-06e0-52b8-b0d9-de462fa44247</string>
 			<key>PayloadType</key>
 			<string>com.apple.dnsSettings.managed</string>
 			<key>PayloadUUID</key>
-			<string>556aa9a6-04bb-4144-9a1b-e1b20cda3b46</string>
+			<string>317A5CDE-06E0-52B8-B0D9-DE462FA44247</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProhibitDisablement</key>
@@ -48,7 +48,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>B27E8E10-697D-4938-8745-7FFEEEED57A0</string>
+	<string>D3AE1D44-EB42-5B10-B721-15D6A0354A9A</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>

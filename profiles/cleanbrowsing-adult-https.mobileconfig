@@ -24,11 +24,11 @@
 			<key>PayloadDisplayName</key>
 			<string>Cleanbrowsing Adult Filter DNS over HTTPS</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.dnsSettings.managed.9d6e5fdf-e404-4f34-ae94-27ed2f636ac4</string>
+			<string>com.apple.dnsSettings.managed.11607628-2525-55f8-8f2c-c1d7b68b3ff9</string>
 			<key>PayloadType</key>
 			<string>com.apple.dnsSettings.managed</string>
 			<key>PayloadUUID</key>
-			<string>35d5c8a0-afa6-4b36-a9fe-099a997b44ad</string>
+			<string>11607628-2525-55F8-8F2C-C1D7B68B3FF9</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProhibitDisablement</key>
@@ -36,7 +36,7 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Adds the Cleanbrowsing Adult Filter DNS over HTTPS to Big Sur and iOS 14 based systems</string>
+	<string>Adds the Cleanbrowsing Adult Filter DNS to Big Sur and iOS 14 based systems</string>
 	<key>PayloadDisplayName</key>
 	<string>Cleanbrowsing Adult DNS over HTTPS</string>
 	<key>PayloadIdentifier</key>
@@ -48,7 +48,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>5B083B6A-F07D-4B98-AF3B-EAF9F89CAE49</string>
+	<string>B521FB7A-6A10-56C8-B602-0ECAB9D3C741</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>

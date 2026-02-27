@@ -22,11 +22,11 @@
 			<key>PayloadDisplayName</key>
 			<string>360 Public Security DNS over HTTPS</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.dnsSettings.managed.9d6e5fdf-e404-4f34-ae94-27ed2f636ac4</string>
+			<string>com.apple.dnsSettings.managed.b399690d-2f24-5d4e-8e6b-1faedb2dcf0f</string>
 			<key>PayloadType</key>
 			<string>com.apple.dnsSettings.managed</string>
 			<key>PayloadUUID</key>
-			<string>AADC443A-E6B1-4F18-9093-CEA9B406A8FF</string>
+			<string>B399690D-2F24-5D4E-8E6B-1FAEDB2DCF0F</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProhibitDisablement</key>
@@ -46,7 +46,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>32663B5D-707C-48BD-90C5-123E84204A8C</string>
+	<string>32955666-3542-5C76-B7E4-B8924A9D7572</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>

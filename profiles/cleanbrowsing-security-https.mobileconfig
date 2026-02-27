@@ -24,11 +24,11 @@
 			<key>PayloadDisplayName</key>
 			<string>Cleanbrowsing Security Filter DNS over HTTPS</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.dnsSettings.managed.9d6e5fdf-e404-4f34-ae94-27ed2f636ac4</string>
+			<string>com.apple.dnsSettings.managed.de112623-e567-556a-a5ef-d89ca497ec27</string>
 			<key>PayloadType</key>
 			<string>com.apple.dnsSettings.managed</string>
 			<key>PayloadUUID</key>
-			<string>35d5c8a0-afa6-4b36-a9fe-099a997b44ad</string>
+			<string>DE112623-E567-556A-A5EF-D89CA497EC27</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProhibitDisablement</key>
@@ -36,7 +36,7 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Adds the Cleanbrowsing Security Filter DNS  over HTTPS to Big Sur and iOS 14 based systems</string>
+	<string>Adds the Cleanbrowsing Security Filter DNS to Big Sur and iOS 14 based systems</string>
 	<key>PayloadDisplayName</key>
 	<string>Cleanbrowsing Security DNS over HTTPS</string>
 	<key>PayloadIdentifier</key>
@@ -48,7 +48,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>30A6F82B-5A75-40BB-B45E-04170CFEF7D3</string>
+	<string>39E0EE77-B290-57B8-91FA-D6E6928C3C2E</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>

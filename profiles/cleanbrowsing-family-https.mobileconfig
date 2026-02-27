@@ -24,11 +24,11 @@
 			<key>PayloadDisplayName</key>
 			<string>Cleanbrowsing Family Filter DNS over HTTPS</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.dnsSettings.managed.9d6e5fdf-e404-4f34-ae94-27ed2f636ac4</string>
+			<string>com.apple.dnsSettings.managed.412fd71d-9aea-513e-a745-17475f60376b</string>
 			<key>PayloadType</key>
 			<string>com.apple.dnsSettings.managed</string>
 			<key>PayloadUUID</key>
-			<string>35d5c8a0-afa6-4b36-a9fe-099a997b44ad</string>
+			<string>412FD71D-9AEA-513E-A745-17475F60376B</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProhibitDisablement</key>
@@ -36,7 +36,7 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Adds the Cleanbrowsing Family Filter DNS over HTTPS to Big Sur and iOS 14 based systems</string>
+	<string>Adds the Cleanbrowsing Family Filter DNS to Big Sur and iOS 14 based systems</string>
 	<key>PayloadDisplayName</key>
 	<string>Cleanbrowsing Family DNS over HTTPS</string>
 	<key>PayloadIdentifier</key>
@@ -48,7 +48,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>3E5C292F-D880-4F69-BB49-2A4AA20BDADA</string>
+	<string>558FC95E-D736-54E6-9428-C433C36AF10E</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>

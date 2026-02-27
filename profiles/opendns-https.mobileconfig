@@ -17,11 +17,11 @@
 			<key>PayloadDisplayName</key>
 			<string>OpenDNS DNS over HTTPS Standard</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.dnsSettings.managed.684b6631-98ef-4534-ab68-baa22a4a3b81</string>
+			<string>com.apple.dnsSettings.managed.45ba4fc6-566b-5e50-b483-46b97b96597a</string>
 			<key>PayloadType</key>
 			<string>com.apple.dnsSettings.managed</string>
 			<key>PayloadUUID</key>
-			<string>0fedcb81-3c3d-4604-b90e-12ee51bdaee1</string>
+			<string>45BA4FC6-566B-5E50-B483-46B97B96597A</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProhibitDisablement</key>
@@ -29,17 +29,19 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Adds the OpenDNS DNS to Big Sur and iOS 14 based systems</string>
+	<string>Adds the OpenDNS Encrypted DNS to Big Sur and iOS 14 based systems</string>
 	<key>PayloadDisplayName</key>
 	<string>OpenDNS Encrypted DNS</string>
 	<key>PayloadIdentifier</key>
 	<string>com.paulmillr.apple-dns</string>
 	<key>PayloadRemovalDisallowed</key>
 	<false/>
+	<key>PayloadScope</key>
+	<string>System</string>
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>9877ACF3-420D-4E25-B3B8-96C8EB82A907</string>
+	<string>38CDCB26-893D-50A7-8E36-EE7E02CC0682</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>

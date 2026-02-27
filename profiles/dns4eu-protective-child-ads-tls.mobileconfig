@@ -20,15 +20,15 @@
 				<string>child-noads.joindns4.eu</string>
 			</dict>
 			<key>PayloadDescription</key>
-			<string>Configures device to use DNS4EU Protective with child protection & ad-blocking Encrypted DNS over HTTPS</string>
+			<string>Configures device to use DNS4EU Protective with child protection &amp; ad-blocking DNS over TLS</string>
 			<key>PayloadDisplayName</key>
-			<string>DNS4EU Protective with child protection & ad-blocking DNS over TLS</string>
+			<string>DNS4EU Protective with child protection &amp; ad-blocking DNS over TLS</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.dnsSettings.managed.2D5FB801-6B78-435D-AA47-D954E3AFAB3C</string>
+			<string>com.apple.dnsSettings.managed.8455f0bd-16e3-5d43-9a57-8e83e22499c1</string>
 			<key>PayloadType</key>
 			<string>com.apple.dnsSettings.managed</string>
 			<key>PayloadUUID</key>
-			<string>03783018-E934-486E-920E-0CF88BC5E6E3</string>
+			<string>8455F0BD-16E3-5D43-9A57-8E83E22499C1</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProhibitDisablement</key>
@@ -36,9 +36,9 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Adds the DNS4EU Protective with child protection & ad-blocking DNS to Big Sur and iOS 14 based systems</string>
+	<string>Adds the DNS4EU Protective with child protection &amp; ad-blocking DNS to Big Sur and iOS 14 based systems</string>
 	<key>PayloadDisplayName</key>
-	<string>DNS4EU Protective with child protection & ad-blocking Encrypted DNS over TLS</string>
+	<string>DNS4EU Protective with child protection &amp; ad-blocking Encrypted DNS over TLS</string>
 	<key>PayloadIdentifier</key>
 	<string>com.paulmillr.apple-dns</string>
 	<key>PayloadRemovalDisallowed</key>
@@ -48,7 +48,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>E09F3821-CED3-4A44-BBC8-9DA7F0098BF4</string>
+	<string>59A2E9E9-6987-55AA-AED6-B52963158491</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>

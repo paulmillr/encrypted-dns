@@ -41,11 +41,11 @@
 			<key>PayloadDisplayName</key>
 			<string>Example DNS over HTTPS</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.dnsSettings.managed.f0ffd552-7183-4f2e-86e5-ee1ecad2a53a</string>
+			<string>com.apple.dnsSettings.managed.abc0db58-da07-5566-a55b-587df1382d4a</string>
 			<key>PayloadType</key>
 			<string>com.apple.dnsSettings.managed</string>
 			<key>PayloadUUID</key>
-			<string>556aa9a6-04bb-4144-9a1b-e1b20cda3b46</string>
+			<string>ABC0DB58-DA07-5566-A55B-587DF1382D4A</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProhibitDisablement</key>
@@ -53,17 +53,19 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Adds the Example DNS to Big Sur and iOS 14 based systems</string>
+	<string>Adds the Example Encrypted DNS over HTTPS to Big Sur and iOS 14 based systems</string>
 	<key>PayloadDisplayName</key>
 	<string>Example Encrypted DNS over HTTPS</string>
 	<key>PayloadIdentifier</key>
 	<string>com.paulmillr.apple-dns</string>
 	<key>PayloadRemovalDisallowed</key>
 	<false/>
+	<key>PayloadScope</key>
+	<string>System</string>
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>B27E8E10-697D-4938-8745-7FFEEEED57A0</string>
+	<string>9E0173E4-7947-5174-A857-D97C90189345</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>

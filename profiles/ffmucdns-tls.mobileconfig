@@ -24,11 +24,11 @@
 			<key>PayloadDisplayName</key>
 			<string>FFMUC DNS over TLS</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.dnsSettings.managed.69866750-1580-4f0f-90db-bd10da1ce3df</string>
+			<string>com.apple.dnsSettings.managed.01675f29-6ce8-5f58-8c4b-fbdda91c8652</string>
 			<key>PayloadType</key>
 			<string>com.apple.dnsSettings.managed</string>
 			<key>PayloadUUID</key>
-			<string>35022acf-0422-4523-a0aa-41f0747037ad</string>
+			<string>01675F29-6CE8-5F58-8C4B-FBDDA91C8652</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProhibitDisablement</key>
@@ -48,7 +48,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>386ffdff-bb84-499f-bfb4-10b4ea229ee8</string>
+	<string>4AB17AF6-FF17-58EF-B57F-1AED92A8E26A</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>

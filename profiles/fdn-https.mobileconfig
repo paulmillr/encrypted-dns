@@ -24,11 +24,11 @@
 			<key>PayloadDisplayName</key>
 			<string>FDN DNS over HTTPS</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.dnsSettings.managed.f0ffd552-7183-4f2e-86e5-ee1ecad2a53a</string>
+			<string>com.apple.dnsSettings.managed.53520e35-5994-52bb-aa82-bde0a6061ec9</string>
 			<key>PayloadType</key>
 			<string>com.apple.dnsSettings.managed</string>
 			<key>PayloadUUID</key>
-			<string>0ffcd083-5afa-4ba2-88e1-f01abd75bcc2</string>
+			<string>53520E35-5994-52BB-AA82-BDE0A6061EC9</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProhibitDisablement</key>
@@ -48,7 +48,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>93C5EB95-3A25-4097-B64B-02B5F1493D32</string>
+	<string>426D33EA-3B8B-5E59-AB91-56CF5EC6AFCC</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>

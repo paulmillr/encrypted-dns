@@ -24,11 +24,11 @@
 			<key>PayloadDisplayName</key>
 			<string>Quad9 No Filter DNS over HTTPS</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.dnsSettings.managed.1a93b54b-8541-4536-8302-c08159ca9184</string>
+			<string>com.apple.dnsSettings.managed.4764962f-5e78-514d-ad2c-dc8acd3b27f3</string>
 			<key>PayloadType</key>
 			<string>com.apple.dnsSettings.managed</string>
 			<key>PayloadUUID</key>
-			<string>5b67762c-3a11-47fd-ad22-1b7810cacfc1</string>
+			<string>4764962F-5E78-514D-AD2C-DC8ACD3B27F3</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProhibitDisablement</key>
@@ -48,7 +48,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>79AE8914-AC0B-4EF9-9AA4-392584F35278</string>
+	<string>F6897440-5EFC-552A-B53A-839C487463FD</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>

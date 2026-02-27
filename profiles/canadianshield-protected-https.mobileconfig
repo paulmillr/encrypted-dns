@@ -11,8 +11,8 @@
 				<string>HTTPS</string>
 				<key>ServerAddresses</key>
 				<array>
-					<string>2620:10A:80BB::20</string>
-					<string>2620:10A:80BC::20</string>
+					<string>2620:10a:80bb::20</string>
+					<string>2620:10a:80bc::20</string>
 					<string>149.112.121.20</string>
 					<string>149.112.122.20</string>
 				</array>
@@ -24,11 +24,11 @@
 			<key>PayloadDisplayName</key>
 			<string>Canadian Shield DNS over HTTPS</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.dnsSettings.managed.9d6e5fdf-e404-4f34-ae94-27ed2f636ac4</string>
+			<string>com.apple.dnsSettings.managed.66f3663e-cbbe-53af-ae6f-78bde855ad79</string>
 			<key>PayloadType</key>
 			<string>com.apple.dnsSettings.managed</string>
 			<key>PayloadUUID</key>
-			<string>35d5c8a0-afa6-4b36-a9fe-099a997b44ad</string>
+			<string>66F3663E-CBBE-53AF-AE6F-78BDE855AD79</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProhibitDisablement</key>
@@ -48,7 +48,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>32E01895-86AB-40AE-ACD2-4460D584EA35</string>
+	<string>802870F1-79DE-5003-B1DE-26C0B5E84A27</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>

@@ -24,11 +24,11 @@
 			<key>PayloadDisplayName</key>
 			<string>Adguard Default DNS over TLS</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.dnsSettings.managed.e17cf1fa-0f0f-48a9-a68b-395804ed1850</string>
+			<string>com.apple.dnsSettings.managed.d1c9922c-d540-5ffe-a181-9c3538691553</string>
 			<key>PayloadType</key>
 			<string>com.apple.dnsSettings.managed</string>
 			<key>PayloadUUID</key>
-			<string>28b90644-fc1e-409a-81e7-939598fee661</string>
+			<string>D1C9922C-D540-5FFE-A181-9C3538691553</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProhibitDisablement</key>
@@ -48,7 +48,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>54A8F485-C9E3-4475-B651-3656DF781F4F</string>
+	<string>FF4C5D7C-B03E-59A9-9B18-89511D1A7D4F</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>

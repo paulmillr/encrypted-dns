@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>DNSSettings</key>
+			<dict>
+				<key>DNSProtocol</key>
+				<string>HTTPS</string>
+				<key>ServerAddresses</key>
+				<array>
+					<string>46.250.226.242</string>
+					<string>2407:3640:2205:1668::1</string>
+				</array>
+				<key>ServerURL</key>
+				<string>https://doh-sg.blahdns.com/dns-query</string>
+			</dict>
+			<key>PayloadDescription</key>
+			<string>Configures device to use BlahDNS (Singapore) DNS over HTTPS</string>
+			<key>PayloadDisplayName</key>
+			<string>BlahDNS (Singapore) DNS over HTTPS</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.dnsSettings.managed.d1976481-acaa-5aa7-bd8f-2a8de37caab9</string>
+			<key>PayloadType</key>
+			<string>com.apple.dnsSettings.managed</string>
+			<key>PayloadUUID</key>
+			<string>D1976481-ACAA-5AA7-BD8F-2A8DE37CAAB9</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProhibitDisablement</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>This profile enables BlahDNS (Singapore) DNS over HTTPS on all networks using the iOS 14 / iPadOS 14 / tvOS 14 / macOS Big Sur Encrypted DNS feature.</string>
+	<key>ConsentText</key>
+	<dict>
+		<key>default</key>
+		<string>Privacy policy:
+https://blahdns.com</string>
+	</dict>
+	<key>PayloadDisplayName</key>
+	<string>BlahDNS (Singapore) DNS over HTTPS</string>
+	<key>PayloadIdentifier</key>
+	<string>com.paulmillr.apple-dns</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>3A91EE26-404A-59E9-9420-009E708EFAA2</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>

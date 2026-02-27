@@ -20,15 +20,15 @@
 				<string>https://child-noads.joindns4.eu/dns-query</string>
 			</dict>
 			<key>PayloadDescription</key>
-			<string>Configures device to use DNS4EU Protective with child protection & ad-blocking Encrypted DNS over HTTPS</string>
+			<string>Configures device to use DNS4EU Protective with child protection &amp; ad-blocking DNS over HTTPS</string>
 			<key>PayloadDisplayName</key>
-			<string>DNS4EU Protective with child protection & ad-blocking DNS over HTTPS</string>
+			<string>DNS4EU Protective with child protection &amp; ad-blocking DNS over HTTPS</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.dnsSettings.managed.DCD27DC2-4B03-44E8-A449-983520884BEC</string>
+			<string>com.apple.dnsSettings.managed.f4a5e1c6-d82e-5000-a7bb-678a20116896</string>
 			<key>PayloadType</key>
 			<string>com.apple.dnsSettings.managed</string>
 			<key>PayloadUUID</key>
-			<string>BA50B5C8-F7C6-47CA-80E0-A572BF998F7C</string>
+			<string>F4A5E1C6-D82E-5000-A7BB-678A20116896</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProhibitDisablement</key>
@@ -36,9 +36,9 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Adds the DNS4EU Protective with child protection & ad-blocking DNS to Big Sur and iOS 14 based systems</string>
+	<string>Adds the DNS4EU Protective with child protection &amp; ad-blocking DNS to Big Sur and iOS 14 based systems</string>
 	<key>PayloadDisplayName</key>
-	<string>DNS4EU Protective with child protection & ad-blocking Encrypted DNS over HTTPS</string>
+	<string>DNS4EU Protective with child protection &amp; ad-blocking Encrypted DNS over HTTPS</string>
 	<key>PayloadIdentifier</key>
 	<string>com.paulmillr.apple-dns</string>
 	<key>PayloadRemovalDisallowed</key>
@@ -48,7 +48,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>BE9E0FA3-B8F9-457C-9B05-1C5E5EE8AE0D</string>
+	<string>4E1547FA-5A31-5D43-A84F-DFF919BBB386</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>

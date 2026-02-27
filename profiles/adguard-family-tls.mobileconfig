@@ -8,7 +8,7 @@
 			<key>DNSSettings</key>
 			<dict>
 				<key>DNSProtocol</key>
-				<string>HTTPS</string>
+				<string>TLS</string>
 				<key>ServerAddresses</key>
 				<array>
 					<string>2a10:50c0::bad1:ff</string>
@@ -24,11 +24,11 @@
 			<key>PayloadDisplayName</key>
 			<string>AdGuard Family Protection DNS over TLS</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.dnsSettings.managed.56f69d61-c1d2-422b-989a-adeeb1b6ddc0</string>
+			<string>com.apple.dnsSettings.managed.613ad78c-05ce-5f51-b416-a6be4d086adb</string>
 			<key>PayloadType</key>
 			<string>com.apple.dnsSettings.managed</string>
 			<key>PayloadUUID</key>
-			<string>1cda01f8-b05b-4b0d-8675-44eeb5290564</string>
+			<string>613AD78C-05CE-5F51-B416-A6BE4D086ADB</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProhibitDisablement</key>
@@ -48,7 +48,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>FF00A616-63CE-4078-8786-800A1F357A9C</string>
+	<string>4F5445DD-4EC6-5EDC-8822-FC21EDF6D501</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>

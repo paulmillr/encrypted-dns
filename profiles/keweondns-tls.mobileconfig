@@ -12,35 +12,16 @@
 				<key>ServerName</key>
 				<string>dns.keweon.center</string>
 			</dict>
-			<key>OnDemandRules</key>
-			<array>
-				<dict>
-					<key>Action</key>
-					<string>Connect</string>
-					<key>InterfaceTypeMatch</key>
-					<string>WiFi</string>
-				</dict>
-				<dict>
-					<key>Action</key>
-					<string>Connect</string>
-					<key>InterfaceTypeMatch</key>
-					<string>Cellular</string>
-				</dict>
-				<dict>
-					<key>Action</key>
-					<string>Disconnect</string>
-				</dict>
-			</array>
 			<key>PayloadDescription</key>
 			<string>Configures device to use keweonDNS physical DNS Server to encrypt DNS over TLS</string>
 			<key>PayloadDisplayName</key>
 			<string>keweonDNS (DoT)</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.dnsSettings.managed.50cac8a0-da47-4e0c-bb45-a0250a799dd1</string>
+			<string>com.apple.dnsSettings.managed.e3e6d9a3-8f9f-5bae-b22c-4288be42e6b1</string>
 			<key>PayloadType</key>
 			<string>com.apple.dnsSettings.managed</string>
 			<key>PayloadUUID</key>
-			<string>50cac8a0-da47-4e0c-bb45-a0250a799dd1</string>
+			<string>E3E6D9A3-8F9F-5BAE-B22C-4288BE42E6B1</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProhibitDisablement</key>
@@ -52,13 +33,15 @@
 	<key>PayloadDisplayName</key>
 	<string>keweonDNS (DoT)</string>
 	<key>PayloadIdentifier</key>
-	<string>center.keweo.apple-dns.616cf439-7a72-4e15-883c-c08569a96560</string>
+	<string>com.paulmillr.apple-dns</string>
 	<key>PayloadRemovalDisallowed</key>
 	<false/>
+	<key>PayloadScope</key>
+	<string>System</string>
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>B0E8A932-459A-4C05-B433-B45CE0195E5A</string>
+	<string>B6B082E8-E78E-5F49-8AFB-390B51717105</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>
