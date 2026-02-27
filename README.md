@@ -2,11 +2,9 @@ English | [简体中文](https://github.com/paulmillr/encrypted-dns/blob/master/
 
 # encrypted-dns-configs
 
-Configuration profiles for [DNS over HTTPS](https://en.wikipedia.org/wiki/DNS_over_HTTPS) and [DNS over TLS](https://en.wikipedia.org/wiki/DNS_over_TLS). Check out the article for more info: [paulmillr.com/posts/encrypted-dns/](https://paulmillr.com/posts/encrypted-dns/).
+Configuration profiles for [DNS over HTTPS](https://en.wikipedia.org/wiki/DNS_over_HTTPS) and [DNS over TLS](https://en.wikipedia.org/wiki/DNS_over_TLS). Check out the article for more info: [paulmillr.com/posts/encrypted-dns/](https://paulmillr.com/posts/encrypted-dns/). To add a new provider, or edit an existing one, edit json files in `src` directory.
 
-To add a new provider, or edit an existing one, edit json files in `src` directory.
-
-### Known issues
+## Known issues
 
 1. Some apps and protocols will ignore encrypted-dns:
       - Firefox in specific regions, App Store in all regions. [More info](https://github.com/paulmillr/encrypted-dns/issues/22)
@@ -17,6 +15,23 @@ To add a new provider, or edit an existing one, edit json files in `src` directo
 3. TLS DNS is easier for providers to block, because it uses non-standard port 853.
   [More info](https://security.googleblog.com/2022/07/dns-over-http3-in-android.html)
 4. e-dns over TOR could be better privacy-wise, but we don't have this for now.
+
+## Usage
+
+Install / download profile (`.mobileconfig` file) from a table below. After that:
+
+iPhones, iPads:
+
+1. Open the mobileconfig file in GitHub by using Safari (other browsers will just download the file and won't ask for installation)
+2. Tap on "Allow" button. The profile should download.
+3. Go to **System Settings => General => VPN, DNS & Device Management**, select downloaded profile and tap the "Install" button.
+
+Mac:
+
+1. Ensure the downloaded file has proper extension: NAME.mobileconfig, not NAME.mobileconfig.txt.
+2. Choose Apple menu > System Settings, click Privacy and Security in the sidebar, then click Profiles on the right. (You may need to scroll down.)
+3. You may be asked to supply your password or other information during installation.
+4. In the Downloaded section, double-click the profile. Review the profile contents then click Continue, Install or Enroll to install the profile. If an earlier version of a profile is already installed on your Mac, the settings in the updated version replace the previous ones.
 
 ## Providers
 
@@ -62,22 +77,6 @@ To add a new provider, or edit an existing one, edit json files in `src` directo
 | [Quad9 Unfiltered][quad9]                                                            | 🇨🇭     | No         | Operated by Quad9 Foundation.                                                                             | [HTTPS][quad9-profile-unfiltered-https-signed], [TLS][quad9-profile-unfiltered-tls-signed]                       | [HTTPS][quad9-profile-unfiltered-https], [TLS][quad9-profile-unfiltered-tls]                       |
 | [Tiarap][tiarap]                                                                     | 🇸🇬 🇺🇸  | Yes        | Operated by Tiarap Inc. Blocks ads, tracking, phising & malware                                           | [HTTPS][tiarap-profile-https-signed], [TLS][tiarap-profile-tls-signed]                                           | [HTTPS][tiarap-profile-https], [TLS][tiarap-profile-tls]                                           |
 
-## Installation
-
-To make settings work across all apps in **iOS**, **iPadOS** & **macOS**, you'll need to install configuration profile. This profile would tell operating system to use DoH / DoT. Note: it's not enough to simply set server IPs in System Preferences — you need to install a profile.
-
-iOS / iPadOS: Open the mobileconfig file in GitHub by using Safari (other browsers will just download the file and won't ask for installation), and then click/tap on "Allow" button. The profile should download. Go to **System Settings => General => VPN, DNS & Device Management**, select downloaded profile and tap the "Install" button.
-
-macOS [(official docs)](https://support.apple.com/guide/mac-help/mh35561/):
-
-1. Download and save the profile. After save, rename it to be in format: `NAME.mobileconfig`, not NAME.txt, or so
-2. Choose Apple menu > System Settings, click Privacy and Security in the sidebar, then click Profiles on the right. (You may need to scroll down.)
-   You may be asked to supply your password or other information during installation.
-3. In the Downloaded section, double-click the profile.
-4. Review the profile contents then click Continue, Install or Enroll to install the profile.
-
-   If an earlier version of a profile is already installed on your Mac, the settings in the updated version replace the previous ones.
-
 ## Signed Profiles
 
 To verify resolver IPs and hostnames, compare mobileconfig files to their documentation URLs. Internal workings of the profiles are described on [developer.apple.com](https://developer.apple.com/documentation/devicemanagement/dnssettings). In order to verify signed mobileconfigs, you will need to download them to your computer and open them in a text editor, because signing profiles makes GitHub think that they are binary files.
@@ -88,33 +87,7 @@ You can optionally exclude some trusted Wi-Fi networks where you don't want to u
 
 ## Contributing a new profile
 
-Profiles are generated from easily editable `.json` files. Check out `providers` directory to add or edit a new profile.
-
-Copy an existing one and change its UUID, make sure you update README with new profile's info.
-
-In addition to generating online, there are many other ways to generate a random UUID:
-
-- Press `F12` to open DevTools in the browser, run this code in the console
-
-```javascript
-crypto.randomUUID();
-```
-
-- Run these commands in the macOS / Linux terminal
-
-```sh
-# Works both in macOS & Linux
-uuidgen
-
-# Works in Linux
-cat /proc/sys/kernel/random/uuid
-```
-
-- Run this cmdlet in Powershell
-
-```powershell
-New-Guid
-```
+To add a new provider, or edit an existing one, edit json files in `src` directory.
 
 [360-dns]: https://sdns.360.net/dnsPublic.html
 [360-dns-profile-https]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/360-https.mobileconfig
