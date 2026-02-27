@@ -6,7 +6,7 @@
     "region": "区域",
     "censorship": "审查",
     "notes": "备注",
-    "install_signed": "安装 (已签名 - 推荐)",
+    "install_signed": "安装",
     "install_unsigned": "安装 (未签名)"
   },
   "yes": "是",

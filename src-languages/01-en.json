@@ -6,7 +6,7 @@
     "region": "Region",
     "censorship": "Censorship",
     "notes": "Notes",
-    "install_signed": "Install (Signed - Recommended)",
+    "install_signed": "Install",
     "install_unsigned": "Install (unsigned)"
   },
   "yes": "Yes",

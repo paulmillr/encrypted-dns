@@ -2,8 +2,8 @@
 const fs = require('node:fs');
 const path = require('node:path');
 
-const LANGUAGES_DIR = path.join(__dirname, 'languages');
-const PROVIDERS_PATH = path.join(__dirname, 'providers');
+const LANGUAGES_DIR = path.join(__dirname, 'src-languages');
+const PROVIDERS_PATH = path.join(__dirname, 'src');
 const DEFAULT_LANG = 'en';
 const OUTPUT_DIR = __dirname;
 const REPO_RAW = 'https://github.com/paulmillr/encrypted-dns/raw/master';
@@ -260,8 +260,8 @@ function generateConfigs() {
 }
 // Small utility to rewrite config structure
 function patchConfigs() {
-  for (const f of fs.readdirSync(`./providers/`)) {
-    const path = `./providers/${f}`;
+  for (const f of fs.readdirSync(`./src/`)) {
+    const path = `./src/${f}`;
     const json = JSON.parse(fs.readFileSync(path, 'utf8'));
     fs.writeFileSync(path, JSON.stringify(json, null, 4));
   }
