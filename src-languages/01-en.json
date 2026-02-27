@@ -1,0 +1,14 @@
+{
+  "code": "en",
+  "name": "English",
+  "table_columns": {
+    "name": "Name",
+    "region": "Region",
+    "censorship": "Censorship",
+    "notes": "Notes",
+    "install_signed": "Install (Signed - Recommended)",
+    "install_unsigned": "Install (unsigned)"
+  },
+  "yes": "Yes",
+  "no": "No"
+}

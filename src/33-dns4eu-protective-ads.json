@@ -1,0 +1,36 @@
+{
+    "id": "dns4eu-protective-ads",
+    "profile": "dns4eu-profile-protective-ads",
+    "website": "https://www.joindns4.eu/for-public",
+    "region": "CZ",
+    "censorship": true,
+    "names": {
+        "en": "DNS4EU Protective ad-blocking",
+        "cmn-CN": "",
+        "cmn-TW": ""
+    },
+    "notes": {
+        "en": "Operated by a consortium lead by Whalebone. Blocks Malware and Ads",
+        "cmn-CN": "",
+        "cmn-TW": ""
+    },
+    "fullName": "DNS4EU Protective ad-blocking DNS",
+    "ServerAddresses": [
+        "2a13:1001::86:54:11:13",
+        "2a13:1001::86:54:11:213",
+        "86.54.11.13",
+        "86.54.11.213"
+    ],
+    "https": {
+        "topName": "DNS4EU Protective ad-blocking Encrypted DNS over HTTPS",
+        "ServerURLOrName": "https://noads.joindns4.eu/dns-query",
+        "PayloadDescription": "Configures device to use DNS4EU Protective ad-blocking Encrypted DNS over HTTPS",
+        "signature": "3046022100aa97ca22a94c98972fd66a19d8a4c7cbc52a0498d57684e1ec39f1cab1b3f084022100fc2f065b3a66260bd0d124df2cd357733c00b9993f16761523d5a28b1dd48808"
+    },
+    "tls": {
+        "topName": "DNS4EU Protective ad-blocking Encrypted DNS over TLS",
+        "ServerURLOrName": "noads.joindns4.eu",
+        "PayloadDescription": "Configures device to use DNS4EU Protective ad-blocking Encrypted DNS over HTTPS",
+        "signature": "3046022100c2ee880f90a82996aa02b2ca1b4595e758349caf45dccb1c78ccdaab228a6c6b022100ec8b1d84801c0e8c049028578ff9ea3b2f69292e0f168ef56a71acb6b7edae80"
+    }
+}

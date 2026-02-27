@@ -1,0 +1,25 @@
+{
+    "id": "mullvad-dns",
+    "profile": "mullvad-dns-profile",
+    "name": "mullvad",
+    "website": "https://mullvad.net/help/dns-over-https-and-dns-over-tls/",
+    "region": "SE",
+    "censorship": true,
+    "names": {
+        "en": "Mullvad DNS"
+    },
+    "notes": {
+        "en": "Operated by Mullvad VPN AB",
+        "cmn-CN": "由 Mullvad VPN AB 运营",
+        "cmn-TW": "由 Mullvad VPN AB 營運"
+    },
+    "fullName": "Mullvad DNS",
+    "ServerAddresses": [
+        "2a07:e340::2",
+        "194.242.2.2"
+    ],
+    "https": {
+        "ServerURLOrName": "https://doh.mullvad.net/dns-query",
+        "signature": "3046022100c4e5e9e69ff01276049fb36b06df3042b2179608cb395d0443352ed4e36e11a4022100e1d77e7ab13a9a0ba5e037f15702a77fd7d21838cd87aba6c6f0e139023988df"
+    }
+}

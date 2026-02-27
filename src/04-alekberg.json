@@ -1,0 +1,31 @@
+{
+    "id": "alekberg-dns",
+    "profile": "alekberg-dns-profile",
+    "name": "alekberg",
+    "website": "https://alekberg.net",
+    "region": "NL",
+    "censorship": false,
+    "names": {
+        "en": "Alekberg Encrypted DNS",
+        "cmn-CN": "Alekberg 加密 DNS",
+        "cmn-TW": "Alekberg 加密 DNS"
+    },
+    "notes": {
+        "en": "Independent",
+        "cmn-CN": "由个人提供",
+        "cmn-TW": "由個人提供"
+    },
+    "ServerAddresses": [
+        "89.38.131.38",
+        "2a0c:b9c0:f:451d::1"
+    ],
+    "https": {
+        "PayloadDisplayName": "Alekberg DNS over HTTPS (nl)",
+        "ServerURLOrName": "https://dnsnl.alekberg.net/dns-query",
+        "top": {
+            "description": "This profile enables Alekberg DNS over HTTPS located in Amsterdam (DNSSEC enabled) on all networks using the iOS 14 / macOS Big Sur Encrypted DNS feature."
+        },
+        "ConsentTextDefault": "Privacy policy: https://alekberg.net/privacy",
+        "signature": "3046022100e5a8e20dd6836cb41e74aa7a529f1bc6dabaccd0b191cbe09f973815c3d035fd022100a7250b2209274b5e0f54deed17a2d221e33dbe836e4f0cad08e5fa4bf5da20a4"
+    }
+}

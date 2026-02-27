@@ -1,0 +1,24 @@
+{
+    "id": "opendns",
+    "profile": "opendns-standard-profile",
+    "website": "https://support.opendns.com/hc/articles/360038086532",
+    "region": "US",
+    "censorship": false,
+    "names": {
+        "en": "OpenDNS Standard",
+        "cmn-CN": "OpenDNS 标准版",
+        "cmn-TW": "OpenDNS 標準版"
+    },
+    "notes": {
+        "en": "Operated by Cisco OpenDNS LLC",
+        "cmn-CN": "由思科 OpenDNS 运营",
+        "cmn-TW": "由思科 OpenDNS 營運"
+    },
+    "https": {
+        "PayloadDisplayName": "OpenDNS DNS over HTTPS Standard",
+        "PayloadDescription": "Configures device to use OpenDNS Encrypted DNS over HTTPS",
+        "ServerURLOrName": "https://doh.opendns.com/dns-query",
+        "topName": "OpenDNS Encrypted DNS",
+        "signature": "304402204affca5bb1d7939ce042c08a7eb3d428b11691f895d6096f55aa8d74bdb873d50220347312163eb30c9e5f971471eb435190a97c505fb2d74c2496b85c32b6895473"
+    }
+}

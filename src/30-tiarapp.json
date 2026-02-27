@@ -1,0 +1,31 @@
+{
+    "id": "tiarap",
+    "profile": "tiarap-profile",
+    "website": "https://doh.tiar.app",
+    "name": "tiarapp",
+    "region": [
+        "SG",
+        "US"
+    ],
+    "censorship": true,
+    "names": {
+        "en": "Tiarap"
+    },
+    "notes": {
+        "en": "Operated by Tiarap Inc. Blocks ads, tracking, phising & malware",
+        "cmn-CN": "由 Tiarap 公司运营，拦截广告、跟踪器、钓鱼和恶意软件",
+        "cmn-TW": "由 Tiarap 公司營運，阻擋廣告、追蹤器、釣魚和惡意軟體"
+    },
+    "https": {
+        "PayloadDisplayName": "Tiarap DNS over HTTPS",
+        "PayloadDescription": "Configures device to use Tiarap Encrypted DNS over HTTPS",
+        "ServerURLOrName": "https://doh.tiar.app/dns-query",
+        "signature": "3044022065da27b3576b68f7e744b3a2e1f0186525c11202d144aa3bd1a881a0914baae202205f9aa3c07a4106be7458be38140ce7e219707cc546b9440d9f4f36df2582a2e4"
+    },
+    "tls": {
+        "PayloadDisplayName": "Tiarap DNS over TLS",
+        "PayloadDescription": "Configures device to use Tiarap Encrypted DNS over TLS",
+        "ServerURLOrName": "dot.tiar.app",
+        "signature": "3046022100b2b7abd52d7b6a515ee716bcd8174ca28a241f8adc536a44d3253d7a46ae6be5022100eff5351a1b6a0a63225a5e869dbd9ace6e76f2f70acc184558b96a0738ca62fa"
+    }
+}

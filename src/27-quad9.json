@@ -1,0 +1,34 @@
+{
+    "id": "quad9",
+    "profile": "quad9-profile",
+    "website": "https://www.quad9.net/news/blog/doh-with-quad9-dns-servers/",
+    "region": "CH",
+    "censorship": true,
+    "names": {
+        "en": "Quad9"
+    },
+    "notes": {
+        "en": "Operated by Quad9 Foundation. Blocks malware",
+        "cmn-CN": "由 Quad9 基金会运营，拦截恶意软件",
+        "cmn-TW": "由 Quad9 基金會營運，阻擋惡意軟體"
+    },
+    "fullName": "Quad9 DNS",
+    "ServerAddresses": [
+        "2620:fe::fe",
+        "2620:fe::9",
+        "9.9.9.9",
+        "149.112.112.112"
+    ],
+    "https": {
+        "topName": "Quad9 Encrypted DNS over HTTPS",
+        "ServerURLOrName": "https://dns.quad9.net/dns-query",
+        "PayloadDescription": "Configures device to use Quad9 Encrypted DNS over HTTPS",
+        "signature": "304402200907ab690f38036aa05b7661f1290ee512d951aeef706bdf7178d64ce02b2720022008bad55511fbc647354aad3875329f9c1356a601b3c2a05cd11e76ac9335dee4"
+    },
+    "tls": {
+        "topName": "Quad9 Encrypted DNS over TLS",
+        "ServerURLOrName": "dns.quad9.net",
+        "PayloadDescription": "Configures device to use Quad9 Encrypted DNS over HTTPS",
+        "signature": "3045022100ed942feb36a94df5e8f022a9a1bf2b5f43a0a857ad310c5ce384691eb24f945802200cc0dae3515e8bb2d0c2718c65f34fe59e68ff7ef803da8a41ca1fdf33faed0d"
+    }
+}

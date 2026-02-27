@@ -1,0 +1,35 @@
+{
+    "id": "fdn-dns",
+    "profile": "fdn",
+    "website": "https://www.fdn.fr/actions/dns/",
+    "name": "fdn",
+    "region": "FR",
+    "censorship": false,
+    "names": {
+        "en": "FDN"
+    },
+    "notes": {
+        "en": "Operated by French Data Network",
+        "cmn-CN": "由法国数据网络运营",
+        "cmn-TW": "由法國資料網路營運"
+    },
+    "fullName": "FDN DNS",
+    "ServerAddresses": [
+        "2001:910:800::12",
+        "2001:910:800::40",
+        "80.67.169.12",
+        "80.67.169.40"
+    ],
+    "https": {
+        "topName": "FDN Encrypted DNS over HTTPS",
+        "ServerURLOrName": "https://ns0.fdn.fr/dns-query",
+        "PayloadDescription": "Configures device to use Google Encrypted DNS over HTTPS",
+        "signature": "3045022100a35e60382af4ed71ca90e44d4c8819462631e431486d1a100898ce42e1e4229702201a759920577ea480f74d4689c2f251e1fbe662042b6c28bec531030a464fb22a"
+    },
+    "tls": {
+        "topName": "FDN Encrypted DNS over TLS",
+        "ServerURLOrName": "dns.fdn",
+        "PayloadDescription": "Configures device to use FDN Encrypted DNS over TLS",
+        "signature": "3046022100e83f6ebda04a7440e10fbc1801bca35dae016d6f75b04f292c111990c0c3ee95022100c01fb44e36d3136b05aa3856573f28bb7e56ea9b4a0b5895ad9124295655339e"
+    }
+}

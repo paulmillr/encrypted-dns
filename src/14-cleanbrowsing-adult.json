@@ -1,0 +1,36 @@
+{
+    "id": "cleanbrowsing",
+    "profile": "cleanbrowsing-adult",
+    "name": "cleanbrowsing-adult",
+    "region": "US",
+    "censorship": true,
+    "names": {
+        "en": "Cleanbrowsing Adult Filter",
+        "cmn-CN": "Cleanbrowsing 成人过滤器",
+        "cmn-TW": "Cleanbrowsing 成人過濾器"
+    },
+    "notes": {
+        "en": "Filters malware & adult content",
+        "cmn-CN": "过滤恶意软件和成人内容",
+        "cmn-TW": "過濾惡意軟體和成人內容"
+    },
+    "fullName": "Cleanbrowsing Adult Filter DNS",
+    "ServerAddresses": [
+        "2a0d:2a00:1::1",
+        "2a0d:2a00:2::1",
+        "185.228.169.10",
+        "185.228.168.10"
+    ],
+    "https": {
+        "topName": "Cleanbrowsing Adult DNS over HTTPS",
+        "ServerURLOrName": "https://doh.cleanbrowsing.org/doh/adult-filter/",
+        "PayloadDescription": "Configures device to use Cleanbrowsing Adult Filter Encrypted DNS over HTTPS",
+        "signature": "3044022011d99bf0bb586c483fa9ecb306cd5b70b62d811343e11dac856b390c7ffe70c90220086270a6f6940113a50bacae42b4c346bc705b414afc661c75b33f6b17a302c1"
+    },
+    "tls": {
+        "topName": "Cleanbrowsing Adult DNS over TLS",
+        "ServerURLOrName": "adult-filter-dns.cleanbrowsing.org",
+        "PayloadDescription": "Configures device to use Cleanbrowsing Adult Filter Encrypted DNS over TLS",
+        "signature": "3046022100e42eb790e146e86a486b5c2758e8a76afe45d5ec60244d916df5a28540ceda57022100dd2408dc83df7975e1f163346e1201169f0386336d87149062fa3e8fd16799b7"
+    }
+}

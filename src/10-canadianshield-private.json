@@ -1,0 +1,35 @@
+{
+    "id": "canadian-shield",
+    "profile": "canadian-shield-private-profile",
+    "name": "canadianshield-private",
+    "website": "https://www.cira.ca/cybersecurity-services/canadian-shield/configure/summary-cira-canadian-shield-dns-resolver-addresses",
+    "region": "CA",
+    "censorship": false,
+    "names": {
+        "en": "Canadian Shield Private",
+        "cmn-CN": "Canadian Shield 私人",
+        "cmn-TW": "Canadian Shield 私人"
+    },
+    "notes": {
+        "en": "Operated by the Canadian Internet Registration Authority (CIRA)",
+        "cmn-CN": "由加拿大互联网注册管理局 (CIRA) 运营",
+        "cmn-TW": "由加拿大網際網路註冊管理局 (CIRA) 營運"
+    },
+    "fullName": "Canadian Shield DNS",
+    "ServerAddresses": [
+        "2620:10a:80bb::10",
+        "2620:10a:80bc::10",
+        "149.112.121.10",
+        "149.112.122.10"
+    ],
+    "https": {
+        "ServerURLOrName": "https://private.canadianshield.cira.ca/dns-query",
+        "PayloadDescription": "Configures device to use Canadian Shield Encrypted DNS over HTTPS",
+        "signature": "3045022064d30f7786ac873e3124e4242c096f6c5ac09df6cbbe1e41a57e2da3909a9bdd022100feb8b7af5749d0641c221bda13b18efb6c4972788c0941c627a78f62f7ed00c4"
+    },
+    "tls": {
+        "ServerURLOrName": "private.canadianshield.cira.ca",
+        "PayloadDescription": "Configures device to use Canadian Shield Encrypted DNS over TLS",
+        "signature": "3045022100ccd427a95a8cf6a36759d7c3bed8971cbd307dbe2ddce55f5106a801577f269902203091115303e173af130b74424bed413b9a240a037e8d47a558d3414fae7d88ed"
+    }
+}

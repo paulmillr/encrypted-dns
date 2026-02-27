@@ -1,0 +1,15 @@
+{
+  "name": "encrypted-dns",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:clean": "rm -f signed/*.mobileconfig profiles/*.mobileconfig README*.md",
+    "build": "npm run build:clean && node scripts/generate.ts",
+    "test": "node --experimental-strip-types --test scripts/new.test.ts scripts/sign.test.ts",
+    "format": "prettier --write \"src/*.json\" scripts/*.ts *.ts"
+  },
+  "dependencies": {
+    "micro-key-producer": "0.8.5",
+    "prettier": "3.6.2"
+  }
+}

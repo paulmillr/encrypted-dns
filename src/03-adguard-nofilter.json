@@ -1,0 +1,35 @@
+{
+    "id": "adguard-dns-unfiltered",
+    "profile": "adguard-dns-unfiltered-profile",
+    "website": "https://adguard-dns.io/kb/general/dns-providers/#non-filtering",
+    "name": "adguard-nofilter",
+    "region": "RU",
+    "censorship": false,
+    "names": {
+        "en": "AdGuard DNS Non-filtering",
+        "cmn-CN": "AdGuard DNS 无过滤",
+        "cmn-TW": "AdGuard DNS 無過濾"
+    },
+    "notes": {
+        "en": "Operated by AdGuard Software Ltd. Non-filtering",
+        "cmn-CN": "由 AdGuard 运营，无过滤",
+        "cmn-TW": "由 AdGuard 營運，無過濾"
+    },
+    "fullName": "Adguard No Filter",
+    "ServerAddresses": [
+        "2a10:50c0::1:ff",
+        "2a10:50c0::2:ff",
+        "94.140.14.140",
+        "94.140.14.141"
+    ],
+    "https": {
+        "ServerURLOrName": "https://dns-unfiltered.adguard.com/dns-query",
+        "PayloadDescription": "Configures device to use Adguard No Filter Encrypted DNS over TLS",
+        "signature": "3045022100fdaed8c78e07649e838da505d99f0977c8c4c9acd0bbbbecf850d32b3cf59fbc02202aa3e3f3b8f534404a553067d09e42c3d3c1dc56e564add9aa1f575af66629aa"
+    },
+    "tls": {
+        "ServerURLOrName": "dns-unfiltered.adguard.com",
+        "PayloadDescription": "Configures device to use Adguard No Filter Encrypted DNS over TLS",
+        "signature": "3045022100a98724a7b116b17a4298420cd6485094dd4ee7f99c205e5be3cdaf8ddb1f89d002202f030d4ab8db9892b4e616d5f40e5f34fc6c820d93dd8a53ba5807feeff2b9cf"
+    }
+}

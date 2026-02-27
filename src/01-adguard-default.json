@@ -1,0 +1,35 @@
+{
+    "id": "adguard-dns-default",
+    "profile": "adguard-dns-default-profile",
+    "name": "adguard-default",
+    "website": "https://adguard-dns.io/kb/general/dns-providers/#default",
+    "region": "RU",
+    "censorship": true,
+    "names": {
+        "en": "AdGuard DNS Default",
+        "cmn-CN": "AdGuard DNS 默认",
+        "cmn-TW": "AdGuard DNS 預設"
+    },
+    "notes": {
+        "en": "Operated by AdGuard Software Ltd. Blocks ads, tracking & phishing",
+        "cmn-CN": "由 AdGuard 运营，拦截广告、跟踪器和钓鱼网站",
+        "cmn-TW": "由 AdGuard 營運，阻擋廣告、追蹤器和釣魚網站"
+    },
+    "fullName": "Adguard Default DNS",
+    "ServerAddresses": [
+        "2a10:50c0::ad1:ff",
+        "2a10:50c0::ad2:ff",
+        "94.140.14.14",
+        "94.140.15.15"
+    ],
+    "https": {
+        "ServerURLOrName": "https://dns.adguard.com/dns-query",
+        "PayloadDescription": "Configures device to use Adguard Default Encrypted DNS over HTTPS",
+        "signature": "3046022100df21963cb87bd478cd7985c27eff370522620f349febe9bdc7046ca086da0f46022100f752055d9bca317503ef427103087a18aab012b9be057ff7717c6afb97f8c8ae"
+    },
+    "tls": {
+        "ServerURLOrName": "dns.adguard.com",
+        "PayloadDescription": "Configures device to use Adguard Default Encrypted DNS over TLS",
+        "signature": "3045022100a5245519b88402ab2ee5d2763d7d547515b31eb50bc92ccc338a62b51d7d5dfc0220161eec1a9ea24f2f71c4231a00245704a5f1b67699a976eeb63a3ab20a472abb"
+    }
+}

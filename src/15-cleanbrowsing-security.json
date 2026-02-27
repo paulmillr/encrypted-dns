@@ -1,0 +1,36 @@
+{
+    "id": "cleanbrowsing",
+    "profile": "cleanbrowsing-security",
+    "name": "cleanbrowsing-security",
+    "region": "US",
+    "censorship": true,
+    "names": {
+        "en": "Cleanbrowsing Security Filter",
+        "cmn-CN": "Cleanbrowsing 安全过滤器",
+        "cmn-TW": "Cleanbrowsing 安全過濾器"
+    },
+    "notes": {
+        "en": "Filters malware",
+        "cmn-CN": "过滤恶意软件",
+        "cmn-TW": "過濾惡意軟體"
+    },
+    "fullName": "Cleanbrowsing Security Filter DNS",
+    "ServerAddresses": [
+        "2a0d:2a00:1::2",
+        "2a0d:2a00:2::2",
+        "185.228.168.9",
+        "185.228.169.9"
+    ],
+    "https": {
+        "topName": "Cleanbrowsing Security DNS over HTTPS",
+        "ServerURLOrName": "https://doh.cleanbrowsing.org/doh/security-filter/",
+        "PayloadDescription": "Configures device to use Cleanbrowsing Security Filter Encrypted DNS over HTTPS",
+        "signature": "3045022100a029e18ed7d32aefb22ebe233a70e2da8a71f6cacf0a0a83832963137edb77500220583c5d5ec630aa95e0c93468489e52ff15198befc173d5c10b9d995636ae9b60"
+    },
+    "tls": {
+        "topName": "Cleanbrowsing Security DNS over TLS",
+        "ServerURLOrName": "security-filter-dns.cleanbrowsing.org",
+        "PayloadDescription": "Configures device to use Cleanbrowsing Security Filter Encrypted DNS over TLS",
+        "signature": "304402202e650e4cedf2daf322b7fe3c4ce79561e8f31b0b68404717c98db0aade007aa4022016affa44117b33b9a1529d9fd759ccfcaa0562e5a0fc565b0718212b5fd48161"
+    }
+}

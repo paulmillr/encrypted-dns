@@ -1,0 +1,14 @@
+{
+  "code": "cmn-CN",
+  "name": "简体中文",
+  "table_columns": {
+    "name": "名称",
+    "region": "区域",
+    "censorship": "审查",
+    "notes": "备注",
+    "install_signed": "安装 (已签名 - 推荐)",
+    "install_unsigned": "安装 (未签名)"
+  },
+  "yes": "是",
+  "no": "否"
+}

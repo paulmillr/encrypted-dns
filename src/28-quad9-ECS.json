@@ -1,0 +1,38 @@
+{
+    "id": "quad9",
+    "profile": "quad9-ecs-profile",
+    "name": "quad9-ECS",
+    "region": "CH",
+    "censorship": true,
+    "names": {
+        "en": "Quad9 w/ ECS",
+        "cmn-CN": "Quad9 带 ECS",
+        "cmn-TW": "Quad9 帶 ECS"
+    },
+    "notes": {
+        "en": "Operated by Quad9 Foundation. Supports ECS. Blocks malware",
+        "cmn-CN": "由 Quad9 基金会运营，支持 ECS，拦截恶意软件",
+        "cmn-TW": "由 Quad9 基金會營運，支援 ECS，阻擋惡意軟體"
+    },
+    "fullName": "Quad9 with ECS DNS",
+    "ServerAddresses": [
+        "2620:fe::fe:11",
+        "2620:fe::11",
+        "9.9.9.11",
+        "149.112.112.11"
+    ],
+    "https": {
+        "topName": "Quad9 with ECS Encrypted DNS over HTTPS",
+        "PayloadDisplayName": "Quad9 DNS over HTTPS with ECS",
+        "ServerURLOrName": "https://dns11.quad9.net/dns-query",
+        "PayloadDescription": "Configures device to use Quad9 Encrypted DNS over HTTPS with ECS",
+        "signature": "3045022100ed0a0feff22496cf9e67678ed3401a4586b00e76e68e89aedd201a3268502c44022016f3755477287f51e4ae95a69d074d929053868c529f6a156037c6a23d83d3d9"
+    },
+    "tls": {
+        "topName": "Quad9 with ECS Encrypted DNS over TLS",
+        "PayloadDisplayName": "Quad9 DNS over TLS with ECS",
+        "ServerURLOrName": "dns11.quad9.net",
+        "PayloadDescription": "Configures device to use Quad9 with ECS Encrypted DNS over HTTPS",
+        "signature": "304502200ffc0c911615ee9345b73711478b4bdd6bfdd9a3d209ee0e2ff70eef067ef676022100e6ef2efe613cd716e41876f1e30ee49fbc4ca4948b66e6cb13485963cb25ef75"
+    }
+}

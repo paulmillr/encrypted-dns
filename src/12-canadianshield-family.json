@@ -1,0 +1,34 @@
+{
+    "id": "canadian-shield",
+    "profile": "canadian-shield-family-profile",
+    "name": "canadianshield-family",
+    "region": "CA",
+    "censorship": true,
+    "names": {
+        "en": "Canadian Shield Family",
+        "cmn-CN": "Canadian Shield 家庭",
+        "cmn-TW": "Canadian Shield 家庭"
+    },
+    "notes": {
+        "en": "Operated by the Canadian Internet Registration Authority (CIRA). Blocks malware, phishing & adult content",
+        "cmn-CN": "由加拿大互联网注册管理局 (CIRA) 运营，拦截恶意软件、钓鱼和成人内容",
+        "cmn-TW": "由加拿大網際網路註冊管理局 (CIRA) 營運，阻擋惡意軟體、釣魚和成人內容"
+    },
+    "fullName": "Canadian Shield DNS",
+    "ServerAddresses": [
+        "2620:10a:80bb::30",
+        "2620:10a:80bc::30",
+        "149.112.121.30",
+        "149.112.122.30"
+    ],
+    "https": {
+        "ServerURLOrName": "https://family.canadianshield.cira.ca/dns-query",
+        "PayloadDescription": "Configures device to use Canadian Shield Encrypted DNS over HTTPS",
+        "signature": "3045022100e438440001c1efd68be7986f050e6b0376c982b6ea5948d1f4266839801628920220271416bfb37f6e0f9257648eb35a17c54059e60812d6e0c543921b47f7cc086e"
+    },
+    "tls": {
+        "ServerURLOrName": "family.canadianshield.cira.ca",
+        "PayloadDescription": "Configures device to use Canadian Shield Encrypted DNS over TLS",
+        "signature": "30450220273eb0f462105c04ce400559be7e5334139ee5791ec1295ff531adbecd633295022100ceb65d82f23c206098ba9d9d6637fd5368280f51d5801a42e6e909347ab3e238"
+    }
+}

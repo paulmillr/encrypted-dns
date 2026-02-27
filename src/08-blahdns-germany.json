@@ -1,0 +1,30 @@
+{
+    "id": "blahdns",
+    "profile": "blahdns-germany-profile",
+    "name": "blahdns-germany",
+    "region": "DE",
+    "censorship": true,
+    "names": {
+        "en": "BlahDNS Germany",
+        "cmn-CN": "BlahDNS 德国",
+        "cmn-TW": "BlahDNS 德國"
+    },
+    "notes": {
+        "en": "Independent. Blocks ads, tracking & malware",
+        "cmn-CN": "由个人提供，拦截广告、跟踪器和恶意软件",
+        "cmn-TW": "由個人提供，阻擋廣告、追蹤器和惡意軟體"
+    },
+    "ServerAddresses": [
+        "78.46.244.143",
+        "2a01:4f8:c17:ec67::1"
+    ],
+    "https": {
+        "PayloadDisplayName": "BlahDNS (Germany) DNS over HTTPS",
+        "ServerURLOrName": "https://doh-de.blahdns.com/dns-query",
+        "top": {
+            "description": "This profile enables BlahDNS (Germany) DNS over HTTPS on all networks using the iOS 14 / iPadOS 14 / tvOS 14 / macOS Big Sur Encrypted DNS feature."
+        },
+        "ConsentTextDefault": "Privacy policy:\nhttps://blahdns.com",
+        "signature": "3045022100ad5a23f54ee2f57f8719b2958057029defac0c4a80bad51e93676f1b4c18f34302205c7ed04674652ccce814fc31b459bda8197c9c16c60c73d4fb2a7eefac1b860c"
+    }
+}

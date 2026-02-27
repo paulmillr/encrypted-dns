@@ -1,0 +1,37 @@
+{
+    "id": "google-dns",
+    "profile": "google-dns-profile",
+    "name": "google",
+    "website": "https://developers.google.com/speed/public-dns/docs/secure-transports",
+    "region": "US",
+    "censorship": false,
+    "names": {
+        "en": "Google Public DNS",
+        "cmn-CN": "Google 公共 DNS",
+        "cmn-TW": "Google 公共 DNS"
+    },
+    "notes": {
+        "en": "Operated by Google LLC",
+        "cmn-CN": "由谷歌公司运营",
+        "cmn-TW": "由谷歌公司營運"
+    },
+    "fullName": "Google DNS",
+    "ServerAddresses": [
+        "2001:4860:4860::8888",
+        "2001:4860:4860::8844",
+        "8.8.8.8",
+        "8.8.4.4"
+    ],
+    "https": {
+        "topName": "Google Encrypted DNS over HTTPS",
+        "ServerURLOrName": "https://dns.google/dns-query",
+        "PayloadDescription": "Configures device to use Google Encrypted DNS over HTTPS",
+        "signature": "3044022100f4648f2e0ba7d04e8e3da24cb02fbdc4d9f81ba9603b007c561314137eb1478e021f460943164fb4d769603a8324ecdb1dfff45c31bd79065741a27e6877de5d67"
+    },
+    "tls": {
+        "topName": "Google Encrypted DNS over TLS",
+        "ServerURLOrName": "dns.google",
+        "PayloadDescription": "Configures device to use Google Encrypted DNS over TLS",
+        "signature": "30440220327b0b3297a16252639e0ebb52cfd367d16a361ee36fa5dd3862cf6a923285ae02203b6ef52222d7dea9c6d7ab1858c27294b0003175fb851409fcfab4870651b79e"
+    }
+}

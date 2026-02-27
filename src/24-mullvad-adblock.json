@@ -1,0 +1,27 @@
+{
+    "id": "mullvad-dns",
+    "profile": "mullvad-dns-adblock-profile",
+    "name": "mullvad-adblock",
+    "region": "SE",
+    "censorship": true,
+    "names": {
+        "en": "Mullvad DNS Adblock",
+        "cmn-CN": "Mullvad DNS 广告拦截",
+        "cmn-TW": "Mullvad DNS 廣告阻擋"
+    },
+    "notes": {
+        "en": "Operated by Mullvad VPN AB. Blocks ads & tracking",
+        "cmn-CN": "由 Mullvad VPN AB 运营，拦截广告和跟踪器",
+        "cmn-TW": "由 Mullvad VPN AB 營運，阻擋廣告和追蹤器"
+    },
+    "fullName": "Mullvad DNS with ad blocking",
+    "ServerAddresses": [
+        "2a07:e340::3",
+        "194.242.2.3"
+    ],
+    "https": {
+        "PayloadDisplayName": "Mullvad DNS over HTTPS",
+        "ServerURLOrName": "https://adblock.doh.mullvad.net/dns-query",
+        "signature": "3046022100fb68c3b2f7a20faba344b70a227b2ecbadc354a29165c43adbb19fcc28601dc5022100d7c007414b1c5b56ea0e07e4d21ffcec9ce4de2a2dd8b983dbc52601a75786dc"
+    }
+}
