@@ -75,51 +75,6 @@ macOS [（官方文档）](https://support.apple.com/zh-cn/guide/mac-help/mh3556
 
    如果 Mac 上已安装了较早版本的描述文件，其设置将替换为更新版本中的设置。
 
-## 范围
-
-这条[额外选项](https://github.com/paulmillr/encrypted-dns/issues/22)似乎可以让描述文件在系统全局范围生效。如果有兴趣尝试，请将下面的内容添加到 mobileconfig 文件中：
-
-```xml
-<key>PayloadScope</key>
-<string>System</string>
-```
-
-## 签名版描述文件
-
-在 `signed` 文件夹中，存放了*稍微过时的*签名版描述文件。这些描述文件已由 [@Candygoblen123](https://github.com/Candygoblen123) 签名，因此当你安装时，界面上会有“已验证”的提示，此举还可确保这些描述文件未被篡改。但由于这些描述文件是交由第三方签名的，因此可能会稍微落后于未签名的版本。
-
-[备注]: <> (我们建议安装签名版的描述文件，因为数字签名可以确保文件在下载时没有被修改。)
-
-如要验证 DNS 解析器的 IP 和主机名，请将描述文件内容与其官方网站的文档进行比对，描述文件内部结构和属性在[苹果开发者网站](https://developer.apple.com/documentation/devicemanagement/dnssettings)上有详细讲解。如要验证签名版的描述文件，请将其下载到本地后用文本编辑器打开，因为 GitHub 会将签名版描述文件视为二进制文件而无法直接查看。
-
-## 提交新描述文件
-
-描述文件本质上是文本文件，将现有的描述文件复制一份并修改其 UUID 即可，请确保在本 README 文件中更新描述文件的相关信息。
-
-随机 UUID 除了可以通过网站在线生成，还有很多其他获取方法：
-
-- 在浏览器中按下 `F12` 打开“开发人员工具”，在控制台中运行这段代码
-
-```javascript
-crypto.randomUUID();
-```
-
-- 在 macOS / Linux 终端中运行此命令
-
-```sh
-# 适用于 macOS 和 Linux
-uuidgen
-
-# 适用于 Linux
-cat /proc/sys/kernel/random/uuid
-```
-
-- 在 Powershell 中运行此命令
-
-```powershell
-New-Guid
-```
-
 [360-default]: https://sdns.360.net/dnsPublic.html
 [360-default-https]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/360-default-https.mobileconfig
 [adguard-default]: https://adguard-dns.io/kb/general/dns-providers/#default
