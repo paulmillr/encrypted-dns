@@ -1,0 +1,25 @@
+{
+    "names": {
+        "en": "keweonDNS"
+    },
+    "notes": {
+        "en": "Operated by Aviontex. Blocks ads & tracking",
+        "cmn-CN": "由 Aviontex 运营，拦截广告和跟踪器",
+        "cmn-TW": "由 Aviontex 營運，阻擋廣告和追蹤器"
+    },
+    "website": "https://forum.xda-developers.com/t/keweondns-info-facts-and-what-is-keweon-actually.4576651/",
+    "region": "DE",
+    "censorship": false,
+    "variants": {
+        "default": {
+            "https": {
+                "ServerURLOrName": "https://dns.keweon.center/dns-query",
+                "signature": "304502202c1c48d486f50b90ac7570bcd562058e769c9569e34de87f75b696134fd209a302210089988f94bb6f708855f2a267ff60583bc1e46cecdc4d3005cd37d428786e7404"
+            },
+            "tls": {
+                "ServerURLOrName": "dns.keweon.center",
+                "signature": "3045022100933322f8ae95f6f5f096f5dcf63988b2c2d16de787f65d44a82f1406f391e24502203fac2ca76ba7f05c2f6132a33da47c73ea13ec849943cf6a46982a3b2bf3770c"
+            }
+        }
+    }
+}

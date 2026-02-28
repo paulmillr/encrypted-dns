@@ -22,7 +22,7 @@
 			<key>PayloadDescription</key>
 			<string>Configures device to use DNS4EU Protective ad-blocking Encrypted DNS over HTTPS</string>
 			<key>PayloadDisplayName</key>
-			<string>DNS4EU Protective ad-blocking DNS over HTTPS</string>
+			<string>DNS4EU Protective ad-blocking Encrypted DNS over HTTPS</string>
 			<key>PayloadIdentifier</key>
 			<string>com.apple.dnsSettings.managed.468a13d5-803a-56dd-acf2-293ed817ef9a</string>
 			<key>PayloadType</key>
@@ -36,7 +36,10 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Adds the DNS4EU Protective ad-blocking DNS to Big Sur and iOS 14 based systems</string>
+	<string>Configures device to use DNS4EU Protective ad-blocking over HTTPS
+Operated by a consortium lead by Whalebone. Blocks Malware and Ads.
+Server location: 🇨🇿.
+Filtering: yes</string>
 	<key>PayloadDisplayName</key>
 	<string>DNS4EU Protective ad-blocking Encrypted DNS over HTTPS</string>
 	<key>PayloadIdentifier</key>

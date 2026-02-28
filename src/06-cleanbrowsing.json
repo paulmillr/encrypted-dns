@@ -1,0 +1,88 @@
+{
+    "names": {
+        "en": "Cleanbrowsing"
+    },
+    "website": "https://cleanbrowsing.org/filters/",
+    "region": "US",
+    "censorship": true,
+    "variants": {
+        "family": {
+            "ServerAddresses": [
+                "2a0d:2a00:1::",
+                "2a0d:2a00:1::",
+                "185.228.169.168",
+                "185.228.168.168"
+            ],
+            "https": {
+                "ServerURLOrName": "https://doh.cleanbrowsing.org/doh/family-filter/",
+                "signature": "3045022100e116667db75c84e7c224872a91110dbf175db1e307d13c0cb3fe903aed084ab402203a5addc46dfa935ab72bb2cf1be35ba44463c8358186d3e016e300328eb26ea0"
+            },
+            "tls": {
+                "ServerURLOrName": "family-filter-dns.cleanbrowsing.org",
+                "signature": "3046022100ce3eb2b2a462990326fdea4b6b7c2f771fd22ba2932efae72228c8d16b15f1a50221008d8640146bc45e1231ba3388d1a5f8019054b7454192b7f9825577f42d6cea2d"
+            },
+            "names": {
+                "en": "Family Filter",
+                "cmn-CN": "家庭过滤器",
+                "cmn-TW": "家庭過濾器"
+            },
+            "notes": {
+                "en": "Filters malware & adult, mixed content",
+                "cmn-CN": "过滤恶意软件、成人内容和混合内容",
+                "cmn-TW": "過濾惡意軟體、成人內容和混合內容"
+            }
+        },
+        "adult": {
+            "names": {
+                "en": "Adult Filter",
+                "cmn-CN": "成人过滤器",
+                "cmn-TW": "成人過濾器"
+            },
+            "notes": {
+                "en": "Filters malware & adult content",
+                "cmn-CN": "过滤恶意软件和成人内容",
+                "cmn-TW": "過濾惡意軟體和成人內容"
+            },
+            "ServerAddresses": [
+                "2a0d:2a00:1::1",
+                "2a0d:2a00:2::1",
+                "185.228.169.10",
+                "185.228.168.10"
+            ],
+            "https": {
+                "ServerURLOrName": "https://doh.cleanbrowsing.org/doh/adult-filter/",
+                "signature": "304402201bcf2615d755b30a6c2b4e38a0b5f10e31c27ecb911f75931d9445d69890885f022077daa29854203da1ab48d1b52b837f003fc6bf08a5263b86fef07ca59b67c00d"
+            },
+            "tls": {
+                "ServerURLOrName": "adult-filter-dns.cleanbrowsing.org",
+                "signature": "30450221008ca3aa72e34af676d5ff24afe939a9ad5ce08bb695f33b572a7a970c29c2ba88022050909ba8c55dbb6e4eb3c36c24b0fa51a32e8056a46e822cc5618185cf073dc6"
+            }
+        },
+        "security": {
+            "names": {
+                "en": "Security Filter",
+                "cmn-CN": "安全过滤器",
+                "cmn-TW": "安全過濾器"
+            },
+            "notes": {
+                "en": "Filters malware",
+                "cmn-CN": "过滤恶意软件",
+                "cmn-TW": "過濾惡意軟體"
+            },
+            "ServerAddresses": [
+                "2a0d:2a00:1::2",
+                "2a0d:2a00:2::2",
+                "185.228.168.9",
+                "185.228.169.9"
+            ],
+            "https": {
+                "ServerURLOrName": "https://doh.cleanbrowsing.org/doh/security-filter/",
+                "signature": "3046022100aff11ce818e66df55d4b59761c7714d23f1dc37d848f7a9e9d9135844ba5e2f8022100ac8cd28cccac15fbd7c9ef6a647200fbdde5aee299bd2ab8f11edc5127c20b38"
+            },
+            "tls": {
+                "ServerURLOrName": "security-filter-dns.cleanbrowsing.org",
+                "signature": "3045022100e746604c4b341d9563f14fc87658157e16737909e9836d6e748eeeb1ce5ee3db022053320f489c7d148a70356d0778086e4cb3d3bcefbbcf5b6f7d6a18ad741edb85"
+            }
+        }
+    }
+}

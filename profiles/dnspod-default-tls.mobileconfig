@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>DNSSettings</key>
+			<dict>
+				<key>DNSProtocol</key>
+				<string>TLS</string>
+				<key>ServerAddresses</key>
+				<array>
+					<string>1.12.12.12</string>
+					<string>120.53.53.53</string>
+				</array>
+				<key>ServerName</key>
+				<string>dot.pub</string>
+			</dict>
+			<key>PayloadDescription</key>
+			<string>Configures device to use DNSPod Public DNS Encrypted DNS over TLS</string>
+			<key>PayloadDisplayName</key>
+			<string>DNSPod Public DNS Encrypted DNS over TLS</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.dnsSettings.managed.64ecbaaa-b2da-542e-8d8b-9f2cbd1037ed</string>
+			<key>PayloadType</key>
+			<string>com.apple.dnsSettings.managed</string>
+			<key>PayloadUUID</key>
+			<string>64ECBAAA-B2DA-542E-8D8B-9F2CBD1037ED</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProhibitDisablement</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Configures device to use DNSPod Public DNS over TLS
+Operated by DNSPod Inc., a Tencent Cloud Company.
+Server location: 🇨🇳.
+Filtering: no</string>
+	<key>PayloadDisplayName</key>
+	<string>DNSPod Public DNS Encrypted DNS over TLS</string>
+	<key>PayloadIdentifier</key>
+	<string>com.paulmillr.apple-dns</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>430A7431-572F-5FA3-B347-FE77E300234D</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>

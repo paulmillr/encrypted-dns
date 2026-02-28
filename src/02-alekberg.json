@@ -1,0 +1,28 @@
+{
+    "names": {
+        "en": "Alekberg Encrypted DNS",
+        "cmn-CN": "Alekberg 加密 DNS",
+        "cmn-TW": "Alekberg 加密 DNS"
+    },
+    "notes": {
+        "en": "Independent",
+        "cmn-CN": "由个人提供",
+        "cmn-TW": "由個人提供"
+    },
+    "website": "https://alekberg.net",
+    "region": "NL",
+    "censorship": false,
+    "consent": "Privacy policy: https://alekberg.net/privacy",
+    "variants": {
+        "default": {
+            "ServerAddresses": [
+                "89.38.131.38",
+                "2a0c:b9c0:f:451d::1"
+            ],
+            "https": {
+                "ServerURLOrName": "https://dnsnl.alekberg.net/dns-query",
+                "signature": "3044022005dac8a915cbafbd1e7eb7a118df0c206335fc4b49ec383b27361f1a3448cf5202205d5210e724aa386b7d28f9dd67471ae0e4df4ddb04d1fd2bf371ab392df206a8"
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "names": {
+        "en": "FDN"
+    },
+    "notes": {
+        "en": "Operated by French Data Network",
+        "cmn-CN": "由法国数据网络运营",
+        "cmn-TW": "由法國資料網路營運"
+    },
+    "website": "https://www.fdn.fr/actions/dns/",
+    "region": "FR",
+    "censorship": false,
+    "variants": {
+        "default": {
+            "ServerAddresses": [
+                "2001:910:800::12",
+                "2001:910:800::40",
+                "80.67.169.12",
+                "80.67.169.40"
+            ],
+            "https": {
+                "ServerURLOrName": "https://ns0.fdn.fr/dns-query",
+                "signature": "3045022100fe76e468888071eacb8bf94a1afb14ce152965c5f2bca0052c1493ccbb36d037022031bc9a1b508519f7827e0ee3903799dea0f5983b81bd3cea3d8e8bd2997a3da7"
+            },
+            "tls": {
+                "ServerURLOrName": "dns.fdn",
+                "signature": "3044022066e68e444d5c97c4ae03ed5b02790acce9dc156103d28e1299b7e51bef53f8a7022027805e23cc2abd2ac41b000399af91770713e8cd202b5dd44cfe8248f8f7b93f"
+            }
+        }
+    }
+}

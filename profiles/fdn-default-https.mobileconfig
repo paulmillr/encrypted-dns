@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>DNSSettings</key>
+			<dict>
+				<key>DNSProtocol</key>
+				<string>HTTPS</string>
+				<key>ServerAddresses</key>
+				<array>
+					<string>2001:910:800::12</string>
+					<string>2001:910:800::40</string>
+					<string>80.67.169.12</string>
+					<string>80.67.169.40</string>
+				</array>
+				<key>ServerURL</key>
+				<string>https://ns0.fdn.fr/dns-query</string>
+			</dict>
+			<key>PayloadDescription</key>
+			<string>Configures device to use FDN Encrypted DNS over HTTPS</string>
+			<key>PayloadDisplayName</key>
+			<string>FDN Encrypted DNS over HTTPS</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.dnsSettings.managed.c56afe2b-9a39-5a08-968f-c6c5e3c9c1c1</string>
+			<key>PayloadType</key>
+			<string>com.apple.dnsSettings.managed</string>
+			<key>PayloadUUID</key>
+			<string>C56AFE2B-9A39-5A08-968F-C6C5E3C9C1C1</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProhibitDisablement</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Configures device to use FDN over HTTPS
+Operated by French Data Network.
+Server location: 🇫🇷.
+Filtering: no</string>
+	<key>PayloadDisplayName</key>
+	<string>FDN Encrypted DNS over HTTPS</string>
+	<key>PayloadIdentifier</key>
+	<string>com.paulmillr.apple-dns</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>C87A5BE8-354A-557F-9C9D-2871E280F815</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>

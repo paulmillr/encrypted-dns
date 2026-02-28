@@ -20,9 +20,9 @@
 				<string>https://dns10.quad9.net/dns-query</string>
 			</dict>
 			<key>PayloadDescription</key>
-			<string>Configures device to use Quad9 No Filter Encrypted DNS over HTTPS</string>
+			<string>Configures device to use Quad9 Unfiltered Encrypted DNS over HTTPS</string>
 			<key>PayloadDisplayName</key>
-			<string>Quad9 No Filter DNS over HTTPS</string>
+			<string>Quad9 Unfiltered Encrypted DNS over HTTPS</string>
 			<key>PayloadIdentifier</key>
 			<string>com.apple.dnsSettings.managed.4764962f-5e78-514d-ad2c-dc8acd3b27f3</string>
 			<key>PayloadType</key>
@@ -36,9 +36,12 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Adds the Quad9 No Filter DNS to Big Sur and iOS 14 based systems</string>
+	<string>Configures device to use Quad9 Unfiltered over HTTPS
+Operated by Quad9 Foundation.
+Server location: 🇨🇭.
+Filtering: no</string>
 	<key>PayloadDisplayName</key>
-	<string>Quad9 No Filter Encrypted DNS over HTTPS</string>
+	<string>Quad9 Unfiltered Encrypted DNS over HTTPS</string>
 	<key>PayloadIdentifier</key>
 	<string>com.paulmillr.apple-dns</string>
 	<key>PayloadRemovalDisallowed</key>

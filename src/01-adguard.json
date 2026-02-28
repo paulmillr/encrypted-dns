@@ -1,0 +1,96 @@
+{
+    "names": {
+        "en": "AdGuard DNS"
+    },
+    "notes": {
+        "en": "Operated by AdGuard Software Ltd.",
+        "cmn-CN": "由 AdGuard 运营",
+        "cmn-TW": "由 AdGuard 營運"
+    },
+    "website": "https://adguard-dns.io/kb/general/dns-providers/#default",
+    "region": "RU",
+    "censorship": true,
+    "variants": {
+        "default": {
+            "names": {
+                "en": "Default",
+                "cmn-CN": "默认",
+                "cmn-TW": "預設"
+            },
+            "notes": {
+                "en": "Blocks ads, tracking & phishing",
+                "cmn-CN": "拦截广告、跟踪器和钓鱼网站",
+                "cmn-TW": "阻擋廣告、追蹤器和釣魚網站"
+            },
+            "ServerAddresses": [
+                "2a10:50c0::ad1:ff",
+                "2a10:50c0::ad2:ff",
+                "94.140.14.14",
+                "94.140.15.15"
+            ],
+            "https": {
+                "ServerURLOrName": "https://dns.adguard.com/dns-query",
+                "signature": "30440220375de2ae941e0cd18808a45a84441afe3bdc4b48546022965796123257afa5eb02201226d86321cc6346d4c404f466fa0fdd42b8e9ef5f893783216cbacc321505fc"
+            },
+            "tls": {
+                "ServerURLOrName": "dns.adguard.com",
+                "signature": "3046022100fa4420993bad29e01ea11240d5df3a5b2d531618e2553797bd7a402790ee663e0221008d90318c0e60b526c0ef231cf0a2b3cdec47e3f2c08c549fceca51ab08065403"
+            }
+        },
+        "family": {
+            "website": "https://adguard-dns.io/kb/general/dns-providers/#family-protection",
+            "names": {
+                "en": "Family Protection",
+                "cmn-CN": "家庭保护",
+                "cmn-TW": "家庭保護"
+            },
+            "notes": {
+                "en": "Blocks `Default` + malware & adult content",
+                "cmn-CN": "除默认规则外，额外拦截恶意软件和成人内容",
+                "cmn-TW": "除預設規則外，額外阻擋惡意軟體和成人內容"
+            },
+            "ServerAddresses": [
+                "2a10:50c0::bad1:ff",
+                "2a10:50c0::bad2:ff",
+                "94.140.14.15",
+                "94.140.15.16"
+            ],
+            "https": {
+                "ServerURLOrName": "https://dns-family.adguard.com/dns-query",
+                "signature": "3044022036dfca78ce0f7e24e04f299a96e9b8ce2fa563467c6fcf82cc2cf54be30f372b02206bb26c0740e8c117ad80e722f2a8d5a65bfdacdc967590a516d56e9d03a985af"
+            },
+            "tls": {
+                "ServerURLOrName": "dns-family.adguard.com",
+                "signature": "304502201271423ed65dd0a26d1c77032b80ee70aa692c62363e8ad088b5a89cf1be9405022100a615e2a22ae529891e1c86aff96620944b87afdd5b83e3d9c65e88fa613598be"
+            }
+        },
+        "nofilter": {
+            "website": "https://adguard-dns.io/kb/general/dns-providers/#non-filtering",
+            "names": {
+                "en": "Non-filtering",
+                "cmn-CN": "无过滤",
+                "cmn-TW": "無過濾"
+            },
+            "notes": {
+                "en": "Non-filtering",
+                "cmn-CN": "无过滤",
+                "cmn-TW": "無過濾"
+            },
+            "censorship": false,
+            "ServerAddresses": [
+                "2a10:50c0::1:ff",
+                "2a10:50c0::2:ff",
+                "94.140.14.140",
+                "94.140.14.141"
+            ],
+            "https": {
+                "ServerURLOrName": "https://dns-unfiltered.adguard.com/dns-query",
+                "signature": "3045022100ba4b7877563695b68bb3ab7b384a7efcd00cb8c365f0175e181f39f697916f3002203bccc566117ccbc73ff82d8139cbd9b703316d213d17637b4088a4124b99f62c"
+            },
+            "tls": {
+                "ServerURLOrName": "dns-unfiltered.adguard.com",
+                "signature": "304502207d32991b63ececdb6217056c9ce4af7d5a7caa7b540d36665ae0bf57234d2473022100c336269381b09ed2e3d5363a42f4599cc6c23f025a9156e9aae3081358e1e4dc"
+            }
+        }
+    }
+}

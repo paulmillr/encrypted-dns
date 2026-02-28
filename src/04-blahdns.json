@@ -1,0 +1,91 @@
+{
+    "names": {
+        "en": "BlahDNS"
+    },
+    "notes": {
+        "en": "Independent.",
+        "cmn-CN": "由个人提供",
+        "cmn-TW": "由個人提供"
+    },
+    "website": "https://blahdns.com/",
+    "region": "US",
+    "censorship": true,
+    "consent": "Privacy policy:\nhttps://blahdns.com",
+    "variants": {
+        "cdn-adblock": {
+            "https": {
+                "ServerURLOrName": "https://doh1.blahdns.com/dns-query",
+                "signature": "3045022100d1197f91d4678bd68cfa78cfd487a37b3783a1e7aedfe6048f835b99d11ff2e902206ab8c2e060feab91f22166e9e874dbfcb9c95c6eadb88440ba95d2b58fd75313"
+            },
+            "names": {
+                "en": "CDN Filtered",
+                "cmn-CN": "CDN 过滤",
+                "cmn-TW": "CDN 過濾"
+            },
+            "notes": {
+                "en": "Blocks ads, tracking & malware",
+                "cmn-CN": "拦截广告、跟踪器和恶意软件",
+                "cmn-TW": "阻擋廣告、追蹤器和惡意軟體"
+            }
+        },
+        "cdn-unfiltered": {
+            "names": {
+                "en": "CDN Unfiltered",
+                "cmn-CN": "CDN 无过滤",
+                "cmn-TW": "CDN 無過濾"
+            },
+            "notes": {
+                "en": "Non-filtering",
+                "cmn-CN": "无过滤",
+                "cmn-TW": "無過濾"
+            },
+            "censorship": false,
+            "https": {
+                "ServerURLOrName": "https://doh1.blahdns.com/uncensor",
+                "signature": "304402203ff18b8ee33567f827fb9fbab11313653e88070f314fa95e40dc1558f39b733702204f9f5b74815023320b5d3e558257fdb135832425b384087e141a4995b8da75d3"
+            }
+        },
+        "germany": {
+            "region": "DE",
+            "names": {
+                "en": "Germany",
+                "cmn-CN": "德国",
+                "cmn-TW": "德國"
+            },
+            "ServerAddresses": [
+                "78.46.244.143",
+                "2a01:4f8:c17:ec67::1"
+            ],
+            "https": {
+                "ServerURLOrName": "https://doh-de.blahdns.com/dns-query",
+                "signature": "30460221009f91f2f5b4905134c7e4e0bbcbae1331b0f32283affdd911f33e86760ce2a3e0022100dca0ee0fda0c9ff9c5ec23b255c2bc4f90288a4bfc8b0091007470b7952369a0"
+            },
+            "notes": {
+                "en": "Blocks ads, tracking & malware",
+                "cmn-CN": "拦截广告、跟踪器和恶意软件",
+                "cmn-TW": "阻擋廣告、追蹤器和惡意軟體"
+            }
+        },
+        "singapore": {
+            "region": "SG",
+            "names": {
+                "en": "Singapore",
+                "cmn-CN": "新加坡",
+                "cmn-TW": "新加坡"
+            },
+            "ServerAddresses": [
+                "46.250.226.242",
+                "2407:3640:2205:1668::1"
+            ],
+            "https": {
+                "ServerURLOrName": "https://doh-sg.blahdns.com/dns-query",
+                "signature": "304402203afd29c961f211de6ff5b73896bdb7d7d3a9255a6147233df434ac371bf4a75e022053f66d018a48b159212cfb64382b7b0d0def6982a70be6526d8a05b087a3b20c"
+            },
+            "notes": {
+                "en": "Blocks ads, tracking & malware",
+                "cmn-CN": "拦截广告、跟踪器和恶意软件",
+                "cmn-TW": "阻擋廣告、追蹤器和惡意軟體"
+            }
+        }
+    }
+}

@@ -18,9 +18,9 @@
 				<string>https://adblock.doh.mullvad.net/dns-query</string>
 			</dict>
 			<key>PayloadDescription</key>
-			<string>Configures device to use Mullvad DNS over HTTPS</string>
+			<string>Configures device to use Mullvad DNS Adblock Encrypted DNS over HTTPS</string>
 			<key>PayloadDisplayName</key>
-			<string>Mullvad DNS over HTTPS</string>
+			<string>Mullvad DNS Adblock Encrypted DNS over HTTPS</string>
 			<key>PayloadIdentifier</key>
 			<string>com.apple.dnsSettings.managed.aa51aa88-e16a-50c0-9b0b-4a5c1f4af720</string>
 			<key>PayloadType</key>
@@ -34,9 +34,12 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Adds the Mullvad DNS with ad blocking to Big Sur and iOS 14 based systems</string>
+	<string>Configures device to use Mullvad DNS Adblock over HTTPS
+Operated by Mullvad VPN AB. Blocks ads &amp; tracking.
+Server location: 🇸🇪.
+Filtering: yes</string>
 	<key>PayloadDisplayName</key>
-	<string>Mullvad DNS over HTTPS</string>
+	<string>Mullvad DNS Adblock Encrypted DNS over HTTPS</string>
 	<key>PayloadIdentifier</key>
 	<string>com.paulmillr.apple-dns</string>
 	<key>PayloadRemovalDisallowed</key>

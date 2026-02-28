@@ -1,0 +1,43 @@
+{
+    "names": {
+        "en": "OpenDNS"
+    },
+    "notes": {
+        "en": "Operated by Cisco OpenDNS LLC",
+        "cmn-CN": "由思科 OpenDNS 运营",
+        "cmn-TW": "由思科 OpenDNS 營運"
+    },
+    "website": "https://support.opendns.com/hc/articles/360038086532",
+    "region": "US",
+    "censorship": false,
+    "variants": {
+        "default": {
+            "https": {
+                "ServerURLOrName": "https://doh.opendns.com/dns-query",
+                "signature": "30440220714a5e3f10c6b14a8f12405a39eed00c408b648b5af603434a06fdacefddc64b02204e1273ddb49649e84cb7a667f7fa0f273eaf0e0a39d151c66cca2f9e83aa946e"
+            },
+            "names": {
+                "en": "Standard",
+                "cmn-CN": "标准版",
+                "cmn-TW": "標準版"
+            }
+        },
+        "family": {
+            "names": {
+                "en": "FamilyShield",
+                "cmn-CN": "家庭盾",
+                "cmn-TW": "家庭盾"
+            },
+            "notes": {
+                "en": "Blocks malware & adult content",
+                "cmn-CN": "拦截恶意软件和成人内容",
+                "cmn-TW": "阻擋惡意軟體和成人內容"
+            },
+            "censorship": true,
+            "https": {
+                "ServerURLOrName": "https://doh.familyshield.opendns.com/dns-query",
+                "signature": "304502201b7494f8fdbfe1ec83d99b960163eed13e040fc18c5ce3e00c254829661bae540221008cef5162f72d5f65534af2774c882288e627c4a8bb5ba2bf56e5047d628efff1"
+            }
+        }
+    }
+}

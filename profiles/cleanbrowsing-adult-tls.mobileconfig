@@ -22,7 +22,7 @@
 			<key>PayloadDescription</key>
 			<string>Configures device to use Cleanbrowsing Adult Filter Encrypted DNS over TLS</string>
 			<key>PayloadDisplayName</key>
-			<string>Cleanbrowsing Adult Filter DNS over TLS</string>
+			<string>Cleanbrowsing Adult Filter Encrypted DNS over TLS</string>
 			<key>PayloadIdentifier</key>
 			<string>com.apple.dnsSettings.managed.121e1333-1810-5b62-aae2-06711e8582a8</string>
 			<key>PayloadType</key>
@@ -36,9 +36,12 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Adds the Cleanbrowsing Adult Filter DNS to Big Sur and iOS 14 based systems</string>
+	<string>Configures device to use Cleanbrowsing Adult Filter over TLS
+Filters malware &amp; adult content.
+Server location: 🇺🇸.
+Filtering: yes</string>
 	<key>PayloadDisplayName</key>
-	<string>Cleanbrowsing Adult DNS over TLS</string>
+	<string>Cleanbrowsing Adult Filter Encrypted DNS over TLS</string>
 	<key>PayloadIdentifier</key>
 	<string>com.paulmillr.apple-dns</string>
 	<key>PayloadRemovalDisallowed</key>

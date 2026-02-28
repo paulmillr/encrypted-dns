@@ -1,10 +1,4 @@
 {
-    "id": "360-dns",
-    "profile": "360-dns-profile",
-    "name": "360",
-    "website": "https://sdns.360.net/dnsPublic.html",
-    "region": "CN",
-    "censorship": true,
     "names": {
         "en": "360 Security DNS",
         "cmn-CN": "360 安全 DNS",
@@ -15,13 +9,19 @@
         "cmn-CN": "由 360 数字安全集团运营",
         "cmn-TW": "由 360 數位安全集團營運"
     },
-    "ServerAddresses": [
-        "101.198.198.198",
-        "101.198.199.200"
-    ],
-    "https": {
-        "PayloadDisplayName": "360 Public Security DNS over HTTPS",
-        "ServerURLOrName": "https://doh.360.cn/dns-query",
-        "signature": "3045022000f1c4afee39b143a5b3193fc849d5b1775488e202ca6dc5ff9ab2e50b6d8bfb022100b19549425ff3a369ed6669f45bf2972bd8fcb85b96ad7013dda53494cc795941"
+    "website": "https://sdns.360.net/dnsPublic.html",
+    "region": "CN",
+    "censorship": true,
+    "variants": {
+        "default": {
+            "ServerAddresses": [
+                "101.198.198.198",
+                "101.198.199.200"
+            ],
+            "https": {
+                "ServerURLOrName": "https://doh.360.cn/dns-query",
+                "signature": "3045022100cf0b6200ce7979bb818415db139aa97f6b6db8d717379c2ed523e485023a1e330220735fd05cbca306fe688503bec1fb2edcdd4688b8c95fe0e8b0e8e6db173b1de7"
+            }
+        }
     }
 }

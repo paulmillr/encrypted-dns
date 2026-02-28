@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>DNSSettings</key>
+			<dict>
+				<key>DNSProtocol</key>
+				<string>HTTPS</string>
+				<key>ServerAddresses</key>
+				<array>
+					<string>2a13:1001::86:54:11:100</string>
+					<string>2a13:1001::86:54:11:200</string>
+					<string>86.54.11.100</string>
+					<string>86.54.11.200</string>
+				</array>
+				<key>ServerURL</key>
+				<string>https://unfiltered.joindns4.eu/dns-query</string>
+			</dict>
+			<key>PayloadDescription</key>
+			<string>Configures device to use DNS4EU Encrypted DNS over HTTPS</string>
+			<key>PayloadDisplayName</key>
+			<string>DNS4EU Encrypted DNS over HTTPS</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.dnsSettings.managed.8f35bc77-18dd-5233-a8ee-fbc3fd0b76e0</string>
+			<key>PayloadType</key>
+			<string>com.apple.dnsSettings.managed</string>
+			<key>PayloadUUID</key>
+			<string>8F35BC77-18DD-5233-A8EE-FBC3FD0B76E0</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProhibitDisablement</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Configures device to use DNS4EU over HTTPS
+Operated by a consortium lead by Whalebone.
+Server location: 🇨🇿.
+Filtering: no</string>
+	<key>PayloadDisplayName</key>
+	<string>DNS4EU Encrypted DNS over HTTPS</string>
+	<key>PayloadIdentifier</key>
+	<string>com.paulmillr.apple-dns</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>5A30346F-9BFF-55B3-93E8-7623B9089F52</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>

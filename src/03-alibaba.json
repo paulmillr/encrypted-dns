@@ -1,0 +1,33 @@
+{
+    "names": {
+        "en": "Aliyun Public DNS",
+        "cmn-CN": "阿里云公共 DNS",
+        "cmn-TW": "阿里雲公共 DNS"
+    },
+    "notes": {
+        "en": "Operated by Alibaba Cloud Ltd.",
+        "cmn-CN": "由阿里云计算运营",
+        "cmn-TW": "由阿里雲計算營運"
+    },
+    "website": "https://www.alidns.com/",
+    "region": "CN",
+    "censorship": false,
+    "variants": {
+        "default": {
+            "ServerAddresses": [
+                "2400:3200::1",
+                "2400:3200:baba::1",
+                "223.5.5.5",
+                "223.6.6.6"
+            ],
+            "https": {
+                "ServerURLOrName": "https://dns.alidns.com/dns-query",
+                "signature": "3043022006a1f7c364f18b69de9a65ad82cc5647f6ec035a9efb7d84bb16237c656e8ea5021f7a0b048a82d147acfb2726cdc48a9bb5ce0c19b701d0b2dde23baf51b6b073"
+            },
+            "tls": {
+                "ServerURLOrName": "dns.alidns.com",
+                "signature": "3045022017e0041af2292d0f2d1e152faa7ae95902699a9d240350706e2febb7b8ef3fad022100c4686424fd5827bd250bb40964cd18154bc9fb862c5e63fd2e0a79fd1241768e"
+            }
+        }
+    }
+}

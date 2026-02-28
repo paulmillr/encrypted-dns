@@ -1,0 +1,33 @@
+{
+    "names": {
+        "en": "Google Public DNS",
+        "cmn-CN": "Google 公共 DNS",
+        "cmn-TW": "Google 公共 DNS"
+    },
+    "notes": {
+        "en": "Operated by Google LLC",
+        "cmn-CN": "由谷歌公司运营",
+        "cmn-TW": "由谷歌公司營運"
+    },
+    "website": "https://developers.google.com/speed/public-dns/docs/secure-transports",
+    "region": "US",
+    "censorship": false,
+    "variants": {
+        "default": {
+            "ServerAddresses": [
+                "2001:4860:4860::8888",
+                "2001:4860:4860::8844",
+                "8.8.8.8",
+                "8.8.4.4"
+            ],
+            "https": {
+                "ServerURLOrName": "https://dns.google/dns-query",
+                "signature": "30450220082db0be790fa00a8cec06c0d0f5df87bf84fd230014c49cad59d33df892e91c022100ea911e0f6bd8890095cc67c3ba19e9e83c661152841581f7e6012a2af17faa7a"
+            },
+            "tls": {
+                "ServerURLOrName": "dns.google",
+                "signature": "304402205e3224a88b1729aa91a9bfeaf3a6290f365449c8153e55f6a989e2a97ce91ae202206528f35e0fde9278bd2e01fb32f0c8bccb7ebf999e951f2ae042e1054299c5b0"
+            }
+        }
+    }
+}

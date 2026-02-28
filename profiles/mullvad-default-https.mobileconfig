@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>DNSSettings</key>
+			<dict>
+				<key>DNSProtocol</key>
+				<string>HTTPS</string>
+				<key>ServerAddresses</key>
+				<array>
+					<string>2a07:e340::2</string>
+					<string>194.242.2.2</string>
+				</array>
+				<key>ServerURL</key>
+				<string>https://doh.mullvad.net/dns-query</string>
+			</dict>
+			<key>PayloadDescription</key>
+			<string>Configures device to use Mullvad DNS Encrypted DNS over HTTPS</string>
+			<key>PayloadDisplayName</key>
+			<string>Mullvad DNS Encrypted DNS over HTTPS</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.dnsSettings.managed.5392613a-ac78-594d-a43b-d396f54f59fd</string>
+			<key>PayloadType</key>
+			<string>com.apple.dnsSettings.managed</string>
+			<key>PayloadUUID</key>
+			<string>5392613A-AC78-594D-A43B-D396F54F59FD</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProhibitDisablement</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Configures device to use Mullvad DNS over HTTPS
+Operated by Mullvad VPN AB.
+Server location: 🇸🇪.
+Filtering: yes</string>
+	<key>PayloadDisplayName</key>
+	<string>Mullvad DNS Encrypted DNS over HTTPS</string>
+	<key>PayloadIdentifier</key>
+	<string>com.paulmillr.apple-dns</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>9EE643A7-BCF2-50B2-A03E-7437589CB25E</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>

@@ -22,7 +22,7 @@
 			<key>PayloadDescription</key>
 			<string>Configures device to use Cleanbrowsing Security Filter Encrypted DNS over HTTPS</string>
 			<key>PayloadDisplayName</key>
-			<string>Cleanbrowsing Security Filter DNS over HTTPS</string>
+			<string>Cleanbrowsing Security Filter Encrypted DNS over HTTPS</string>
 			<key>PayloadIdentifier</key>
 			<string>com.apple.dnsSettings.managed.de112623-e567-556a-a5ef-d89ca497ec27</string>
 			<key>PayloadType</key>
@@ -36,9 +36,12 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Adds the Cleanbrowsing Security Filter DNS to Big Sur and iOS 14 based systems</string>
+	<string>Configures device to use Cleanbrowsing Security Filter over HTTPS
+Filters malware.
+Server location: 🇺🇸.
+Filtering: yes</string>
 	<key>PayloadDisplayName</key>
-	<string>Cleanbrowsing Security DNS over HTTPS</string>
+	<string>Cleanbrowsing Security Filter Encrypted DNS over HTTPS</string>
 	<key>PayloadIdentifier</key>
 	<string>com.paulmillr.apple-dns</string>
 	<key>PayloadRemovalDisallowed</key>

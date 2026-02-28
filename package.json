@@ -4,13 +4,14 @@
   "type": "module",
   "scripts": {
     "build:clean": "rm -f signed/*.mobileconfig profiles/*.mobileconfig README*.md",
-    "build": "npm run build:clean && node scripts/build.ts",
-    "sign": "node scripts/sign.ts",
-    "new": "node scripts/new.ts",
-    "test": "node --experimental-strip-types --test scripts/new.test.ts scripts/sign-single.test.ts",
-    "format": "prettier --write \"src/*.json\" scripts/*.ts *.ts"
+    "build": "npm run build:clean && node src/scripts/build.ts",
+    "sign": "node src/scripts/sign.ts",
+    "new": "node src/scripts/new.ts",
+    "test": "node --experimental-strip-types --test src/scripts/new.test.ts src/scripts/sign-single.test.ts",
+    "format": "prettier --write \"src/*.json\" src/scripts/*.ts"
   },
   "dependencies": {
+    "@noble/hashes": "2.0.1",
     "micro-key-producer": "0.8.5",
     "prettier": "3.6.2"
   }

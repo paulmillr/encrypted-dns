@@ -13,9 +13,9 @@
 				<string>https://doh.familyshield.opendns.com/dns-query</string>
 			</dict>
 			<key>PayloadDescription</key>
-			<string>Configures device to use OpenDNS Encrypted DNS over HTTPS</string>
+			<string>Configures device to use OpenDNS FamilyShield Encrypted DNS over HTTPS</string>
 			<key>PayloadDisplayName</key>
-			<string>OpenDNS DNS over HTTPS Standard</string>
+			<string>OpenDNS FamilyShield Encrypted DNS over HTTPS</string>
 			<key>PayloadIdentifier</key>
 			<string>com.apple.dnsSettings.managed.1a8cc509-020c-5f6a-830d-7a85f82d66e5</string>
 			<key>PayloadType</key>
@@ -29,9 +29,12 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Adds the OpenDNS Encrypted DNS Family Shield to Big Sur and iOS 14 based systems</string>
+	<string>Configures device to use OpenDNS FamilyShield over HTTPS
+Operated by Cisco OpenDNS LLC. Blocks malware &amp; adult content.
+Server location: 🇺🇸.
+Filtering: yes</string>
 	<key>PayloadDisplayName</key>
-	<string>OpenDNS Encrypted DNS Family Shield</string>
+	<string>OpenDNS FamilyShield Encrypted DNS over HTTPS</string>
 	<key>PayloadIdentifier</key>
 	<string>com.paulmillr.apple-dns</string>
 	<key>PayloadRemovalDisallowed</key>

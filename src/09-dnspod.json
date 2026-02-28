@@ -1,0 +1,31 @@
+{
+    "names": {
+        "en": "DNSPod Public DNS",
+        "cmn-CN": "DNSPod 公共 DNS",
+        "cmn-TW": "DNSPod 公共 DNS"
+    },
+    "notes": {
+        "en": "Operated by DNSPod Inc., a Tencent Cloud Company",
+        "cmn-CN": "由腾讯公司 DNSPod 运营",
+        "cmn-TW": "由騰訊公司 DNSPod 營運"
+    },
+    "website": "https://www.dnspod.com/products/public.dns",
+    "region": "CN",
+    "censorship": false,
+    "variants": {
+        "default": {
+            "ServerAddresses": [
+                "1.12.12.12",
+                "120.53.53.53"
+            ],
+            "https": {
+                "ServerURLOrName": "https://doh.pub/dns-query",
+                "signature": "3046022100a1e11d6e6bd66005a345d35d87256ca7f4148996b15908f5bf9e7c8d368a9a1002210085f5dc0214602e8d53af50d3cdafac9068b9c5f16f1638095a929b830d09f655"
+            },
+            "tls": {
+                "ServerURLOrName": "dot.pub",
+                "signature": "3046022100eb47e3b0933d906768b49b77051f77392bb221850ddaf1b394e3af7a0830cba0022100ba015a8c9ab990afa499b93b9d63984d0e5e0c74ebaca84befa976c35cd938a3"
+            }
+        }
+    }
+}

@@ -13,9 +13,9 @@
 				<string>https://doh1.blahdns.com/uncensor</string>
 			</dict>
 			<key>PayloadDescription</key>
-			<string>Configures device to use BlahDNS (CDN / Unfiltered / Primary) DNS over HTTPS</string>
+			<string>Configures device to use BlahDNS CDN Unfiltered Encrypted DNS over HTTPS</string>
 			<key>PayloadDisplayName</key>
-			<string>BlahDNS (CDN / Unfiltered / Primary) DNS over HTTPS</string>
+			<string>BlahDNS CDN Unfiltered Encrypted DNS over HTTPS</string>
 			<key>PayloadIdentifier</key>
 			<string>com.apple.dnsSettings.managed.68a187fb-09ed-583d-90e8-86768d65ec77</string>
 			<key>PayloadType</key>
@@ -29,7 +29,10 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>This profile enables BlahDNS (CDN / Unfiltered / Primary) DNS over HTTPS on all networks using the iOS 14 / iPadOS 14 / tvOS 14 / macOS Big Sur Encrypted DNS feature.</string>
+	<string>Configures device to use BlahDNS CDN Unfiltered over HTTPS
+Independent. Non-filtering.
+Server location: 🇺🇸.
+Filtering: no</string>
 	<key>ConsentText</key>
 	<dict>
 		<key>default</key>
@@ -37,7 +40,7 @@
 https://blahdns.com</string>
 	</dict>
 	<key>PayloadDisplayName</key>
-	<string>BlahDNS (CDN / Unfiltered / Primary) DNS over HTTPS</string>
+	<string>BlahDNS CDN Unfiltered Encrypted DNS over HTTPS</string>
 	<key>PayloadIdentifier</key>
 	<string>com.paulmillr.apple-dns</string>
 	<key>PayloadRemovalDisallowed</key>

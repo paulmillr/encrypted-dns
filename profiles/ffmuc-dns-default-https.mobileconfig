@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>DNSSettings</key>
+			<dict>
+				<key>DNSProtocol</key>
+				<string>HTTPS</string>
+				<key>ServerAddresses</key>
+				<array>
+					<string>2001:678:e68:f000::</string>
+					<string>2001:678:ed0:f000::</string>
+					<string>5.1.66.255</string>
+					<string>185.150.99.255</string>
+				</array>
+				<key>ServerURL</key>
+				<string>https://doh.ffmuc.net/dns-query</string>
+			</dict>
+			<key>PayloadDescription</key>
+			<string>Configures device to use FFMUC-DNS Encrypted DNS over HTTPS</string>
+			<key>PayloadDisplayName</key>
+			<string>FFMUC-DNS Encrypted DNS over HTTPS</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.dnsSettings.managed.2297046a-c2cc-5c3e-ab2d-08cfe5880f70</string>
+			<key>PayloadType</key>
+			<string>com.apple.dnsSettings.managed</string>
+			<key>PayloadUUID</key>
+			<string>2297046A-C2CC-5C3E-AB2D-08CFE5880F70</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProhibitDisablement</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Configures device to use FFMUC-DNS over HTTPS
+FFMUC free DNS servers provided by Freifunk München.
+Server location: 🇩🇪.
+Filtering: no</string>
+	<key>PayloadDisplayName</key>
+	<string>FFMUC-DNS Encrypted DNS over HTTPS</string>
+	<key>PayloadIdentifier</key>
+	<string>com.paulmillr.apple-dns</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>791C654F-0336-563C-BE97-3E54C004FA8B</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>

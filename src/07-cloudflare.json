@@ -1,0 +1,78 @@
+{
+    "names": {
+        "en": "Cloudflare 1.1.1.1"
+    },
+    "notes": {
+        "en": "Operated by Cloudflare Inc.",
+        "cmn-CN": "由 Cloudflare 公司运营",
+        "cmn-TW": "由 Cloudflare 公司營運"
+    },
+    "website": "https://developers.cloudflare.com/1.1.1.1/encryption/",
+    "region": "US",
+    "censorship": false,
+    "variants": {
+        "default": {
+            "ServerAddresses": [
+                "2606:4700:4700::1111",
+                "2606:4700:4700::1001",
+                "1.1.1.1",
+                "1.0.0.1"
+            ],
+            "https": {
+                "ServerURLOrName": "https://cloudflare-dns.com/dns-query",
+                "signature": "3046022100a02a5c33109ca27befc04ef356f2cf6bf108be7a90063ee58263f126e8de59bc022100fe97730bb1fc44d4995e201a0bbfc725d551cee28a4b44aa1292ce019a40f886"
+            },
+            "tls": {
+                "ServerURLOrName": "one.one.one.one",
+                "signature": "304402206bc315756e6167b9cddb2af35283b366e92a52dd972d8c6f231d53a143bcaeff022038325f16dda82a4e3539fb8da458c2d2f37f0b2bfd6e44120db039faf8c97f3c"
+            }
+        },
+        "malware": {
+            "names": {
+                "en": "Security",
+                "cmn-CN": "安全",
+                "cmn-TW": "安全"
+            },
+            "notes": {
+                "en": "Blocks malware & phishing",
+                "cmn-CN": "拦截恶意软件和钓鱼网站",
+                "cmn-TW": "阻擋惡意軟體和釣魚網站"
+            },
+            "censorship": true,
+            "ServerAddresses": [
+                "2606:4700:4700::1112",
+                "2606:4700:4700::1002",
+                "1.1.1.2",
+                "1.0.0.2"
+            ],
+            "https": {
+                "ServerURLOrName": "https://security.cloudflare-dns.com/dns-query",
+                "signature": "304502206319ac3ea232414c6acffd2771a27b854e01c18b4a9f0b469d91b7f3dacc72a2022100fdd25c7b3565991e559b465a9c1ae088ab3fa2937be1cc7ad90dfca539e7034c"
+            }
+        },
+        "family": {
+            "website": "https://developers.cloudflare.com/1.1.1.1/setup/#1111-for-families",
+            "names": {
+                "en": "Family",
+                "cmn-CN": "家庭",
+                "cmn-TW": "家庭"
+            },
+            "notes": {
+                "en": "Blocks malware, phishing & adult content",
+                "cmn-CN": "拦截恶意软件、钓鱼和成人内容",
+                "cmn-TW": "阻擋惡意軟體、釣魚和成人內容"
+            },
+            "censorship": true,
+            "ServerAddresses": [
+                "2606:4700:4700::1113",
+                "2606:4700:4700::1003",
+                "1.1.1.3",
+                "1.0.0.3"
+            ],
+            "https": {
+                "ServerURLOrName": "https://family.cloudflare-dns.com/dns-query",
+                "signature": "30450220020714ea5d23a024b1f021ade296da07e9f1b165df402938c571999d5e9e72eb02210094f10b12d8746caf66486e7dec454767d6fb58283b4914ae1607edc5b93abe54"
+            }
+        }
+    }
+}

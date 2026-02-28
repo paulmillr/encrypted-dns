@@ -1,0 +1,84 @@
+{
+    "names": {
+        "en": "Quad9"
+    },
+    "notes": {
+        "en": "Operated by Quad9 Foundation.",
+        "cmn-CN": "由 Quad9 基金会运营",
+        "cmn-TW": "由 Quad9 基金會營運"
+    },
+    "website": "https://www.quad9.net/news/blog/doh-with-quad9-dns-servers/",
+    "region": "CH",
+    "censorship": true,
+    "variants": {
+        "default": {
+            "ServerAddresses": [
+                "2620:fe::fe",
+                "2620:fe::9",
+                "9.9.9.9",
+                "149.112.112.112"
+            ],
+            "https": {
+                "ServerURLOrName": "https://dns.quad9.net/dns-query",
+                "signature": "30440220449a8c668084c46a548138abc02602a41707822177b0254dde3f6375577cf38e022070761626257a056982438de6320102ae8f920e07b2f08e17087e76617edbe17a"
+            },
+            "tls": {
+                "ServerURLOrName": "dns.quad9.net",
+                "signature": "3046022100daab299a5f45b8cdafe59634d1c77253d83959f83d9105cd9d0538ccbff315e2022100c49acf66acbb9bcc01ef273ec13a39e8c5f03710b5e416250231ee2c68537464"
+            },
+            "notes": {
+                "en": "Blocks malware",
+                "cmn-CN": "拦截恶意软件",
+                "cmn-TW": "阻擋惡意軟體"
+            }
+        },
+        "ECS": {
+            "names": {
+                "en": "w/ ECS",
+                "cmn-CN": "带 ECS",
+                "cmn-TW": "帶 ECS"
+            },
+            "notes": {
+                "en": "Supports ECS. Blocks malware",
+                "cmn-CN": "支持 ECS，拦截恶意软件",
+                "cmn-TW": "支援 ECS，阻擋惡意軟體"
+            },
+            "ServerAddresses": [
+                "2620:fe::fe:11",
+                "2620:fe::11",
+                "9.9.9.11",
+                "149.112.112.11"
+            ],
+            "https": {
+                "ServerURLOrName": "https://dns11.quad9.net/dns-query",
+                "signature": "3044022005f241a5b427d1626d38f9beace5a44e8f12b6be7d0784401639fc770d27a49002204217f17085d238d103f638d18d9199aef2c796fc43bf8d0a9ae5676f6df187dc"
+            },
+            "tls": {
+                "ServerURLOrName": "dns11.quad9.net",
+                "signature": "3045022100be5d4f3d9d148c16ab5df0bf077d2f8acee7d724fe884e80f1534d7ef6d03525022020bdeca5d766b21f067af9d444089d156ca3e065a50d05f97f71eeb5de971809"
+            }
+        },
+        "nofilter": {
+            "names": {
+                "en": "Unfiltered",
+                "cmn-CN": "无过滤",
+                "cmn-TW": "無過濾"
+            },
+            "censorship": false,
+            "ServerAddresses": [
+                "2620:fe::10",
+                "2620:fe::fe:10",
+                "9.9.9.10",
+                "149.112.112.10"
+            ],
+            "https": {
+                "ServerURLOrName": "https://dns10.quad9.net/dns-query",
+                "signature": "304402206ac2b4afafc2755d7df54b232718c098b096910845190646f8ed13fbac6376a6022041a18a6fe731c4d605a1cae368e039faa787400add22ab81008bb0212175a158"
+            },
+            "tls": {
+                "ServerURLOrName": "dns10.quad9.net",
+                "signature": "304502206d4226fdfd131bb192cb663147920dd717c6165817169f8584a80c3d731be0a20221008280f92c4b3a14c80500429b8ee73e05981c9ed46c1b2267a7acce2cff4feca0"
+            }
+        }
+    }
+}

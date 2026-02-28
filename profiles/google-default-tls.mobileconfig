@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>DNSSettings</key>
+			<dict>
+				<key>DNSProtocol</key>
+				<string>TLS</string>
+				<key>ServerAddresses</key>
+				<array>
+					<string>2001:4860:4860::8888</string>
+					<string>2001:4860:4860::8844</string>
+					<string>8.8.8.8</string>
+					<string>8.8.4.4</string>
+				</array>
+				<key>ServerName</key>
+				<string>dns.google</string>
+			</dict>
+			<key>PayloadDescription</key>
+			<string>Configures device to use Google Public DNS Encrypted DNS over TLS</string>
+			<key>PayloadDisplayName</key>
+			<string>Google Public DNS Encrypted DNS over TLS</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.dnsSettings.managed.d984244b-7644-5b5e-b254-af8e59f6c09c</string>
+			<key>PayloadType</key>
+			<string>com.apple.dnsSettings.managed</string>
+			<key>PayloadUUID</key>
+			<string>D984244B-7644-5B5E-B254-AF8E59F6C09C</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProhibitDisablement</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Configures device to use Google Public DNS over TLS
+Operated by Google LLC.
+Server location: 🇺🇸.
+Filtering: no</string>
+	<key>PayloadDisplayName</key>
+	<string>Google Public DNS Encrypted DNS over TLS</string>
+	<key>PayloadIdentifier</key>
+	<string>com.paulmillr.apple-dns</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>022447CE-3B19-59A8-B11E-D4DEFB9DFBC1</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>

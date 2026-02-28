@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>DNSSettings</key>
+			<dict>
+				<key>DNSProtocol</key>
+				<string>HTTPS</string>
+				<key>ServerURL</key>
+				<string>https://doh.tiar.app/dns-query</string>
+			</dict>
+			<key>PayloadDescription</key>
+			<string>Configures device to use Tiarap Encrypted DNS over HTTPS</string>
+			<key>PayloadDisplayName</key>
+			<string>Tiarap Encrypted DNS over HTTPS</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.dnsSettings.managed.fde2d338-fe25-546b-ab48-645b7b675e6b</string>
+			<key>PayloadType</key>
+			<string>com.apple.dnsSettings.managed</string>
+			<key>PayloadUUID</key>
+			<string>FDE2D338-FE25-546B-AB48-645B7B675E6B</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProhibitDisablement</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Configures device to use Tiarap over HTTPS
+Operated by Tiarap Inc. Blocks ads, tracking, phising &amp; malware.
+Server location: 🇸🇬 🇺🇸.
+Filtering: yes</string>
+	<key>PayloadDisplayName</key>
+	<string>Tiarap Encrypted DNS over HTTPS</string>
+	<key>PayloadIdentifier</key>
+	<string>com.paulmillr.apple-dns</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>39D05040-6A6B-53A3-A94A-CBACA457F960</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>

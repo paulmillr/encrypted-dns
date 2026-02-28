@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>DNSSettings</key>
+			<dict>
+				<key>DNSProtocol</key>
+				<string>TLS</string>
+				<key>ServerAddresses</key>
+				<array>
+					<string>2400:3200::1</string>
+					<string>2400:3200:baba::1</string>
+					<string>223.5.5.5</string>
+					<string>223.6.6.6</string>
+				</array>
+				<key>ServerName</key>
+				<string>dns.alidns.com</string>
+			</dict>
+			<key>PayloadDescription</key>
+			<string>Configures device to use Aliyun Public DNS Encrypted DNS over TLS</string>
+			<key>PayloadDisplayName</key>
+			<string>Aliyun Public DNS Encrypted DNS over TLS</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.dnsSettings.managed.2950c71c-1478-5c77-b58b-e3be44f2f4cc</string>
+			<key>PayloadType</key>
+			<string>com.apple.dnsSettings.managed</string>
+			<key>PayloadUUID</key>
+			<string>2950C71C-1478-5C77-B58B-E3BE44F2F4CC</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProhibitDisablement</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Configures device to use Aliyun Public DNS over TLS
+Operated by Alibaba Cloud Ltd.
+Server location: 🇨🇳.
+Filtering: no</string>
+	<key>PayloadDisplayName</key>
+	<string>Aliyun Public DNS Encrypted DNS over TLS</string>
+	<key>PayloadIdentifier</key>
+	<string>com.paulmillr.apple-dns</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>B3571C63-5980-585A-B65C-51CC145498CE</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>

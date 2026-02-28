@@ -1,0 +1,28 @@
+{
+    "names": {
+        "en": "Tiarap"
+    },
+    "notes": {
+        "en": "Operated by Tiarap Inc. Blocks ads, tracking, phising & malware",
+        "cmn-CN": "由 Tiarap 公司运营，拦截广告、跟踪器、钓鱼和恶意软件",
+        "cmn-TW": "由 Tiarap 公司營運，阻擋廣告、追蹤器、釣魚和惡意軟體"
+    },
+    "website": "https://doh.tiar.app",
+    "region": [
+        "SG",
+        "US"
+    ],
+    "censorship": true,
+    "variants": {
+        "default": {
+            "https": {
+                "ServerURLOrName": "https://doh.tiar.app/dns-query",
+                "signature": "3045022100e23af03cb0a254c250ec9d6b7ffa6041b60735b1f2459b7f18cafba5452939c902201b9320e62777df3b720904983542dfe3be41abb0f728735c0f29defd83cee937"
+            },
+            "tls": {
+                "ServerURLOrName": "dot.tiar.app",
+                "signature": "3045022075fba1923446ee05daa54b20c90b771a3a52b0614d69d98082e14e2c51736d5e0221008b59f0b0e1922ac14e3f983b7e49be355280b3035cce456da14d07c7337c5208"
+            }
+        }
+    }
+}

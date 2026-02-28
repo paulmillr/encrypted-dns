@@ -1,33 +1,36 @@
 {
-    "id": "template-on-demand",
-    "profile": "template-on-demand",
-    "name": "template-on-demand",
-    "file": "template-on-demand.mobileconfig",
+    "names": {
+        "en": "Example Encrypted DNS"
+    },
     "hidden": true,
-    "ServerAddresses": [
-        "2001:db8::1",
-        "2001:db8::2",
-        "192.0.0.1",
-        "192.0.0.2"
-    ],
-    "https": {
-        "ServerURLOrName": "https://dns.example/dns-query",
-        "PayloadDisplayName": "Example DNS over HTTPS",
-        "PayloadDescription": "Configures device to use Example Encrypted DNS over HTTPS",
-        "onDemandRules": [
-            {
-                "Action": "Disconnect",
-                "SSIDMatch": [
-                    "TRUSTED_NETWORK_1",
-                    "TRUSTED_NETWORK_2",
-                    "TRUSTED_NETWORK_3"
-                ]
+    "variants": {
+        "default": {
+            "notes": {
+                "en": "Adds the Example Encrypted DNS over HTTPS to Big Sur and iOS 14 based systems"
             },
-            {
-                "Action": "Connect"
+            "ServerAddresses": [
+                "2001:db8::1",
+                "2001:db8::2",
+                "192.0.0.1",
+                "192.0.0.2"
+            ],
+            "onDemandRules": [
+                {
+                    "Action": "Disconnect",
+                    "SSIDMatch": [
+                        "TRUSTED_NETWORK_1",
+                        "TRUSTED_NETWORK_2",
+                        "TRUSTED_NETWORK_3"
+                    ]
+                },
+                {
+                    "Action": "Connect"
+                }
+            ],
+            "https": {
+                "ServerURLOrName": "https://dns.example/dns-query",
+                "signature": "3046022100df99d84fc1178fecf5bb818f43b85a964ab4c208d232db6e76a5cdb204905201022100cf3cde149fe64a47dddf09dde9c812bfbcbc4d10ccd31ea4c879d859e4b711db"
             }
-        ],
-        "topName": "Example Encrypted DNS over HTTPS",
-        "signature": "30450220757106da272dbf93c121df2f4a40214bd00f6348b08de3515f5acf158de44263022100892a901a757b8d136a31babeeee3025caae7e0a111de7e42fba8b5d7b2ec3236"
+        }
     }
 }

@@ -1,0 +1,122 @@
+{
+    "names": {
+        "en": "DNS4EU"
+    },
+    "notes": {
+        "en": "Operated by a consortium lead by Whalebone."
+    },
+    "website": "https://www.joindns4.eu/for-public",
+    "region": "CZ",
+    "censorship": false,
+    "variants": {
+        "default": {
+            "ServerAddresses": [
+                "2a13:1001::86:54:11:100",
+                "2a13:1001::86:54:11:200",
+                "86.54.11.100",
+                "86.54.11.200"
+            ],
+            "https": {
+                "ServerURLOrName": "https://unfiltered.joindns4.eu/dns-query",
+                "signature": "3046022100aa46d30c0b2cb4c6f1d6a70bc5c8bd34cb4db765035eb322e065f84844bc7cef022100d94354875d46e9fadf7143b851323f9582c2426d78b264abb662aad1f92315d7"
+            },
+            "tls": {
+                "ServerURLOrName": "unfiltered.joindns4.eu",
+                "signature": "3045022100a55d8e2d7f9fca9bbcb61dc18b8bad6faebc4550481c6ebdfcb01c8b3a66b1af022067f8972c113c21e50954bda40ef916481d667f7a7a68c7e42d4aa71c3a6cbfa0"
+            },
+            "names": {}
+        },
+        "malware": {
+            "names": {
+                "en": "Protective"
+            },
+            "notes": {
+                "en": "Blocks Malware."
+            },
+            "censorship": true,
+            "ServerAddresses": [
+                "2a13:1001::86:54:11:1",
+                "2a13:1001::86:54:11:201",
+                "86.54.11.1",
+                "86.54.11.201"
+            ],
+            "https": {
+                "ServerURLOrName": "https://protective.joindns4.eu/dns-query",
+                "signature": "304402200e1eb6214b3ce181603a4d0c6e3577412e78944e69e19cf6939c56d5c860f7d10220461e4700ac321a2ffab3b8c13dc65c6185ace5839c6c5c81cbdcdbc9a1a7a4c0"
+            },
+            "tls": {
+                "ServerURLOrName": "protective.joindns4.eu",
+                "signature": "3044022034b10d802760a49b0d6772c3914430b2af653605cc43b2939ce5b2f9fd21df2002206ea5b55414a5f015cc1c9cad0e72b2a4fbca41a0650e2c5e4b965a8436e978dc"
+            }
+        },
+        "protective-ads": {
+            "names": {
+                "en": "Protective ad-blocking"
+            },
+            "notes": {
+                "en": "Blocks Malware and Ads"
+            },
+            "censorship": true,
+            "ServerAddresses": [
+                "2a13:1001::86:54:11:13",
+                "2a13:1001::86:54:11:213",
+                "86.54.11.13",
+                "86.54.11.213"
+            ],
+            "https": {
+                "ServerURLOrName": "https://noads.joindns4.eu/dns-query",
+                "signature": "3045022100c8ae72adf5b3bd0e61f0abf4497c88ff58d2de78eee33c1ca39bbbb5ed4953cb02204c0664b2b1355ca588cdccbfbf99e2957160f84d6664d2f166b6ac6a7aed9a91"
+            },
+            "tls": {
+                "ServerURLOrName": "noads.joindns4.eu",
+                "signature": "3045022100cb38254dfebf0791401d7d0ab155bc888f0c9e974080753f9f5e71ebcda0ea8702204b8b6315430e6ca4e7ee62ac79d21469ae0affdead708bf7c1b901e0b9f97d8c"
+            }
+        },
+        "protective-child": {
+            "names": {
+                "en": "Protective with child protection"
+            },
+            "notes": {
+                "en": "Blocks malware and explicit content."
+            },
+            "censorship": true,
+            "ServerAddresses": [
+                "2a13:1001::86:54:11:12",
+                "2a13:1001::86:54:11:212",
+                "86.54.11.12",
+                "86.54.11.212"
+            ],
+            "https": {
+                "ServerURLOrName": "https://child.joindns4.eu/dns-query",
+                "signature": "304402201a899df9a468bb7d057316b65988520ca6b5f2007cc337f011990f68b91664b002207c64bc19b6f58d913d6dc701e7f034fa8dd1594b5f79794388637fe85d168bb3"
+            },
+            "tls": {
+                "ServerURLOrName": "child.joindns4.eu",
+                "signature": "30450220294497a83786624a1b24102b61de64b65701dd243e1aef5b3386d0836b9cf8e2022100c550c6824e2a027f01779db87bf07be2676710611b29e9be96f89733a13250c3"
+            }
+        },
+        "protective-child-ads": {
+            "names": {
+                "en": "Protective with child protection & ad-blocking"
+            },
+            "notes": {
+                "en": "Blocks Malware, Ads and explicit content"
+            },
+            "censorship": true,
+            "ServerAddresses": [
+                "2a13:1001::86:54:11:11",
+                "2a13:1001::86:54:11:211",
+                "86.54.11.11",
+                "86.54.11.211"
+            ],
+            "https": {
+                "ServerURLOrName": "https://child-noads.joindns4.eu/dns-query",
+                "signature": "30450220340142a0729934a351de8f6948ffa57c133549a2da78198ac422ff906f4e42b4022100a1b7dbe86dec0e7644c3c161bffda3b7d32de43b46180d42a92f0e30c6f3d82c"
+            },
+            "tls": {
+                "ServerURLOrName": "child-noads.joindns4.eu",
+                "signature": "304502210097d5ea662df171fab1ccce018539162c955aa56c5973072d7798664531d38f6902201883387630877a5091fdeb28cb9f2ac9bb0ce075098dfde2d378886af7383f71"
+            }
+        }
+    }
+}

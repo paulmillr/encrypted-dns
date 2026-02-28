@@ -1,0 +1,29 @@
+{
+    "names": {
+        "en": "FFMUC-DNS"
+    },
+    "notes": {
+        "en": "FFMUC free DNS servers provided by Freifunk München."
+    },
+    "website": "https://ffmuc.net/wiki/knb:dohdot_en",
+    "region": "DE",
+    "censorship": false,
+    "variants": {
+        "default": {
+            "ServerAddresses": [
+                "2001:678:e68:f000::",
+                "2001:678:ed0:f000::",
+                "5.1.66.255",
+                "185.150.99.255"
+            ],
+            "https": {
+                "ServerURLOrName": "https://doh.ffmuc.net/dns-query",
+                "signature": "3046022100bbbec5ffdcdaa53daa9ddc6907722684fa3307a23e73ce30ea3e9554d737e8a9022100e7bbcffe01d4258ed26710a5b37d88b45390848051f28d5e8f7fbef70de27988"
+            },
+            "tls": {
+                "ServerURLOrName": "dot.ffmuc.net",
+                "signature": "3046022100f68f3d200f876fd907021662cf128eb7d2029796b2af310e1bae226ed3c8fd82022100dc2fd434129265ae4f44e6747ec2074288147fddd49ad07eb42c54c2fc448ba3"
+            }
+        }
+    }
+}

@@ -20,9 +20,9 @@
 				<string>dns-unfiltered.adguard.com</string>
 			</dict>
 			<key>PayloadDescription</key>
-			<string>Configures device to use Adguard No Filter Encrypted DNS over TLS</string>
+			<string>Configures device to use AdGuard DNS Non-filtering Encrypted DNS over TLS</string>
 			<key>PayloadDisplayName</key>
-			<string>Adguard No Filter over TLS</string>
+			<string>AdGuard DNS Non-filtering Encrypted DNS over TLS</string>
 			<key>PayloadIdentifier</key>
 			<string>com.apple.dnsSettings.managed.967d8837-2749-5739-bd43-3ebe75d1ccc7</string>
 			<key>PayloadType</key>
@@ -36,9 +36,12 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Adds the Adguard No Filter to Big Sur and iOS 14 based systems</string>
+	<string>Configures device to use AdGuard DNS Non-filtering over TLS
+Operated by AdGuard Software Ltd. Non-filtering.
+Server location: 🇷🇺.
+Filtering: no</string>
 	<key>PayloadDisplayName</key>
-	<string>Adguard No Filter over TLS</string>
+	<string>AdGuard DNS Non-filtering Encrypted DNS over TLS</string>
 	<key>PayloadIdentifier</key>
 	<string>com.paulmillr.apple-dns</string>
 	<key>PayloadRemovalDisallowed</key>

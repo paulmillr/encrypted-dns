@@ -20,9 +20,9 @@
 				<string>dns.adguard.com</string>
 			</dict>
 			<key>PayloadDescription</key>
-			<string>Configures device to use Adguard Default Encrypted DNS over TLS</string>
+			<string>Configures device to use AdGuard DNS Default Encrypted DNS over TLS</string>
 			<key>PayloadDisplayName</key>
-			<string>Adguard Default DNS over TLS</string>
+			<string>AdGuard DNS Default Encrypted DNS over TLS</string>
 			<key>PayloadIdentifier</key>
 			<string>com.apple.dnsSettings.managed.d1c9922c-d540-5ffe-a181-9c3538691553</string>
 			<key>PayloadType</key>
@@ -36,9 +36,12 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Adds the Adguard Default DNS to Big Sur and iOS 14 based systems</string>
+	<string>Configures device to use AdGuard DNS Default over TLS
+Operated by AdGuard Software Ltd. Blocks ads, tracking &amp; phishing.
+Server location: 🇷🇺.
+Filtering: yes</string>
 	<key>PayloadDisplayName</key>
-	<string>Adguard Default DNS over TLS</string>
+	<string>AdGuard DNS Default Encrypted DNS over TLS</string>
 	<key>PayloadIdentifier</key>
 	<string>com.paulmillr.apple-dns</string>
 	<key>PayloadRemovalDisallowed</key>

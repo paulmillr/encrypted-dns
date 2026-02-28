@@ -1,0 +1,90 @@
+{
+    "names": {
+        "en": "Canadian Shield"
+    },
+    "notes": {
+        "en": "Operated by the Canadian Internet Registration Authority (CIRA)",
+        "cmn-CN": "由加拿大互联网注册管理局 (CIRA) 运营",
+        "cmn-TW": "由加拿大網際網路註冊管理局 (CIRA) 營運"
+    },
+    "website": "https://www.cira.ca/cybersecurity-services/canadian-shield/configure/summary-cira-canadian-shield-dns-resolver-addresses",
+    "region": "CA",
+    "censorship": false,
+    "variants": {
+        "private": {
+            "ServerAddresses": [
+                "2620:10a:80bb::10",
+                "2620:10a:80bc::10",
+                "149.112.121.10",
+                "149.112.122.10"
+            ],
+            "https": {
+                "ServerURLOrName": "https://private.canadianshield.cira.ca/dns-query",
+                "signature": "3045022100eb0b5ecf39a8918c17be90210ba5515d385b27777afb75eb28046478016d123f022009c500ab97664e99fe82ab092a39f32518ae812c9661ed0db12d21421bdab829"
+            },
+            "tls": {
+                "ServerURLOrName": "private.canadianshield.cira.ca",
+                "signature": "3045022100e4a9a6f7eddd3db61efa16d68a44351c365bc751fe03974125f9de8c913fbd4102201c79a1826ad9d261a26a553a332ec751dccb09130d0c6983f0fe37c11f912e06"
+            },
+            "names": {
+                "en": "Private",
+                "cmn-CN": "私人",
+                "cmn-TW": "私人"
+            }
+        },
+        "protected": {
+            "names": {
+                "en": "Protected",
+                "cmn-CN": "保护",
+                "cmn-TW": "保護"
+            },
+            "notes": {
+                "en": "Blocks malware & phishing",
+                "cmn-CN": "拦截恶意软件和钓鱼网站",
+                "cmn-TW": "阻擋惡意軟體和釣魚網站"
+            },
+            "censorship": true,
+            "ServerAddresses": [
+                "2620:10a:80bb::20",
+                "2620:10a:80bc::20",
+                "149.112.121.20",
+                "149.112.122.20"
+            ],
+            "https": {
+                "ServerURLOrName": "https://protected.canadianshield.cira.ca/dns-query",
+                "signature": "304402207ecc88b83c46bb83d3d37b8c0b4150ff66d0839ad1eba739ad25261ffc61a75802200b8ad6da7849f7a1a7d3c5cc635060c6191d9f0a4a7d96fae8367b2c06115e47"
+            },
+            "tls": {
+                "ServerURLOrName": "protected.canadianshield.cira.ca",
+                "signature": "304402206397986a7d3def4e12c25c3414f872a3de1dfd3a72b8e8e75b1e28441775fd9002200b240cbb7ec3b2a563d7304a0b9134e888d2694dc5e2df87c7037721c5b6dd2f"
+            }
+        },
+        "family": {
+            "names": {
+                "en": "Family",
+                "cmn-CN": "家庭",
+                "cmn-TW": "家庭"
+            },
+            "notes": {
+                "en": "Blocks malware, phishing & adult content",
+                "cmn-CN": "拦截恶意软件、钓鱼和成人内容",
+                "cmn-TW": "阻擋惡意軟體、釣魚和成人內容"
+            },
+            "censorship": true,
+            "ServerAddresses": [
+                "2620:10a:80bb::30",
+                "2620:10a:80bc::30",
+                "149.112.121.30",
+                "149.112.122.30"
+            ],
+            "https": {
+                "ServerURLOrName": "https://family.canadianshield.cira.ca/dns-query",
+                "signature": "3045022070c870743bf71838de470b99667cdec2a804dbe3df7697040571d63272b19e57022100c3e1b42a48421ce522795ed9e79d05ec7fb7d88a697d5f18076e6ef283e0334e"
+            },
+            "tls": {
+                "ServerURLOrName": "family.canadianshield.cira.ca",
+                "signature": "304402202c6e7f0fe6f7362a12ba559771c24068448bca3faf06abd730da8be997e285f20220126d903ec2f98dcecdd46c7db18e5e3950af4b8b1f97868113dec088cb1e1846"
+            }
+        }
+    }
+}

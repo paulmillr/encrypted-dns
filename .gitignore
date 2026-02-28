@@ -1,5 +1,1 @@
-certs/cert.pem
-certs/chain.pem
-certs/fullchain.pem
-certs/privkey.pem
-certs/README
+/src/certificates

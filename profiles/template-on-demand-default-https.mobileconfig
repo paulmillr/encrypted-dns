@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>DNSSettings</key>
+			<dict>
+				<key>DNSProtocol</key>
+				<string>HTTPS</string>
+				<key>ServerAddresses</key>
+				<array>
+					<string>2001:db8::1</string>
+					<string>2001:db8::2</string>
+					<string>192.0.0.1</string>
+					<string>192.0.0.2</string>
+				</array>
+				<key>ServerURL</key>
+				<string>https://dns.example/dns-query</string>
+			</dict>
+			<key>OnDemandRules</key>
+			<array>
+				<dict>
+					<key>Action</key>
+					<string>Disconnect</string>
+					<key>SSIDMatch</key>
+					<array>
+						<string>TRUSTED_NETWORK_1</string>
+						<string>TRUSTED_NETWORK_2</string>
+						<string>TRUSTED_NETWORK_3</string>
+					</array>
+				</dict>
+				<dict>
+					<key>Action</key>
+					<string>Connect</string>
+				</dict>
+			</array>
+			<key>PayloadDescription</key>
+			<string>Configures device to use Example Encrypted DNS Encrypted DNS over HTTPS</string>
+			<key>PayloadDisplayName</key>
+			<string>Example Encrypted DNS Encrypted DNS over HTTPS</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.dnsSettings.managed.45134783-5122-5abb-96ed-f5bf88841542</string>
+			<key>PayloadType</key>
+			<string>com.apple.dnsSettings.managed</string>
+			<key>PayloadUUID</key>
+			<string>45134783-5122-5ABB-96ED-F5BF88841542</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProhibitDisablement</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Configures device to use Example Encrypted DNS over HTTPS
+Adds the Example Encrypted DNS over HTTPS to Big Sur and iOS 14 based systems.
+Server location: .
+Filtering: no</string>
+	<key>PayloadDisplayName</key>
+	<string>Example Encrypted DNS Encrypted DNS over HTTPS</string>
+	<key>PayloadIdentifier</key>
+	<string>com.paulmillr.apple-dns</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>094F8FB6-20D9-51D6-8F5D-6E3F32192E24</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>

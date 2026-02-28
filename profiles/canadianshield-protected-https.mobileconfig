@@ -20,9 +20,9 @@
 				<string>https://protected.canadianshield.cira.ca/dns-query</string>
 			</dict>
 			<key>PayloadDescription</key>
-			<string>Configures device to use Canadian Shield Encrypted DNS over HTTPS</string>
+			<string>Configures device to use Canadian Shield Protected Encrypted DNS over HTTPS</string>
 			<key>PayloadDisplayName</key>
-			<string>Canadian Shield DNS over HTTPS</string>
+			<string>Canadian Shield Protected Encrypted DNS over HTTPS</string>
 			<key>PayloadIdentifier</key>
 			<string>com.apple.dnsSettings.managed.66f3663e-cbbe-53af-ae6f-78bde855ad79</string>
 			<key>PayloadType</key>
@@ -36,9 +36,12 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Adds the Canadian Shield DNS to Big Sur and iOS 14 based systems</string>
+	<string>Configures device to use Canadian Shield Protected over HTTPS
+Operated by the Canadian Internet Registration Authority (CIRA). Blocks malware &amp; phishing.
+Server location: 🇨🇦.
+Filtering: yes</string>
 	<key>PayloadDisplayName</key>
-	<string>Canadian Shield DNS over HTTPS</string>
+	<string>Canadian Shield Protected Encrypted DNS over HTTPS</string>
 	<key>PayloadIdentifier</key>
 	<string>com.paulmillr.apple-dns</string>
 	<key>PayloadRemovalDisallowed</key>

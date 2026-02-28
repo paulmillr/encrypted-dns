@@ -1,0 +1,45 @@
+{
+    "names": {
+        "en": "Mullvad DNS"
+    },
+    "notes": {
+        "en": "Operated by Mullvad VPN AB",
+        "cmn-CN": "由 Mullvad VPN AB 运营",
+        "cmn-TW": "由 Mullvad VPN AB 營運"
+    },
+    "website": "https://mullvad.net/help/dns-over-https-and-dns-over-tls/",
+    "region": "SE",
+    "censorship": true,
+    "variants": {
+        "default": {
+            "ServerAddresses": [
+                "2a07:e340::2",
+                "194.242.2.2"
+            ],
+            "https": {
+                "ServerURLOrName": "https://doh.mullvad.net/dns-query",
+                "signature": "30450221008d2902dbedd10d4753813ebd0405eb84e3ddb96eb397c3d9a55b788136c191870220600f18d6807ca534b07a75f8b1760c5d7d2de232fb1dc62d4f915039fbcc6c3a"
+            }
+        },
+        "adblock": {
+            "names": {
+                "en": "Adblock",
+                "cmn-CN": "广告拦截",
+                "cmn-TW": "廣告阻擋"
+            },
+            "notes": {
+                "en": "Blocks ads & tracking",
+                "cmn-CN": "拦截广告和跟踪器",
+                "cmn-TW": "阻擋廣告和追蹤器"
+            },
+            "ServerAddresses": [
+                "2a07:e340::3",
+                "194.242.2.3"
+            ],
+            "https": {
+                "ServerURLOrName": "https://adblock.doh.mullvad.net/dns-query",
+                "signature": "304502205e6b97282de3fe8fb42f0a478d9bedbf574776588f7e361cff4ec591c153d367022100bca9c8fc1ff319f8010c7d7fb3e131b767568e9d6b42cd0e91a0980e13705f2e"
+            }
+        }
+    }
+}

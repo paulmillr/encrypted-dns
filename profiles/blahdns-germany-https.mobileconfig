@@ -18,9 +18,9 @@
 				<string>https://doh-de.blahdns.com/dns-query</string>
 			</dict>
 			<key>PayloadDescription</key>
-			<string>Configures device to use BlahDNS (Germany) DNS over HTTPS</string>
+			<string>Configures device to use BlahDNS Germany Encrypted DNS over HTTPS</string>
 			<key>PayloadDisplayName</key>
-			<string>BlahDNS (Germany) DNS over HTTPS</string>
+			<string>BlahDNS Germany Encrypted DNS over HTTPS</string>
 			<key>PayloadIdentifier</key>
 			<string>com.apple.dnsSettings.managed.f6244097-4c9c-5f50-9957-173c9262c5ac</string>
 			<key>PayloadType</key>
@@ -34,7 +34,10 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>This profile enables BlahDNS (Germany) DNS over HTTPS on all networks using the iOS 14 / iPadOS 14 / tvOS 14 / macOS Big Sur Encrypted DNS feature.</string>
+	<string>Configures device to use BlahDNS Germany over HTTPS
+Independent. Blocks ads, tracking &amp; malware.
+Server location: 🇩🇪.
+Filtering: yes</string>
 	<key>ConsentText</key>
 	<dict>
 		<key>default</key>
@@ -42,7 +45,7 @@
 https://blahdns.com</string>
 	</dict>
 	<key>PayloadDisplayName</key>
-	<string>BlahDNS (Germany) DNS over HTTPS</string>
+	<string>BlahDNS Germany Encrypted DNS over HTTPS</string>
 	<key>PayloadIdentifier</key>
 	<string>com.paulmillr.apple-dns</string>
 	<key>PayloadRemovalDisallowed</key>

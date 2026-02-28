@@ -20,9 +20,9 @@
 				<string>child-noads.joindns4.eu</string>
 			</dict>
 			<key>PayloadDescription</key>
-			<string>Configures device to use DNS4EU Protective with child protection &amp; ad-blocking DNS over TLS</string>
+			<string>Configures device to use DNS4EU Protective with child protection &amp; ad-blocking Encrypted DNS over TLS</string>
 			<key>PayloadDisplayName</key>
-			<string>DNS4EU Protective with child protection &amp; ad-blocking DNS over TLS</string>
+			<string>DNS4EU Protective with child protection &amp; ad-blocking Encrypted DNS over TLS</string>
 			<key>PayloadIdentifier</key>
 			<string>com.apple.dnsSettings.managed.8455f0bd-16e3-5d43-9a57-8e83e22499c1</string>
 			<key>PayloadType</key>
@@ -36,7 +36,10 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Adds the DNS4EU Protective with child protection &amp; ad-blocking DNS to Big Sur and iOS 14 based systems</string>
+	<string>Configures device to use DNS4EU Protective with child protection &amp; ad-blocking over TLS
+Operated by a consortium lead by Whalebone. Blocks Malware, Ads and explicit content.
+Server location: 🇨🇿.
+Filtering: yes</string>
 	<key>PayloadDisplayName</key>
 	<string>DNS4EU Protective with child protection &amp; ad-blocking Encrypted DNS over TLS</string>
 	<key>PayloadIdentifier</key>

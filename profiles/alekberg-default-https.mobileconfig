@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>DNSSettings</key>
+			<dict>
+				<key>DNSProtocol</key>
+				<string>HTTPS</string>
+				<key>ServerAddresses</key>
+				<array>
+					<string>89.38.131.38</string>
+					<string>2a0c:b9c0:f:451d::1</string>
+				</array>
+				<key>ServerURL</key>
+				<string>https://dnsnl.alekberg.net/dns-query</string>
+			</dict>
+			<key>PayloadDescription</key>
+			<string>Configures device to use Alekberg Encrypted DNS Encrypted DNS over HTTPS</string>
+			<key>PayloadDisplayName</key>
+			<string>Alekberg Encrypted DNS Encrypted DNS over HTTPS</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.dnsSettings.managed.d27008e4-ecaa-5171-adcf-70bdc8c2351c</string>
+			<key>PayloadType</key>
+			<string>com.apple.dnsSettings.managed</string>
+			<key>PayloadUUID</key>
+			<string>D27008E4-ECAA-5171-ADCF-70BDC8C2351C</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProhibitDisablement</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Configures device to use Alekberg Encrypted DNS over HTTPS
+Independent.
+Server location: 🇳🇱.
+Filtering: no</string>
+	<key>ConsentText</key>
+	<dict>
+		<key>default</key>
+		<string>Privacy policy: https://alekberg.net/privacy</string>
+	</dict>
+	<key>PayloadDisplayName</key>
+	<string>Alekberg Encrypted DNS Encrypted DNS over HTTPS</string>
+	<key>PayloadIdentifier</key>
+	<string>com.paulmillr.apple-dns</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>EB4D5EF9-B4B4-56A6-9C3A-43EFD5A3C532</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>
