@@ -2,7 +2,7 @@
 
 # 加密 DNS 配置
 
-[DNS over HTTPS](https://zh.wikipedia.org/wiki/DNS_over_HTTPS) 和 [DNS over TLS](https://zh.wikipedia.org/wiki/DNS_over_TLS) 的配置描述文件。查看这篇文章以获取更多信息：[paulmillr.com/posts/encrypted-dns/](https://paulmillr.com/posts/encrypted-dns/)。要添加一个新的供应商，或者修改已有的供应商：见[#参与贡献](#参与贡献)。
+[DNS over HTTPS](https://zh.wikipedia.org/wiki/DNS_over_HTTPS) 和 [DNS over TLS](https://zh.wikipedia.org/wiki/DNS_over_TLS) 的配置描述文件。查看这篇文章以获取更多信息：[paulmillr.com/posts/encrypted-dns/](https://paulmillr.com/posts/encrypted-dns/)。要添加一个新的供应商，或者修改已有的供应商：见 [#参与贡献](#参与贡献)。
 
 ## 使用方法
 
@@ -34,24 +34,24 @@ Mac：
       - iCloud 专用代理，VPN 客户端
       - Little Snitch，LuLu
       - DNS 相关的命令行工具：`host`，`dig`，`nslookup` 等。
-2. 咖啡馆、酒店、机场的 [Wi-Fi 强制门户](https://zh.wikipedia.org/wiki/强制门户)被苹果从加密 DNS 规则中排除；为了简化认证流程——这是合理的
+2. 咖啡馆、酒店、机场的 [Wi-Fi 强制门户](https://zh.wikipedia.org/wiki/强制门户) 被苹果从加密 DNS 规则中排除；为了简化认证流程——这是合理的
 3. TLS DNS 更容易被供应商屏蔽，因为它使用非标准的 853 端口。
   [更多信息](https://security.googleblog.com/2022/07/dns-over-http3-in-android.html)
 4. 基于 TOR 的加密 DNS 可能在隐私方面更好，但我们目前尚无此功能。
 
 ## 参与贡献
 
-- **添加 / 编辑一个描述文件：**编辑 `src` 目录下的 json 文件。
-- **验证解析器的 IP / 主机名：**比较 mobileconfig 文件与它们的原始网站（在文本编辑器中打开文件）。
+- **添加 / 编辑一个描述文件：** 编辑 `src` 目录下的 json 文件。
+- **验证解析器的 IP / 主机名：** 比较 mobileconfig 文件与它们的原始网站（在文本编辑器中打开文件）。
 - 访问 [developer.apple.com](https://developer.apple.com/documentation/devicemanagement/dnssettings) 查看更多文档。
-- **按需激活：**你可以选择排除一些不想使用加密 DNS 的受信任 Wi-Fi 网络。为此，在描述文件的 `PayloadContent` 字典下的 [OnDemandRules](https://github.com/paulmillr/encrypted-dns/blob/master/profiles/template-on-demand-default-https.mobileconfig#L22-L38) 字段中添加你的 SSID。
+- **按需激活：** 你可以选择排除一些不想使用加密 DNS 的受信任 Wi-Fi 网络。为此，在描述文件的 `PayloadContent` 字典下的 [OnDemandRules](https://github.com/paulmillr/encrypted-dns/blob/master/profiles/template-on-demand-default-https.mobileconfig#L22-L38) 字段中添加你的 SSID。
 
 ### 脚本
 
 - `npm run build` - 重新构建描述文件、已签名描述文件和 README
 - `npm run sign` - 使用 ECC SSL 证书重新签名所有描述文件（更新 `signature` 字段）。
     - 签名通过 [key-producer](https://github.com/paulmillr/micro-key-producer) 完成
-    - 可以使用 Let's Encrypt 免费证书, 但[会在45天内过期](https://letsencrypt.org/2026/02/24/rate-limits-45-day-certs)。
+    - 可以使用 Let's Encrypt 免费证书，但[会在45天内过期](https://letsencrypt.org/2026/02/24/rate-limits-45-day-certs)。
     - `certs` 子目录下需要包含以下文件:
 
     ```
