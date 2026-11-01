@@ -59,6 +59,7 @@
 | [Quad9 無過濾][quad9-nofilter]                                                       | 🇨🇭    | 否   | 由 Quad9 基金會營運                                                                                                             | [HTTPS][quad9-nofilter-https-signed], [TLS][quad9-nofilter-tls-signed]                           | [HTTPS][quad9-nofilter-https], [TLS][quad9-nofilter-tls]                           |
 | [Tiarap][tiarapp-default]                                                            | 🇸🇬 🇺🇸 | 是   | 由 Tiarap 公司營運，阻擋廣告、追蹤器、釣魚和惡意軟體                                                                            | [HTTPS][tiarapp-default-https-signed], [TLS][tiarapp-default-tls-signed]                         | [HTTPS][tiarapp-default-https], [TLS][tiarapp-default-tls]                         |
 | [ADNull DNS][adnull-default]                                                         | 🇺🇦    | 是   | Public DNS operated by ADNull. Blocks ads & tracking. Paid plans offer personalized DNS with advanced ad and phishing blocking. | [HTTPS][adnull-default-https-signed]                                                             | [HTTPS][adnull-default-https]                                                      |
+| [BeatQuantum DNS][beatquantum-default]                                               | 🇬🇧    | 否   | Operated by BeatQuantum Limited. Non-filtering, no logs, DNSSEC. Classical, hybrid & post-quantum (ML-KEM) key exchange         |                                                                                                  | [HTTPS][beatquantum-default-https], [TLS][beatquantum-default-tls]                 |
 
 ## 安裝
 
@@ -177,6 +178,9 @@ macOS [（官方文檔）](https://support.apple.com/zh-tw/guide/mac-help/mh3556
 [tiarapp-default-tls]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/tiarapp-default-tls.mobileconfig
 [adnull-default]: https://adnull.com
 [adnull-default-https]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/adnull-default-https.mobileconfig
+[beatquantum-default]: https://beatquantum.com/stamps
+[beatquantum-default-https]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/beatquantum-default-https.mobileconfig
+[beatquantum-default-tls]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/beatquantum-default-tls.mobileconfig
 [360-default-https-signed]: https://github.com/paulmillr/encrypted-dns/raw/master/signed/360-default-https.mobileconfig
 [adguard-default-https-signed]: https://github.com/paulmillr/encrypted-dns/raw/master/signed/adguard-default-https.mobileconfig
 [adguard-default-tls-signed]: https://github.com/paulmillr/encrypted-dns/raw/master/signed/adguard-default-tls.mobileconfig

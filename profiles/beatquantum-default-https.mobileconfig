@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>DNSSettings</key>
+			<dict>
+				<key>DNSProtocol</key>
+				<string>HTTPS</string>
+				<key>ServerAddresses</key>
+				<array>
+					<string>2a0c:9a46:1e22:12::a</string>
+					<string>207.2.121.35</string>
+				</array>
+				<key>ServerURL</key>
+				<string>https://beatquantum.com/dns-query</string>
+			</dict>
+			<key>PayloadDescription</key>
+			<string>Configures device to use BeatQuantum DNS Encrypted DNS over HTTPS</string>
+			<key>PayloadDisplayName</key>
+			<string>BeatQuantum DNS Encrypted DNS over HTTPS</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.dnsSettings.managed.73b09b22-5f94-528e-bd37-6565cf6873b6</string>
+			<key>PayloadType</key>
+			<string>com.apple.dnsSettings.managed</string>
+			<key>PayloadUUID</key>
+			<string>73B09B22-5F94-528E-BD37-6565CF6873B6</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProhibitDisablement</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Configures device to use BeatQuantum DNS over HTTPS
+Operated by BeatQuantum Limited. Non-filtering, no logs, DNSSEC. Classical, hybrid &amp; post-quantum (ML-KEM) key exchange.
+Server location: 🇬🇧.
+Filtering: no</string>
+	<key>PayloadDisplayName</key>
+	<string>BeatQuantum DNS Encrypted DNS over HTTPS</string>
+	<key>PayloadIdentifier</key>
+	<string>com.paulmillr.apple-dns</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>4E102B8E-AFE3-5928-B81D-2B385F00AB4A</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>

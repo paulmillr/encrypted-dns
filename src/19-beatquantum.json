@@ -1,0 +1,25 @@
+{
+    "names": {
+        "en": "BeatQuantum DNS"
+    },
+    "notes": {
+        "en": "Operated by BeatQuantum Limited. Non-filtering, no logs, DNSSEC. Classical, hybrid & post-quantum (ML-KEM) key exchange"
+    },
+    "website": "https://beatquantum.com/stamps",
+    "region": "GB",
+    "censorship": false,
+    "variants": {
+        "default": {
+            "ServerAddresses": [
+                "2a0c:9a46:1e22:12::a",
+                "207.2.121.35"
+            ],
+            "https": {
+                "ServerURLOrName": "https://beatquantum.com/dns-query"
+            },
+            "tls": {
+                "ServerURLOrName": "beatquantum.com"
+            }
+        }
+    }
+}
