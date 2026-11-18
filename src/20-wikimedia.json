@@ -24,7 +24,10 @@
         "tr": "Wikimedia Vakfı",
         "uk": "Фонд Вікімедіа",
         "zh-CN": "维基媒体基金会",
-        "zh-TW": "維基媒體基金會"
+        "zh-TW": "維基媒體基金會",
+        "ar": "مؤسسة ويكيميديا",
+        "id": "Yayasan Wikimedia",
+        "pt": "Fundação Wikimedia"
     },
     "tableNote": {
         "en": "Beta service, no availability guarantees",
@@ -36,7 +39,10 @@
         "tr": "Hizmet beta aşamasında. Kesintisiz çalışacağı garanti edilmiyor",
         "uk": "Бета-версія без гарантій доступності",
         "zh-CN": "服务仍在测试阶段，不保证始终可用",
-        "zh-TW": "服務仍在測試階段，不保證能隨時使用"
+        "zh-TW": "服務仍在測試階段，不保證能隨時使用",
+        "ar": "خدمة تجريبية لا يُضمن توفّرها",
+        "id": "Layanan beta, ketersediaannya tidak dijamin",
+        "pt": "Serviço em fase beta, sem garantia de disponibilidade"
     },
     "website": "https://meta.wikimedia.org/wiki/Wikimedia_DNS",
     "region": "US",

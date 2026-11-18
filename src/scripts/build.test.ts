@@ -97,6 +97,12 @@ it('preserves signed downloads through clean builds and fails safely when the pi
       )
     );
     assert.doesNotMatch(translatedRelease, /-tls(?:-signed)?\]/);
+    const arabic = fs.readFileSync(path.join(dir, 'translations', 'ar.md'), 'utf8');
+    assert.ok(
+      arabic.includes(
+        '[عائلي (غير موقّع)][adguard-family-https] · *برمجيات خبيثة*، *محتوى للبالغين*'
+      )
+    );
     fs.unlinkSync(path.join(dir, 'src/profile-signer.pem'));
     const failed = spawnSync(process.execPath, ['src/scripts/build.ts'], {
       cwd: dir,
@@ -130,6 +136,7 @@ const templateShape = (md: string) => {
   const flush = () => shape.push(`${section}: ${counts.links} links, ${counts.code} code`);
   let prevBlank = true;
   for (const line of md.split('\n')) {
+    if (/^(?:<div lang="[\w-]+" dir="rtl">|<\/div>)$/.test(line)) continue;
     const heading = /^(#+) /.exec(line);
     if (heading) {
       flush();

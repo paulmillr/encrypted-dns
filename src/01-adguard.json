@@ -30,7 +30,10 @@
                 "tr": "Varsayılan",
                 "ru": "По умолчанию",
                 "uk": "Типовий",
-                "ja": "デフォルト"
+                "ja": "デフォルト",
+                "ar": "افتراضي",
+                "id": "Bawaan",
+                "pt": "Padrão"
             },
             "notes": {
                 "en": "Blocks ads, tracking & phishing",
@@ -74,7 +77,10 @@
                 "tr": "Aile Koruması",
                 "ru": "Семейная защита",
                 "uk": "Сімейний захист",
-                "ja": "ファミリー保護"
+                "ja": "ファミリー保護",
+                "ar": "الحماية العائلية",
+                "id": "Perlindungan keluarga",
+                "pt": "Proteção familiar"
             },
             "tableName": {
                 "en": "Family",
@@ -86,7 +92,10 @@
                 "tr": "Aile",
                 "uk": "Сімейний захист",
                 "zh-CN": "家庭保护",
-                "zh-TW": "家庭保護"
+                "zh-TW": "家庭保護",
+                "ar": "عائلي",
+                "id": "Keluarga",
+                "pt": "Família"
             },
             "notes": {
                 "en": "Blocks `Default` + malware & adult content",
@@ -132,7 +141,10 @@
                 "tr": "Filtresiz",
                 "ru": "Без фильтрации",
                 "uk": "Без фільтрування",
-                "ja": "フィルタリングなし"
+                "ja": "フィルタリングなし",
+                "ar": "بلا تصفية",
+                "id": "Tanpa filter",
+                "pt": "Sem filtro"
             },
             "notes": {
                 "en": "Non-filtering",

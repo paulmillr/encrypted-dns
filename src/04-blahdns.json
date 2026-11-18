@@ -36,7 +36,10 @@
                 "tr": "Almanya",
                 "ru": "Германия",
                 "uk": "Німеччина",
-                "ja": "ドイツ"
+                "ja": "ドイツ",
+                "ar": "ألمانيا",
+                "id": "Jerman",
+                "pt": "Alemanha"
             },
             "ServerAddresses": [
                 "78.46.244.143",
@@ -70,7 +73,10 @@
                 "tr": "Singapur",
                 "ru": "Сингапур",
                 "uk": "Сінгапур",
-                "ja": "シンガポール"
+                "ja": "シンガポール",
+                "ar": "سنغافورة",
+                "id": "Singapura",
+                "pt": "Singapura"
             },
             "ServerAddresses": [
                 "46.250.226.242",

@@ -23,7 +23,10 @@
         "ru": "фонд Quad9",
         "uk": "фонд Quad9",
         "zh-CN": "Quad9 基金会",
-        "zh-TW": "Quad9 基金會"
+        "zh-TW": "Quad9 基金會",
+        "ar": "مؤسسة Quad9",
+        "id": "Yayasan Quad9",
+        "pt": "Fundação Quad9"
     },
     "website": "https://www.quad9.net/news/blog/doh-with-quad9-dns-servers/",
     "region": "CH",
@@ -69,7 +72,10 @@
                 "tr": "ECS destekli",
                 "ru": "С поддержкой ECS",
                 "uk": "З підтримкою ECS",
-                "ja": "ECS 対応"
+                "ja": "ECS 対応",
+                "ar": "مع ECS",
+                "id": "Dengan ECS",
+                "pt": "Com ECS"
             },
             "notes": {
                 "en": "Supports ECS. Blocks malware",
@@ -107,7 +113,10 @@
                 "tr": "Filtresiz",
                 "ru": "Без фильтрации",
                 "uk": "Без фільтрування",
-                "ja": "フィルタリングなし"
+                "ja": "フィルタリングなし",
+                "ar": "بلا تصفية",
+                "id": "Tanpa filter",
+                "pt": "Sem filtro"
             },
             "censorship": false,
             "ServerAddresses": [

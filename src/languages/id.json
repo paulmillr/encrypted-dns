@@ -1,0 +1,26 @@
+{
+  "code": "id",
+  "name": "Bahasa Indonesia",
+  "table_columns": {
+    "provider": "Penyedia",
+    "unfiltered": "Tanpa filter",
+    "filtered": "Dengan filter",
+    "notes": "Catatan"
+  },
+  "install": "Instal",
+  "default_profile": "Bawaan",
+  "details": "rincian",
+  "operated_by": "Dikelola oleh {operator}",
+  "filter_tags": {
+    "malware": "malware",
+    "adult": "konten dewasa",
+    "ads": "iklan",
+    "tracking": "pelacakan",
+    "phishing": "phishing",
+    "mixed content": "konten campuran",
+    "unspecified": "tidak disebutkan"
+  },
+  "signed": "ditandatangani",
+  "unsigned": "tanpa tanda tangan",
+  "sentence_separator": ". "
+}

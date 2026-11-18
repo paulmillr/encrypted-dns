@@ -25,7 +25,10 @@
         "tr": "Kanada İnternet Kayıt Kurumu (CIRA)",
         "uk": "Канадська служба реєстрації доменів (CIRA)",
         "zh-CN": "加拿大互联网注册管理机构（CIRA）",
-        "zh-TW": "加拿大網際網路註冊管理機構（CIRA）"
+        "zh-TW": "加拿大網際網路註冊管理機構（CIRA）",
+        "ar": "الهيئة الكندية لتسجيل نطاقات الإنترنت (CIRA)",
+        "id": "Otoritas Pendaftaran Domain Internet Kanada (CIRA)",
+        "pt": "Autoridade Canadense de Registro de Domínios (CIRA)"
     },
     "website": "https://www.cira.ca/cybersecurity-services/canadian-shield/configure/summary-cira-canadian-shield-dns-resolver-addresses",
     "region": "CA",
@@ -54,7 +57,10 @@
                 "tr": "Özel",
                 "ru": "Приватный",
                 "uk": "Приватний",
-                "ja": "プライベート"
+                "ja": "プライベート",
+                "ar": "خاص",
+                "id": "Privat",
+                "pt": "Privado"
             }
         },
         "protected": {
@@ -68,7 +74,10 @@
                 "tr": "Korumalı",
                 "ru": "Защита от угроз",
                 "uk": "Захист від загроз",
-                "ja": "セキュリティ"
+                "ja": "セキュリティ",
+                "ar": "محمي",
+                "id": "Terlindungi",
+                "pt": "Protegido"
             },
             "notes": {
                 "en": "Blocks malware & phishing",
@@ -111,7 +120,10 @@
                 "tr": "Aile",
                 "ru": "Семейный фильтр",
                 "uk": "Сімейний фільтр",
-                "ja": "ファミリー"
+                "ja": "ファミリー",
+                "ar": "عائلي",
+                "id": "Keluarga",
+                "pt": "Família"
             },
             "notes": {
                 "en": "Blocks malware, phishing & adult content",

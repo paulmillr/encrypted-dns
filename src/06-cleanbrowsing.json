@@ -35,7 +35,10 @@
                 "tr": "Aile Filtresi",
                 "ru": "Семейный фильтр",
                 "uk": "Сімейний фільтр",
-                "ja": "ファミリーフィルター"
+                "ja": "ファミリーフィルター",
+                "ar": "تصفية عائلية",
+                "id": "Filter keluarga",
+                "pt": "Filtro familiar"
             },
             "tableName": {
                 "en": "Family",
@@ -47,7 +50,10 @@
                 "tr": "Aile filtresi",
                 "uk": "Сімейний фільтр",
                 "zh-CN": "家庭过滤",
-                "zh-TW": "家庭過濾"
+                "zh-TW": "家庭過濾",
+                "ar": "تصفية عائلية",
+                "id": "Filter keluarga",
+                "pt": "Filtro familiar"
             },
             "notes": {
                 "en": "Filters malware & adult, mixed content",
@@ -73,7 +79,10 @@
                 "tr": "Yetişkinlere Yönelik İçerik Filtresi",
                 "ru": "Фильтр контента для взрослых",
                 "uk": "Фільтр вмісту для дорослих",
-                "ja": "成人向けサイトの制限"
+                "ja": "成人向けサイトの制限",
+                "ar": "تصفية محتوى البالغين",
+                "id": "Filter konten dewasa",
+                "pt": "Filtro de conteúdo adulto"
             },
             "tableName": {
                 "en": "Adult",
@@ -85,7 +94,10 @@
                 "tr": "Yetişkinlere yönelik içerik filtresi",
                 "uk": "Фільтр вмісту для дорослих",
                 "zh-CN": "成人内容过滤",
-                "zh-TW": "成人內容過濾"
+                "zh-TW": "成人內容過濾",
+                "ar": "تصفية محتوى البالغين",
+                "id": "Filter konten dewasa",
+                "pt": "Filtro de conteúdo adulto"
             },
             "notes": {
                 "en": "Filters malware & adult content",
@@ -128,7 +140,10 @@
                 "tr": "Güvenlik Filtresi",
                 "ru": "Фильтр безопасности",
                 "uk": "Фільтр безпеки",
-                "ja": "セキュリティフィルター"
+                "ja": "セキュリティフィルター",
+                "ar": "تصفية أمنية",
+                "id": "Filter keamanan",
+                "pt": "Filtro de segurança"
             },
             "tableName": {
                 "en": "Security",
@@ -140,7 +155,10 @@
                 "tr": "Güvenlik filtresi",
                 "uk": "Фільтр безпеки",
                 "zh-CN": "安全过滤",
-                "zh-TW": "安全過濾"
+                "zh-TW": "安全過濾",
+                "ar": "تصفية أمنية",
+                "id": "Filter keamanan",
+                "pt": "Filtro de segurança"
             },
             "notes": {
                 "en": "Filters malware",

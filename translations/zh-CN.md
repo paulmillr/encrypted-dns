@@ -1,5 +1,5 @@
 <!-- Generated from src/languages/zh-CN.md by npm --prefix src/scripts run build. Edit that file instead. -->
-[English](../README.md) | [Deutsch](de.md) | [Español](es.md) | [Français](fr.md) | [日本語](ja.md) | [Русский](ru.md) | [Türkçe](tr.md) | [Українська](uk.md) | 简体中文 | [繁體中文](zh-TW.md)
+[English](../README.md) | [العربية](ar.md) | [Deutsch](de.md) | [Español](es.md) | [Français](fr.md) | [Bahasa Indonesia](id.md) | [日本語](ja.md) | [Português](pt.md) | [Русский](ru.md) | [Türkçe](tr.md) | [Українська](uk.md) | 简体中文 | [繁體中文](zh-TW.md)
 
 # 加密 DNS 配置描述文件
 

@@ -1,5 +1,5 @@
 <!-- Generated from src/languages/en.md by npm --prefix src/scripts run build. Edit that file instead. -->
-English | [Deutsch](translations/de.md) | [Español](translations/es.md) | [Français](translations/fr.md) | [日本語](translations/ja.md) | [Русский](translations/ru.md) | [Türkçe](translations/tr.md) | [Українська](translations/uk.md) | [简体中文](translations/zh-CN.md) | [繁體中文](translations/zh-TW.md)
+English | [العربية](translations/ar.md) | [Deutsch](translations/de.md) | [Español](translations/es.md) | [Français](translations/fr.md) | [Bahasa Indonesia](translations/id.md) | [日本語](translations/ja.md) | [Português](translations/pt.md) | [Русский](translations/ru.md) | [Türkçe](translations/tr.md) | [Українська](translations/uk.md) | [简体中文](translations/zh-CN.md) | [繁體中文](translations/zh-TW.md)
 
 # encrypted-dns-configs
 

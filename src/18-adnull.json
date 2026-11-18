@@ -25,7 +25,10 @@
         "tr": "Ücretli planlarla DNS ayarlarını özelleştirebilir, reklamları ve kimlik avı sitelerini engellemek için gelişmiş filtreler kullanabilirsiniz",
         "uk": "Платні тарифи дають змогу налаштувати DNS під свої потреби й точніше керувати блокуванням реклами та фішингових сайтів",
         "zh-CN": "付费套餐可自定义 DNS 设置，并提供更完善的广告拦截和网络钓鱼防护",
-        "zh-TW": "付費方案可自訂 DNS 設定，並提供進階的廣告封鎖與網路釣魚防護功能"
+        "zh-TW": "付費方案可自訂 DNS 設定，並提供進階的廣告封鎖與網路釣魚防護功能",
+        "ar": "توفّر الباقات المدفوعة خدمة DNS مخصّصة وخيارات متقدّمة لحجب الإعلانات ومواقع التصيّد الاحتيالي",
+        "id": "Paket berbayar menyediakan DNS yang bisa disesuaikan dan filter lanjutan untuk memblokir iklan serta situs phishing",
+        "pt": "Os planos pagos incluem DNS personalizado e filtros avançados para bloquear anúncios e sites de phishing"
     },
     "website": "https://adnull.com",
     "region": "UA",

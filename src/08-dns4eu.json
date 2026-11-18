@@ -24,7 +24,10 @@
         "tr": "Whalebone liderliğindeki bir konsorsiyum",
         "uk": "консорціум на чолі з Whalebone",
         "zh-CN": "Whalebone 牵头的联盟",
-        "zh-TW": "Whalebone 主導的聯盟"
+        "zh-TW": "Whalebone 主導的聯盟",
+        "ar": "ائتلاف بقيادة Whalebone",
+        "id": "konsorsium yang dipimpin Whalebone",
+        "pt": "consórcio liderado pela Whalebone"
     },
     "website": "https://www.joindns4.eu/for-public",
     "region": "CZ",
@@ -56,7 +59,10 @@
                 "uk": "Із захистом",
                 "ja": "セキュリティ",
                 "zh-CN": "安全防护",
-                "zh-TW": "安全防護"
+                "zh-TW": "安全防護",
+                "ar": "الحماية",
+                "id": "Perlindungan",
+                "pt": "Proteção"
             },
             "notes": {
                 "en": "Blocks Malware.",
@@ -98,7 +104,10 @@
                 "tr": "Güvenlik + reklam engelleme",
                 "ru": "С защитой и блокировкой рекламы",
                 "uk": "Із захистом і блокуванням реклами",
-                "ja": "セキュリティ＋広告ブロック"
+                "ja": "セキュリティ＋広告ブロック",
+                "ar": "حماية مع حجب الإعلانات",
+                "id": "Perlindungan dengan pemblokiran iklan",
+                "pt": "Proteção com bloqueio de anúncios"
             },
             "tableName": {
                 "en": "Ad-blocking",
@@ -110,7 +119,10 @@
                 "tr": "Reklam engelleme",
                 "uk": "Блокування реклами",
                 "zh-CN": "广告拦截",
-                "zh-TW": "廣告封鎖"
+                "zh-TW": "廣告封鎖",
+                "ar": "حجب الإعلانات",
+                "id": "Pemblokiran iklan",
+                "pt": "Bloqueio de anúncios"
             },
             "notes": {
                 "en": "Blocks Malware and Ads",
@@ -153,7 +165,10 @@
                 "tr": "Güvenlik + çocuklar için içerik filtresi",
                 "ru": "С защитой и детским фильтром",
                 "uk": "Із захистом і дитячим фільтром",
-                "ja": "セキュリティ＋子ども向けフィルター"
+                "ja": "セキュリティ＋子ども向けフィルター",
+                "ar": "حماية مع تصفية للأطفال",
+                "id": "Perlindungan dengan filter anak",
+                "pt": "Proteção com filtro infantil"
             },
             "tableName": {
                 "en": "Child protection",
@@ -165,7 +180,10 @@
                 "tr": "Çocuklar için içerik filtresi",
                 "uk": "Дитячий фільтр",
                 "zh-CN": "儿童上网保护",
-                "zh-TW": "兒童上網防護"
+                "zh-TW": "兒童上網防護",
+                "ar": "حماية الأطفال",
+                "id": "Perlindungan anak",
+                "pt": "Proteção infantil"
             },
             "notes": {
                 "en": "Blocks malware and explicit content.",
@@ -208,7 +226,10 @@
                 "tr": "Güvenlik + çocuklar için içerik filtresi + reklam engelleme",
                 "ru": "С защитой, детским фильтром и блокировкой рекламы",
                 "uk": "Із захистом, дитячим фільтром і блокуванням реклами",
-                "ja": "セキュリティ＋子ども向けフィルター＋広告ブロック"
+                "ja": "セキュリティ＋子ども向けフィルター＋広告ブロック",
+                "ar": "حماية مع تصفية للأطفال وحجب الإعلانات",
+                "id": "Perlindungan dengan filter anak dan pemblokiran iklan",
+                "pt": "Proteção com filtro infantil e bloqueio de anúncios"
             },
             "tableName": {
                 "en": "Child + ad-blocking",
@@ -220,7 +241,10 @@
                 "tr": "Çocuklar için içerik filtresi + reklam engelleme",
                 "uk": "Дитячий фільтр і блокування реклами",
                 "zh-CN": "儿童上网保护＋广告拦截",
-                "zh-TW": "兒童上網防護＋廣告封鎖"
+                "zh-TW": "兒童上網防護＋廣告封鎖",
+                "ar": "حماية الأطفال وحجب الإعلانات",
+                "id": "Perlindungan anak dan pemblokiran iklan",
+                "pt": "Proteção infantil e bloqueio de anúncios"
             },
             "notes": {
                 "en": "Blocks Malware, Ads and explicit content",

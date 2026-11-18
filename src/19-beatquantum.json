@@ -25,7 +25,10 @@
         "tr": "DNSSEC desteği sunar. Anahtar değişimi için klasik, hibrit ve kuantum sonrası (ML-KEM) yöntemleri destekler",
         "uk": "Підтримує DNSSEC, класичний і гібридний обмін ключами, а також постквантовий обмін із ML-KEM",
         "zh-CN": "支持 DNSSEC，密钥交换可采用传统、混合或基于 ML-KEM 的后量子方案",
-        "zh-TW": "支援 DNSSEC，金鑰交換可採用傳統、混合或以 ML-KEM 為基礎的後量子方案"
+        "zh-TW": "支援 DNSSEC，金鑰交換可採用傳統、混合或以 ML-KEM 為基礎的後量子方案",
+        "ar": "يدعم DNSSEC وتبادل المفاتيح التقليدي والهجين وما بعد الكمّي (ML-KEM)",
+        "id": "Mendukung DNSSEC dan pertukaran kunci dengan metode klasik, hibrida, serta pascakuantum (ML-KEM)",
+        "pt": "Suporte a DNSSEC e troca de chaves clássica, híbrida e pós-quântica (ML-KEM)"
     },
     "website": "https://beatquantum.com/stamps",
     "region": "GB",

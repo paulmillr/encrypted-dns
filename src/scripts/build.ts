@@ -575,10 +575,10 @@ const installLink = (row: TableRow, label: string, unsigned = '') => {
   return `[${unsigned ? `${label} (${unsigned})` : label}][${id}]`;
 };
 
-const filterTags = (provider: Provider, variant: Variant, labels?: FilterLabels) =>
+const filterTags = (provider: Provider, variant: Variant, lang?: Lang) =>
   (variant.filters ?? provider.filters ?? ['unspecified'])
-    .map((tag) => `*${labels?.[tag] ?? tag}*`)
-    .join(', ');
+    .map((tag) => `*${lang?.data.filter_tags[tag] ?? tag}*`)
+    .join(lang?.code === 'ar' ? '، ' : ', ');
 
 const tableText = (value: TableText | undefined, code: string) =>
   typeof value === 'string' ? value : (value?.[code] ?? value?.[DEFAULT_LANG]);
@@ -594,7 +594,8 @@ const fillOperator = (template: string, operator: string) =>
       `${CJK.test(operator[0]) ? '' : before}${operator}${CJK.test(operator.at(-1)!) ? '' : after}`
   );
 
-const providerTable = ({ code, data }: Lang) => {
+const providerTable = (lang: Lang) => {
+  const { code, data } = lang;
   const providers = Map.groupBy(
     tableRows.filter((row) => !row.hidden && row.unsigned.https),
     (row) => row.providerId
@@ -620,7 +621,7 @@ const providerTable = ({ code, data }: Lang) => {
         row.website && row.website !== home.website ? ` ([${data.details}][${row.id}])` : '';
       if (row.censorship) {
         const link = installLink(row, grouped ? variantName : data.install, data.unsigned);
-        other.push(`${link} · ${filterTags(provider, variant, data.filter_tags)}${website}`);
+        other.push(`${link} · ${filterTags(provider, variant, lang)}${website}`);
       } else {
         uncensored.push(installLink(row, data.install));
       }

@@ -1,0 +1,26 @@
+{
+  "code": "ar",
+  "name": "العربية",
+  "table_columns": {
+    "provider": "المزوّد",
+    "unfiltered": "بلا تصفية",
+    "filtered": "مع تصفية",
+    "notes": "ملاحظات"
+  },
+  "install": "تثبيت",
+  "default_profile": "افتراضي",
+  "details": "التفاصيل",
+  "operated_by": "بإدارة {operator}",
+  "filter_tags": {
+    "malware": "برمجيات خبيثة",
+    "adult": "محتوى للبالغين",
+    "ads": "إعلانات",
+    "tracking": "تتبّع",
+    "phishing": "تصيّد احتيالي",
+    "mixed content": "محتوى مختلط",
+    "unspecified": "غير محدّد"
+  },
+  "signed": "موقّع",
+  "unsigned": "غير موقّع",
+  "sentence_separator": ". "
+}

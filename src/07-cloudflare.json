@@ -44,7 +44,10 @@
                 "tr": "Güvenlik",
                 "ru": "Защита от угроз",
                 "uk": "Захист від загроз",
-                "ja": "セキュリティ"
+                "ja": "セキュリティ",
+                "ar": "الأمان",
+                "id": "Keamanan",
+                "pt": "Segurança"
             },
             "notes": {
                 "en": "Blocks malware & phishing",
@@ -85,7 +88,10 @@
                 "tr": "Aile",
                 "ru": "Семейный фильтр",
                 "uk": "Сімейний фільтр",
-                "ja": "ファミリー"
+                "ja": "ファミリー",
+                "ar": "عائلي",
+                "id": "Keluarga",
+                "pt": "Família"
             },
             "notes": {
                 "en": "Blocks malware, phishing & adult content",
