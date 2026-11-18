@@ -7,6 +7,7 @@
     "build": "npm run build:clean && node src/scripts/build.ts",
     "sign": "node src/scripts/sign.ts",
     "new": "node src/scripts/new.ts",
+    "check": "node src/scripts/check-endpoints.ts",
     "test": "node --experimental-strip-types --test src/scripts/new.test.ts src/scripts/sign-single.test.ts",
     "format": "prettier --write \"src/*.json\" src/scripts/*.ts"
   },

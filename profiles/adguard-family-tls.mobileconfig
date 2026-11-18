@@ -43,7 +43,7 @@ Filtering: yes</string>
 	<key>PayloadDisplayName</key>
 	<string>AdGuard DNS Family Protection Encrypted DNS over TLS</string>
 	<key>PayloadIdentifier</key>
-	<string>com.paulmillr.apple-dns</string>
+	<string>com.paulmillr.apple-dns.adguard-family-tls</string>
 	<key>PayloadRemovalDisallowed</key>
 	<false/>
 	<key>PayloadScope</key>

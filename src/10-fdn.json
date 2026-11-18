@@ -14,17 +14,13 @@
         "default": {
             "ServerAddresses": [
                 "2001:910:800::12",
-                "2001:910:800::40",
-                "80.67.169.12",
-                "80.67.169.40"
+                "80.67.169.12"
             ],
             "https": {
-                "ServerURLOrName": "https://ns0.fdn.fr/dns-query",
-                "signature": "3045022100a1a6d757234a8f9ff6f1fe4a3abc91fdf530c78d0db7d35c5bff67fd5e2365c4022062c0f0d771db807fc7816f894c8ccdf9ac9b603ed241bdb66a93ffb1bce1468a"
+                "ServerURLOrName": "https://ns0.fdn.fr/dns-query"
             },
             "tls": {
-                "ServerURLOrName": "dns.fdn",
-                "signature": "3046022100c441f4a38172a52318b035c60fc245acb955a65b45a016a7021dd400e30455330221008b061e2ece16b93f3b5205947e5b2415c0d8412cb6e03bd50d47514bbeb6702c"
+                "ServerURLOrName": "ns0.fdn.fr"
             }
         }
     }

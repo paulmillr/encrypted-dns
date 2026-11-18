@@ -43,7 +43,7 @@ Filtering: no</string>
 	<key>PayloadDisplayName</key>
 	<string>Cloudflare 1.1.1.1 Encrypted DNS over TLS</string>
 	<key>PayloadIdentifier</key>
-	<string>com.paulmillr.apple-dns</string>
+	<string>com.paulmillr.apple-dns.cloudflare-default-tls</string>
 	<key>PayloadRemovalDisallowed</key>
 	<false/>
 	<key>PayloadScope</key>

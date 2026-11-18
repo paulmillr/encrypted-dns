@@ -43,7 +43,7 @@ Filtering: no</string>
 	<key>PayloadDisplayName</key>
 	<string>Google Public DNS Encrypted DNS over HTTPS</string>
 	<key>PayloadIdentifier</key>
-	<string>com.paulmillr.apple-dns</string>
+	<string>com.paulmillr.apple-dns.google-default-https</string>
 	<key>PayloadRemovalDisallowed</key>
 	<false/>
 	<key>PayloadScope</key>

@@ -16,12 +16,10 @@
     "variants": {
         "default": {
             "ServerAddresses": [
-                "89.38.131.38",
-                "2a0c:b9c0:f:451d::1"
+                "77.112.215.66"
             ],
             "https": {
-                "ServerURLOrName": "https://dnsnl.alekberg.net/dns-query",
-                "signature": "304502206466696de198399e80d81f7ba11f28038931dbfda4e9fa4f03172f19e1c3eeec022100cee37c88cfe1eef1c849edb5f55375bbf6d4078c15819eb04b5e32b138e0f7ed"
+                "ServerURLOrName": "https://dnsnl.alekberg.net/dns-query"
             }
         }
     }

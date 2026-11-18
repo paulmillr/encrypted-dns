@@ -14,13 +14,8 @@
     "censorship": true,
     "variants": {
         "default": {
-            "ServerAddresses": [
-                "101.198.198.198",
-                "101.198.199.200"
-            ],
             "https": {
-                "ServerURLOrName": "https://doh.360.cn/dns-query",
-                "signature": "3045022100f90ba7ca7d511a93a55e81515b272275eb03ca520e2c42e948031bd32730f61c0220483d1c92c7903a498fdfddebbc6e6341911272f5067df7b779aadd6bf5639253"
+                "ServerURLOrName": "https://doh.360.cn/dns-query"
             }
         }
     }

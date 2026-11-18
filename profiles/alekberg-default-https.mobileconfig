@@ -11,8 +11,7 @@
 				<string>HTTPS</string>
 				<key>ServerAddresses</key>
 				<array>
-					<string>89.38.131.38</string>
-					<string>2a0c:b9c0:f:451d::1</string>
+					<string>77.112.215.66</string>
 				</array>
 				<key>ServerURL</key>
 				<string>https://dnsnl.alekberg.net/dns-query</string>
@@ -46,7 +45,7 @@ Filtering: no</string>
 	<key>PayloadDisplayName</key>
 	<string>Alekberg Encrypted DNS Encrypted DNS over HTTPS</string>
 	<key>PayloadIdentifier</key>
-	<string>com.paulmillr.apple-dns</string>
+	<string>com.paulmillr.apple-dns.alekberg-default-https</string>
 	<key>PayloadRemovalDisallowed</key>
 	<false/>
 	<key>PayloadScope</key>

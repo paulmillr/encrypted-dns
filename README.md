@@ -8,18 +8,26 @@ Configuration profiles for [DNS over HTTPS](https://en.wikipedia.org/wiki/DNS_ov
 
 Install / download profile (`.mobileconfig` file) from a table below. After that:
 
-iPhones, iPads:
+iPhones, iPads ([official docs](https://support.apple.com/102400)):
 
 1. Open the file by using Safari (other browsers will just download the file and won't ask for installation)
 2. Tap on "Allow" button. The profile should download.
-3. Go to **System Settings => General => VPN, DNS & Device Management**, select downloaded profile and tap the "Install" button.
+3. Open **Settings**, tap "Profile Downloaded" at the top (or go to **General => VPN & Device Management**), select downloaded profile and tap the "Install" button.
+  A downloaded profile is discarded if it is not installed within 8 minutes. With Stolen Device Protection enabled, installation can be refused away from familiar locations.
 
-Mac:
+Mac ([official docs](https://support.apple.com/guide/mac-help/mh35561/mac)):
 
 1. Ensure the downloaded file has proper extension: NAME.mobileconfig, not NAME.mobileconfig.txt.
-2. Choose Apple menu > System Settings, click Privacy and Security in the sidebar, then click Profiles on the right.
-  You may need to scroll down. You may be asked to supply your password or other information during installation.
+2. Double-click the file, then choose Apple menu > System Settings, click General in the sidebar, then click Device Management.
+  On macOS 13 and 14 it is Privacy & Security > Profiles instead. You may need to scroll down. You may be asked to supply your password or other information during installation.
 3. In the Downloaded section, double-click the profile. Review the profile contents then click Continue, Install or Enroll to install the profile. If an earlier version of a profile is already installed on your Mac, the settings in the updated version replace the previous ones.
+
+Several profiles can be installed at once; only one is active at a time. To switch between them or turn encrypted DNS off temporarily, without uninstalling:
+
+- iPhones, iPads: **Settings => General => VPN, DNS & Device Management => DNS**. "Automatic" means the network's own (unencrypted) DNS.
+- Mac: **System Settings => Network => VPN & Filters** ("Filters" on macOS 13 and 14).
+
+To verify that it works, open a test page of your provider, e.g. [1.1.1.1/help](https://1.1.1.1/help) for Cloudflare, [on.quad9.net](https://on.quad9.net) for Quad9, [adguard.com/test.html](https://adguard.com/en/test.html) for AdGuard.
 
 ## Providers
 
@@ -27,14 +35,12 @@ Censorship (also known as "filtering") means the profile will not send true info
 
 | Name                                                                                 | Region | Censorship | Notes                                                                                                                           | Install                                                                                          | Install (unsigned)                                                                 |
 | ------------------------------------------------------------------------------------ | ------ | ---------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- |
-| [360 Security DNS][360-default]                                                      | 🇨🇳     | Yes        | Operated by 360 Digital Security Group                                                                                          | [HTTPS][360-default-https-signed]                                                                | [HTTPS][360-default-https]                                                         |
+| [360 Security DNS][360-default]                                                      | 🇨🇳     | Yes        | Operated by 360 Digital Security Group                                                                                          |                                                                                                  | [HTTPS][360-default-https]                                                         |
 | [AdGuard DNS Default][adguard-default]                                               | 🇷🇺     | Yes        | Operated by AdGuard Software Ltd. Blocks ads, tracking & phishing                                                               | [HTTPS][adguard-default-https-signed], [TLS][adguard-default-tls-signed]                         | [HTTPS][adguard-default-https], [TLS][adguard-default-tls]                         |
 | [AdGuard DNS Family Protection][adguard-family]                                      | 🇷🇺     | Yes        | Operated by AdGuard Software Ltd. Blocks `Default` + malware & adult content                                                    | [HTTPS][adguard-family-https-signed], [TLS][adguard-family-tls-signed]                           | [HTTPS][adguard-family-https], [TLS][adguard-family-tls]                           |
 | [AdGuard DNS Non-filtering][adguard-nofilter]                                        | 🇷🇺     | No         | Operated by AdGuard Software Ltd. Non-filtering                                                                                 | [HTTPS][adguard-nofilter-https-signed], [TLS][adguard-nofilter-tls-signed]                       | [HTTPS][adguard-nofilter-https], [TLS][adguard-nofilter-tls]                       |
-| [Alekberg Encrypted DNS][alekberg-default]                                           | 🇳🇱     | No         | Independent                                                                                                                     | [HTTPS][alekberg-default-https-signed]                                                           | [HTTPS][alekberg-default-https]                                                    |
+| [Alekberg Encrypted DNS][alekberg-default]                                           | 🇳🇱     | No         | Independent                                                                                                                     |                                                                                                  | [HTTPS][alekberg-default-https]                                                    |
 | [Aliyun Public DNS][alibaba-default]                                                 | 🇨🇳     | No         | Operated by Alibaba Cloud Ltd.                                                                                                  | [HTTPS][alibaba-default-https-signed], [TLS][alibaba-default-tls-signed]                         | [HTTPS][alibaba-default-https], [TLS][alibaba-default-tls]                         |
-| [BlahDNS CDN Filtered][blahdns-cdn-adblock]                                          | 🇺🇸     | Yes        | Independent. Blocks ads, tracking & malware                                                                                     | [HTTPS][blahdns-cdn-adblock-https-signed]                                                        | [HTTPS][blahdns-cdn-adblock-https]                                                 |
-| [BlahDNS CDN Unfiltered][blahdns-cdn-unfiltered]                                     | 🇺🇸     | No         | Independent. Non-filtering                                                                                                      | [HTTPS][blahdns-cdn-unfiltered-https-signed]                                                     | [HTTPS][blahdns-cdn-unfiltered-https]                                              |
 | [BlahDNS Germany][blahdns-germany]                                                   | 🇩🇪     | Yes        | Independent. Blocks ads, tracking & malware                                                                                     | [HTTPS][blahdns-germany-https-signed]                                                            | [HTTPS][blahdns-germany-https]                                                     |
 | [BlahDNS Singapore][blahdns-singapore]                                               | 🇸🇬     | Yes        | Independent. Blocks ads, tracking & malware                                                                                     | [HTTPS][blahdns-singapore-https-signed]                                                          | [HTTPS][blahdns-singapore-https]                                                   |
 | [Canadian Shield Private][canadianshield-private]                                    | 🇨🇦     | No         | Operated by the Canadian Internet Registration Authority (CIRA)                                                                 | [HTTPS][canadianshield-private-https-signed], [TLS][canadianshield-private-tls-signed]           | [HTTPS][canadianshield-private-https], [TLS][canadianshield-private-tls]           |
@@ -52,7 +58,7 @@ Censorship (also known as "filtering") means the profile will not send true info
 | [DNS4EU Protective with child protection][dns4eu-protective-child]                   | 🇨🇿     | Yes        | Operated by a consortium lead by Whalebone. Blocks malware and explicit content.                                                | [HTTPS][dns4eu-protective-child-https-signed], [TLS][dns4eu-protective-child-tls-signed]         | [HTTPS][dns4eu-protective-child-https], [TLS][dns4eu-protective-child-tls]         |
 | [DNS4EU Protective with child protection & ad-blocking][dns4eu-protective-child-ads] | 🇨🇿     | Yes        | Operated by a consortium lead by Whalebone. Blocks Malware, Ads and explicit content                                            | [HTTPS][dns4eu-protective-child-ads-https-signed], [TLS][dns4eu-protective-child-ads-tls-signed] | [HTTPS][dns4eu-protective-child-ads-https], [TLS][dns4eu-protective-child-ads-tls] |
 | [DNSPod Public DNS][dnspod-default]                                                  | 🇨🇳     | No         | Operated by DNSPod Inc., a Tencent Cloud Company                                                                                | [HTTPS][dnspod-default-https-signed], [TLS][dnspod-default-tls-signed]                           | [HTTPS][dnspod-default-https], [TLS][dnspod-default-tls]                           |
-| [FDN][fdn-default]                                                                   | 🇫🇷     | No         | Operated by French Data Network                                                                                                 | [HTTPS][fdn-default-https-signed], [TLS][fdn-default-tls-signed]                                 | [HTTPS][fdn-default-https], [TLS][fdn-default-tls]                                 |
+| [FDN][fdn-default]                                                                   | 🇫🇷     | No         | Operated by French Data Network                                                                                                 |                                                                                                  | [HTTPS][fdn-default-https], [TLS][fdn-default-tls]                                 |
 | [FFMUC-DNS][ffmuc-dns-default]                                                       | 🇩🇪     | No         | FFMUC free DNS servers provided by Freifunk München.                                                                            | [HTTPS][ffmuc-dns-default-https-signed], [TLS][ffmuc-dns-default-tls-signed]                     | [HTTPS][ffmuc-dns-default-https], [TLS][ffmuc-dns-default-tls]                     |
 | [Google Public DNS][google-default]                                                  | 🇺🇸     | No         | Operated by Google LLC                                                                                                          | [HTTPS][google-default-https-signed], [TLS][google-default-tls-signed]                           | [HTTPS][google-default-https], [TLS][google-default-tls]                           |
 | [keweonDNS][keweondns-default]                                                       | 🇩🇪     | No         | Operated by Aviontex. Blocks ads & tracking                                                                                     | [HTTPS][keweondns-default-https-signed], [TLS][keweondns-default-tls-signed]                     | [HTTPS][keweondns-default-https], [TLS][keweondns-default-tls]                     |
@@ -65,29 +71,35 @@ Censorship (also known as "filtering") means the profile will not send true info
 | [Quad9 Unfiltered][quad9-nofilter]                                                   | 🇨🇭     | No         | Operated by Quad9 Foundation.                                                                                                   | [HTTPS][quad9-nofilter-https-signed], [TLS][quad9-nofilter-tls-signed]                           | [HTTPS][quad9-nofilter-https], [TLS][quad9-nofilter-tls]                           |
 | [Tiarap][tiarapp-default]                                                            | 🇸🇬 🇺🇸  | Yes        | Operated by Tiarap Inc. Blocks ads, tracking, phising & malware                                                                 | [HTTPS][tiarapp-default-https-signed], [TLS][tiarapp-default-tls-signed]                         | [HTTPS][tiarapp-default-https], [TLS][tiarapp-default-tls]                         |
 | [ADNull DNS][adnull-default]                                                         | 🇺🇦     | Yes        | Public DNS operated by ADNull. Blocks ads & tracking. Paid plans offer personalized DNS with advanced ad and phishing blocking. | [HTTPS][adnull-default-https-signed]                                                             | [HTTPS][adnull-default-https]                                                      |
+| [Wikimedia DNS][wikimedia-default]                                                   | 🇺🇸     | No         | Operated by the Wikimedia Foundation. Beta service, no availability guarantees                                                  |                                                                                                  | [HTTPS][wikimedia-default-https], [TLS][wikimedia-default-tls]                     |
 
 ## Known issues
 
 1. Some apps and protocols will ignore encrypted-dns:
       - Firefox in specific regions, App Store in all regions. [More info](https://github.com/paulmillr/encrypted-dns/issues/22)
-      - iCloud Private Relay, VPN clients
-      - Little Snitch, LuLu
+      - Chrome and other Chromium-based browsers, when their own "Use secure DNS" setting is enabled. [More info](https://github.com/paulmillr/encrypted-dns/issues/19)
+      - iCloud Private Relay, VPN clients: while a VPN is connected, DNS of the VPN is used. [More info](https://github.com/paulmillr/encrypted-dns/issues/18)
+      - Little Snitch, LuLu. [More info](https://github.com/paulmillr/encrypted-dns/issues/13)
+      - Devices connected to your Personal Hotspot. [More info](https://github.com/paulmillr/encrypted-dns/issues/88)
       - DNS-related CLI tools: `host`, `dig`, `nslookup` etc.
 2. [Wi-Fi captive portals](https://en.wikipedia.org/wiki/Captive_portal) in cafes, hotels, airports are exempted by Apple from eDNS rules; to simplify authentication - this is ok
 3. TLS DNS is easier for providers to block, because it uses non-standard port 853.
   [More info](https://security.googleblog.com/2022/07/dns-over-http3-in-android.html)
 4. e-dns over TOR could be better privacy-wise, but we don't have this for now.
+5. A custom port in `ServerURL` is ignored: DNS over HTTPS always goes to port 443. [More info](https://github.com/paulmillr/encrypted-dns/discussions/58)
+6. Profiles without `ServerAddresses` look up the hostname of the resolver through the unencrypted DNS of the network first.
 
 ## Contributing
 
 - **To add / edit a profile:** edit json files in `src` directory.
 - **To verify resolver IPs / hostnames:** compare mobileconfig files to their original websites (open files in a text editor).
 - Check out [developer.apple.com](https://developer.apple.com/documentation/devicemanagement/dnssettings) for more docs.
-- **On demand activation:** You can optionally exclude some trusted Wi-Fi networks where you don't want to use encrypted DNS. To do so, add your SSIDs in the [OnDemandRules](https://github.com/paulmillr/encrypted-dns/blob/master/profiles/template-on-demand.mobileconfig#L22-L38) section inside the `PayloadContent` dictionary of a profile.
+- **On demand activation:** You can optionally exclude some trusted Wi-Fi networks where you don't want to use encrypted DNS. To do so, add your SSIDs in the [OnDemandRules](https://github.com/paulmillr/encrypted-dns/blob/master/profiles/template-on-demand-default-https.mobileconfig#L22-L38) section inside the `PayloadContent` dictionary of a profile.
 
 ### Scripts
 
 - `npm run build` - re-build profiles, signed profiles, READMEs
+- `npm run check` - queries every server address of every profile over DoH / DoT and reports dead endpoints and certificate mismatches. Run it before sending a provider change. `npm run check -- quad9` checks one provider.
 - `npm run sign` - re-sign all profiles (updates `signature` field) using an ECC SSL certificate.
     - Signing is done using [key-producer](https://github.com/paulmillr/micro-key-producer)
     - Let's Encrypt free certificates are OK, but [expire in 45 days](https://letsencrypt.org/2026/02/24/rate-limits-45-day-certs).
@@ -103,7 +115,7 @@ Censorship (also known as "filtering") means the profile will not send true info
 - `npm run new` - interactively creates new profile from CLI options. Can also be ran with flags.
     - `scripts/new.test.ts` includes CLI snapshot tests and a PTY interactive flow test.
     - PTY test runs by default; set `NEW_TEST_PTY=0` to opt out.
-- `src/scripts/sign-single.ts --ca cert.pem --priv_key key.pem [--chain chain.pem] path.mobileconfig` - sings single mobileconfig
+- `src/scripts/sign-single.ts --ca cert.pem --priv_key key.pem [--chain chain.pem] path.mobileconfig` - signs single mobileconfig
 - `src/scripts/sign-single-openssl.ts --ca cert.pem --priv_key key.pem [--chain chain.pem] path.mobileconfig` Sign one `.mobileconfig` using OpenSSL.
     - Uses `-nosmimecap` to match local CMS signing policy.
 - `src/scripts/detach.ts signed.mobileconfig` - detach CMS signature from signed profile and print PEM to stdout.
@@ -128,10 +140,6 @@ Censorship (also known as "filtering") means the profile will not send true info
 [alibaba-default]: https://www.alidns.com/
 [alibaba-default-https]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/alibaba-default-https.mobileconfig
 [alibaba-default-tls]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/alibaba-default-tls.mobileconfig
-[blahdns-cdn-adblock]: https://blahdns.com/
-[blahdns-cdn-adblock-https]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/blahdns-cdn-adblock-https.mobileconfig
-[blahdns-cdn-unfiltered]: https://blahdns.com/
-[blahdns-cdn-unfiltered-https]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/blahdns-cdn-unfiltered-https.mobileconfig
 [blahdns-germany]: https://blahdns.com/
 [blahdns-germany-https]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/blahdns-germany-https.mobileconfig
 [blahdns-singapore]: https://blahdns.com/
@@ -213,18 +221,17 @@ Censorship (also known as "filtering") means the profile will not send true info
 [tiarapp-default-tls]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/tiarapp-default-tls.mobileconfig
 [adnull-default]: https://adnull.com
 [adnull-default-https]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/adnull-default-https.mobileconfig
-[360-default-https-signed]: https://github.com/paulmillr/encrypted-dns/raw/master/signed/360-default-https.mobileconfig
+[wikimedia-default]: https://meta.wikimedia.org/wiki/Wikimedia_DNS
+[wikimedia-default-https]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/wikimedia-default-https.mobileconfig
+[wikimedia-default-tls]: https://github.com/paulmillr/encrypted-dns/raw/master/profiles/wikimedia-default-tls.mobileconfig
 [adguard-default-https-signed]: https://github.com/paulmillr/encrypted-dns/raw/master/signed/adguard-default-https.mobileconfig
 [adguard-default-tls-signed]: https://github.com/paulmillr/encrypted-dns/raw/master/signed/adguard-default-tls.mobileconfig
 [adguard-family-https-signed]: https://github.com/paulmillr/encrypted-dns/raw/master/signed/adguard-family-https.mobileconfig
 [adguard-family-tls-signed]: https://github.com/paulmillr/encrypted-dns/raw/master/signed/adguard-family-tls.mobileconfig
 [adguard-nofilter-https-signed]: https://github.com/paulmillr/encrypted-dns/raw/master/signed/adguard-nofilter-https.mobileconfig
 [adguard-nofilter-tls-signed]: https://github.com/paulmillr/encrypted-dns/raw/master/signed/adguard-nofilter-tls.mobileconfig
-[alekberg-default-https-signed]: https://github.com/paulmillr/encrypted-dns/raw/master/signed/alekberg-default-https.mobileconfig
 [alibaba-default-https-signed]: https://github.com/paulmillr/encrypted-dns/raw/master/signed/alibaba-default-https.mobileconfig
 [alibaba-default-tls-signed]: https://github.com/paulmillr/encrypted-dns/raw/master/signed/alibaba-default-tls.mobileconfig
-[blahdns-cdn-adblock-https-signed]: https://github.com/paulmillr/encrypted-dns/raw/master/signed/blahdns-cdn-adblock-https.mobileconfig
-[blahdns-cdn-unfiltered-https-signed]: https://github.com/paulmillr/encrypted-dns/raw/master/signed/blahdns-cdn-unfiltered-https.mobileconfig
 [blahdns-germany-https-signed]: https://github.com/paulmillr/encrypted-dns/raw/master/signed/blahdns-germany-https.mobileconfig
 [blahdns-singapore-https-signed]: https://github.com/paulmillr/encrypted-dns/raw/master/signed/blahdns-singapore-https.mobileconfig
 [canadianshield-private-https-signed]: https://github.com/paulmillr/encrypted-dns/raw/master/signed/canadianshield-private-https.mobileconfig
@@ -255,8 +262,6 @@ Censorship (also known as "filtering") means the profile will not send true info
 [dns4eu-protective-child-ads-tls-signed]: https://github.com/paulmillr/encrypted-dns/raw/master/signed/dns4eu-protective-child-ads-tls.mobileconfig
 [dnspod-default-https-signed]: https://github.com/paulmillr/encrypted-dns/raw/master/signed/dnspod-default-https.mobileconfig
 [dnspod-default-tls-signed]: https://github.com/paulmillr/encrypted-dns/raw/master/signed/dnspod-default-tls.mobileconfig
-[fdn-default-https-signed]: https://github.com/paulmillr/encrypted-dns/raw/master/signed/fdn-default-https.mobileconfig
-[fdn-default-tls-signed]: https://github.com/paulmillr/encrypted-dns/raw/master/signed/fdn-default-tls.mobileconfig
 [ffmuc-dns-default-https-signed]: https://github.com/paulmillr/encrypted-dns/raw/master/signed/ffmuc-dns-default-https.mobileconfig
 [ffmuc-dns-default-tls-signed]: https://github.com/paulmillr/encrypted-dns/raw/master/signed/ffmuc-dns-default-tls.mobileconfig
 [google-default-https-signed]: https://github.com/paulmillr/encrypted-dns/raw/master/signed/google-default-https.mobileconfig

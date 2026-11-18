@@ -17,7 +17,7 @@ iPhone 和 iPad：
 Mac：
 
 1. 确保下载的文件具有正确的扩展名：NAME.mobileconfig，而非 NAME.mobileconfig.txt。
-2. 选择苹果菜单 > “系统设置”，在侧边栏中点击“隐私与安全性”，然后点击右侧的“描述文件”。
+2. 选择苹果菜单 > “系统设置”，在侧边栏中点击“通用”，然后点击“设备管理”（macOS 13 和 14：“隐私与安全性” > “描述文件”）。
   你可能需要向下滚动。安装过程中你可能会被要求提供密码或者其他信息。
 3. 在“已下载”部分，双击描述文件。检查描述文件的内容，然后点击“继续”、“安装”或“注册”来安装描述文件。如果你的 Mac 上已经安装了一个旧版本的描述文件，新版本中的设置将覆盖旧版本。
 
@@ -30,7 +30,7 @@ Mac：
 ## 已知问题
 
 1. 某些应用和协议会忽略加密 DNS：
-      - 特定地区的 Firefox，所有地区的 App Store。[更多信息](https://github.com/paulmill/encrypted-dns/issues/22)
+      - 特定地区的 Firefox，所有地区的 App Store。[更多信息](https://github.com/paulmillr/encrypted-dns/issues/22)
       - iCloud 专用代理，VPN 客户端
       - Little Snitch，LuLu
       - DNS 相关的命令行工具：`host`，`dig`，`nslookup` 等。

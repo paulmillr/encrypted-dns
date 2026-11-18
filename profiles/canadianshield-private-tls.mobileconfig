@@ -43,7 +43,7 @@ Filtering: no</string>
 	<key>PayloadDisplayName</key>
 	<string>Canadian Shield Private Encrypted DNS over TLS</string>
 	<key>PayloadIdentifier</key>
-	<string>com.paulmillr.apple-dns</string>
+	<string>com.paulmillr.apple-dns.canadianshield-private-tls</string>
 	<key>PayloadRemovalDisallowed</key>
 	<false/>
 	<key>PayloadScope</key>

@@ -12,9 +12,7 @@
 				<key>ServerAddresses</key>
 				<array>
 					<string>2001:910:800::12</string>
-					<string>2001:910:800::40</string>
 					<string>80.67.169.12</string>
-					<string>80.67.169.40</string>
 				</array>
 				<key>ServerURL</key>
 				<string>https://ns0.fdn.fr/dns-query</string>
@@ -43,7 +41,7 @@ Filtering: no</string>
 	<key>PayloadDisplayName</key>
 	<string>FDN Encrypted DNS over HTTPS</string>
 	<key>PayloadIdentifier</key>
-	<string>com.paulmillr.apple-dns</string>
+	<string>com.paulmillr.apple-dns.fdn-default-https</string>
 	<key>PayloadRemovalDisallowed</key>
 	<false/>
 	<key>PayloadScope</key>

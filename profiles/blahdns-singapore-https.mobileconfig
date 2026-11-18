@@ -47,7 +47,7 @@ https://blahdns.com</string>
 	<key>PayloadDisplayName</key>
 	<string>BlahDNS Singapore Encrypted DNS over HTTPS</string>
 	<key>PayloadIdentifier</key>
-	<string>com.paulmillr.apple-dns</string>
+	<string>com.paulmillr.apple-dns.blahdns-singapore-https</string>
 	<key>PayloadRemovalDisallowed</key>
 	<false/>
 	<key>PayloadScope</key>

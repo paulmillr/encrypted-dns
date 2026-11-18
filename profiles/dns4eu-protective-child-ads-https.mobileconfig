@@ -43,7 +43,7 @@ Filtering: yes</string>
 	<key>PayloadDisplayName</key>
 	<string>DNS4EU Protective with child protection &amp; ad-blocking Encrypted DNS over HTTPS</string>
 	<key>PayloadIdentifier</key>
-	<string>com.paulmillr.apple-dns</string>
+	<string>com.paulmillr.apple-dns.dns4eu-protective-child-ads-https</string>
 	<key>PayloadRemovalDisallowed</key>
 	<false/>
 	<key>PayloadScope</key>

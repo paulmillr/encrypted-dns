@@ -120,7 +120,7 @@ const EXPECT_ARGS = `<?xml version="1.0" encoding="UTF-8"?>
 \t<key>PayloadDisplayName</key>
 \t<string>Args DNS Encrypted DNS over HTTPS</string>
 \t<key>PayloadIdentifier</key>
-\t<string>com.paulmillr.apple-dns</string>
+\t<string>com.paulmillr.apple-dns.args</string>
 \t<key>PayloadRemovalDisallowed</key>
 \t<false/>
 \t<key>PayloadScope</key>
@@ -174,7 +174,7 @@ const EXPECT_INTERACTIVE = `<?xml version="1.0" encoding="UTF-8"?>
 \t<key>PayloadDisplayName</key>
 \t<string>Interactive DNS Encrypted DNS over HTTPS</string>
 \t<key>PayloadIdentifier</key>
-\t<string>com.paulmillr.apple-dns</string>
+\t<string>com.paulmillr.apple-dns.interactive</string>
 \t<key>PayloadRemovalDisallowed</key>
 \t<false/>
 \t<key>PayloadScope</key>

@@ -36,7 +36,7 @@ Filtering: yes</string>
 	<key>PayloadDisplayName</key>
 	<string>OpenDNS FamilyShield Encrypted DNS over HTTPS</string>
 	<key>PayloadIdentifier</key>
-	<string>com.paulmillr.apple-dns</string>
+	<string>com.paulmillr.apple-dns.opendns-family-https</string>
 	<key>PayloadRemovalDisallowed</key>
 	<false/>
 	<key>PayloadScope</key>

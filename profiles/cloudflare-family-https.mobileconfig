@@ -43,7 +43,7 @@ Filtering: yes</string>
 	<key>PayloadDisplayName</key>
 	<string>Cloudflare 1.1.1.1 Family Encrypted DNS over HTTPS</string>
 	<key>PayloadIdentifier</key>
-	<string>com.paulmillr.apple-dns</string>
+	<string>com.paulmillr.apple-dns.cloudflare-family-https</string>
 	<key>PayloadRemovalDisallowed</key>
 	<false/>
 	<key>PayloadScope</key>
