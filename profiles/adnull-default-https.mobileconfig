@@ -41,7 +41,7 @@ Filtering: yes</string>
 	<key>PayloadDisplayName</key>
 	<string>ADNull DNS Encrypted DNS over HTTPS</string>
 	<key>PayloadIdentifier</key>
-	<string>com.paulmillr.apple-dns</string>
+	<string>com.paulmillr.apple-dns.adnull-default-https</string>
 	<key>PayloadRemovalDisallowed</key>
 	<false/>
 	<key>PayloadScope</key>

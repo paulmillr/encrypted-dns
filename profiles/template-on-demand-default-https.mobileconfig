@@ -60,7 +60,7 @@ Filtering: no</string>
 	<key>PayloadDisplayName</key>
 	<string>Example Encrypted DNS Encrypted DNS over HTTPS</string>
 	<key>PayloadIdentifier</key>
-	<string>com.paulmillr.apple-dns</string>
+	<string>com.paulmillr.apple-dns.template-on-demand-default-https</string>
 	<key>PayloadRemovalDisallowed</key>
 	<false/>
 	<key>PayloadScope</key>

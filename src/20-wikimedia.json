@@ -1,0 +1,25 @@
+{
+    "names": {
+        "en": "Wikimedia DNS"
+    },
+    "notes": {
+        "en": "Operated by the Wikimedia Foundation. Beta service, no availability guarantees"
+    },
+    "website": "https://meta.wikimedia.org/wiki/Wikimedia_DNS",
+    "region": "US",
+    "censorship": false,
+    "variants": {
+        "default": {
+            "ServerAddresses": [
+                "2001:67c:930::1",
+                "185.71.138.138"
+            ],
+            "https": {
+                "ServerURLOrName": "https://wikimedia-dns.org/dns-query"
+            },
+            "tls": {
+                "ServerURLOrName": "wikimedia-dns.org"
+            }
+        }
+    }
+}

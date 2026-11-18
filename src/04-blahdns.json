@@ -12,39 +12,6 @@
     "censorship": true,
     "consent": "Privacy policy:\nhttps://blahdns.com",
     "variants": {
-        "cdn-adblock": {
-            "https": {
-                "ServerURLOrName": "https://doh1.blahdns.com/dns-query",
-                "signature": "304402206f1222b24c5409783988d698f04cd85138fc14e484cb9d560cf954050fe711c302202c7fe966d9e92a5bd987206fd14abf08d45f53c9691681a759cdbd67ada873f5"
-            },
-            "names": {
-                "en": "CDN Filtered",
-                "cmn-CN": "CDN 过滤",
-                "cmn-TW": "CDN 過濾"
-            },
-            "notes": {
-                "en": "Blocks ads, tracking & malware",
-                "cmn-CN": "拦截广告、跟踪器和恶意软件",
-                "cmn-TW": "阻擋廣告、追蹤器和惡意軟體"
-            }
-        },
-        "cdn-unfiltered": {
-            "names": {
-                "en": "CDN Unfiltered",
-                "cmn-CN": "CDN 无过滤",
-                "cmn-TW": "CDN 無過濾"
-            },
-            "notes": {
-                "en": "Non-filtering",
-                "cmn-CN": "无过滤",
-                "cmn-TW": "無過濾"
-            },
-            "censorship": false,
-            "https": {
-                "ServerURLOrName": "https://doh1.blahdns.com/uncensor",
-                "signature": "3045022068aa06d5be5a66f070b1099d35af220ec58e21fcea1ed4f30620cf59fa707003022100db91ad5b944e13ef6269780395d3b1a5f9f58bfa93c280bbbc54fc0c92aeb30c"
-            }
-        },
         "germany": {
             "region": "DE",
             "names": {

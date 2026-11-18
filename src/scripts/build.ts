@@ -296,7 +296,8 @@ const genProfile = (name: string, profile: Profile): string => {
   const payloadUUID = uuidV5(`${ROOT_IDENTIFIER}::payload::0::${rel}`);
   const payloadId = `com.apple.dnsSettings.managed.${payloadUUID.toLowerCase()}`;
   const topUUID = uuidV5(`${ROOT_IDENTIFIER}::root::${rel}`);
-  const topId = ROOT_IDENTIFIER;
+  // Unique per profile: the OS replaces an installed profile that has the same top-level identifier.
+  const topId = `${ROOT_IDENTIFIER}.${key}`;
   const serverKey = p.ServerURLOrName.startsWith('https://') ? 'ServerURL' : 'ServerName';
   const dns: Record<string, PlistNode> = { DNSProtocol: proto };
   if (p.ServerAddresses && p.ServerAddresses.length) dns.ServerAddresses = p.ServerAddresses;

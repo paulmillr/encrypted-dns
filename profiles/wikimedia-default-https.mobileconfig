@@ -9,19 +9,24 @@
 			<dict>
 				<key>DNSProtocol</key>
 				<string>HTTPS</string>
+				<key>ServerAddresses</key>
+				<array>
+					<string>2001:67c:930::1</string>
+					<string>185.71.138.138</string>
+				</array>
 				<key>ServerURL</key>
-				<string>https://doh1.blahdns.com/dns-query</string>
+				<string>https://wikimedia-dns.org/dns-query</string>
 			</dict>
 			<key>PayloadDescription</key>
-			<string>Configures device to use BlahDNS CDN Filtered Encrypted DNS over HTTPS</string>
+			<string>Configures device to use Wikimedia DNS Encrypted DNS over HTTPS</string>
 			<key>PayloadDisplayName</key>
-			<string>BlahDNS CDN Filtered Encrypted DNS over HTTPS</string>
+			<string>Wikimedia DNS Encrypted DNS over HTTPS</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.dnsSettings.managed.81f9f40a-545c-5c09-bc7a-55957bda3333</string>
+			<string>com.apple.dnsSettings.managed.d5181f9a-3a09-5c90-af64-3a1065c9d8d8</string>
 			<key>PayloadType</key>
 			<string>com.apple.dnsSettings.managed</string>
 			<key>PayloadUUID</key>
-			<string>81F9F40A-545C-5C09-BC7A-55957BDA3333</string>
+			<string>D5181F9A-3A09-5C90-AF64-3A1065C9D8D8</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProhibitDisablement</key>
@@ -29,20 +34,14 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Configures device to use BlahDNS CDN Filtered over HTTPS
-Independent. Blocks ads, tracking &amp; malware.
+	<string>Configures device to use Wikimedia DNS over HTTPS
+Operated by the Wikimedia Foundation. Beta service, no availability guarantees.
 Server location: 🇺🇸.
-Filtering: yes</string>
-	<key>ConsentText</key>
-	<dict>
-		<key>default</key>
-		<string>Privacy policy:
-https://blahdns.com</string>
-	</dict>
+Filtering: no</string>
 	<key>PayloadDisplayName</key>
-	<string>BlahDNS CDN Filtered Encrypted DNS over HTTPS</string>
+	<string>Wikimedia DNS Encrypted DNS over HTTPS</string>
 	<key>PayloadIdentifier</key>
-	<string>com.paulmillr.apple-dns</string>
+	<string>com.paulmillr.apple-dns.wikimedia-default-https</string>
 	<key>PayloadRemovalDisallowed</key>
 	<false/>
 	<key>PayloadScope</key>
@@ -50,7 +49,7 @@ https://blahdns.com</string>
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>24AA3B1E-1B40-59AA-AC78-7CD6B5F9F294</string>
+	<string>78ADA02A-59DB-5932-B8A6-B9ADC08810E4</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>

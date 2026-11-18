@@ -8,20 +8,25 @@
 			<key>DNSSettings</key>
 			<dict>
 				<key>DNSProtocol</key>
-				<string>HTTPS</string>
-				<key>ServerURL</key>
-				<string>https://doh1.blahdns.com/uncensor</string>
+				<string>TLS</string>
+				<key>ServerAddresses</key>
+				<array>
+					<string>2001:67c:930::1</string>
+					<string>185.71.138.138</string>
+				</array>
+				<key>ServerName</key>
+				<string>wikimedia-dns.org</string>
 			</dict>
 			<key>PayloadDescription</key>
-			<string>Configures device to use BlahDNS CDN Unfiltered Encrypted DNS over HTTPS</string>
+			<string>Configures device to use Wikimedia DNS Encrypted DNS over TLS</string>
 			<key>PayloadDisplayName</key>
-			<string>BlahDNS CDN Unfiltered Encrypted DNS over HTTPS</string>
+			<string>Wikimedia DNS Encrypted DNS over TLS</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.dnsSettings.managed.68a187fb-09ed-583d-90e8-86768d65ec77</string>
+			<string>com.apple.dnsSettings.managed.4c243d7c-b305-5b8b-8071-37a3baca3510</string>
 			<key>PayloadType</key>
 			<string>com.apple.dnsSettings.managed</string>
 			<key>PayloadUUID</key>
-			<string>68A187FB-09ED-583D-90E8-86768D65EC77</string>
+			<string>4C243D7C-B305-5B8B-8071-37A3BACA3510</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProhibitDisablement</key>
@@ -29,20 +34,14 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Configures device to use BlahDNS CDN Unfiltered over HTTPS
-Independent. Non-filtering.
+	<string>Configures device to use Wikimedia DNS over TLS
+Operated by the Wikimedia Foundation. Beta service, no availability guarantees.
 Server location: 🇺🇸.
 Filtering: no</string>
-	<key>ConsentText</key>
-	<dict>
-		<key>default</key>
-		<string>Privacy policy:
-https://blahdns.com</string>
-	</dict>
 	<key>PayloadDisplayName</key>
-	<string>BlahDNS CDN Unfiltered Encrypted DNS over HTTPS</string>
+	<string>Wikimedia DNS Encrypted DNS over TLS</string>
 	<key>PayloadIdentifier</key>
-	<string>com.paulmillr.apple-dns</string>
+	<string>com.paulmillr.apple-dns.wikimedia-default-tls</string>
 	<key>PayloadRemovalDisallowed</key>
 	<false/>
 	<key>PayloadScope</key>
@@ -50,7 +49,7 @@ https://blahdns.com</string>
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>9B014330-556D-5F81-8279-71E5CB9F418B</string>
+	<string>EE381B26-A0A8-50A6-B005-70804EE44AF0</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>

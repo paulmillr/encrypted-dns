@@ -43,7 +43,7 @@ Filtering: no</string>
 	<key>PayloadDisplayName</key>
 	<string>AdGuard DNS Non-filtering Encrypted DNS over TLS</string>
 	<key>PayloadIdentifier</key>
-	<string>com.paulmillr.apple-dns</string>
+	<string>com.paulmillr.apple-dns.adguard-nofilter-tls</string>
 	<key>PayloadRemovalDisallowed</key>
 	<false/>
 	<key>PayloadScope</key>

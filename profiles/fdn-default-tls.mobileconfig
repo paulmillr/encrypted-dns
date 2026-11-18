@@ -12,12 +12,10 @@
 				<key>ServerAddresses</key>
 				<array>
 					<string>2001:910:800::12</string>
-					<string>2001:910:800::40</string>
 					<string>80.67.169.12</string>
-					<string>80.67.169.40</string>
 				</array>
 				<key>ServerName</key>
-				<string>dns.fdn</string>
+				<string>ns0.fdn.fr</string>
 			</dict>
 			<key>PayloadDescription</key>
 			<string>Configures device to use FDN Encrypted DNS over TLS</string>
@@ -43,7 +41,7 @@ Filtering: no</string>
 	<key>PayloadDisplayName</key>
 	<string>FDN Encrypted DNS over TLS</string>
 	<key>PayloadIdentifier</key>
-	<string>com.paulmillr.apple-dns</string>
+	<string>com.paulmillr.apple-dns.fdn-default-tls</string>
 	<key>PayloadRemovalDisallowed</key>
 	<false/>
 	<key>PayloadScope</key>

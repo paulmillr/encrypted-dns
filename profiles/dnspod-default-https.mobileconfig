@@ -41,7 +41,7 @@ Filtering: no</string>
 	<key>PayloadDisplayName</key>
 	<string>DNSPod Public DNS Encrypted DNS over HTTPS</string>
 	<key>PayloadIdentifier</key>
-	<string>com.paulmillr.apple-dns</string>
+	<string>com.paulmillr.apple-dns.dnspod-default-https</string>
 	<key>PayloadRemovalDisallowed</key>
 	<false/>
 	<key>PayloadScope</key>

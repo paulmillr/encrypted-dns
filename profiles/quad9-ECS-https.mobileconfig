@@ -43,7 +43,7 @@ Filtering: yes</string>
 	<key>PayloadDisplayName</key>
 	<string>Quad9 w/ ECS Encrypted DNS over HTTPS</string>
 	<key>PayloadIdentifier</key>
-	<string>com.paulmillr.apple-dns</string>
+	<string>com.paulmillr.apple-dns.quad9-ECS-https</string>
 	<key>PayloadRemovalDisallowed</key>
 	<false/>
 	<key>PayloadScope</key>
