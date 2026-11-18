@@ -1,0 +1,47 @@
+{
+    "names": {
+        "en": "BeatQuantum DNS"
+    },
+    "notes": {
+        "en": "Operated by BeatQuantum Limited. Non-filtering, with DNSSEC. Classical, hybrid & post-quantum (ML-KEM) key exchange",
+        "zh-CN": "由 BeatQuantum Limited 运营。无过滤，支持 DNSSEC，密钥交换可采用传统、混合或基于 ML-KEM 的后量子方案",
+        "zh-TW": "由 BeatQuantum Limited 營運。無過濾，支援 DNSSEC，金鑰交換可採用傳統、混合或以 ML-KEM 為基礎的後量子方案",
+        "es": "Gestionado por BeatQuantum Limited. Usa DNSSEC y funciona sin filtrado. Admite el intercambio de claves clásico e híbrido, así como el poscuántico mediante ML-KEM",
+        "de": "Betrieben von BeatQuantum Limited. Ohne Filterung, mit DNSSEC. Klassischer und hybrider Schlüsselaustausch sowie quantenresistenter Schlüsselaustausch mit ML-KEM",
+        "fr": "Exploité par BeatQuantum Limited. Service sans filtrage. Prend en charge DNSSEC, les échanges de clés classiques et hybrides, ainsi que les échanges post-quantiques avec ML-KEM",
+        "tr": "BeatQuantum Limited tarafından işletilir. Filtreleme yapmaz. DNSSEC desteği sunar. Anahtar değişimi için klasik, hibrit ve kuantum sonrası (ML-KEM) yöntemleri destekler",
+        "ru": "Оператор — BeatQuantum Limited. Без фильтрации. Поддерживает DNSSEC, классический и гибридный обмен ключами, а также постквантовый обмен с ML-KEM",
+        "uk": "Оператор — BeatQuantum Limited. Працює без фільтрування. Підтримує DNSSEC, класичний і гібридний обмін ключами, а також постквантовий обмін із ML-KEM",
+        "ja": "BeatQuantum Limited が運営。フィルタリングなし。DNSSEC に対応。鍵交換には従来方式、ハイブリッド方式、耐量子方式（ML-KEM）を利用できます"
+    },
+    "operator": "BeatQuantum Limited",
+    "tableNote": {
+        "en": "DNSSEC. Classical, hybrid, and post-quantum (ML-KEM) key exchange",
+        "de": "DNSSEC. Klassischer und hybrider Schlüsselaustausch sowie quantenresistenter Schlüsselaustausch mit ML-KEM",
+        "es": "DNSSEC. Admite el intercambio de claves clásico e híbrido, así como el poscuántico mediante ML-KEM",
+        "fr": "Prend en charge DNSSEC, les échanges de clés classiques et hybrides, ainsi que les échanges post-quantiques avec ML-KEM",
+        "ja": "DNSSEC に対応。鍵交換には従来方式、ハイブリッド方式、耐量子方式（ML-KEM）を利用できます",
+        "ru": "Поддерживает DNSSEC, классический и гибридный обмен ключами, а также постквантовый обмен с ML-KEM",
+        "tr": "DNSSEC desteği sunar. Anahtar değişimi için klasik, hibrit ve kuantum sonrası (ML-KEM) yöntemleri destekler",
+        "uk": "Підтримує DNSSEC, класичний і гібридний обмін ключами, а також постквантовий обмін із ML-KEM",
+        "zh-CN": "支持 DNSSEC，密钥交换可采用传统、混合或基于 ML-KEM 的后量子方案",
+        "zh-TW": "支援 DNSSEC，金鑰交換可採用傳統、混合或以 ML-KEM 為基礎的後量子方案"
+    },
+    "website": "https://beatquantum.com/stamps",
+    "region": "GB",
+    "censorship": false,
+    "variants": {
+        "default": {
+            "ServerAddresses": [
+                "2a0c:9a46:1e22:12::a",
+                "207.2.121.35"
+            ],
+            "https": {
+                "ServerURLOrName": "https://beatquantum.com/dns-query"
+            },
+            "tls": {
+                "ServerURLOrName": "beatquantum.com"
+            }
+        }
+    }
+}

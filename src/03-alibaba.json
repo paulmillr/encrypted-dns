@@ -1,14 +1,22 @@
 {
     "names": {
         "en": "Aliyun Public DNS",
-        "cmn-CN": "阿里云公共 DNS",
-        "cmn-TW": "阿里雲公共 DNS"
+        "zh-CN": "阿里云公共 DNS",
+        "zh-TW": "阿里雲公用 DNS"
     },
     "notes": {
         "en": "Operated by Alibaba Cloud Ltd.",
-        "cmn-CN": "由阿里云计算运营",
-        "cmn-TW": "由阿里雲計算營運"
+        "zh-CN": "由阿里云计算运营",
+        "zh-TW": "由阿里雲計算營運",
+        "es": "Gestionado por Alibaba Cloud Ltd.",
+        "de": "Betrieben von Alibaba Cloud Ltd.",
+        "fr": "Exploité par Alibaba Cloud Ltd.",
+        "tr": "Alibaba Cloud Ltd. tarafından işletilir",
+        "ru": "Оператор — Alibaba Cloud Ltd.",
+        "uk": "Оператор — Alibaba Cloud Ltd.",
+        "ja": "Alibaba Cloud Ltd. が運営"
     },
+    "operator": "Alibaba Cloud Ltd.",
     "website": "https://www.alidns.com/",
     "region": "CN",
     "censorship": false,
@@ -21,12 +29,10 @@
                 "223.6.6.6"
             ],
             "https": {
-                "ServerURLOrName": "https://dns.alidns.com/dns-query",
-                "signature": "3046022100d0fca46392c3abc0a21b84ba6c15fc1d80adfbd444bd39a5df2e7ef0719008ce022100be213f306335c63db65b7adaf858a4af93eaafb4af6c190e68be0992a335c5af"
+                "ServerURLOrName": "https://dns.alidns.com/dns-query"
             },
             "tls": {
-                "ServerURLOrName": "dns.alidns.com",
-                "signature": "30440220123102e719bf1df554250cbe6227a968d3d4d8affa379faa5e9655bce762ea0a022027ebd73e80ef41a10f8339cc99be7b27674324042dd538621ea0084c90dbf4de"
+                "ServerURLOrName": "dns.alidns.com"
             }
         }
     }

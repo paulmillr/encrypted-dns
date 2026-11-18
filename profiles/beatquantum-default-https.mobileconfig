@@ -11,22 +11,22 @@
 				<string>HTTPS</string>
 				<key>ServerAddresses</key>
 				<array>
-					<string>2a07:e340::3</string>
-					<string>194.242.2.3</string>
+					<string>2a0c:9a46:1e22:12::a</string>
+					<string>207.2.121.35</string>
 				</array>
 				<key>ServerURL</key>
-				<string>https://adblock.doh.mullvad.net/dns-query</string>
+				<string>https://beatquantum.com/dns-query</string>
 			</dict>
 			<key>PayloadDescription</key>
-			<string>Configures device to use Mullvad DNS Adblock Encrypted DNS over HTTPS</string>
+			<string>Configures device to use BeatQuantum DNS Encrypted DNS over HTTPS</string>
 			<key>PayloadDisplayName</key>
-			<string>Mullvad DNS Adblock Encrypted DNS over HTTPS</string>
+			<string>BeatQuantum DNS Encrypted DNS over HTTPS</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.dnsSettings.managed.aa51aa88-e16a-50c0-9b0b-4a5c1f4af720</string>
+			<string>com.apple.dnsSettings.managed.73b09b22-5f94-528e-bd37-6565cf6873b6</string>
 			<key>PayloadType</key>
 			<string>com.apple.dnsSettings.managed</string>
 			<key>PayloadUUID</key>
-			<string>AA51AA88-E16A-50C0-9B0B-4A5C1F4AF720</string>
+			<string>73B09B22-5F94-528E-BD37-6565CF6873B6</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProhibitDisablement</key>
@@ -34,14 +34,14 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Configures device to use Mullvad DNS Adblock over HTTPS
-Operated by Mullvad VPN AB. Blocks ads &amp; tracking.
-Server location: 🇸🇪.
-Filtering: yes</string>
+	<string>Configures device to use BeatQuantum DNS over HTTPS
+Operated by BeatQuantum Limited. Non-filtering, with DNSSEC. Classical, hybrid &amp; post-quantum (ML-KEM) key exchange.
+Server location: 🇬🇧.
+Filtering: no</string>
 	<key>PayloadDisplayName</key>
-	<string>Mullvad DNS Adblock Encrypted DNS over HTTPS</string>
+	<string>BeatQuantum DNS Encrypted DNS over HTTPS</string>
 	<key>PayloadIdentifier</key>
-	<string>com.paulmillr.apple-dns.mullvad-adblock-https</string>
+	<string>com.paulmillr.apple-dns.beatquantum-default-https</string>
 	<key>PayloadRemovalDisallowed</key>
 	<false/>
 	<key>PayloadScope</key>
@@ -49,7 +49,7 @@ Filtering: yes</string>
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>3A25B6FB-8441-52AA-A746-3236EEF0FBA4</string>
+	<string>4E102B8E-AFE3-5928-B81D-2B385F00AB4A</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>

@@ -2,7 +2,7 @@
 set -euo pipefail
 
 if [ "$#" -lt 5 ]; then
-  echo "usage: scripts/sign-single-openssl.sh --ca <cert.pem> --priv_key <key.pem> [--chain <chain.pem>] <path.mobileconfig>" >&2
+  echo "usage: src/scripts/sign-single-openssl.sh --ca <cert.pem> --priv_key <key.pem> [--chain <chain.pem>] <path.mobileconfig>" >&2
   exit 1
 fi
 
@@ -33,7 +33,7 @@ while [ "$#" -gt 0 ]; do
 done
 
 if [ -z "$ca" ] || [ -z "$priv_key" ] || [ -z "$input" ]; then
-  echo "usage: scripts/sign-single-openssl.sh --ca <cert.pem> --priv_key <key.pem> [--chain <chain.pem>] <path.mobileconfig>" >&2
+  echo "usage: src/scripts/sign-single-openssl.sh --ca <cert.pem> --priv_key <key.pem> [--chain <chain.pem>] <path.mobileconfig>" >&2
   exit 1
 fi
 
@@ -54,7 +54,7 @@ else
   out="$input.signed.mobileconfig"
 fi
 
-cmd=(openssl cms -sign -binary -nodetach -nosmimecap -in "$input" -signer "$ca" -inkey "$priv_key" -outform DER -out "$out")
+cmd=(openssl cms -sign -md sha256 -binary -nodetach -nosmimecap -in "$input" -signer "$ca" -inkey "$priv_key" -outform DER -out "$out")
 if [ -n "$chain" ]; then
   cmd+=( -certfile "$chain" )
 fi

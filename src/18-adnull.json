@@ -3,17 +3,42 @@
         "en": "ADNull DNS"
     },
     "notes": {
-        "en": "Public DNS operated by ADNull. Blocks ads & tracking. Paid plans offer personalized DNS with advanced ad and phishing blocking."
+        "en": "Public DNS operated by ADNull. Blocks ads & tracking. Paid plans offer personalized DNS with advanced ad and phishing blocking.",
+        "zh-CN": "由 ADNull 运营的公共 DNS 服务，拦截广告和跟踪器。付费套餐可自定义 DNS 设置，并提供更完善的广告拦截和网络钓鱼防护",
+        "zh-TW": "由 ADNull 營運的公用 DNS 服務，封鎖廣告和追蹤器。付費方案可自訂 DNS 設定，並提供進階的廣告封鎖與網路釣魚防護功能",
+        "es": "Servicio público de DNS a cargo de ADNull. Bloquea anuncios y rastreadores. Los planes de pago permiten personalizar el DNS y ofrecen filtros avanzados contra anuncios y sitios de phishing.",
+        "de": "Öffentlicher DNS-Dienst von ADNull. Blockiert Werbung und Tracking. Die kostenpflichtigen Tarife bieten anpassbare DNS-Einstellungen und zusätzliche Filter für Werbung und Phishing.",
+        "fr": "Le DNS public d’ADNull bloque les publicités et les traqueurs. Les offres payantes permettent de personnaliser le DNS et donnent accès à des options avancées pour bloquer les publicités et les sites d’hameçonnage.",
+        "tr": "ADNull’ın herkese açık DNS hizmeti. Reklamları ve izleyicileri engeller. Ücretli planlarla DNS ayarlarını özelleştirebilir, reklamları ve kimlik avı sitelerini engellemek için gelişmiş filtreler kullanabilirsiniz.",
+        "ru": "Публичный DNS-сервис ADNull блокирует рекламу и трекеры. На платных тарифах можно настроить DNS под себя и гибче управлять блокировкой рекламы и фишинговых сайтов.",
+        "uk": "Публічний DNS-сервіс ADNull блокує рекламу й трекери. Платні тарифи дають змогу налаштувати DNS під свої потреби й точніше керувати блокуванням реклами та фішингових сайтів.",
+        "ja": "ADNull が運営する公開 DNS。広告とトラッキングをブロック。有料プランでは DNS の設定をカスタマイズでき、広告やフィッシングのブロック機能も強化されます"
+    },
+    "operator": "ADNull",
+    "tableNote": {
+        "en": "Paid plans add personalized DNS and advanced ad and phishing blocking",
+        "de": "Die kostenpflichtigen Tarife bieten anpassbare DNS-Einstellungen und zusätzliche Filter für Werbung und Phishing",
+        "es": "Los planes de pago permiten personalizar el DNS y ofrecen filtros avanzados contra anuncios y sitios de phishing",
+        "fr": "Les offres payantes permettent de personnaliser le DNS et donnent accès à des options avancées pour bloquer les publicités et les sites d’hameçonnage",
+        "ja": "有料プランでは DNS の設定をカスタマイズでき、広告やフィッシングのブロック機能も強化されます",
+        "ru": "На платных тарифах можно настроить DNS под себя и гибче управлять блокировкой рекламы и фишинговых сайтов",
+        "tr": "Ücretli planlarla DNS ayarlarını özelleştirebilir, reklamları ve kimlik avı sitelerini engellemek için gelişmiş filtreler kullanabilirsiniz",
+        "uk": "Платні тарифи дають змогу налаштувати DNS під свої потреби й точніше керувати блокуванням реклами та фішингових сайтів",
+        "zh-CN": "付费套餐可自定义 DNS 设置，并提供更完善的广告拦截和网络钓鱼防护",
+        "zh-TW": "付費方案可自訂 DNS 設定，並提供進階的廣告封鎖與網路釣魚防護功能"
     },
     "website": "https://adnull.com",
     "region": "UA",
     "censorship": true,
     "consent": "Free public DNS service by ADNull. Paid subscribers get a personalized subdomain (e.g. abc123.dns.adnull.com/dns-query) with customizable ad and phishing blocking — replace the hostname in the profile with your own before installing. Privacy policy: https://adnull.com/privacy",
+    "filters": [
+        "ads",
+        "tracking"
+    ],
     "variants": {
         "default": {
             "https": {
-                "ServerURLOrName": "https://dns.adnull.com/dns-query",
-                "signature": "30460221008ccc0cdea78e2451f2e7417110291a46c0fe7ef091d0b50bfbf7fed53750a844022100f1aba1543aacf20a86ab206bd92bfc6948e1c37fafcffeb4b1f29c89ee0fbbb9"
+                "ServerURLOrName": "https://dns.adnull.com/dns-query"
             }
         }
     }

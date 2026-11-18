@@ -32,7 +32,7 @@
 	<string>Configures device to use keweonDNS over HTTPS
 Operated by Aviontex. Blocks ads &amp; tracking.
 Server location: 🇩🇪.
-Filtering: no</string>
+Filtering: yes</string>
 	<key>PayloadDisplayName</key>
 	<string>keweonDNS Encrypted DNS over HTTPS</string>
 	<key>PayloadIdentifier</key>

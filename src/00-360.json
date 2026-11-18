@@ -1,13 +1,26 @@
 {
     "names": {
         "en": "360 Security DNS",
-        "cmn-CN": "360 安全 DNS",
-        "cmn-TW": "360 安全 DNS"
+        "zh-CN": "360 安全 DNS",
+        "zh-TW": "360 安全 DNS"
     },
     "notes": {
         "en": "Operated by 360 Digital Security Group",
-        "cmn-CN": "由 360 数字安全集团运营",
-        "cmn-TW": "由 360 數位安全集團營運"
+        "zh-CN": "由 360 数字安全集团运营",
+        "zh-TW": "由 360 數位安全集團營運",
+        "es": "Gestionado por 360 Digital Security Group",
+        "de": "Betrieben von der 360 Digital Security Group",
+        "fr": "Exploité par 360 Digital Security Group",
+        "tr": "360 Digital Security Group tarafından işletilir",
+        "ru": "Оператор — 360 Digital Security Group",
+        "uk": "Оператор — 360 Digital Security Group",
+        "ja": "360 Digital Security Group が運営"
+    },
+    "operator": {
+        "en": "360 Digital Security Group",
+        "de": "der 360 Digital Security Group",
+        "zh-CN": "360 数字安全集团",
+        "zh-TW": "360 數位安全集團"
     },
     "website": "https://sdns.360.net/dnsPublic.html",
     "region": "CN",

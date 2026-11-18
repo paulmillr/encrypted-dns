@@ -1,0 +1,26 @@
+{
+  "code": "fr",
+  "name": "Français",
+  "table_columns": {
+    "provider": "Fournisseur",
+    "unfiltered": "Sans filtrage",
+    "filtered": "Avec filtrage",
+    "notes": "Remarques"
+  },
+  "install": "Installer",
+  "default_profile": "Par défaut",
+  "details": "détails",
+  "operated_by": "par {operator}",
+  "filter_tags": {
+    "malware": "logiciels malveillants",
+    "adult": "contenu pour adultes",
+    "ads": "publicités",
+    "tracking": "traqueurs",
+    "phishing": "hameçonnage",
+    "mixed content": "contenu mixte",
+    "unspecified": "non précisé"
+  },
+  "signed": "signé",
+  "unsigned": "non signé",
+  "sentence_separator": ". "
+}

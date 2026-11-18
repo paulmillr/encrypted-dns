@@ -1,30 +1,37 @@
 {
     "names": {
         "en": "DNSPod Public DNS",
-        "cmn-CN": "DNSPod 公共 DNS",
-        "cmn-TW": "DNSPod 公共 DNS"
+        "zh-CN": "DNSPod 公共 DNS",
+        "zh-TW": "DNSPod 公用 DNS"
     },
     "notes": {
         "en": "Operated by DNSPod Inc., a Tencent Cloud Company",
-        "cmn-CN": "由腾讯公司 DNSPod 运营",
-        "cmn-TW": "由騰訊公司 DNSPod 營運"
+        "zh-CN": "由腾讯云旗下的 DNSPod 运营",
+        "zh-TW": "由騰訊雲旗下的 DNSPod 營運",
+        "es": "Gestionado por DNSPod Inc., una empresa de Tencent Cloud",
+        "de": "Betrieben von DNSPod Inc., einem Unternehmen von Tencent Cloud",
+        "fr": "Exploité par DNSPod Inc., une société de Tencent Cloud",
+        "tr": "Tencent Cloud bünyesindeki DNSPod Inc. tarafından işletilir",
+        "ru": "Оператор — DNSPod Inc., компания Tencent Cloud",
+        "uk": "Оператор — DNSPod Inc., компанія Tencent Cloud",
+        "ja": "Tencent Cloud 傘下の DNSPod Inc. が運営"
+    },
+    "operator": {
+        "en": "DNSPod Inc. (Tencent Cloud)",
+        "ja": "DNSPod Inc.（Tencent Cloud）",
+        "zh-CN": "DNSPod Inc.（腾讯云）",
+        "zh-TW": "DNSPod Inc.（騰訊雲）"
     },
     "website": "https://www.dnspod.com/products/public.dns",
     "region": "CN",
     "censorship": false,
     "variants": {
         "default": {
-            "ServerAddresses": [
-                "1.12.12.12",
-                "120.53.53.53"
-            ],
             "https": {
-                "ServerURLOrName": "https://doh.pub/dns-query",
-                "signature": "3046022100a75be9e3066cbce486d16a2e98bf2c82d55b63475f06d5afa5e4b1ab0c60794f0221009bdf5c2986b759eb98ef887216357cc4f8cc908dea6d3b7b92c8175dc5dab624"
+                "ServerURLOrName": "https://doh.pub/dns-query"
             },
             "tls": {
-                "ServerURLOrName": "dot.pub",
-                "signature": "3046022100854c75a6e39048b3110930e99bc2dfebdbed565b97bdd2fbe44b4a3cd245a12e02210085254673ecc67c3480cc58862aff9ce205ef9d8e455a2390221e7d84a8dab278"
+                "ServerURLOrName": "dot.pub"
             }
         }
     }

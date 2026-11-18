@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { stdin as input, stdout as output } from 'node:process';
 import { createInterface } from 'node:readline/promises';
-import { genProfile, splitCsv, validateDnsInput } from './build.ts';
+import { genProfile, splitCsv, validateDnsInput, validateServer } from './build.ts';
 import { signFile } from './sign-single.ts';
 
 type Proto = 'https' | 'tls';
@@ -153,8 +153,7 @@ const askRequired = async (seed: PartialInput = {}): Promise<PartialInput> => {
         '',
         (v) => {
           if (!v) throw new Error('server is required');
-          validateDnsInput({ protocol, server: v, addresses: [] }, 'Server');
-          return v;
+          return validateServer(protocol, v, 'Server');
         }
       ));
     const addresses =
@@ -212,8 +211,7 @@ const askFull = async (): Promise<PartialInput> => {
       '',
       (v) => {
         if (!v) throw new Error('server is required');
-        validateDnsInput({ protocol, server: v, addresses: [] }, 'Server');
-        return v;
+        return validateServer(protocol, v, 'Server');
       }
     );
     const addresses = await retry<string[]>(

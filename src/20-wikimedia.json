@@ -3,7 +3,40 @@
         "en": "Wikimedia DNS"
     },
     "notes": {
-        "en": "Operated by the Wikimedia Foundation. Beta service, no availability guarantees"
+        "en": "Operated by the Wikimedia Foundation. Beta service, no availability guarantees",
+        "zh-CN": "由维基媒体基金会运营。服务仍在测试阶段，不保证始终可用",
+        "zh-TW": "由維基媒體基金會營運。服務仍在測試階段，不保證能隨時使用",
+        "es": "Gestionado por la Fundación Wikimedia. Servicio en fase beta, sin garantía de disponibilidad",
+        "de": "Betrieben von der Wikimedia Foundation. Betaversion ohne Verfügbarkeitsgarantie",
+        "fr": "Exploité par la Wikimedia Foundation. Service en bêta, sans garantie de disponibilité",
+        "tr": "Wikimedia Vakfı tarafından işletilir. Hizmet beta aşamasında. Kesintisiz çalışacağı garanti edilmiyor",
+        "ru": "Оператор — Фонд Викимедиа. Бета-версия без гарантий доступности",
+        "uk": "Оператор — Фонд Вікімедіа. Бета-версія без гарантій доступності",
+        "ja": "ウィキメディア財団が運営。ベータ版のため、稼働は保証されません"
+    },
+    "operator": {
+        "en": "Wikimedia Foundation",
+        "de": "der Wikimedia Foundation",
+        "es": "la Fundación Wikimedia",
+        "fr": "la Wikimedia Foundation",
+        "ja": "ウィキメディア財団",
+        "ru": "Фонд Викимедиа",
+        "tr": "Wikimedia Vakfı",
+        "uk": "Фонд Вікімедіа",
+        "zh-CN": "维基媒体基金会",
+        "zh-TW": "維基媒體基金會"
+    },
+    "tableNote": {
+        "en": "Beta service, no availability guarantees",
+        "de": "Betaversion ohne Verfügbarkeitsgarantie",
+        "es": "Servicio en fase beta, sin garantía de disponibilidad",
+        "fr": "Service en bêta, sans garantie de disponibilité",
+        "ja": "ベータ版のため、稼働は保証されません",
+        "ru": "Бета-версия без гарантий доступности",
+        "tr": "Hizmet beta aşamasında. Kesintisiz çalışacağı garanti edilmiyor",
+        "uk": "Бета-версія без гарантій доступності",
+        "zh-CN": "服务仍在测试阶段，不保证始终可用",
+        "zh-TW": "服務仍在測試階段，不保證能隨時使用"
     },
     "website": "https://meta.wikimedia.org/wiki/Wikimedia_DNS",
     "region": "US",

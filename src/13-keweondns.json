@@ -4,21 +4,31 @@
     },
     "notes": {
         "en": "Operated by Aviontex. Blocks ads & tracking",
-        "cmn-CN": "由 Aviontex 运营，拦截广告和跟踪器",
-        "cmn-TW": "由 Aviontex 營運，阻擋廣告和追蹤器"
+        "zh-CN": "由 Aviontex 运营，拦截广告和跟踪器",
+        "zh-TW": "由 Aviontex 營運，阻擋廣告和追蹤器",
+        "es": "Gestionado por Aviontex. Bloquea anuncios y rastreo",
+        "de": "Betrieben von Aviontex. Blockiert Werbung und Tracking",
+        "fr": "Exploité par Aviontex. Bloque les publicités et les traqueurs",
+        "tr": "Aviontex tarafından işletilir. Reklamları ve izleyicileri engeller",
+        "ru": "Оператор — Aviontex. Блокирует рекламу и трекеры",
+        "uk": "Оператор — Aviontex. Блокує рекламу й трекери",
+        "ja": "Aviontex が運営。広告とトラッキングをブロック"
     },
+    "operator": "Aviontex",
     "website": "https://forum.xda-developers.com/t/keweondns-info-facts-and-what-is-keweon-actually.4576651/",
     "region": "DE",
-    "censorship": false,
+    "censorship": true,
+    "filters": [
+        "ads",
+        "tracking"
+    ],
     "variants": {
         "default": {
             "https": {
-                "ServerURLOrName": "https://dns.keweon.center/dns-query",
-                "signature": "3045022056e3fddadce26198e431343602edd037b9d62a62c3f66478ce7449189e161e78022100cae378e2a490a3dd84549cd8109d0843f32c7ec21358e5cca8c478527e2b666c"
+                "ServerURLOrName": "https://dns.keweon.center/dns-query"
             },
             "tls": {
-                "ServerURLOrName": "dns.keweon.center",
-                "signature": "3046022100d65911453c3b47fea5714b8f36f00a6a6d36683af52ad04820313ec80610cef9022100d9466c5494852b9046944f3f3bc8490fd854fecee5991824f30abe07ba8f4544"
+                "ServerURLOrName": "dns.keweon.center"
             }
         }
     }

@@ -3,7 +3,28 @@
         "en": "DNS4EU"
     },
     "notes": {
-        "en": "Operated by a consortium lead by Whalebone."
+        "en": "Operated by a consortium lead by Whalebone.",
+        "zh-CN": "由 Whalebone 牵头的联盟运营",
+        "zh-TW": "由 Whalebone 主導的聯盟營運",
+        "es": "Gestionado por un consorcio liderado por Whalebone",
+        "de": "Betrieben von einem Konsortium unter der Leitung von Whalebone",
+        "fr": "Exploité par un consortium sous la direction de Whalebone",
+        "tr": "Whalebone liderliğindeki bir konsorsiyum tarafından işletilir",
+        "ru": "Управляется консорциумом во главе с Whalebone",
+        "uk": "Сервісом керує консорціум на чолі з Whalebone",
+        "ja": "Whalebone が主導するコンソーシアムが運営"
+    },
+    "operator": {
+        "en": "a Whalebone-led consortium",
+        "de": "einem Konsortium unter der Leitung von Whalebone",
+        "es": "un consorcio liderado por Whalebone",
+        "fr": "un consortium sous la direction de Whalebone",
+        "ja": "Whalebone が主導するコンソーシアム",
+        "ru": "консорциум во главе с Whalebone",
+        "tr": "Whalebone liderliğindeki bir konsorsiyum",
+        "uk": "консорціум на чолі з Whalebone",
+        "zh-CN": "Whalebone 牵头的联盟",
+        "zh-TW": "Whalebone 主導的聯盟"
     },
     "website": "https://www.joindns4.eu/for-public",
     "region": "CZ",
@@ -17,23 +38,42 @@
                 "86.54.11.200"
             ],
             "https": {
-                "ServerURLOrName": "https://unfiltered.joindns4.eu/dns-query",
-                "signature": "3044022060f82bcd69ea04b81859a2fd6be97e6fe5da59cd50371a450fba22a9c8755886022060d942265ed350cf086f3019d986aef69e4beb86dbe0a5e615ca6fb6fe67dd3d"
+                "ServerURLOrName": "https://unfiltered.joindns4.eu/dns-query"
             },
             "tls": {
-                "ServerURLOrName": "unfiltered.joindns4.eu",
-                "signature": "304502200c947a280c95b8d205551681b89a5c6442c58a0afe4b50c9e39ddad7b06d3772022100d4087c248dca7be74a1495dbfe02d8ac75bf49019a5bae080d7a25ec6f201acc"
+                "ServerURLOrName": "unfiltered.joindns4.eu"
             },
             "names": {}
         },
         "malware": {
             "names": {
-                "en": "Protective"
+                "en": "Protective",
+                "es": "Con protección",
+                "de": "Schutzfilter",
+                "fr": "Avec protection",
+                "tr": "Güvenlik",
+                "ru": "С защитой",
+                "uk": "Із захистом",
+                "ja": "セキュリティ",
+                "zh-CN": "安全防护",
+                "zh-TW": "安全防護"
             },
             "notes": {
-                "en": "Blocks Malware."
+                "en": "Blocks Malware.",
+                "zh-CN": "拦截恶意软件",
+                "zh-TW": "封鎖惡意軟體",
+                "es": "Bloquea software malicioso",
+                "de": "Blockiert Schadsoftware",
+                "fr": "Bloque les logiciels malveillants",
+                "tr": "Kötü amaçlı yazılımları engeller",
+                "ru": "Блокирует вредоносное ПО",
+                "uk": "Блокує шкідливе ПЗ",
+                "ja": "マルウェアをブロック"
             },
             "censorship": true,
+            "filters": [
+                "malware"
+            ],
             "ServerAddresses": [
                 "2a13:1001::86:54:11:1",
                 "2a13:1001::86:54:11:201",
@@ -41,22 +81,54 @@
                 "86.54.11.201"
             ],
             "https": {
-                "ServerURLOrName": "https://protective.joindns4.eu/dns-query",
-                "signature": "3045022100d1ea5372a326f3b341e61ebff07642f587c4bfcde9e90d53786eb902085b80dc02201c46081dd53abc1fe208667146e1c6023f0dc0eae057d4596d60bcd3a757c08f"
+                "ServerURLOrName": "https://protective.joindns4.eu/dns-query"
             },
             "tls": {
-                "ServerURLOrName": "protective.joindns4.eu",
-                "signature": "3044022031f91357003329aca1cb942056b7d426d06552c7567bac4da060aff815a4afff022071eb30766cfa773a79423a710178168ff47b14fea69690c4cea5b76b274b77fb"
+                "ServerURLOrName": "protective.joindns4.eu"
             }
         },
         "protective-ads": {
             "names": {
-                "en": "Protective ad-blocking"
+                "en": "Protective ad-blocking",
+                "zh-CN": "安全防护＋广告拦截",
+                "zh-TW": "安全防護＋廣告封鎖",
+                "es": "Con protección y bloqueo de anuncios",
+                "de": "Mit Schutz und Werbeblocker",
+                "fr": "Avec protection et blocage des publicités",
+                "tr": "Güvenlik + reklam engelleme",
+                "ru": "С защитой и блокировкой рекламы",
+                "uk": "Із захистом і блокуванням реклами",
+                "ja": "セキュリティ＋広告ブロック"
+            },
+            "tableName": {
+                "en": "Ad-blocking",
+                "de": "Werbefilter",
+                "es": "Bloqueo de anuncios",
+                "fr": "Blocage des publicités",
+                "ja": "広告ブロック",
+                "ru": "Блокировка рекламы",
+                "tr": "Reklam engelleme",
+                "uk": "Блокування реклами",
+                "zh-CN": "广告拦截",
+                "zh-TW": "廣告封鎖"
             },
             "notes": {
-                "en": "Blocks Malware and Ads"
+                "en": "Blocks Malware and Ads",
+                "zh-CN": "拦截恶意软件和广告",
+                "zh-TW": "封鎖惡意軟體和廣告",
+                "es": "Bloquea software malicioso y anuncios",
+                "de": "Blockiert Schadsoftware und Werbung",
+                "fr": "Bloque les logiciels malveillants et les publicités",
+                "tr": "Kötü amaçlı yazılımları ve reklamları engeller",
+                "ru": "Блокирует вредоносное ПО и рекламу",
+                "uk": "Блокує шкідливе ПЗ та рекламу",
+                "ja": "マルウェアと広告をブロック"
             },
             "censorship": true,
+            "filters": [
+                "malware",
+                "ads"
+            ],
             "ServerAddresses": [
                 "2a13:1001::86:54:11:13",
                 "2a13:1001::86:54:11:213",
@@ -64,22 +136,54 @@
                 "86.54.11.213"
             ],
             "https": {
-                "ServerURLOrName": "https://noads.joindns4.eu/dns-query",
-                "signature": "3045022039902cfbc792ab43fe8742f82fd53fdace3a6519c824c599f1b8b6ef59309a7b022100cf53233f71256c9377e54b3e5445b5d9e21ff900b8f258d1bedf50f77d31b35d"
+                "ServerURLOrName": "https://noads.joindns4.eu/dns-query"
             },
             "tls": {
-                "ServerURLOrName": "noads.joindns4.eu",
-                "signature": "3045022100b6013e055492d6c31903ac75f4987ab45ea64a57641831eabcf6b931f037c16702200c9470a2a4c9f6da868fe8e9bf27352c456e107d41456829ea171ea8faa11872"
+                "ServerURLOrName": "noads.joindns4.eu"
             }
         },
         "protective-child": {
             "names": {
-                "en": "Protective with child protection"
+                "en": "Protective with child protection",
+                "zh-CN": "安全防护＋儿童上网保护",
+                "zh-TW": "安全防護＋兒童上網防護",
+                "es": "Con protección y control parental",
+                "de": "Mit Schutz und Kinderschutzfilter",
+                "fr": "Avec protection et contrôle parental",
+                "tr": "Güvenlik + çocuklar için içerik filtresi",
+                "ru": "С защитой и детским фильтром",
+                "uk": "Із захистом і дитячим фільтром",
+                "ja": "セキュリティ＋子ども向けフィルター"
+            },
+            "tableName": {
+                "en": "Child protection",
+                "de": "Kinderschutz",
+                "es": "Control parental",
+                "fr": "Contrôle parental",
+                "ja": "子ども向けフィルター",
+                "ru": "Детский фильтр",
+                "tr": "Çocuklar için içerik filtresi",
+                "uk": "Дитячий фільтр",
+                "zh-CN": "儿童上网保护",
+                "zh-TW": "兒童上網防護"
             },
             "notes": {
-                "en": "Blocks malware and explicit content."
+                "en": "Blocks malware and explicit content.",
+                "zh-CN": "拦截恶意软件和色情内容",
+                "zh-TW": "封鎖惡意軟體和色情內容",
+                "es": "Bloquea software malicioso y contenido explícito",
+                "de": "Blockiert Schadsoftware und explizite Inhalte",
+                "fr": "Bloque les logiciels malveillants et les contenus explicites",
+                "tr": "Kötü amaçlı yazılımları ve müstehcen içerikleri engeller",
+                "ru": "Блокирует вредоносное ПО и откровенный контент",
+                "uk": "Блокує шкідливе ПЗ та відвертий вміст",
+                "ja": "マルウェアと成人向けコンテンツをブロック"
             },
             "censorship": true,
+            "filters": [
+                "malware",
+                "adult"
+            ],
             "ServerAddresses": [
                 "2a13:1001::86:54:11:12",
                 "2a13:1001::86:54:11:212",
@@ -87,22 +191,55 @@
                 "86.54.11.212"
             ],
             "https": {
-                "ServerURLOrName": "https://child.joindns4.eu/dns-query",
-                "signature": "3045022070ee4aa926199b08ecf1dead90b41e761d2d33c7ab82c4e6da19520469b635ec022100891febf9f914dac254bec0cb370109e336ebaa816530f1770626e6a70ffaf852"
+                "ServerURLOrName": "https://child.joindns4.eu/dns-query"
             },
             "tls": {
-                "ServerURLOrName": "child.joindns4.eu",
-                "signature": "3046022100e25fca848cced0eafae7c6578eb1b4df2da440c9171a70a5317a079f71f8d5bc022100e7501402424506ec9eb48a711130f7d0af34acf06c7e3323f91a14af9183eda5"
+                "ServerURLOrName": "child.joindns4.eu"
             }
         },
         "protective-child-ads": {
             "names": {
-                "en": "Protective with child protection & ad-blocking"
+                "en": "Protective with child protection & ad-blocking",
+                "zh-CN": "安全防护＋儿童上网保护＋广告拦截",
+                "zh-TW": "安全防護＋兒童上網防護＋廣告封鎖",
+                "es": "Con protección, control parental y bloqueo de anuncios",
+                "de": "Mit Schutz, Kinderschutzfilter und Werbeblocker",
+                "fr": "Avec protection, contrôle parental et blocage des publicités",
+                "tr": "Güvenlik + çocuklar için içerik filtresi + reklam engelleme",
+                "ru": "С защитой, детским фильтром и блокировкой рекламы",
+                "uk": "Із захистом, дитячим фільтром і блокуванням реклами",
+                "ja": "セキュリティ＋子ども向けフィルター＋広告ブロック"
+            },
+            "tableName": {
+                "en": "Child + ad-blocking",
+                "de": "Kinderschutz + Werbefilter",
+                "es": "Control parental y bloqueo de anuncios",
+                "fr": "Contrôle parental et blocage des publicités",
+                "ja": "子ども向けフィルター＋広告ブロック",
+                "ru": "Детский фильтр и блокировка рекламы",
+                "tr": "Çocuklar için içerik filtresi + reklam engelleme",
+                "uk": "Дитячий фільтр і блокування реклами",
+                "zh-CN": "儿童上网保护＋广告拦截",
+                "zh-TW": "兒童上網防護＋廣告封鎖"
             },
             "notes": {
-                "en": "Blocks Malware, Ads and explicit content"
+                "en": "Blocks Malware, Ads and explicit content",
+                "zh-CN": "拦截恶意软件、广告和色情内容",
+                "zh-TW": "封鎖惡意軟體、廣告和色情內容",
+                "es": "Bloquea software malicioso, anuncios y contenido explícito",
+                "de": "Blockiert Schadsoftware, Werbung und explizite Inhalte",
+                "fr": "Bloque les logiciels malveillants, les publicités et les contenus explicites",
+                "tr": "Kötü amaçlı yazılımları, reklamları ve müstehcen içerikleri engeller",
+                "ru": "Блокирует вредоносное ПО, рекламу и откровенный контент",
+                "uk": "Блокує шкідливе ПЗ, рекламу й відвертий вміст",
+                "ja": "マルウェア、広告、成人向けコンテンツをブロック"
             },
             "censorship": true,
+            "filters": [
+                "malware",
+                "adult",
+                "ads"
+            ],
             "ServerAddresses": [
                 "2a13:1001::86:54:11:11",
                 "2a13:1001::86:54:11:211",
@@ -110,12 +247,10 @@
                 "86.54.11.211"
             ],
             "https": {
-                "ServerURLOrName": "https://child-noads.joindns4.eu/dns-query",
-                "signature": "304402207e867aea9a8b9dd7f7efb66b84fbadc6faf1ffeedf85bcf84e1927542bb2f6ac022003330d3b91ab36a0848b3ccc24d54c696fcd73c26510b7750f6838f3be62814f"
+                "ServerURLOrName": "https://child-noads.joindns4.eu/dns-query"
             },
             "tls": {
-                "ServerURLOrName": "child-noads.joindns4.eu",
-                "signature": "304402206662d25f2146268d68b7c90544adf6021c28dc6dfe6e70187f29e4d8e9dd602902207ca68a794444fec62fa44d04b50ab4610dd2768369b2f1c95313cd6b0fbab723"
+                "ServerURLOrName": "child-noads.joindns4.eu"
             }
         }
     }

@@ -4,12 +4,33 @@
     },
     "notes": {
         "en": "Operated by Quad9 Foundation.",
-        "cmn-CN": "由 Quad9 基金会运营",
-        "cmn-TW": "由 Quad9 基金會營運"
+        "zh-CN": "由 Quad9 基金会运营",
+        "zh-TW": "由 Quad9 基金會營運",
+        "es": "Gestionado por la Fundación Quad9",
+        "de": "Betrieben von der Quad9 Foundation",
+        "fr": "Exploité par la fondation Quad9",
+        "tr": "Quad9 Vakfı tarafından işletilir",
+        "ru": "Оператор — фонд Quad9",
+        "uk": "Оператор — фонд Quad9",
+        "ja": "Quad9 Foundation が運営"
+    },
+    "operator": {
+        "en": "Quad9 Foundation",
+        "de": "der Quad9 Foundation",
+        "es": "la Fundación Quad9",
+        "fr": "la fondation Quad9",
+        "tr": "Quad9 Vakfı",
+        "ru": "фонд Quad9",
+        "uk": "фонд Quad9",
+        "zh-CN": "Quad9 基金会",
+        "zh-TW": "Quad9 基金會"
     },
     "website": "https://www.quad9.net/news/blog/doh-with-quad9-dns-servers/",
     "region": "CH",
     "censorship": true,
+    "filters": [
+        "malware"
+    ],
     "variants": {
         "default": {
             "ServerAddresses": [
@@ -19,29 +40,48 @@
                 "149.112.112.112"
             ],
             "https": {
-                "ServerURLOrName": "https://dns.quad9.net/dns-query",
-                "signature": "30440220602e13fafe41f3e6b787eb3218dca6631fb4f3b106c1aef5f7c693cdb9330526022002877b7da66c69f9e1957a8edb4703fa2bffe587361ea65b88c4f520dfc3d444"
+                "ServerURLOrName": "https://dns.quad9.net/dns-query"
             },
             "tls": {
-                "ServerURLOrName": "dns.quad9.net",
-                "signature": "304402206139a79eab7e218877ea306744f58a6acd4458be30b1fcaa51bbec5a7f868b88022075a97dfd7944a45280d580d83b206309906a2129841098640aec710e5119ab4e"
+                "ServerURLOrName": "dns.quad9.net"
             },
             "notes": {
                 "en": "Blocks malware",
-                "cmn-CN": "拦截恶意软件",
-                "cmn-TW": "阻擋惡意軟體"
+                "zh-CN": "拦截恶意软件",
+                "zh-TW": "阻擋惡意軟體",
+                "es": "Bloquea software malicioso",
+                "de": "Blockiert Schadsoftware",
+                "fr": "Bloque les logiciels malveillants",
+                "tr": "Kötü amaçlı yazılımları engeller",
+                "ru": "Блокирует вредоносное ПО",
+                "uk": "Блокує шкідливе ПЗ",
+                "ja": "マルウェアをブロック"
             }
         },
         "ECS": {
             "names": {
                 "en": "w/ ECS",
-                "cmn-CN": "带 ECS",
-                "cmn-TW": "帶 ECS"
+                "zh-CN": "支持 ECS",
+                "zh-TW": "支援 ECS",
+                "es": "Con ECS",
+                "de": "Mit ECS",
+                "fr": "Avec ECS",
+                "tr": "ECS destekli",
+                "ru": "С поддержкой ECS",
+                "uk": "З підтримкою ECS",
+                "ja": "ECS 対応"
             },
             "notes": {
                 "en": "Supports ECS. Blocks malware",
-                "cmn-CN": "支持 ECS，拦截恶意软件",
-                "cmn-TW": "支援 ECS，阻擋惡意軟體"
+                "zh-CN": "支持 ECS，拦截恶意软件",
+                "zh-TW": "支援 ECS，阻擋惡意軟體",
+                "es": "Compatible con ECS. Bloquea software malicioso",
+                "de": "Unterstützt ECS. Blockiert Schadsoftware",
+                "fr": "Prend en charge ECS. Bloque les logiciels malveillants",
+                "tr": "ECS’yi destekler. Kötü amaçlı yazılımları engeller",
+                "ru": "Поддерживает ECS. Блокирует вредоносное ПО",
+                "uk": "Підтримує ECS. Блокує шкідливе ПЗ",
+                "ja": "ECS に対応。マルウェアをブロック"
             },
             "ServerAddresses": [
                 "2620:fe::fe:11",
@@ -50,19 +90,24 @@
                 "149.112.112.11"
             ],
             "https": {
-                "ServerURLOrName": "https://dns11.quad9.net/dns-query",
-                "signature": "3046022100d4c99217853b315f0fa70c35f121536b36e4220949bc9662e3bd3f889adef7da022100b297795928485dafdec727059a122cbe3a38beee69111357b0621b775d9285be"
+                "ServerURLOrName": "https://dns11.quad9.net/dns-query"
             },
             "tls": {
-                "ServerURLOrName": "dns11.quad9.net",
-                "signature": "3044022012c838430241ba5874159d6e49ba1d25420533b7a64507f9766f33d4b5e6a47c02201e948662206fa9087b0a9752011a9303cc20f1c07eafc298d5089abffa89c57b"
+                "ServerURLOrName": "dns11.quad9.net"
             }
         },
         "nofilter": {
             "names": {
                 "en": "Unfiltered",
-                "cmn-CN": "无过滤",
-                "cmn-TW": "無過濾"
+                "zh-CN": "无过滤",
+                "zh-TW": "無過濾",
+                "es": "Sin filtrado",
+                "de": "Ungefiltert",
+                "fr": "Sans filtrage",
+                "tr": "Filtresiz",
+                "ru": "Без фильтрации",
+                "uk": "Без фільтрування",
+                "ja": "フィルタリングなし"
             },
             "censorship": false,
             "ServerAddresses": [
@@ -72,12 +117,10 @@
                 "149.112.112.10"
             ],
             "https": {
-                "ServerURLOrName": "https://dns10.quad9.net/dns-query",
-                "signature": "304402206b4e97c54c4b6a88b3532b9f2ed929037d6c7438c1a8a8fd743b8c1680c588a30220175209a694d57f9ba71b9470c0df7ca25b60e12273991ca3e370b4478854595f"
+                "ServerURLOrName": "https://dns10.quad9.net/dns-query"
             },
             "tls": {
-                "ServerURLOrName": "dns10.quad9.net",
-                "signature": "30450221009bca25b6781e53fbe6574492af12d7859f921379325355fa2e26f1da7670bd420220723216f3e2ef9ee7be582ac084b0bae9def230bcda9ddd521be37c866c96b487"
+                "ServerURLOrName": "dns10.quad9.net"
             }
         }
     }

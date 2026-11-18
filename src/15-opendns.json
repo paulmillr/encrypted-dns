@@ -4,39 +4,61 @@
     },
     "notes": {
         "en": "Operated by Cisco OpenDNS LLC",
-        "cmn-CN": "由思科 OpenDNS 运营",
-        "cmn-TW": "由思科 OpenDNS 營運"
+        "zh-CN": "由思科 OpenDNS 运营",
+        "zh-TW": "由思科 OpenDNS 營運",
+        "es": "Gestionado por Cisco OpenDNS LLC",
+        "de": "Betrieben von Cisco OpenDNS LLC",
+        "fr": "Exploité par Cisco OpenDNS LLC",
+        "tr": "Cisco OpenDNS LLC tarafından işletilir",
+        "ru": "Оператор — Cisco OpenDNS LLC",
+        "uk": "Оператор — Cisco OpenDNS LLC",
+        "ja": "Cisco OpenDNS LLC が運営"
     },
+    "operator": "Cisco OpenDNS LLC",
     "website": "https://support.opendns.com/hc/articles/360038086532",
     "region": "US",
     "censorship": false,
     "variants": {
         "default": {
             "https": {
-                "ServerURLOrName": "https://doh.opendns.com/dns-query",
-                "signature": "3045022004a12b164119401c9b4e66dffaa2e680d7b1e72773dac99a571bbf8e8704e321022100a832146a00f4b3e9f587e0e32b7ba7310cc675109bc3e08e03114912ad93fde9"
+                "ServerURLOrName": "https://doh.opendns.com/dns-query"
             },
             "names": {
                 "en": "Standard",
-                "cmn-CN": "标准版",
-                "cmn-TW": "標準版"
+                "zh-CN": "标准版",
+                "zh-TW": "標準版",
+                "es": "Estándar",
+                "de": "Standard",
+                "fr": "Standard",
+                "tr": "Standart",
+                "ru": "Стандартный",
+                "uk": "Стандартний",
+                "ja": "標準"
             }
         },
         "family": {
             "names": {
-                "en": "FamilyShield",
-                "cmn-CN": "家庭盾",
-                "cmn-TW": "家庭盾"
+                "en": "FamilyShield"
             },
             "notes": {
                 "en": "Blocks malware & adult content",
-                "cmn-CN": "拦截恶意软件和成人内容",
-                "cmn-TW": "阻擋惡意軟體和成人內容"
+                "zh-CN": "拦截恶意软件和成人内容",
+                "zh-TW": "阻擋惡意軟體和成人內容",
+                "es": "Bloquea software malicioso y contenido para adultos",
+                "de": "Blockiert Schadsoftware und Inhalte für Erwachsene",
+                "fr": "Bloque les logiciels malveillants et les contenus pour adultes",
+                "tr": "Kötü amaçlı yazılımları ve yetişkinlere yönelik içerikleri engeller",
+                "ru": "Блокирует вредоносное ПО и контент для взрослых",
+                "uk": "Блокує шкідливе ПЗ та вміст для дорослих",
+                "ja": "マルウェアと成人向けコンテンツをブロック"
             },
             "censorship": true,
+            "filters": [
+                "malware",
+                "adult"
+            ],
             "https": {
-                "ServerURLOrName": "https://doh.familyshield.opendns.com/dns-query",
-                "signature": "3045022100fb8353509f843fb2465baff9797a2f0fbb0066588bfdf965ee4c636508c3ef9002204e2304a781abeb5a547058491d5db6db306494d626f639b49555e1b45c3c76cc"
+                "ServerURLOrName": "https://doh.familyshield.opendns.com/dns-query"
             }
         }
     }

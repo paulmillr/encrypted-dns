@@ -1,0 +1,26 @@
+{
+  "code": "zh-TW",
+  "name": "繁體中文",
+  "table_columns": {
+    "provider": "服務提供者",
+    "unfiltered": "無過濾",
+    "filtered": "有過濾",
+    "notes": "備註"
+  },
+  "install": "安裝",
+  "default_profile": "預設",
+  "details": "詳細資訊",
+  "operated_by": "由 {operator} 營運",
+  "filter_tags": {
+    "malware": "惡意軟體",
+    "adult": "成人內容",
+    "ads": "廣告",
+    "tracking": "追蹤器",
+    "phishing": "網路釣魚",
+    "mixed content": "混合內容網站",
+    "unspecified": "類別未註明"
+  },
+  "signed": "已簽署",
+  "unsigned": "未簽署",
+  "sentence_separator": "。"
+}

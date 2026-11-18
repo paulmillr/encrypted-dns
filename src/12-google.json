@@ -1,14 +1,22 @@
 {
     "names": {
         "en": "Google Public DNS",
-        "cmn-CN": "Google 公共 DNS",
-        "cmn-TW": "Google 公共 DNS"
+        "zh-CN": "Google 公共 DNS",
+        "zh-TW": "Google 公用 DNS"
     },
     "notes": {
         "en": "Operated by Google LLC",
-        "cmn-CN": "由谷歌公司运营",
-        "cmn-TW": "由谷歌公司營運"
+        "zh-CN": "由 Google 运营",
+        "zh-TW": "由 Google 營運",
+        "es": "Gestionado por Google LLC",
+        "de": "Betrieben von Google LLC",
+        "fr": "Exploité par Google LLC",
+        "tr": "Google LLC tarafından işletilir",
+        "ru": "Оператор — Google LLC",
+        "uk": "Оператор — Google LLC",
+        "ja": "Google LLC が運営"
     },
+    "operator": "Google LLC",
     "website": "https://developers.google.com/speed/public-dns/docs/secure-transports",
     "region": "US",
     "censorship": false,
@@ -21,12 +29,10 @@
                 "8.8.4.4"
             ],
             "https": {
-                "ServerURLOrName": "https://dns.google/dns-query",
-                "signature": "3045022100d71a7db0fd08d3cfc8c8c1f1fd22122eb5fb093026ee5906d82810bc58370ac702206f8de6a1f63d01362e3e0ce4aac52233e157df98c5c5d08df3afe7dc1edd7014"
+                "ServerURLOrName": "https://dns.google/dns-query"
             },
             "tls": {
-                "ServerURLOrName": "dns.google",
-                "signature": "3045022100c4b30c608e39b78f4e93cefeb9d9167b657cb4fdd5a76ca1ccdaae9d05f74aa902206a88b9932ba530be7c3bdabe3bb387f5a03b8c39f9567c1b713b4af6ec7d864a"
+                "ServerURLOrName": "dns.google"
             }
         }
     }

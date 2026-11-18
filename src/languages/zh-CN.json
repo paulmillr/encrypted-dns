@@ -1,0 +1,26 @@
+{
+  "code": "zh-CN",
+  "name": "简体中文",
+  "table_columns": {
+    "provider": "服务商",
+    "unfiltered": "无过滤",
+    "filtered": "有过滤",
+    "notes": "备注"
+  },
+  "install": "安装",
+  "default_profile": "默认",
+  "details": "详情",
+  "operated_by": "由 {operator} 运营",
+  "filter_tags": {
+    "malware": "恶意软件",
+    "adult": "成人内容",
+    "ads": "广告",
+    "tracking": "跟踪器",
+    "phishing": "网络钓鱼",
+    "mixed content": "混合内容网站",
+    "unspecified": "类别未注明"
+  },
+  "signed": "已签名",
+  "unsigned": "未签名",
+  "sentence_separator": "。"
+}

@@ -1,0 +1,26 @@
+{
+  "code": "ru",
+  "name": "Русский",
+  "table_columns": {
+    "provider": "Провайдер",
+    "unfiltered": "Без фильтрации",
+    "filtered": "С фильтрацией",
+    "notes": "Примечания"
+  },
+  "install": "Установить",
+  "default_profile": "По умолчанию",
+  "details": "подробнее",
+  "operated_by": "оператор — {operator}",
+  "filter_tags": {
+    "malware": "вредоносное ПО",
+    "adult": "контент для взрослых",
+    "ads": "реклама",
+    "tracking": "трекеры",
+    "phishing": "фишинг",
+    "mixed content": "смешанный контент",
+    "unspecified": "не указано"
+  },
+  "signed": "с подписью",
+  "unsigned": "без подписи",
+  "sentence_separator": ". "
+}

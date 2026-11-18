@@ -1,0 +1,25 @@
+{
+  "name": "encrypted-dns",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:clean": "rm -f ../../profiles/*.mobileconfig ../../README.md ../../ALL-PROFILES.md ../../translations/*.md",
+    "build": "node build.ts",
+    "sign": "cd ../.. && node src/scripts/build.ts --keychain",
+    "new": "cd ../.. && node src/scripts/new.ts",
+    "check": "node check-endpoints.ts",
+    "check:censorship": "cd ../.. && node src/scripts/check-censorship.ts",
+    "test": "node --experimental-strip-types --test build.test.ts new.test.ts sign-single.test.ts dns-response.test.ts",
+    "format": "prettier --write \"../*.json\" *.ts"
+  },
+  "dependencies": {
+    "@noble/hashes": "2.2.0",
+    "micro-key-producer": "0.8.6",
+    "prettier": "3.6.2"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  }
+}

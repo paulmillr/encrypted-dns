@@ -1,42 +1,58 @@
 #!/usr/bin/env node
 import { sha1 } from '@noble/hashes/legacy.js';
-import { bytesToHex, concatBytes, hexToBytes, utf8ToBytes } from '@noble/hashes/utils.js';
-import { CMS } from 'micro-key-producer/x509.js';
+import { bytesToHex, concatBytes, utf8ToBytes } from '@noble/hashes/utils.js';
+import { X509Certificate } from 'node:crypto';
 import fs from 'node:fs';
+import os from 'node:os';
 import net from 'node:net';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { keychainIdentity, signInKeychain, verifyProfile } from './keychain-sign.ts';
+
+const FILTER_TAGS = ['malware', 'adult', 'ads', 'tracking', 'phishing', 'mixed content'] as const;
+type FilterTag = (typeof FILTER_TAGS)[number];
+type FilterLabels = Record<FilterTag | 'unspecified', string>;
+type TableText = string | Record<string, string>;
 
 type LangData = {
   code: string;
   name: string;
   table_columns: {
-    name: string;
-    region: string;
-    censorship: string;
+    provider: string;
+    unfiltered: string;
+    filtered: string;
     notes: string;
-    install_signed: string;
-    install_unsigned: string;
   };
-  yes: string;
-  no: string;
+  install: string;
+  default_profile: string;
+  details: string;
+  filter_tags: FilterLabels;
+  // Who runs a provider, e.g. "by {operator}" or "由 {operator} 运营". Must contain {operator}.
+  operated_by: string;
+  // Plain words. The table shows `unsigned` in parentheses after a link: "Family (unsigned)".
+  signed: string;
+  unsigned: string;
+  // Joins provider and variant notes, e.g. ". " in English, "，" in Chinese.
+  sentence_separator: string;
 };
 type Lang = { code: string; name: string; mdFile: string; data: LangData };
 // Per-protocol endpoint configuration used to generate Apple DNSSettings payload.
 type Endpoint = {
   ServerURLOrName: string;
   ServerAddresses?: string[];
-  signature?: string;
   onDemandRules?: Array<Record<string, unknown>>;
 };
 
 // Variant extends provider defaults (names/notes/censorship/region/website) for one profile family slice.
 type Variant = {
   names?: Record<string, string>;
+  // Optional shorter name for the provider table, e.g. "Family" for "Family Protection".
+  tableName?: TableText;
   notes?: Record<string, string>;
   consent?: string;
   onDemandRules?: Array<Record<string, unknown>>;
   censorship?: boolean;
+  filters?: FilterTag[];
   website?: string;
   region?: string | string[];
   ServerAddresses?: string[];
@@ -48,12 +64,18 @@ type Variant = {
 type Provider = {
   names: Record<string, string>;
   notes?: Record<string, string>;
+  // Who runs the provider: a name, or a map when the name is translated (e.g. "Wikimedia Foundation").
+  // The table shows it through each language's `operated_by` template.
+  operator?: TableText;
+  // Extra information for the table, after the operator: e.g. "Beta service, no availability guarantees".
+  tableNote?: TableText;
   consent?: string;
   onDemandRules?: Array<Record<string, unknown>>;
   hidden?: boolean;
   website?: string;
   region?: string | string[];
   censorship?: boolean;
+  filters?: FilterTag[];
   variants: Record<string, Variant>;
 };
 
@@ -62,11 +84,10 @@ type Profile = {
   name: string;
   description: string;
   consent?: string;
-  onDemanRules?: Array<Record<string, unknown>>;
+  onDemandRules?: Array<Record<string, unknown>>;
   protocol: 'https' | 'tls';
   ServerURLOrName: string;
   ServerAddresses?: string[];
-  signature?: string;
 };
 type DnsInput = { protocol: string; server: string; addresses: string[] };
 
@@ -76,19 +97,13 @@ const ROOT = path.join(__dirname, '..', '..');
 const SRC = path.join(ROOT, 'src');
 const PROFILES = path.join(ROOT, 'profiles');
 const SIGNED = path.join(ROOT, 'signed');
-const CERT = path.join(SRC, 'certificates', 'cert.pem');
-const CHAIN = path.join(SRC, 'certificates', 'chain.pem');
+const KEYCHAIN_CERT = path.join(SRC, 'profile-signer.pem');
 const LANGUAGES_DIR = path.join(SRC, 'languages');
 const DEFAULT_LANG = 'en';
-const OUTPUT_DIR = ROOT;
+const TRANSLATIONS_DIR = 'translations';
+const ALL_PROFILES = 'ALL-PROFILES.md';
 const REPO_RAW = 'https://github.com/paulmillr/encrypted-dns/raw/master';
-const SIGN_OPTS = { extraEntropy: false } as const;
 const ROOT_IDENTIFIER = 'com.paulmillr.apple-dns';
-const SENTENCE_SEPARATOR: Record<string, string> = {
-  en: '. ',
-  'cmn-CN': '，',
-  'cmn-TW': '，',
-};
 const REGIONS: Record<string, string> = {
   US: '🇺🇸',
   CN: '🇨🇳',
@@ -104,6 +119,7 @@ const REGIONS: Record<string, string> = {
   SG: '🇸🇬',
   TW: '🇹🇼',
   UA: '🇺🇦',
+  GB: '🇬🇧',
 };
 
 const validateIdent = (v: string, where = 'ident') => {
@@ -118,25 +134,34 @@ const splitCsv = (s: string) =>
     .split(',')
     .map((x) => x.trim())
     .filter(Boolean);
-const validateDnsInput = (x: DnsInput, where: string) => {
-  const protocol = x.protocol.toUpperCase();
+const validateServer = (protocolName: string, server: string, where: string) => {
+  const protocol = protocolName.toUpperCase();
   if (protocol !== 'HTTPS' && protocol !== 'TLS')
-    throw new Error(`${where}: expected protocol HTTPS|TLS, got ${x.protocol}`);
-  if (!x.server.trim()) throw new Error(`${where}: server is required`);
+    throw new Error(`${where}: expected protocol HTTPS|TLS, got ${protocolName}`);
+  if (!server.trim()) throw new Error(`${where}: server is required`);
   if (protocol === 'HTTPS') {
     let url: URL;
     try {
-      url = new URL(x.server);
+      url = new URL(server);
     } catch {
-      throw new Error(`${where}: https server must be a valid URL, got: ${x.server}`);
+      throw new Error(`${where}: https server must be a valid URL, got: ${server}`);
     }
     if (url.protocol !== 'https:')
-      throw new Error(`${where}: https server URL must use https://, got: ${x.server}`);
-  } else if (!validHost(x.server))
-    throw new Error(`${where}: tls server must be a hostname, got: ${x.server}`);
+      throw new Error(`${where}: https server URL must use https://, got: ${server}`);
+    // URL.href percent-encodes braces in paths, which changes DNS URI template expressions.
+    if (server.includes('{') && /^https:\/\//i.test(server.trim()))
+      return server.trim().replace(/^https:/i, 'https:');
+    return url.href;
+  }
+  if (!validHost(server))
+    throw new Error(`${where}: tls server must be a hostname, got: ${server}`);
+  return server;
+};
+const validateDnsInput = (x: DnsInput, where: string) => {
+  validateServer(x.protocol, x.server, where);
   for (const ip of x.addresses)
     if (!net.isIP(ip)) throw new Error(`${where}: invalid IP address: ${ip}`);
-  if (protocol === 'TLS' && x.addresses.length === 0)
+  if (x.protocol.toUpperCase() === 'TLS' && x.addresses.length === 0)
     throw new Error(`${where}: tls requires at least one IP in addresses`);
 };
 const validateLangMap = (
@@ -202,7 +227,11 @@ const getVariants = (name: string, provider: Provider): Record<string, Variant> 
     const variant = provider.variants[variantName];
     out[variantName] = {
       names: mergeMap(provider.names, variant.names, ' '),
-      notes: mergeMap(provider.notes, variant.notes, SENTENCE_SEPARATOR),
+      notes: mergeMap(
+        provider.notes,
+        variant.notes,
+        Object.fromEntries(languages.map((l) => [l.code, l.data.sentence_separator]))
+      ),
       consent: variant.consent !== undefined ? variant.consent : provider.consent,
       onDemandRules:
         variant.onDemandRules !== undefined ? variant.onDemandRules : provider.onDemandRules,
@@ -235,12 +264,11 @@ Filtering: ${variant.censorship ? 'yes' : 'no'}`;
       name: profileName,
       description: profileDescription,
       consent: variant.consent,
-      onDemanRules:
+      onDemandRules:
         endpoint.onDemandRules !== undefined ? endpoint.onDemandRules : variant.onDemandRules,
       protocol,
       ServerURLOrName: endpoint.ServerURLOrName,
       ServerAddresses: endpoint.ServerAddresses || variant.ServerAddresses,
-      signature: endpoint.signature,
     };
   };
   add('https', variant.https);
@@ -260,13 +288,63 @@ const uuidV5 = (seed: string) => {
   const s = bytesToHex(out);
   return `${s.slice(0, 8)}-${s.slice(8, 12)}-${s.slice(12, 16)}-${s.slice(16, 20)}-${s.slice(20, 32)}`.toUpperCase();
 };
-const escapeXML = (s: string) =>
-  s
+const stringList = (v: unknown) => Array.isArray(v) && v.every((s) => typeof s === 'string');
+const ruleDictionary = (v: unknown, keys: string[], where: string): Record<string, unknown> => {
+  if (!v || typeof v !== 'object' || Array.isArray(v))
+    throw new Error(`${where}: expected dictionary`);
+  for (const key of Object.keys(v))
+    if (!keys.includes(key)) throw new Error(`${where}: unknown field ${key}`);
+  return v as Record<string, unknown>;
+};
+const validateOnDemandRules = (rules: unknown, profile: string) => {
+  if (!Array.isArray(rules)) throw new Error(`${profile}: OnDemandRules must be an array`);
+  const matchLists = ['DNSDomainMatch', 'DNSServerAddressMatch', 'SSIDMatch'];
+  const keys = [
+    'Action',
+    'ActionParameters',
+    'InterfaceTypeMatch',
+    'URLStringProbe',
+    ...matchLists,
+  ];
+  for (const [index, value] of rules.entries()) {
+    const where = `${profile}.OnDemandRules[${index}]`;
+    const rule = ruleDictionary(value, keys, where);
+    if (!['Connect', 'Disconnect', 'EvaluateConnection'].includes(rule.Action as string))
+      throw new Error(`${where}: invalid Action`);
+    for (const key of matchLists)
+      if (key in rule && !stringList(rule[key]))
+        throw new Error(`${where}.${key}: expected strings`);
+    if (
+      'InterfaceTypeMatch' in rule &&
+      !['Ethernet', 'WiFi', 'Cellular'].includes(rule.InterfaceTypeMatch as string)
+    )
+      throw new Error(`${where}: invalid InterfaceTypeMatch`);
+    if ('URLStringProbe' in rule && typeof rule.URLStringProbe !== 'string')
+      throw new Error(`${where}.URLStringProbe: expected string`);
+    if (!('ActionParameters' in rule)) continue;
+    if (rule.Action !== 'EvaluateConnection' || !Array.isArray(rule.ActionParameters))
+      throw new Error(`${where}: ActionParameters requires EvaluateConnection and an array`);
+    for (const [i, item] of rule.ActionParameters.entries()) {
+      const location = `${where}.ActionParameters[${i}]`;
+      const parameter = ruleDictionary(item, ['DomainAction', 'Domains'], location);
+      if (
+        !['NeverConnect', 'ConnectIfNeeded'].includes(parameter.DomainAction as string) ||
+        !stringList(parameter.Domains)
+      )
+        throw new Error(`${location}: expected a valid DomainAction and a list of Domains`);
+    }
+  }
+};
+const escapeXML = (s: string) => {
+  if (/[^\u0009\u000A\u000D\u0020-\uD7FF\uE000-\uFFFD\u{10000}-\u{10FFFF}]/u.test(s))
+    throw new Error('Invalid XML character in profile');
+  return s
     .replaceAll('&', '&amp;')
     .replaceAll('<', '&lt;')
     .replaceAll('>', '&gt;')
     .replaceAll('"', '&quot;')
     .replaceAll("'", '&apos;');
+};
 type PlistNode = string | number | boolean | PlistNode[] | Record<string, PlistNode | undefined>;
 const plistNode = (x: PlistNode, level: number): string => {
   const pad = '\t'.repeat(level);
@@ -281,7 +359,7 @@ const plistNode = (x: PlistNode, level: number): string => {
   let out = `${pad}<dict>\n`;
   for (const [k, v] of Object.entries(x)) {
     if (v === undefined) continue;
-    out += `${pad}\t<key>${k}</key>\n`;
+    out += `${pad}\t<key>${escapeXML(k)}</key>\n`;
     out += plistNode(v, level + 1);
   }
   return `${out}${pad}</dict>\n`;
@@ -298,13 +376,14 @@ const genProfile = (name: string, profile: Profile): string => {
   const topUUID = uuidV5(`${ROOT_IDENTIFIER}::root::${rel}`);
   // Unique per profile: the OS replaces an installed profile that has the same top-level identifier.
   const topId = `${ROOT_IDENTIFIER}.${key}`;
-  const serverKey = p.ServerURLOrName.startsWith('https://') ? 'ServerURL' : 'ServerName';
+  const serverKey = proto === 'HTTPS' ? 'ServerURL' : 'ServerName';
   const dns: Record<string, PlistNode> = { DNSProtocol: proto };
   if (p.ServerAddresses && p.ServerAddresses.length) dns.ServerAddresses = p.ServerAddresses;
-  dns[serverKey] = p.ServerURLOrName;
+  dns[serverKey] = validateServer(proto, p.ServerURLOrName, key);
+  if (p.onDemandRules !== undefined) validateOnDemandRules(p.onDemandRules, key);
   const payload: Record<string, PlistNode> = {
     DNSSettings: dns,
-    ...(p.onDemanRules ? { OnDemandRules: p.onDemanRules as PlistNode } : {}),
+    ...(p.onDemandRules ? { OnDemandRules: p.onDemandRules as PlistNode } : {}),
     PayloadDescription: `Configures device to use ${display}`,
     PayloadDisplayName: display,
     PayloadIdentifier: payloadId,
@@ -331,11 +410,6 @@ const genProfile = (name: string, profile: Profile): string => {
 ${plistNode(root, 0)}</plist>
 `;
 };
-const fromSig = (s: string) => {
-  const txt = s.trim();
-  if (!/^[0-9a-f]+$/i.test(txt) || txt.length % 2) throw new Error(`bad signature hex`);
-  return hexToBytes(txt);
-};
 const FULLWIDTH =
   /[\u1100-\u115F\u2329\u232A\u2E80-\u303E\u3040-\uA4CF\uAC00-\uD7A3\uF900-\uFAFF\uFE10-\uFE19\uFE30-\uFE6F\uFF00-\uFF60\uFFE0-\uFFE6]/u;
 const chrWidth = (str: string) => {
@@ -357,19 +431,81 @@ const genTable = (rows: string[][]) => {
   });
   return table;
 };
-const languages: Lang[] = fs
+// [path, value] for every leaf of a language file, e.g. ['filter_tags.ads', 'Werbung'].
+const leaves = (value: unknown, prefix = ''): [string, unknown][] =>
+  value && typeof value === 'object' && !Array.isArray(value)
+    ? Object.entries(value).flatMap(([k, v]) => leaves(v, prefix ? `${prefix}.${k}` : k))
+    : [[prefix, value]];
+// Every language file must have exactly the keys of en.json, each a non-empty string,
+// so adding a string to en.json is enough to make the build ask every translation for it.
+const validateLanguages = (files: [string, unknown][]) => {
+  const english = files.find(([name]) => name === `${DEFAULT_LANG}.json`);
+  if (!english) throw new Error(`missing ${DEFAULT_LANG}.json in src/languages`);
+  const expected = leaves(english[1]).map(([key]) => key);
+  const problems: string[] = [];
+  for (const [name, data] of files) {
+    const actual = new Map(leaves(data));
+    for (const key of expected) {
+      const value = actual.get(key);
+      if (value === undefined) problems.push(`${name}: missing ${key}`);
+      else if (typeof value !== 'string' || !value.trim())
+        problems.push(`${name}: ${key} must be non-empty text`);
+    }
+    for (const key of actual.keys())
+      if (!expected.includes(key)) problems.push(`${name}: unknown key ${key}`);
+    const operatedBy = actual.get('operated_by');
+    if (typeof operatedBy === 'string' && !operatedBy.includes('{operator}'))
+      problems.push(`${name}: operated_by must contain {operator}`);
+  }
+  if (problems.length) throw new Error(`Invalid language files:\n${problems.join('\n')}`);
+};
+const languageFiles = fs
   .readdirSync(LANGUAGES_DIR)
   .filter((name) => name.endsWith('.json'))
-  .sort()
-  .map((name) => {
-    const data = JSON.parse(fs.readFileSync(path.join(LANGUAGES_DIR, name), 'utf8')) as LangData;
+  .map((name): [string, unknown] => [
+    name,
+    JSON.parse(fs.readFileSync(path.join(LANGUAGES_DIR, name), 'utf8')),
+  ]);
+validateLanguages(languageFiles);
+const languages: Lang[] = languageFiles
+  .map(([name, json]) => {
+    const data = json as LangData;
     return {
       code: data.code,
       name: data.name,
       mdFile: path.join(LANGUAGES_DIR, name.replace('.json', '.md')),
       data,
     };
+  })
+  .sort((a, b) => {
+    const defaultFirst = Number(b.code === DEFAULT_LANG) - Number(a.code === DEFAULT_LANG);
+    return defaultFirst || a.code.localeCompare(b.code, DEFAULT_LANG);
   });
+
+const validateFilters = (filters: FilterTag[] | undefined, where: string) => {
+  if (filters === undefined) return;
+  if (
+    !Array.isArray(filters) ||
+    !filters.length ||
+    filters.some((tag) => !FILTER_TAGS.includes(tag))
+  )
+    throw new Error(`${where}: expected one or more of ${FILTER_TAGS.join(', ')}`);
+};
+
+const validateTableText = (value: TableText | undefined, where: string, allowEmpty: boolean) => {
+  if (value === undefined) return;
+  const values =
+    typeof value === 'string'
+      ? [value]
+      : value && typeof value === 'object' && !Array.isArray(value)
+        ? Object.values(value)
+        : [];
+  if (
+    !values.length ||
+    values.some((text) => typeof text !== 'string' || (!allowEmpty && !text.trim()))
+  )
+    throw new Error(`${where}: expected text or a map of localized text`);
+};
 
 const PROVIDERS: Record<string, Provider> = Object.fromEntries(
   fs
@@ -392,10 +528,13 @@ const PROVIDERS: Record<string, Provider> = Object.fromEntries(
         throw new Error(`${file}: missing names`);
       if (provider.notes !== undefined && typeof provider.notes !== 'object')
         throw new Error(`${file}: notes must be object`);
+      validateTableText(provider.operator, `${file}.operator`, false);
+      validateTableText(provider.tableNote, `${file}.tableNote`, false);
       if (provider.consent !== undefined && typeof provider.consent !== 'string')
         throw new Error(`${file}: consent must be string`);
       validateLangMap(provider.names, `${file}.names`, true);
       validateLangMap(provider.notes, `${file}.notes`, false);
+      validateFilters(provider.filters, `${file}.filters`);
       if (!provider.variants || typeof provider.variants !== 'object')
         throw new Error(`${file}: missing variants`);
       for (const k in provider.variants) {
@@ -404,87 +543,238 @@ const PROVIDERS: Record<string, Provider> = Object.fromEntries(
         if (!v || typeof v !== 'object') throw new Error(`${file}.variants.${k}: expected object`);
         if (v.consent !== undefined && typeof v.consent !== 'string')
           throw new Error(`${file}.variants.${k}.consent: expected string`);
+        validateTableText(v.tableName, `${file}.variants.${k}.tableName`, false);
         validateLangMap(v.names, `${file}.variants.${k}.names`, k !== 'default');
         validateLangMap(v.notes, `${file}.variants.${k}.notes`, false);
+        validateFilters(v.filters, `${file}.variants.${k}.filters`);
       }
       return [slug, provider] as const;
     })
 );
 type TableRow = {
   id: string;
+  providerId: string;
+  variantId: string;
   profileBase: string;
   hidden: boolean;
   website?: string;
   names: Record<string, string>;
-  notes: Record<string, string>;
   region: string[];
   censorship: boolean;
   unsigned: { https: boolean; tls: boolean };
   signed: { https: boolean; tls: boolean };
 };
 let tableRows: TableRow[] = [];
+const PROTOCOLS = [
+  ['https', 'HTTPS'],
+  ['tls', 'TLS'],
+] as const;
+const installLink = (row: TableRow, label: string, unsigned = '') => {
+  const id = `${row.profileBase}-https`;
+  if (row.signed.https) return `[${label}][${id}-signed]`;
+  return `[${unsigned ? `${label} (${unsigned})` : label}][${id}]`;
+};
+
+const filterTags = (provider: Provider, variant: Variant, labels?: FilterLabels) =>
+  (variant.filters ?? provider.filters ?? ['unspecified'])
+    .map((tag) => `*${labels?.[tag] ?? tag}*`)
+    .join(', ');
+
+const tableText = (value: TableText | undefined, code: string) =>
+  typeof value === 'string' ? value : (value?.[code] ?? value?.[DEFAULT_LANG]);
+
+// Puts the operator into a language's template. Chinese and Japanese don't put spaces between
+// words, so the template's space is dropped next to a CJK name: "由 Google LLC 运营" but
+// "由维基媒体基金会运营".
+const CJK = /[\u3000-\u9fff\uff00-\uffef]/;
+const fillOperator = (template: string, operator: string) =>
+  template.replace(
+    /( ?)\{operator\}( ?)/,
+    (_, before: string, after: string) =>
+      `${CJK.test(operator[0]) ? '' : before}${operator}${CJK.test(operator.at(-1)!) ? '' : after}`
+  );
+
+const providerTable = ({ code, data }: Lang) => {
+  const providers = Map.groupBy(
+    tableRows.filter((row) => !row.hidden && row.unsigned.https),
+    (row) => row.providerId
+  );
+  const { provider: providerColumn, unfiltered, filtered, notes: notesColumn } = data.table_columns;
+  const table = [[providerColumn, unfiltered, filtered, notesColumn]];
+  for (const [id, rows] of providers) {
+    const provider = PROVIDERS[id];
+    const home = rows.find((row) => row.website === provider.website) || rows[0];
+    const grouped = rows.length > 1;
+    const names = grouped ? provider.names : home.names;
+    const providerName = names[code] ?? names.en;
+    const name = home.website ? `[${providerName}][${home.id}]` : providerName;
+    const regions = rows.map((row) => formatFlags(row.region));
+    const sharedRegion = regions.every((region) => region === regions[0]) ? regions[0] : '';
+    const uncensored: string[] = [];
+    const other: string[] = [];
+    for (const row of rows) {
+      const variant = provider.variants[row.variantId];
+      const variantName =
+        tableText(variant.tableName ?? variant.names, code) ?? data.default_profile;
+      const website =
+        row.website && row.website !== home.website ? ` ([${data.details}][${row.id}])` : '';
+      if (row.censorship) {
+        const link = installLink(row, grouped ? variantName : data.install, data.unsigned);
+        other.push(`${link} · ${filterTags(provider, variant, data.filter_tags)}${website}`);
+      } else {
+        uncensored.push(installLink(row, data.install));
+      }
+    }
+    // "by Quad9 Foundation", plus any extra information. Short fragments, no trailing period.
+    const operator = tableText(provider.operator, code);
+    const note = [
+      operator && fillOperator(data.operated_by, operator),
+      tableText(provider.tableNote, code),
+    ]
+      .filter(Boolean)
+      .join(data.sentence_separator);
+    // Variant names already say where each server is, so flags alone are enough here.
+    const flags = sharedRegion || [...new Set(regions.filter(Boolean))].join(' ');
+    const notes = [flags, note].filter(Boolean).join(' ');
+    table.push([name, uncensored.join('<br>'), other.join('<br>'), notes]);
+  }
+  return genTable(table).trim();
+};
+
+// ALL-PROFILES.md is shared by every language, so it avoids prose: names, flags, profile IDs
+// (file names), server addresses, filter tags, and links labelled by domain or signed/unsigned.
+//   ## AdGuard DNS 🇷🇺
+//   [adguard-dns.io][adguard-default]
+//   - `adguard-family` · Family Protection · *malware*, *adult* · [adguard-dns.io][adguard-family]
+//     - HTTPS `https://dns-family.adguard.com/dns-query` · [signed][…] · [unsigned][…]
+// The only words in ALL-PROFILES.md, translated: English is the header row.
+const signedGlossary = () => {
+  const row = (lang: Lang) => [lang.name, lang.data.signed, lang.data.unsigned];
+  const english = languages.find((lang) => lang.code === DEFAULT_LANG)!;
+  return genTable([row(english), ...languages.filter((lang) => lang !== english).map(row)]).trim();
+};
+
+const allProfilesDoc = () => {
+  const host = (url: string) => new URL(url).hostname.replace(/^www\./, '');
+  const providers = Map.groupBy(
+    tableRows.filter((row) => !row.hidden),
+    (row) => row.providerId
+  );
+  const out: string[] = [signedGlossary()];
+  for (const [id, rows] of providers) {
+    const provider = PROVIDERS[id];
+    const home = rows.find((row) => row.website === provider.website) || rows[0];
+    const grouped = rows.length > 1;
+    const providerName = grouped ? provider.names.en : home.names.en;
+    const flags = [...new Set(rows.map((row) => formatFlags(row.region)).filter(Boolean))];
+    const lines: string[] = [];
+    // Unfiltered first, matching the README table.
+    const ordered = [...rows.filter((r) => !r.censorship), ...rows.filter((r) => r.censorship)];
+    for (const row of ordered) {
+      const variant = provider.variants[row.variantId];
+      const parts = [`\`${row.profileBase}\``];
+      if (variant.names?.en) parts.push(variant.names.en);
+      if (row.censorship) parts.push(filterTags(provider, variant));
+      if (row.website && row.website !== home.website)
+        parts.push(`[${host(row.website)}][${row.id}]`);
+      lines.push(`- ${parts.join(' · ')}`);
+      for (const [proto, protoLabel] of PROTOCOLS) {
+        const server = variant[proto]?.ServerURLOrName;
+        const downloads = [
+          row.signed[proto] ? `[signed][${row.profileBase}-${proto}-signed]` : '',
+          row.unsigned[proto] ? `[unsigned][${row.profileBase}-${proto}]` : '',
+        ].filter(Boolean);
+        if (server && downloads.length)
+          lines.push(`  - ${protoLabel} \`${server}\` · ${downloads.join(' · ')}`);
+      }
+    }
+    out.push(
+      `## ${[providerName, ...flags].join(' ')}`,
+      home.website ? `[${host(home.website)}][${home.id}]` : '',
+      lines.join('\n')
+    );
+  }
+  return out.filter(Boolean).join('\n\n');
+};
+
+// Reference-style link definitions for ALL-PROFILES.md: websites plus every profile file.
+const allProfilesLinks = () => {
+  let out = '';
+  for (const r of tableRows.filter((x) => !x.hidden)) {
+    if (r.website) out += `[${r.id}]: ${r.website}\n`;
+    for (const [proto] of PROTOCOLS) {
+      const file = `${r.profileBase}-${proto}.mobileconfig`;
+      if (r.signed[proto])
+        out += `[${r.profileBase}-${proto}-signed]: ${REPO_RAW}/signed/${file}\n`;
+      if (r.unsigned[proto]) out += `[${r.profileBase}-${proto}]: ${REPO_RAW}/profiles/${file}\n`;
+    }
+  }
+  return out;
+};
+
+const readmeFile = (code: string) =>
+  code === DEFAULT_LANG ? 'README.md' : `${TRANSLATIONS_DIR}/${code}.md`;
 const tags: Record<string, (lang: Lang) => string> = {
   LANGUAGES: (lang) =>
     languages
       .map((x) => {
         if (x.code === lang.code) return x.name;
-        return `[${x.name}](https://github.com/paulmillr/encrypted-dns/${x.code === DEFAULT_LANG ? '' : `blob/master/README.${x.code}.md`})`;
+        const link = path.posix.relative(
+          path.posix.dirname(readmeFile(lang.code)),
+          readmeFile(x.code)
+        );
+        return `[${x.name}](${link})`;
       })
       .join(' | '),
-  PROVIDERS_TABLE: (lang) => {
-    const mat: string[][] = [
-      [
-        lang.data.table_columns.name,
-        lang.data.table_columns.region,
-        lang.data.table_columns.censorship,
-        lang.data.table_columns.notes,
-        lang.data.table_columns.install_signed,
-        lang.data.table_columns.install_unsigned,
-      ],
-    ];
-    for (const r of tableRows.filter((x) => !x.hidden)) {
-      const name = r.names[lang.code] || r.names[DEFAULT_LANG] || r.id;
-      const note = r.notes[lang.code] || r.notes[DEFAULT_LANG] || '';
-      const region = r.region
-        .map((x) => REGIONS[x] || '')
-        .join(' ')
-        .trim();
-      const c = r.censorship ? lang.data.yes : lang.data.no;
-      const s: string[] = [];
-      if (r.signed.https) s.push(`[HTTPS][${r.profileBase}-https-signed]`);
-      if (r.signed.tls) s.push(`[TLS][${r.profileBase}-tls-signed]`);
-      const u: string[] = [];
-      if (r.unsigned.https) u.push(`[HTTPS][${r.profileBase}-https]`);
-      if (r.unsigned.tls) u.push(`[TLS][${r.profileBase}-tls]`);
-      mat.push([`[${name}][${r.id}]`, region, c, note, s.join(', '), u.join(', ')]);
-    }
-    return genTable(mat).trim();
-  },
+  PROVIDERS_TABLE: providerTable,
   PROVIDERS_LINKS: () => {
     let out = '';
+    // Unsigned links are only referenced from the table when no signed profile exists.
     for (const r of tableRows.filter((x) => !x.hidden)) {
       if (r.website) out += `[${r.id}]: ${r.website}\n`;
-      if (r.unsigned.https)
+      if (r.unsigned.https && !r.signed.https)
         out += `[${r.profileBase}-https]: ${REPO_RAW}/profiles/${r.profileBase}-https.mobileconfig\n`;
-      if (r.unsigned.tls)
-        out += `[${r.profileBase}-tls]: ${REPO_RAW}/profiles/${r.profileBase}-tls.mobileconfig\n`;
     }
     for (const r of tableRows.filter((x) => !x.hidden)) {
       if (r.signed.https)
         out += `[${r.profileBase}-https-signed]: ${REPO_RAW}/signed/${r.profileBase}-https.mobileconfig\n`;
-      if (r.signed.tls)
-        out += `[${r.profileBase}-tls-signed]: ${REPO_RAW}/signed/${r.profileBase}-tls.mobileconfig\n`;
     }
     return out;
   },
 };
-const main = () => {
+// Notes without a translation fall back to English in that language's README.
+// Names are skipped: most are brand names that stay the same in every language.
+// Lists table notes that show in English in another language's README. Notes are prose, so
+// a plain string or a map without that language counts. Operators and variant names are
+// proper names: maps only override the languages where the name differs, so they're not listed.
+const warnUntranslated = () => {
+  for (const lang of languages) {
+    if (lang.code === DEFAULT_LANG) continue;
+    const missing = Object.entries(PROVIDERS)
+      .filter(([, p]) => !p.hidden && p.tableNote !== undefined)
+      .filter(([, p]) => typeof p.tableNote === 'string' || p.tableNote![lang.code] === undefined)
+      .map(([slug]) => `${slug}.tableNote`);
+    if (missing.length)
+      console.warn(
+        `warning: ${lang.code}: ${missing.length} notes fall back to English: ${missing.join(', ')}`
+      );
+  }
+};
+const build = (selector: string | undefined, scratch: string) => {
+  const outputs = new Map<string, string | Uint8Array>();
+  const identity = selector ? keychainIdentity(selector) : undefined;
+  const pinned =
+    identity?.certificate ??
+    (fs.existsSync(KEYCHAIN_CERT)
+      ? new X509Certificate(fs.readFileSync(KEYCHAIN_CERT))
+      : undefined);
+  if (
+    pinned &&
+    (Date.now() < Date.parse(pinned.validFrom) || Date.now() > Date.parse(pinned.validTo))
+  )
+    throw new Error('profile signing certificate outside its validity period');
+  if (identity) outputs.set(KEYCHAIN_CERT, identity.certificate.toString());
   tableRows = [];
-  const enc = new TextEncoder();
-  const signerMaterial =
-    fs.existsSync(CERT) && fs.existsSync(CHAIN)
-      ? { cert: fs.readFileSync(CERT, 'utf8'), chain: fs.readFileSync(CHAIN, 'utf8') }
-      : undefined;
   if (!fs.existsSync(PROFILES)) fs.mkdirSync(PROFILES);
   if (!fs.existsSync(SIGNED)) fs.mkdirSync(SIGNED);
   for (const [providerName, provider] of Object.entries(PROVIDERS)) {
@@ -494,11 +784,12 @@ const main = () => {
       const all = getProfiles(base, variant);
       const row: TableRow = {
         id: base,
+        providerId: providerName,
+        variantId: variantName,
         profileBase: base,
         hidden: !!provider.hidden,
         website: variant.website,
         names: variant.names || { en: base },
-        notes: variant.notes || { en: '' },
         region: regionList(variant.region),
         censorship: !!variant.censorship,
         unsigned: { https: false, tls: false },
@@ -507,53 +798,70 @@ const main = () => {
       for (const [profileName, profile] of Object.entries(all)) {
         const xml = genProfile(profileName, profile);
         const profilePath = path.join(PROFILES, `${profileName}.mobileconfig`);
-        fs.writeFileSync(profilePath, xml);
-        console.log(`Generated profiles/${profileName}.mobileconfig`);
-        let hasSigned = false;
-        if (profile.signature) {
-          const compact = fromSig(profile.signature);
-          if (!signerMaterial) {
-            console.log(
-              `WARN missing cert/chain; skipping signed/${profileName}.mobileconfig (need certificates/cert.pem + certificates/chain.pem)`
-            );
-            row.unsigned[profile.protocol] = true;
-            row.signed[profile.protocol] = false;
-            continue;
+        outputs.set(profilePath, xml);
+        const signedPath = path.join(SIGNED, `${profileName}.mobileconfig`);
+        if (pinned && (identity || fs.existsSync(signedPath))) {
+          const der = identity ? signInKeychain(identity, xml) : fs.readFileSync(signedPath);
+          try {
+            verifyProfile(der, xml, pinned, path.join(scratch, 'signer.pem'));
+          } catch (cause) {
+            throw new Error(`Invalid signed/${profileName}.mobileconfig`, { cause });
           }
-          const der = CMS.compact.build(
-            enc.encode(xml),
-            compact,
-            signerMaterial.cert,
-            signerMaterial.chain,
-            SIGN_OPTS
-          );
-          CMS.verify(der, { allowBER: true, checkSignatures: true, time: Date.now() });
-          fs.writeFileSync(path.join(SIGNED, `${profileName}.mobileconfig`), der);
-          console.log(`Generated signed/${profileName}.mobileconfig`);
-          hasSigned = true;
+          outputs.set(signedPath, der);
         }
         row.unsigned[profile.protocol] = true;
-        row.signed[profile.protocol] = hasSigned;
+        row.signed[profile.protocol] = outputs.has(signedPath);
       }
       tableRows.push(row);
     }
   }
+  const byName = new Intl.Collator(DEFAULT_LANG, { sensitivity: 'base', numeric: true });
+  tableRows.sort((a, b) => byName.compare(a.names.en, b.names.en) || byName.compare(a.id, b.id));
   for (const lang of languages) {
     const tpl = fs.readFileSync(lang.mdFile, 'utf8');
     let out = tpl;
     for (const [k, fn] of Object.entries(tags))
       out = out.replace(new RegExp(`<%${k}%>`, 'g'), fn(lang));
-    const file = lang.code === DEFAULT_LANG ? 'README.md' : `README.${lang.code}.md`;
-    fs.writeFileSync(path.join(OUTPUT_DIR, file), out, 'utf8');
-    console.log(`Generated ${file}`);
+    const source = path.relative(ROOT, lang.mdFile);
+    const header = `<!-- Generated from ${source} by npm --prefix src/scripts run build. Edit that file instead. -->\n`;
+    outputs.set(path.join(ROOT, readmeFile(lang.code)), header + out);
+  }
+  outputs.set(
+    path.join(ROOT, ALL_PROFILES),
+    [
+      `<!-- Generated by npm --prefix src/scripts run build from src/*.json. Do not edit. -->`,
+      allProfilesDoc(),
+      allProfilesLinks(),
+    ].join('\n\n')
+  );
+  // Finish signing and verification before replacing any release files.
+  // Without the pinned certificate, existing signed profiles can't be verified, so don't touch them.
+  if (!pinned && fs.readdirSync(SIGNED).some((name) => name.endsWith('.mobileconfig')))
+    throw new Error('Cannot verify existing signed profiles without src/profile-signer.pem');
+  fs.mkdirSync(path.join(ROOT, TRANSLATIONS_DIR), { recursive: true });
+  for (const [file, content] of outputs) fs.writeFileSync(file, content);
+  for (const dir of [PROFILES, SIGNED]) {
+    for (const file of fs.readdirSync(dir)) {
+      const target = path.join(dir, file);
+      if (file.endsWith('.mobileconfig') && !outputs.has(target)) fs.unlinkSync(target);
+    }
   }
   console.log(`providers: ${Object.keys(PROVIDERS).length}`);
+  warnUntranslated();
   console.log(`rows: ${tableRows.length}`);
 };
 
 if (process.argv[1] && path.resolve(process.argv[1]) === __filename) {
-  main();
+  const args = process.argv.slice(2);
+  if (args.length && (args.length !== 2 || args[0] !== '--keychain' || !args[1].trim()))
+    throw new Error('usage: build.ts [--keychain "certificate name or .cer path"]');
+  const scratch = fs.mkdtempSync(path.join(os.tmpdir(), 'encrypted-dns-build-'));
+  try {
+    build(args[1], scratch);
+  } finally {
+    fs.rmSync(scratch, { recursive: true, force: true });
+  }
 }
 
-export { genProfile, getProfiles, getVariants, SIGN_OPTS, splitCsv, validateDnsInput, validId };
+export { fillOperator, genProfile, splitCsv, validateDnsInput, validateServer, validId };
 export type { Profile, Provider, Variant };

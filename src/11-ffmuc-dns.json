@@ -3,8 +3,18 @@
         "en": "FFMUC-DNS"
     },
     "notes": {
-        "en": "FFMUC free DNS servers provided by Freifunk München."
+        "en": "FFMUC free DNS servers provided by Freifunk München.",
+        "zh-CN": "由 Freifunk München 提供的免费 DNS 服务",
+        "zh-TW": "由 Freifunk München 提供的免費 DNS 服務",
+        "es": "Servidores DNS gratuitos de Freifunk München (FFMUC)",
+        "de": "Kostenlose DNS-Server von Freifunk München (FFMUC)",
+        "fr": "Serveurs DNS gratuits de Freifunk München (FFMUC)",
+        "tr": "Freifunk München’in sunduğu ücretsiz FFMUC DNS sunucuları",
+        "ru": "Бесплатные DNS-серверы FFMUC от Freifunk München",
+        "uk": "Безплатні DNS-сервери FFMUC від Freifunk München",
+        "ja": "Freifunk München が提供する無料の FFMUC DNS サーバー"
     },
+    "operator": "Freifunk München",
     "website": "https://ffmuc.net/wiki/knb:dohdot_en",
     "region": "DE",
     "censorship": false,
@@ -17,12 +27,10 @@
                 "185.150.99.255"
             ],
             "https": {
-                "ServerURLOrName": "https://doh.ffmuc.net/dns-query",
-                "signature": "3046022100cdfe8571c43f3f4065a26ba4ba146b9374b4ab7ad87430bfafa747764ead441802210089195f7ac2bb42eddc99c92216f53c9a6d41653170d2779d27848f76e46ae6e0"
+                "ServerURLOrName": "https://doh.ffmuc.net/dns-query"
             },
             "tls": {
-                "ServerURLOrName": "dot.ffmuc.net",
-                "signature": "3045022038dd53daf9d848e2335a0431bd751687351af6049e044df23e3d4561e52692b1022100e5e14b05813aec3461e99afeca144e94bb1acef62de88ed6a5b0ea6a043d76ca"
+                "ServerURLOrName": "dot.ffmuc.net"
             }
         }
     }

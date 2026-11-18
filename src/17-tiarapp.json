@@ -4,24 +4,36 @@
     },
     "notes": {
         "en": "Operated by Tiarap Inc. Blocks ads, tracking, phising & malware",
-        "cmn-CN": "由 Tiarap 公司运营，拦截广告、跟踪器、钓鱼和恶意软件",
-        "cmn-TW": "由 Tiarap 公司營運，阻擋廣告、追蹤器、釣魚和惡意軟體"
+        "zh-CN": "由 Tiarap 公司运营，拦截广告、跟踪器、网络钓鱼网站和恶意软件",
+        "zh-TW": "由 Tiarap 公司營運，封鎖廣告、追蹤器、網路釣魚網站和惡意軟體",
+        "es": "Gestionado por Tiarap Inc. Bloquea anuncios, rastreo, phishing y software malicioso",
+        "de": "Betrieben von Tiarap Inc. Blockiert Werbung, Tracking, Phishing und Schadsoftware",
+        "fr": "Exploité par Tiarap Inc. Bloque les publicités, les traqueurs, les sites d’hameçonnage et les logiciels malveillants",
+        "tr": "Tiarap Inc. tarafından işletilir. Reklamları, izleyicileri, kimlik avı sitelerini ve kötü amaçlı yazılımları engeller",
+        "ru": "Оператор — Tiarap Inc. Блокирует рекламу, трекеры, фишинговые сайты и вредоносное ПО",
+        "uk": "Оператор — Tiarap Inc. Блокує рекламу, трекери, фішингові сайти й шкідливе ПЗ",
+        "ja": "Tiarap Inc. が運営。広告、トラッキング、フィッシング、マルウェアをブロック"
     },
+    "operator": "Tiarap Inc.",
     "website": "https://doh.tiar.app",
     "region": [
         "SG",
         "US"
     ],
     "censorship": true,
+    "filters": [
+        "malware",
+        "ads",
+        "tracking",
+        "phishing"
+    ],
     "variants": {
         "default": {
             "https": {
-                "ServerURLOrName": "https://doh.tiar.app/dns-query",
-                "signature": "30450220218a91af3baa13799aa1e534f3e63d1801647b1c0e69338ef782723947b1c9a2022100d47e4c3edc666b5b6ff6ef6d36f541882c767ca745f88f72f0f1fe2dd26c600b"
+                "ServerURLOrName": "https://doh.tiar.app/dns-query"
             },
             "tls": {
-                "ServerURLOrName": "dot.tiar.app",
-                "signature": "3046022100f9186bf91be321f072c485cacd4316dac770ac8f28545afb748a754f0faddd15022100c50e4b285e585e60ac224054a16347e359e2b06ebc414f19a3136ea2ac02db45"
+                "ServerURLOrName": "dot.tiar.app"
             }
         }
     }

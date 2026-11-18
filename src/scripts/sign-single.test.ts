@@ -1,6 +1,9 @@
 import { CMS } from 'micro-key-producer/x509.js';
-import { deepStrictEqual } from 'node:assert';
-import { execFileSync } from 'node:child_process';
+import { X509Certificate } from 'node:crypto';
+import { keychainIdentity, signInKeychain, verifyProfile } from './keychain-sign.ts';
+import { deepStrictEqual, throws } from 'node:assert';
+import childProcess, { execFileSync } from 'node:child_process';
+import { syncBuiltinESMExports } from 'node:module';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
@@ -9,6 +12,24 @@ import { describe, it } from 'node:test';
 const root = path.join(path.dirname(new URL(import.meta.url).pathname), '..');
 const scriptSign = path.join(root, 'scripts', 'sign-single.ts');
 const scriptOpenSSL = path.join(root, 'scripts', 'sign-single-openssl.sh');
+
+it('reports a native CMS encoding error even on exit zero with partial output', (t) => {
+  const cms = t.mock.method(childProcess, 'spawnSync', () => ({
+    status: 0,
+    stdout: Buffer.from([0x30, 0x80]),
+    stderr: Buffer.from('security: failed to encode data: unknown error -1'),
+  }));
+  syncBuiltinESMExports();
+  try {
+    throws(
+      () => signInKeychain({ flag: '-N', value: 'Test Signer' }, '<plist/>'),
+      /Keychain signing failed.*failed to encode data/
+    );
+  } finally {
+    cms.mock.restore();
+    syncBuiltinESMExports();
+  }
+});
 
 const opensslUsable = () => {
   try {
@@ -32,12 +53,19 @@ const genCerts = (dir: string) => {
   const signerPem = path.join(dir, 'signer.pem');
   const chainPem = path.join(dir, 'chain.pem');
   const ext = path.join(dir, 'signer.ext');
+  const rootConfig = path.join(dir, 'root.cnf');
+  fs.writeFileSync(
+    rootConfig,
+    '[req]\ndistinguished_name=dn\nx509_extensions=ca\n[dn]\n[ca]\nbasicConstraints=critical,CA:TRUE\nkeyUsage=critical,keyCertSign\nsubjectKeyIdentifier=hash\n'
+  );
   openssl(['ecparam', '-name', 'prime256v1', '-genkey', '-noout', '-out', rootKeyEc], dir);
   openssl(['pkcs8', '-topk8', '-nocrypt', '-in', rootKeyEc, '-out', rootKey], dir);
   openssl(
     [
       'req',
       '-x509',
+      '-config',
+      rootConfig,
       '-new',
       '-key',
       rootKeyEc,
@@ -54,7 +82,10 @@ const genCerts = (dir: string) => {
   openssl(['ecparam', '-name', 'prime256v1', '-genkey', '-noout', '-out', signerKeyEc], dir);
   openssl(['pkcs8', '-topk8', '-nocrypt', '-in', signerKeyEc, '-out', signerKey], dir);
   openssl(['req', '-new', '-key', signerKey, '-subj', '/CN=Test Signer', '-out', signerCsr], dir);
-  fs.writeFileSync(ext, 'basicConstraints=critical,CA:FALSE\nkeyUsage=critical,digitalSignature\n');
+  fs.writeFileSync(
+    ext,
+    'basicConstraints=critical,CA:FALSE\nkeyUsage=critical,digitalSignature\nsubjectKeyIdentifier=hash\n'
+  );
   openssl(
     [
       'x509',
@@ -108,7 +139,7 @@ const verifyOpenSSL = (signed: string, ca: string, out: string, cwd: string) =>
     cwd
   );
 
-describe('sign.ts parity', () => {
+describe('sign-single.ts parity', () => {
   it('matches OpenSSL detached content/certs and verifies in both implementations', () => {
     opensslUsable();
     const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'encrypted-dns-sign-parity-'));
@@ -139,6 +170,21 @@ describe('sign.ts parity', () => {
       const osSigned = osInput.replace(/\.mobileconfig$/, '.signed.mobileconfig');
       const tsDer = fs.readFileSync(tsSigned);
       const osDer = fs.readFileSync(osSigned);
+      const signer = new X509Certificate(fs.readFileSync(signerPem));
+      const cerPath = path.join(dir, 'public.cer');
+      fs.writeFileSync(cerPath, signer.raw);
+      const identity = keychainIdentity(cerPath);
+      deepStrictEqual(identity.certificate.raw, signer.raw);
+      deepStrictEqual(identity.flag, '-Z');
+      const certDump = openssl(['x509', '-in', signerPem, '-text', '-noout'], dir);
+      const ski = /X509v3 Subject Key Identifier:\s+([A-F0-9:]+)/i.exec(certDump)![1];
+      deepStrictEqual(identity.value, ski.replaceAll(':', '').toLowerCase());
+      const signerFile = path.join(dir, 'verified-signer.pem');
+      const xml = fs.readFileSync(profile, 'utf8');
+      verifyProfile(osDer, xml, signer, signerFile);
+      throws(() => verifyProfile(osDer, xml + ' ', signer, signerFile), /content differs/);
+      const other = new X509Certificate(fs.readFileSync(rootPem));
+      throws(() => verifyProfile(osDer, xml, other, signerFile), /unexpected profile signer/);
       const tsDetached = CMS.detach(new Uint8Array(tsDer), { allowBER: true });
       const osDetached = CMS.detach(new Uint8Array(osDer), { allowBER: true });
       deepStrictEqual(

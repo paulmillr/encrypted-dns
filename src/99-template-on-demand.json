@@ -28,8 +28,7 @@
                 }
             ],
             "https": {
-                "ServerURLOrName": "https://dns.example/dns-query",
-                "signature": "3045022100be26326d0232625baf449b9f746c7fc90aeb9c975e89922cd452d09786155a62022067c2f313db08d799c00467fa469f966175541f8e061b62e63a2272261747544e"
+                "ServerURLOrName": "https://dns.example/dns-query"
             }
         }
     }

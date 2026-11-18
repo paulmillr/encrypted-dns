@@ -4,9 +4,17 @@
     },
     "notes": {
         "en": "Operated by French Data Network",
-        "cmn-CN": "由法国数据网络运营",
-        "cmn-TW": "由法國資料網路營運"
+        "zh-CN": "由法国数据网络运营",
+        "zh-TW": "由法國資料網路營運",
+        "es": "Gestionado por French Data Network",
+        "de": "Betrieben von French Data Network",
+        "fr": "Exploité par French Data Network",
+        "tr": "French Data Network tarafından işletilir",
+        "ru": "Оператор — French Data Network",
+        "uk": "Оператор — French Data Network",
+        "ja": "French Data Network が運営"
     },
+    "operator": "French Data Network",
     "website": "https://www.fdn.fr/actions/dns/",
     "region": "FR",
     "censorship": false,

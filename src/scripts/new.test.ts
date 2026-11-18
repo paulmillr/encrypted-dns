@@ -1,4 +1,4 @@
-import { deepStrictEqual } from 'node:assert';
+import { deepStrictEqual, match } from 'node:assert';
 import { spawn, spawnSync } from 'node:child_process';
 import fs from 'node:fs';
 import os from 'node:os';
@@ -201,7 +201,7 @@ describe('new.ts', () => {
           '--protocol',
           'https',
           '--server',
-          'https://dns.example.test/dns-query',
+          'HTTPS://dns.example.test/dns-query',
           '--addresses',
           '1.1.1.1,1.0.0.1',
           '--description',
@@ -316,6 +316,40 @@ describe('new.ts', () => {
       deepStrictEqual(fs.existsSync(out), true);
       const xml = fs.readFileSync(out, 'utf8');
       deepStrictEqual(xml, EXPECT_INTERACTIVE);
+    } finally {
+      fs.rmSync(dir, { recursive: true, force: true });
+    }
+  });
+
+  it('prompts for the TLS hostname before validating addresses in both wizards', async () => {
+    if (process.env.NEW_TEST_PTY === '0') return;
+    const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'encrypted-dns-new-tls-'));
+    try {
+      const out = path.join(dir, 'tls.mobileconfig');
+      const server = 'dns.example.test';
+      const addresses = '192.0.2.1';
+      const full = await runPtyFlow(['node', NEW], dir, [
+        'Example',
+        'tls',
+        server,
+        addresses,
+        'no',
+        'Example DNS',
+        out,
+      ]);
+      deepStrictEqual(full.code, 0);
+      match(
+        fs.readFileSync(out, 'utf8'),
+        /<key>ServerName<\/key>\s*<string>dns\.example\.test<\/string>/
+      );
+      const partial = path.join(dir, 'partial.mobileconfig');
+      const result = await runPtyFlow(
+        ['node', NEW, '--name', 'Example', '--protocol', 'tls', '--out', partial],
+        dir,
+        [server, addresses]
+      );
+      deepStrictEqual(result.code, 0);
+      match(fs.readFileSync(partial, 'utf8'), /<string>192\.0\.2\.1<\/string>/);
     } finally {
       fs.rmSync(dir, { recursive: true, force: true });
     }

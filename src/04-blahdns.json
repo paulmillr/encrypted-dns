@@ -4,54 +4,92 @@
     },
     "notes": {
         "en": "Independent.",
-        "cmn-CN": "由个人提供",
-        "cmn-TW": "由個人提供"
+        "zh-CN": "独立运营",
+        "zh-TW": "獨立營運",
+        "es": "Independiente",
+        "de": "Unabhängiger Anbieter",
+        "fr": "Fournisseur indépendant",
+        "tr": "Bağımsız sağlayıcı",
+        "ru": "Независимый провайдер",
+        "uk": "Незалежний постачальник",
+        "ja": "独立系プロバイダ"
     },
     "website": "https://blahdns.com/",
     "region": "US",
     "censorship": true,
     "consent": "Privacy policy:\nhttps://blahdns.com",
+    "filters": [
+        "malware",
+        "ads",
+        "tracking"
+    ],
     "variants": {
         "germany": {
             "region": "DE",
             "names": {
                 "en": "Germany",
-                "cmn-CN": "德国",
-                "cmn-TW": "德國"
+                "zh-CN": "德国",
+                "zh-TW": "德國",
+                "es": "Alemania",
+                "de": "Deutschland",
+                "fr": "Allemagne",
+                "tr": "Almanya",
+                "ru": "Германия",
+                "uk": "Німеччина",
+                "ja": "ドイツ"
             },
             "ServerAddresses": [
                 "78.46.244.143",
                 "2a01:4f8:c17:ec67::1"
             ],
             "https": {
-                "ServerURLOrName": "https://doh-de.blahdns.com/dns-query",
-                "signature": "304602210081f511627a82ef81fa18d0ae92cc83c7158cb0a7bece26985ffffd1dd74f602c022100f0d775795ad1c01da0a92ad000708c843045a9b45ff9062c5216f42b72cf2b4d"
+                "ServerURLOrName": "https://doh-de.blahdns.com/dns-query"
             },
             "notes": {
                 "en": "Blocks ads, tracking & malware",
-                "cmn-CN": "拦截广告、跟踪器和恶意软件",
-                "cmn-TW": "阻擋廣告、追蹤器和惡意軟體"
+                "zh-CN": "拦截广告、跟踪器和恶意软件",
+                "zh-TW": "阻擋廣告、追蹤器和惡意軟體",
+                "es": "Bloquea anuncios, rastreo y software malicioso",
+                "de": "Blockiert Werbung, Tracking und Schadsoftware",
+                "fr": "Bloque les publicités, les traqueurs et les logiciels malveillants",
+                "tr": "Reklamları, izleyicileri ve kötü amaçlı yazılımları engeller",
+                "ru": "Блокирует рекламу, трекеры и вредоносное ПО",
+                "uk": "Блокує рекламу, трекери та шкідливе ПЗ",
+                "ja": "広告、トラッキング、マルウェアをブロック"
             }
         },
         "singapore": {
             "region": "SG",
             "names": {
                 "en": "Singapore",
-                "cmn-CN": "新加坡",
-                "cmn-TW": "新加坡"
+                "zh-CN": "新加坡",
+                "zh-TW": "新加坡",
+                "es": "Singapur",
+                "de": "Singapur",
+                "fr": "Singapour",
+                "tr": "Singapur",
+                "ru": "Сингапур",
+                "uk": "Сінгапур",
+                "ja": "シンガポール"
             },
             "ServerAddresses": [
                 "46.250.226.242",
                 "2407:3640:2205:1668::1"
             ],
             "https": {
-                "ServerURLOrName": "https://doh-sg.blahdns.com/dns-query",
-                "signature": "30460221009d57a0dc63bda32f82da178746478c2e0d64d5c22e24ba13b91594a2692360ef022100a9a2fdfe13b95db49dfe3fe9b38470f35faaba3d6a23c70859b13453b20101dd"
+                "ServerURLOrName": "https://doh-sg.blahdns.com/dns-query"
             },
             "notes": {
                 "en": "Blocks ads, tracking & malware",
-                "cmn-CN": "拦截广告、跟踪器和恶意软件",
-                "cmn-TW": "阻擋廣告、追蹤器和惡意軟體"
+                "zh-CN": "拦截广告、跟踪器和恶意软件",
+                "zh-TW": "阻擋廣告、追蹤器和惡意軟體",
+                "es": "Bloquea anuncios, rastreo y software malicioso",
+                "de": "Blockiert Werbung, Tracking und Schadsoftware",
+                "fr": "Bloque les publicités, les traqueurs et les logiciels malveillants",
+                "tr": "Reklamları, izleyicileri ve kötü amaçlı yazılımları engeller",
+                "ru": "Блокирует рекламу, трекеры и вредоносное ПО",
+                "uk": "Блокує рекламу, трекери та шкідливе ПЗ",
+                "ja": "広告、トラッキング、マルウェアをブロック"
             }
         }
     }

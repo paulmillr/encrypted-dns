@@ -1,0 +1,26 @@
+{
+  "code": "ja",
+  "name": "日本語",
+  "table_columns": {
+    "provider": "プロバイダ",
+    "unfiltered": "フィルタリングなし",
+    "filtered": "フィルタリングあり",
+    "notes": "備考"
+  },
+  "install": "インストール",
+  "default_profile": "デフォルト",
+  "details": "詳細",
+  "operated_by": "{operator} が運営",
+  "filter_tags": {
+    "malware": "マルウェア",
+    "adult": "成人向け",
+    "ads": "広告",
+    "tracking": "トラッキング",
+    "phishing": "フィッシング",
+    "mixed content": "成人向け・一般向けの混在",
+    "unspecified": "対象カテゴリの記載なし"
+  },
+  "signed": "署名あり",
+  "unsigned": "署名なし",
+  "sentence_separator": "。"
+}

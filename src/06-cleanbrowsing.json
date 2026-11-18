@@ -7,42 +7,103 @@
     "censorship": true,
     "variants": {
         "family": {
+            "filters": [
+                "malware",
+                "adult",
+                "phishing",
+                "mixed content"
+            ],
             "ServerAddresses": [
                 "2a0d:2a00:1::",
-                "2a0d:2a00:1::",
+                "2a0d:2a00:2::",
                 "185.228.169.168",
                 "185.228.168.168"
             ],
             "https": {
-                "ServerURLOrName": "https://doh.cleanbrowsing.org/doh/family-filter/",
-                "signature": "3045022065fe868daa35c9468cec7c494d993893d4f6bd04c1765a74172246772b130c97022100c6c95620281bc3a2d3d5ac337468825c8d83174960fecd547ffb4275c748286c"
+                "ServerURLOrName": "https://doh.cleanbrowsing.org/doh/family-filter/"
             },
             "tls": {
-                "ServerURLOrName": "family-filter-dns.cleanbrowsing.org",
-                "signature": "3046022100a0337445c8d31374b719678a2879543692418008920c17412ded9333b27adc36022100f14c6d4007fa8499a5f87442bf57913a9db32304dd590e54c93e67e2157412eb"
+                "ServerURLOrName": "family-filter-dns.cleanbrowsing.org"
             },
             "names": {
                 "en": "Family Filter",
-                "cmn-CN": "家庭过滤器",
-                "cmn-TW": "家庭過濾器"
+                "zh-CN": "家庭过滤",
+                "zh-TW": "家庭過濾",
+                "es": "Filtro familiar",
+                "de": "Familienfilter",
+                "fr": "Filtre familial",
+                "tr": "Aile Filtresi",
+                "ru": "Семейный фильтр",
+                "uk": "Сімейний фільтр",
+                "ja": "ファミリーフィルター"
+            },
+            "tableName": {
+                "en": "Family",
+                "de": "Familienfilter",
+                "es": "Filtro familiar",
+                "fr": "Filtre familial",
+                "ja": "ファミリー",
+                "ru": "Семейный фильтр",
+                "tr": "Aile filtresi",
+                "uk": "Сімейний фільтр",
+                "zh-CN": "家庭过滤",
+                "zh-TW": "家庭過濾"
             },
             "notes": {
                 "en": "Filters malware & adult, mixed content",
-                "cmn-CN": "过滤恶意软件、成人内容和混合内容",
-                "cmn-TW": "過濾惡意軟體、成人內容和混合內容"
+                "zh-CN": "拦截恶意软件和成人内容，也拦截同时含有成人内容和普通内容的网站",
+                "zh-TW": "封鎖惡意軟體和成人內容，也會封鎖同時包含成人內容和一般內容的網站",
+                "es": "Filtra software malicioso, contenido para adultos y sitios con contenido mixto",
+                "de": "Filtert Schadsoftware, Inhalte für Erwachsene und Websites mit gemischten Inhalten",
+                "fr": "Filtre les logiciels malveillants, les contenus pour adultes et les sites à contenu mixte",
+                "tr": "Kötü amaçlı yazılımları, yetişkinlere yönelik içerikleri ve karma içerikli siteleri filtreler",
+                "ru": "Фильтрует вредоносное ПО, контент для взрослых и сайты со смешанным контентом",
+                "uk": "Фільтрує шкідливе ПЗ, вміст для дорослих і сайти зі змішаним вмістом",
+                "ja": "マルウェアや成人向けコンテンツをブロック。成人向けと一般向けのコンテンツを両方掲載するサイトも対象"
             }
         },
         "adult": {
             "names": {
                 "en": "Adult Filter",
-                "cmn-CN": "成人过滤器",
-                "cmn-TW": "成人過濾器"
+                "zh-CN": "成人内容过滤",
+                "zh-TW": "成人內容過濾",
+                "es": "Filtro de contenido para adultos",
+                "de": "Filter für nicht jugendfreie Inhalte",
+                "fr": "Filtre de contenu pour adultes",
+                "tr": "Yetişkinlere Yönelik İçerik Filtresi",
+                "ru": "Фильтр контента для взрослых",
+                "uk": "Фільтр вмісту для дорослих",
+                "ja": "成人向けサイトの制限"
+            },
+            "tableName": {
+                "en": "Adult",
+                "de": "Filter für nicht jugendfreie Inhalte",
+                "es": "Filtro de contenido para adultos",
+                "fr": "Filtre de contenu pour adultes",
+                "ja": "成人向けサイトの制限",
+                "ru": "Фильтр контента для взрослых",
+                "tr": "Yetişkinlere yönelik içerik filtresi",
+                "uk": "Фільтр вмісту для дорослих",
+                "zh-CN": "成人内容过滤",
+                "zh-TW": "成人內容過濾"
             },
             "notes": {
                 "en": "Filters malware & adult content",
-                "cmn-CN": "过滤恶意软件和成人内容",
-                "cmn-TW": "過濾惡意軟體和成人內容"
+                "zh-CN": "过滤恶意软件和成人内容",
+                "zh-TW": "過濾惡意軟體和成人內容",
+                "es": "Filtra software malicioso y contenido para adultos",
+                "de": "Filtert Schadsoftware und Inhalte für Erwachsene",
+                "fr": "Filtre les logiciels malveillants et les contenus pour adultes",
+                "tr": "Kötü amaçlı yazılımları ve yetişkinlere yönelik içerikleri filtreler",
+                "ru": "Фильтрует вредоносное ПО и контент для взрослых",
+                "uk": "Фільтрує шкідливе ПЗ та вміст для дорослих",
+                "ja": "マルウェアと成人向けコンテンツをブロック"
             },
+            "filters": [
+                "malware",
+                "adult",
+                "phishing"
+            ],
             "ServerAddresses": [
                 "2a0d:2a00:1::1",
                 "2a0d:2a00:2::1",
@@ -50,25 +111,53 @@
                 "185.228.168.10"
             ],
             "https": {
-                "ServerURLOrName": "https://doh.cleanbrowsing.org/doh/adult-filter/",
-                "signature": "3046022100f8932eca75a2acb1445d20d6723a7b0ace2bc36c6686dd216afad20dceccc3c9022100e611ec37b40f5d6d869893dfa354cde7cd01a80d6ddaaea8016c8950caf33b3b"
+                "ServerURLOrName": "https://doh.cleanbrowsing.org/doh/adult-filter/"
             },
             "tls": {
-                "ServerURLOrName": "adult-filter-dns.cleanbrowsing.org",
-                "signature": "304502203cd4a787b877d2758ea2a6223101dc19e56ffc57773a5866413df49e5167505c022100c5885e06e4dbb3e80bbde5558722447c0b4e76fe9ac0caf72605bcf5bb1f4b3f"
+                "ServerURLOrName": "adult-filter-dns.cleanbrowsing.org"
             }
         },
         "security": {
             "names": {
                 "en": "Security Filter",
-                "cmn-CN": "安全过滤器",
-                "cmn-TW": "安全過濾器"
+                "zh-CN": "安全过滤",
+                "zh-TW": "安全過濾",
+                "es": "Filtro de seguridad",
+                "de": "Sicherheitsfilter",
+                "fr": "Filtre de sécurité",
+                "tr": "Güvenlik Filtresi",
+                "ru": "Фильтр безопасности",
+                "uk": "Фільтр безпеки",
+                "ja": "セキュリティフィルター"
+            },
+            "tableName": {
+                "en": "Security",
+                "de": "Sicherheitsfilter",
+                "es": "Filtro de seguridad",
+                "fr": "Filtre de sécurité",
+                "ja": "セキュリティ",
+                "ru": "Фильтр безопасности",
+                "tr": "Güvenlik filtresi",
+                "uk": "Фільтр безпеки",
+                "zh-CN": "安全过滤",
+                "zh-TW": "安全過濾"
             },
             "notes": {
                 "en": "Filters malware",
-                "cmn-CN": "过滤恶意软件",
-                "cmn-TW": "過濾惡意軟體"
+                "zh-CN": "过滤恶意软件",
+                "zh-TW": "過濾惡意軟體",
+                "es": "Filtra software malicioso",
+                "de": "Filtert Schadsoftware",
+                "fr": "Filtre les logiciels malveillants",
+                "tr": "Kötü amaçlı yazılımları filtreler",
+                "ru": "Фильтрует вредоносное ПО",
+                "uk": "Фільтрує шкідливе ПЗ",
+                "ja": "マルウェアをブロック"
             },
+            "filters": [
+                "malware",
+                "phishing"
+            ],
             "ServerAddresses": [
                 "2a0d:2a00:1::2",
                 "2a0d:2a00:2::2",
@@ -76,12 +165,10 @@
                 "185.228.169.9"
             ],
             "https": {
-                "ServerURLOrName": "https://doh.cleanbrowsing.org/doh/security-filter/",
-                "signature": "304402204deb572f2476756ab8e698a352a387efa9541683f3211922794e4e30db1b32ee02203f6d8985086ed94d2d3b7d329248d2bf2ff3330fabe8a910c04f0a92c5d36984"
+                "ServerURLOrName": "https://doh.cleanbrowsing.org/doh/security-filter/"
             },
             "tls": {
-                "ServerURLOrName": "security-filter-dns.cleanbrowsing.org",
-                "signature": "30440220440b0d9929e197979de6a26454b4be291649a7bcf10ee14f071cc664d294c1fe02205ad11424e176328e18014a97558c75d67e127240abe39a95b6a5085dfa80969c"
+                "ServerURLOrName": "security-filter-dns.cleanbrowsing.org"
             }
         }
     }

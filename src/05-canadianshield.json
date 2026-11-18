@@ -1,11 +1,31 @@
 {
     "names": {
-        "en": "Canadian Shield"
+        "en": "Canadian Shield",
+        "fr": "Bouclier canadien de CIRA"
     },
     "notes": {
         "en": "Operated by the Canadian Internet Registration Authority (CIRA)",
-        "cmn-CN": "由加拿大互联网注册管理局 (CIRA) 运营",
-        "cmn-TW": "由加拿大網際網路註冊管理局 (CIRA) 營運"
+        "zh-CN": "由加拿大互联网注册管理机构（CIRA）运营",
+        "zh-TW": "由加拿大網際網路註冊管理機構（CIRA）營運",
+        "es": "Gestionado por la Autoridad Canadiense de Registro de Internet (CIRA)",
+        "de": "Betrieben von der Canadian Internet Registration Authority (CIRA)",
+        "fr": "Exploité par l’Autorité canadienne pour les enregistrements Internet (CIRA)",
+        "tr": "Kanada İnternet Kayıt Kurumu (CIRA) tarafından işletilir",
+        "ru": "Оператор — Канадское управление по регистрации доменов (CIRA)",
+        "uk": "Оператор — Канадська служба реєстрації доменів (CIRA)",
+        "ja": "カナダインターネット登録機関（CIRA）が運営"
+    },
+    "operator": {
+        "en": "Canadian Internet Registration Authority (CIRA)",
+        "de": "der Canadian Internet Registration Authority (CIRA)",
+        "es": "la Autoridad Canadiense de Registro de Internet (CIRA)",
+        "fr": "l’Autorité canadienne pour les enregistrements Internet (CIRA)",
+        "ja": "カナダインターネット登録機関（CIRA）",
+        "ru": "Канадское управление по регистрации доменов (CIRA)",
+        "tr": "Kanada İnternet Kayıt Kurumu (CIRA)",
+        "uk": "Канадська служба реєстрації доменів (CIRA)",
+        "zh-CN": "加拿大互联网注册管理机构（CIRA）",
+        "zh-TW": "加拿大網際網路註冊管理機構（CIRA）"
     },
     "website": "https://www.cira.ca/cybersecurity-services/canadian-shield/configure/summary-cira-canadian-shield-dns-resolver-addresses",
     "region": "CA",
@@ -19,31 +39,54 @@
                 "149.112.122.10"
             ],
             "https": {
-                "ServerURLOrName": "https://private.canadianshield.cira.ca/dns-query",
-                "signature": "3046022100b2e2d4778811dcdefb3f7b17f5bd5ec0a892517ef05a76c8a62b90b8fe58ab47022100c3daf68e1ab537b639360e1edf74fe9307be71dc7af73fa7fbd31d8cba5f8caf"
+                "ServerURLOrName": "https://private.canadianshield.cira.ca/dns-query"
             },
             "tls": {
-                "ServerURLOrName": "private.canadianshield.cira.ca",
-                "signature": "304402200277e7c7abe9ba6aa3f665dc3ba7e79522f545d3fc1e9d373dcecfb29b600f61022043a63eced56127a7bf3aa16c4e1883b71570f56d4c1505e9e9da7c04195f4250"
+                "ServerURLOrName": "private.canadianshield.cira.ca"
             },
             "names": {
                 "en": "Private",
-                "cmn-CN": "私人",
-                "cmn-TW": "私人"
+                "zh-CN": "隐私版",
+                "zh-TW": "隱私版",
+                "es": "Privado",
+                "de": "Privat",
+                "fr": "Privé",
+                "tr": "Özel",
+                "ru": "Приватный",
+                "uk": "Приватний",
+                "ja": "プライベート"
             }
         },
         "protected": {
             "names": {
                 "en": "Protected",
-                "cmn-CN": "保护",
-                "cmn-TW": "保護"
+                "zh-CN": "安全防护",
+                "zh-TW": "安全防護",
+                "es": "Con protección",
+                "de": "Geschützt",
+                "fr": "Protégé",
+                "tr": "Korumalı",
+                "ru": "Защита от угроз",
+                "uk": "Захист від загроз",
+                "ja": "セキュリティ"
             },
             "notes": {
                 "en": "Blocks malware & phishing",
-                "cmn-CN": "拦截恶意软件和钓鱼网站",
-                "cmn-TW": "阻擋惡意軟體和釣魚網站"
+                "zh-CN": "拦截恶意软件和钓鱼网站",
+                "zh-TW": "阻擋惡意軟體和釣魚網站",
+                "es": "Bloquea software malicioso y phishing",
+                "de": "Blockiert Schadsoftware und Phishing",
+                "fr": "Bloque les logiciels malveillants et l’hameçonnage",
+                "tr": "Kötü amaçlı yazılımları ve kimlik avını engeller",
+                "ru": "Блокирует вредоносное ПО и фишинг",
+                "uk": "Блокує шкідливе ПЗ та фішинг",
+                "ja": "マルウェアとフィッシングをブロック"
             },
             "censorship": true,
+            "filters": [
+                "malware",
+                "phishing"
+            ],
             "ServerAddresses": [
                 "2620:10a:80bb::20",
                 "2620:10a:80bc::20",
@@ -51,26 +94,43 @@
                 "149.112.122.20"
             ],
             "https": {
-                "ServerURLOrName": "https://protected.canadianshield.cira.ca/dns-query",
-                "signature": "304502207423b64a7cf4d2344c3abdd4dacec71c3faf738c8d49bfe69636deffa3312700022100fb7b9c44db79e1771f0bdba69de5a21efb7e8229b8694c93e04967e9ff32b93a"
+                "ServerURLOrName": "https://protected.canadianshield.cira.ca/dns-query"
             },
             "tls": {
-                "ServerURLOrName": "protected.canadianshield.cira.ca",
-                "signature": "3046022100870826b5a7ee020d3b68005c1c979c6d34cca4e5e5a2d06e869fca56bf4875290221009b52bb52027ce534364b184d18e9e5804990ca976fd156dba6c6ff7272d73fa2"
+                "ServerURLOrName": "protected.canadianshield.cira.ca"
             }
         },
         "family": {
             "names": {
                 "en": "Family",
-                "cmn-CN": "家庭",
-                "cmn-TW": "家庭"
+                "zh-CN": "家庭版",
+                "zh-TW": "家庭版",
+                "es": "Protección familiar",
+                "de": "Familienschutz",
+                "fr": "Famille",
+                "tr": "Aile",
+                "ru": "Семейный фильтр",
+                "uk": "Сімейний фільтр",
+                "ja": "ファミリー"
             },
             "notes": {
                 "en": "Blocks malware, phishing & adult content",
-                "cmn-CN": "拦截恶意软件、钓鱼和成人内容",
-                "cmn-TW": "阻擋惡意軟體、釣魚和成人內容"
+                "zh-CN": "拦截恶意软件、网络钓鱼网站和成人内容",
+                "zh-TW": "封鎖惡意軟體、網路釣魚網站和成人內容",
+                "es": "Bloquea software malicioso, phishing y contenido para adultos",
+                "de": "Blockiert Schadsoftware, Phishing und Inhalte für Erwachsene",
+                "fr": "Bloque les logiciels malveillants, l’hameçonnage et les contenus pour adultes",
+                "tr": "Kötü amaçlı yazılımları, kimlik avını ve yetişkinlere yönelik içerikleri engeller",
+                "ru": "Блокирует вредоносное ПО, фишинг и контент для взрослых",
+                "uk": "Блокує шкідливе ПЗ, фішинг і вміст для дорослих",
+                "ja": "マルウェア、フィッシング、成人向けコンテンツをブロック"
             },
             "censorship": true,
+            "filters": [
+                "malware",
+                "adult",
+                "phishing"
+            ],
             "ServerAddresses": [
                 "2620:10a:80bb::30",
                 "2620:10a:80bc::30",
@@ -78,12 +138,10 @@
                 "149.112.122.30"
             ],
             "https": {
-                "ServerURLOrName": "https://family.canadianshield.cira.ca/dns-query",
-                "signature": "304502203deb2697c91a7d22e0382742454b41f901ea9a065dd3013badbae4b0a2b974fd022100b46d3bc3443664255e99c8fc76aa457164f93ecb6997ee0ceb6e02307e47f2f6"
+                "ServerURLOrName": "https://family.canadianshield.cira.ca/dns-query"
             },
             "tls": {
-                "ServerURLOrName": "family.canadianshield.cira.ca",
-                "signature": "304402204bf2dc6f68be7a8ca03822b79ea50817c8d1c9edc9938b94315698110465fc08022076ab737f47bcf32f1a3376e763cc81ca3b0cd2bd29fb439ffed48c85e2557d0c"
+                "ServerURLOrName": "family.canadianshield.cira.ca"
             }
         }
     }

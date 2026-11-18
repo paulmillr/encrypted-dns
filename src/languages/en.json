@@ -1,0 +1,26 @@
+{
+  "code": "en",
+  "name": "English",
+  "table_columns": {
+    "provider": "Provider",
+    "unfiltered": "Unfiltered",
+    "filtered": "Filtered",
+    "notes": "Notes"
+  },
+  "install": "Install",
+  "default_profile": "Default",
+  "details": "details",
+  "operated_by": "by {operator}",
+  "filter_tags": {
+    "malware": "malware",
+    "adult": "adult",
+    "ads": "ads",
+    "tracking": "tracking",
+    "phishing": "phishing",
+    "mixed content": "mixed content",
+    "unspecified": "unspecified"
+  },
+  "signed": "signed",
+  "unsigned": "unsigned",
+  "sentence_separator": ". "
+}

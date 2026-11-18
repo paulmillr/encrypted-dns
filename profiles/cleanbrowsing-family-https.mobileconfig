@@ -12,7 +12,7 @@
 				<key>ServerAddresses</key>
 				<array>
 					<string>2a0d:2a00:1::</string>
-					<string>2a0d:2a00:1::</string>
+					<string>2a0d:2a00:2::</string>
 					<string>185.228.169.168</string>
 					<string>185.228.168.168</string>
 				</array>

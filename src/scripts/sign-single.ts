@@ -3,7 +3,9 @@ import { CMS } from 'micro-key-producer/x509.js';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { SIGN_OPTS } from './build.ts';
+
+// Deterministic ECDSA nonces (RFC 6979) so re-signing identical input gives identical output.
+const SIGN_OPTS = { extraEntropy: false } as const;
 
 export type SignArgs = { ca: string; priv_key: string; chain?: string; input: string };
 

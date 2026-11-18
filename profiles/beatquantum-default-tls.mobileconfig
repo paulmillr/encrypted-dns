@@ -8,24 +8,25 @@
 			<key>DNSSettings</key>
 			<dict>
 				<key>DNSProtocol</key>
-				<string>HTTPS</string>
+				<string>TLS</string>
 				<key>ServerAddresses</key>
 				<array>
-					<string>77.112.215.66</string>
+					<string>2a0c:9a46:1e22:12::a</string>
+					<string>207.2.121.35</string>
 				</array>
-				<key>ServerURL</key>
-				<string>https://dnsnl.alekberg.net/dns-query</string>
+				<key>ServerName</key>
+				<string>beatquantum.com</string>
 			</dict>
 			<key>PayloadDescription</key>
-			<string>Configures device to use Alekberg Encrypted DNS Encrypted DNS over HTTPS</string>
+			<string>Configures device to use BeatQuantum DNS Encrypted DNS over TLS</string>
 			<key>PayloadDisplayName</key>
-			<string>Alekberg Encrypted DNS Encrypted DNS over HTTPS</string>
+			<string>BeatQuantum DNS Encrypted DNS over TLS</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.dnsSettings.managed.d27008e4-ecaa-5171-adcf-70bdc8c2351c</string>
+			<string>com.apple.dnsSettings.managed.0b9d61f8-1254-56c4-935e-706fb0508c18</string>
 			<key>PayloadType</key>
 			<string>com.apple.dnsSettings.managed</string>
 			<key>PayloadUUID</key>
-			<string>D27008E4-ECAA-5171-ADCF-70BDC8C2351C</string>
+			<string>0B9D61F8-1254-56C4-935E-706FB0508C18</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>ProhibitDisablement</key>
@@ -33,19 +34,14 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Configures device to use Alekberg Encrypted DNS over HTTPS
-Independent.
-Server location: 🇳🇱.
+	<string>Configures device to use BeatQuantum DNS over TLS
+Operated by BeatQuantum Limited. Non-filtering, with DNSSEC. Classical, hybrid &amp; post-quantum (ML-KEM) key exchange.
+Server location: 🇬🇧.
 Filtering: no</string>
-	<key>ConsentText</key>
-	<dict>
-		<key>default</key>
-		<string>Privacy policy: https://alekberg.net/privacy</string>
-	</dict>
 	<key>PayloadDisplayName</key>
-	<string>Alekberg Encrypted DNS Encrypted DNS over HTTPS</string>
+	<string>BeatQuantum DNS Encrypted DNS over TLS</string>
 	<key>PayloadIdentifier</key>
-	<string>com.paulmillr.apple-dns.alekberg-default-https</string>
+	<string>com.paulmillr.apple-dns.beatquantum-default-tls</string>
 	<key>PayloadRemovalDisallowed</key>
 	<false/>
 	<key>PayloadScope</key>
@@ -53,7 +49,7 @@ Filtering: no</string>
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>EB4D5EF9-B4B4-56A6-9C3A-43EFD5A3C532</string>
+	<string>E1FEB115-9BFE-55F6-AF20-138432A5B2BD</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>

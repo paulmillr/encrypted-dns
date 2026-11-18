@@ -1,0 +1,26 @@
+{
+  "code": "tr",
+  "name": "Türkçe",
+  "table_columns": {
+    "provider": "Sağlayıcı",
+    "unfiltered": "Filtresiz",
+    "filtered": "Filtreli",
+    "notes": "Notlar"
+  },
+  "install": "Yükle",
+  "default_profile": "Varsayılan",
+  "details": "ayrıntılar",
+  "operated_by": "{operator} tarafından işletilir",
+  "filter_tags": {
+    "malware": "kötü amaçlı yazılım",
+    "adult": "yetişkinlere yönelik içerik",
+    "ads": "reklam",
+    "tracking": "izleyiciler",
+    "phishing": "kimlik avı",
+    "mixed content": "karma içerikli siteler",
+    "unspecified": "kategori belirtilmemiş"
+  },
+  "signed": "imzalı",
+  "unsigned": "imzasız",
+  "sentence_separator": ". "
+}

@@ -4,9 +4,17 @@
     },
     "notes": {
         "en": "Operated by Cloudflare Inc.",
-        "cmn-CN": "由 Cloudflare 公司运营",
-        "cmn-TW": "由 Cloudflare 公司營運"
+        "zh-CN": "由 Cloudflare 公司运营",
+        "zh-TW": "由 Cloudflare 公司營運",
+        "es": "Gestionado por Cloudflare Inc.",
+        "de": "Betrieben von Cloudflare Inc.",
+        "fr": "Exploité par Cloudflare Inc.",
+        "tr": "Cloudflare Inc. tarafından işletilir",
+        "ru": "Оператор — Cloudflare Inc.",
+        "uk": "Оператор — Cloudflare Inc.",
+        "ja": "Cloudflare Inc. が運営"
     },
+    "operator": "Cloudflare Inc.",
     "website": "https://developers.cloudflare.com/1.1.1.1/encryption/",
     "region": "US",
     "censorship": false,
@@ -19,26 +27,42 @@
                 "1.0.0.1"
             ],
             "https": {
-                "ServerURLOrName": "https://cloudflare-dns.com/dns-query",
-                "signature": "3044022056518b91b094da10ba0be51276e3cd7464458109ae9328f98d35c89f5cc64a66022068f59e3084846f1492cb6c98159bc2386044d75cc55c4de9ab17a14fc4aacc78"
+                "ServerURLOrName": "https://cloudflare-dns.com/dns-query"
             },
             "tls": {
-                "ServerURLOrName": "one.one.one.one",
-                "signature": "3045022100eabaa9cf71c291435bba10b5e67b926b2a74be2acb5a0de999bc04819893e56602205d8216e8e8ae8821018b427a318e0111cb7e384df18edc1b1f5333b409196807"
+                "ServerURLOrName": "one.one.one.one"
             }
         },
         "malware": {
             "names": {
                 "en": "Security",
-                "cmn-CN": "安全",
-                "cmn-TW": "安全"
+                "zh-CN": "安全",
+                "zh-TW": "安全",
+                "es": "Filtro de seguridad",
+                "de": "Sicherheitsfilter",
+                "fr": "Filtre de sécurité",
+                "tr": "Güvenlik",
+                "ru": "Защита от угроз",
+                "uk": "Захист від загроз",
+                "ja": "セキュリティ"
             },
             "notes": {
                 "en": "Blocks malware & phishing",
-                "cmn-CN": "拦截恶意软件和钓鱼网站",
-                "cmn-TW": "阻擋惡意軟體和釣魚網站"
+                "zh-CN": "拦截恶意软件和钓鱼网站",
+                "zh-TW": "阻擋惡意軟體和釣魚網站",
+                "es": "Bloquea software malicioso y phishing",
+                "de": "Blockiert Schadsoftware und Phishing",
+                "fr": "Bloque les logiciels malveillants et l’hameçonnage",
+                "tr": "Kötü amaçlı yazılımları ve kimlik avını engeller",
+                "ru": "Блокирует вредоносное ПО и фишинг",
+                "uk": "Блокує шкідливе ПЗ та фішинг",
+                "ja": "マルウェアとフィッシングをブロック"
             },
             "censorship": true,
+            "filters": [
+                "malware",
+                "phishing"
+            ],
             "ServerAddresses": [
                 "2606:4700:4700::1112",
                 "2606:4700:4700::1002",
@@ -46,23 +70,41 @@
                 "1.0.0.2"
             ],
             "https": {
-                "ServerURLOrName": "https://security.cloudflare-dns.com/dns-query",
-                "signature": "3045022018dc0c3b7fedfe6639f7a0f181bd4e17437c5e95bc849b42aad9d10206b3a7c3022100c4dd9ec7e0593b16d5fe37ff187856088d6af903d3247252ac858284cedb4825"
+                "ServerURLOrName": "https://security.cloudflare-dns.com/dns-query"
             }
         },
         "family": {
             "website": "https://developers.cloudflare.com/1.1.1.1/setup/#1111-for-families",
             "names": {
                 "en": "Family",
-                "cmn-CN": "家庭",
-                "cmn-TW": "家庭"
+                "zh-CN": "家庭版",
+                "zh-TW": "家庭版",
+                "es": "Protección familiar",
+                "de": "Familienschutz",
+                "fr": "Filtre familial",
+                "tr": "Aile",
+                "ru": "Семейный фильтр",
+                "uk": "Сімейний фільтр",
+                "ja": "ファミリー"
             },
             "notes": {
                 "en": "Blocks malware, phishing & adult content",
-                "cmn-CN": "拦截恶意软件、钓鱼和成人内容",
-                "cmn-TW": "阻擋惡意軟體、釣魚和成人內容"
+                "zh-CN": "拦截恶意软件、网络钓鱼网站和成人内容",
+                "zh-TW": "封鎖惡意軟體、網路釣魚網站和成人內容",
+                "es": "Bloquea software malicioso, phishing y contenido para adultos",
+                "de": "Blockiert Schadsoftware, Phishing und Inhalte für Erwachsene",
+                "fr": "Bloque les logiciels malveillants, l’hameçonnage et les contenus pour adultes",
+                "tr": "Kötü amaçlı yazılımları, kimlik avını ve yetişkinlere yönelik içerikleri engeller",
+                "ru": "Блокирует вредоносное ПО, фишинг и контент для взрослых",
+                "uk": "Блокує шкідливе ПЗ, фішинг і вміст для дорослих",
+                "ja": "マルウェア、フィッシング、成人向けコンテンツをブロック"
             },
             "censorship": true,
+            "filters": [
+                "malware",
+                "adult",
+                "phishing"
+            ],
             "ServerAddresses": [
                 "2606:4700:4700::1113",
                 "2606:4700:4700::1003",
@@ -70,8 +112,7 @@
                 "1.0.0.3"
             ],
             "https": {
-                "ServerURLOrName": "https://family.cloudflare-dns.com/dns-query",
-                "signature": "304502205b24a25db48f7e93658fe7297d9218419bcdbed6b4ae4cdf2b3a98c8a72aec42022100d63dcda3b6b47ce21ebbb695211385858fca51b87fc679fd3a3d12553b8ef767"
+                "ServerURLOrName": "https://family.cloudflare-dns.com/dns-query"
             }
         }
     }

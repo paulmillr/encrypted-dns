@@ -1,0 +1,26 @@
+{
+  "code": "de",
+  "name": "Deutsch",
+  "table_columns": {
+    "provider": "Anbieter",
+    "unfiltered": "Ungefiltert",
+    "filtered": "Gefiltert",
+    "notes": "Hinweise"
+  },
+  "install": "Installieren",
+  "default_profile": "Standard",
+  "details": "Details",
+  "operated_by": "von {operator}",
+  "filter_tags": {
+    "malware": "Schadsoftware",
+    "adult": "Inhalte für Erwachsene",
+    "ads": "Werbung",
+    "tracking": "Tracking",
+    "phishing": "Phishing",
+    "mixed content": "gemischte Inhalte",
+    "unspecified": "nicht angegeben"
+  },
+  "signed": "signiert",
+  "unsigned": "ohne Signatur",
+  "sentence_separator": ". "
+}

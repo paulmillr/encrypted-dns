@@ -1,0 +1,26 @@
+{
+  "code": "es",
+  "name": "Español",
+  "table_columns": {
+    "provider": "Proveedor",
+    "unfiltered": "Sin filtrado",
+    "filtered": "Con filtrado",
+    "notes": "Notas"
+  },
+  "install": "Instalar",
+  "default_profile": "Predeterminado",
+  "details": "detalles",
+  "operated_by": "a cargo de {operator}",
+  "filter_tags": {
+    "malware": "malware",
+    "adult": "contenido para adultos",
+    "ads": "anuncios",
+    "tracking": "rastreadores",
+    "phishing": "phishing",
+    "mixed content": "contenido mixto",
+    "unspecified": "sin especificar"
+  },
+  "signed": "firmado",
+  "unsigned": "sin firmar",
+  "sentence_separator": ". "
+}

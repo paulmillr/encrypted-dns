@@ -1,0 +1,26 @@
+{
+  "code": "uk",
+  "name": "Українська",
+  "table_columns": {
+    "provider": "Постачальник",
+    "unfiltered": "Без фільтрування",
+    "filtered": "З фільтруванням",
+    "notes": "Примітки"
+  },
+  "install": "Інсталювати",
+  "default_profile": "Типовий",
+  "details": "докладніше",
+  "operated_by": "оператор — {operator}",
+  "filter_tags": {
+    "malware": "шкідливе ПЗ",
+    "adult": "вміст для дорослих",
+    "ads": "реклама",
+    "tracking": "трекери",
+    "phishing": "фішинг",
+    "mixed content": "змішаний вміст",
+    "unspecified": "не зазначено"
+  },
+  "signed": "з підписом",
+  "unsigned": "без підпису",
+  "sentence_separator": ". "
+}
