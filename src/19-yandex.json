@@ -1,0 +1,69 @@
+{
+    "names": {
+        "en": "Yandex DNS"
+    },
+    "notes": {
+        "en": "Operated by Yandex. Official public DNS."
+    },
+    "website": "https://dns.yandex.com/",
+    "region": "RU",
+    "censorship": false,
+    "variants": {
+        "default": {
+            "ServerAddresses": [
+                "2a02:6b8::feed:0ff",
+                "2a02:6b8:0:1::feed:0ff",
+                "77.88.8.8",
+                "77.88.8.1"
+            ],
+            "https": {
+                "ServerURLOrName": "https://common.dot.dns.yandex.net/dns-query"
+            },
+            "tls": {
+                "ServerURLOrName": "common.dot.dns.yandex.net"
+            }
+        },
+        "safe": {
+            "names": {
+                "en": "Safe"
+            },
+            "notes": {
+                "en": "Blocks malware"
+            },
+            "censorship": true,
+            "ServerAddresses": [
+                "2a02:6b8::feed:bad",
+                "2a02:6b8:0:1::feed:bad",
+                "77.88.8.88",
+                "77.88.8.2"
+            ],
+            "https": {
+                "ServerURLOrName": "https://safe.dot.dns.yandex.net/dns-query"
+            },
+            "tls": {
+                "ServerURLOrName": "safe.dot.dns.yandex.net"
+            }
+        },
+        "family": {
+            "names": {
+                "en": "Family"
+            },
+            "notes": {
+                "en": "Blocks malware and adult content"
+            },
+            "censorship": true,
+            "ServerAddresses": [
+                "2a02:6b8::feed:a11",
+                "2a02:6b8:0:1::feed:a11",
+                "77.88.8.7",
+                "77.88.8.3"
+            ],
+            "https": {
+                "ServerURLOrName": "https://family.dot.dns.yandex.net/dns-query"
+            },
+            "tls": {
+                "ServerURLOrName": "family.dot.dns.yandex.net"
+            }
+        }
+    }
+}
